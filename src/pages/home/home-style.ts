@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div<{ openMenu: boolean }>`
 display: grid;
-grid-template-columns: ${({ openMenu }) => openMenu ? 'repeat(4,1fr)' : 'repeat(5,1fr)'};
+grid-template-columns: repeat(4, 1fr);
 width: 100%;
-max-width: 99%;
 column-gap: 5px;
 row-gap: 20px;
 margin-top: 35px;
@@ -13,6 +12,7 @@ background-color: #fff;
  @media(max-width: 1920px) {
  grid-template-columns: ${({ openMenu }) => openMenu ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)'};
  column-gap: 5px;
+ margin-left: 10px;
  }
 
  @media(max-width: 1559px) {
@@ -21,22 +21,24 @@ background-color: #fff;
 `;
 
 export const HomeContainer = styled.div`
-width: 100%;
-max-width: 97%;
+width: 97%;
 `;
 
 export const MainContainer = styled.div<{ openMenu: boolean }>`
 display: flex;
 flex-direction: column;
 box-sizing: border-box; 
-max-width: 97%;
-width: 100%;
+width: 99%;
 padding-top: 35px;
-padding-left: 13px;
+padding-left: ${({ openMenu }) => openMenu ? '286px' : '115px'};
 
+@media(max-width: 1920px) {
+padding-top: 30px;
+padding-left: 0px;
+max-width: 95%;
+}
 
-@media(max-width: 1559px) {
-padding: 30px 0px 0px 10px;
+@media(max-width: 1556px) {
 max-width: 94%;
 }
 
@@ -52,3 +54,5 @@ max-width: 94%;
   padding: 70px 20px 0 20px;
 }
 `;
+
+/* padding-left: 293px; */

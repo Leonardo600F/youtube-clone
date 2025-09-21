@@ -1,4 +1,5 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
+
 import {
     Container,
     LogoContainer,
@@ -7,9 +8,11 @@ import {
     MenuButtonContainer,
     CreateVideoButtonContainer,
     ButtonIcon,
+    DropDownMenuButtonIcon,
     PlusIconContainer,
     NotificationIconContainer,
     ProfileImageContainer,
+    DropDownMenuProfileImageContainer,
     HiddenIcon,
     SearchButtonResponsive,
     SearchContainer,
@@ -26,11 +29,9 @@ import {
     LoginContainer,
     SpanButton,
     LoginButtonIcon,
-    DropDownMenu,
     DropDownMenuContent,
     UserInfoContainer,
-    UserName,
-    LogOutButton
+    UserName
 } from "./header-style";
 
 import { ComponentContext } from "../../context/componentContext";
@@ -53,6 +54,7 @@ import LogoutIcon from "../../assets/icon-logout.png";
 import YourVideosIcon from "../../assets/icon-your-videos.png";
 import DropDownMenuPortal from "./DropDownMenuPortal";
 
+
 export default function Header() {
 
     const { login, logOut, user, openDropDownMenu, setOpenDropDownMenu } = useContext(UserContext);
@@ -70,6 +72,54 @@ export default function Header() {
     const inputRef = useRef<HTMLInputElement>(null);
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (openDropDownMenu) {
+            // Salva a posição atual do scroll
+            const scrollY = window.scrollY;
+
+            // Aplica estilos para manter a barra visível mas impedir rolagem
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
+            document.body.style.overflowY = 'scroll'; // Mantém a barra visível
+
+            return () => {
+                // Remove os estilos e restaura a posição do scroll
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                window.scrollTo(0, scrollY);
+            };
+        }
+    }, [openDropDownMenu]);
+
+    useEffect(() => {
+
+        const handleClickOutside = (event: MouseEvent) => {
+            // Verifica se o clique foi no dropdown menu
+            const dropdownElement = document.querySelector('[data-dropdown-menu]');
+
+            // Se clicou no dropdown ou dentro dele, não fecha o menu
+            if (dropdownElement && dropdownElement.contains(event.target as Node)) {
+                return;
+            }
+
+            // Se clicou fora do dropdown, fecha o menu
+            setOpenDropDownMenu(false);
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+
+    }, []);
+
+    const handleOverlayClick = () => {
+        setOpenMenu(false);
+    };
 
     const search = () => {
         setOpenSearch(true);
@@ -209,34 +259,32 @@ export default function Header() {
 
                 {login ?
                     <>
-                        <ProfileImageContainer onClick={handleDropDownMenu}>
+                        <ProfileImageContainer onClick={handleDropDownMenu} data-profile-button>
                             {user && user.name ? user.name.charAt(0).toUpperCase() : ''}
                         </ProfileImageContainer>
 
                         <DropDownMenuPortal openDropDownMenu={openDropDownMenu}>
+
                             <UserInfoContainer>
-                                <ProfileImageContainer
+                                <DropDownMenuProfileImageContainer
                                     onClick={handleDropDownMenu}
-                                    style={{ backgroundColor: '#f2f2f2' }}
                                 >
-                                    {user && user.name ? user.name.charAt(0).toUpperCase() : ''}
-                                </ProfileImageContainer>
+                                    <span>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</span>
+                                </DropDownMenuProfileImageContainer>
+
                                 <UserName>{user && user.name ? user.name : ''}</UserName>
                             </UserInfoContainer>
 
                             <DropDownMenuContent onClick={goToYourVideos}>
-                                <ButtonIcon alt="ícone logout" src={LogoutIcon} />
-                                <LogOutButton>
-                                    Seus vídeos
-                                </LogOutButton>
+                                <DropDownMenuButtonIcon alt="ícone logout" src={LogoutIcon} />
+                                <span>Seus vídeos</span>
                             </DropDownMenuContent>
 
-                            <DropDownMenuContent onClick={goOut}>
-                                <ButtonIcon alt="ícone de vídeos" src={YourVideosIcon} />
-                                <LogOutButton>
-                                    Sair
-                                </LogOutButton>
+                            <DropDownMenuContent onClick={goOut} style={{ marginBottom: '15px' }}>
+                                <DropDownMenuButtonIcon alt="ícone de vídeos" src={YourVideosIcon} />
+                                <span>Sair</span>
                             </DropDownMenuContent>
+
                         </DropDownMenuPortal>
                     </>
                     :

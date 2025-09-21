@@ -4,10 +4,8 @@ export const PostsContainer = styled.div<{ openPosts: boolean }>`
 display: grid;
 height: ${({ openPosts }) => openPosts ? '590px' : '285px'};
 width: 100%;
-max-width: 97%;
 column-gap: 5px;
 grid-template-columns: repeat(6, 1fr);
-background-color: #fff;
 
 @media(max-width: 1920px) {
 grid-template-columns: repeat(4, 1fr);

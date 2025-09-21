@@ -79,10 +79,10 @@ font-size: 15px;
 }
 `;
 
-export const PostText = styled.span`
+export const PostText = styled.span<{ openMenu: boolean }>`
 display: flex;
-width: 200px;
-height: 120px;
+width: ${({ openMenu }) => openMenu ? '170px' : '200px'};
+height: ${({ openMenu }) => openMenu ? '130px' : '120px'};
 color: #8c8c8c;
 font-size: 14px;
 margin: 10px 0 0 25px;
@@ -95,12 +95,12 @@ cursor: pointer;
 }
 `;
 
-export const PostImage = styled.img`
+export const PostImage = styled.img<{ openMenu: boolean }>`
 display: flex;
 border-radius: 15px;
 width: 125px;
 height: 120px;
-margin: -125px 0 0 235px;
+margin: ${({ openMenu }) => openMenu ? '-125px 0 0 210px' : '-125px 0 0 235px'};
 
 @media(max-width: 1559px) {
 width: 145px;

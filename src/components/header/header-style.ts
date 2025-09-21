@@ -18,7 +18,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 box-sizing: border box;
-position: sticky;
+position: sticky; 
 height: 55px;
 width: 100%;
 top: 0%;
@@ -27,6 +27,7 @@ background-color: #fff;
 
 export const LogoContainer = styled.div`
 display: flex;
+width: fit-content;
 align-items: center;
 `;
 
@@ -34,17 +35,20 @@ export const MenuButtonContainer = styled.div`
 display: flex; 
 justify-content: center;
 align-items: center;
-margin-left: 23px;
+margin-left: 20px;
 width: 40px;
 height: 40px;
 cursor: pointer;
 border-radius: 50%;
 transition: 0.7s;
 
+&:hover {
+background-color: #9fd3c7;
+}
 
- &:hover {
-    background-color: #9fd3c7;
- }
+@media(max-width: 1920px) {
+margin-left: 20px;
+}
 
 @media(max-width: 1559px) {
 margin-left: 20px;
@@ -57,7 +61,7 @@ justify-content: center;
 align-items: center;
 width: 90px;
 height: 35px;
-margin: 6px 13px 0 -30px;
+margin: 0px 20px 0 0px;
 cursor: pointer;
 border-radius: 20px;
 transition: 0.7s;
@@ -98,11 +102,11 @@ export const NotificationIconContainer = styled.div`
 display: flex; 
 justify-content: center;
 align-items: center;
-width: 40px;
-height: 40px;
+width: 35px;
+height: 35px;
 border-radius: 50%;
 cursor: pointer;
-margin: 2px 10px 0 0;
+margin: 2px 20px 0 0;
 
  &:hover {
     background-color: #9fd3c7;
@@ -118,8 +122,8 @@ export const ProfileImageContainer = styled.div`
 display: flex; 
 justify-content: center;
 align-items: center;
-width: 40px;
-height: 40px;
+width: 35px;
+height: 35px;
 margin-top: 2px;
 border-radius: 50%;
 cursor: pointer;
@@ -134,8 +138,35 @@ cursor: pointer;
  }
 `;
 
+export const DropDownMenuProfileImageContainer = styled.div`
+display: flex; 
+justify-content: center;
+align-items: center;
+width: 42px;
+height: 42px;
+margin-left: 10px;
+border-radius: 50%;
+cursor: pointer;
+background-color: #f2f2f2;
+
+span {font-size: 24px;}
+
+&:hover {background-color: #9fd3c7}
+
+@media(max-width: 1559px) {
+width: 35px;
+height: 35px;
+}
+`;
+
 export const ButtonIcon = styled.img`
 width: 20px;
+`;
+
+export const DropDownMenuButtonIcon = styled.img`
+width: 24px;
+height: 24px;
+margin-left: 6px;
 `;
 
 export const HiddenIcon = styled.img<{ openBar: boolean }>`
@@ -156,7 +187,6 @@ background-color: #fff;
 
 export const Logo = styled.img`
 width: 100px;
-margin-left: 50px;
 cursor: pointer;
 
 @media(max-width: 414px) {
@@ -168,8 +198,8 @@ export const LinkLogo = styled(NavLink)`
 display: flex;
 justify-content: center;
 align-items: center;
-width: 100px;
-cursor: pointer;
+width: fit-content;
+margin-left: 20px;
 `;
 
 export const SearchContainer = styled.div<Responsive>`
@@ -298,9 +328,8 @@ margin-left: -290px;
 
 export const HeaderButton = styled.div`
 display: flex;
-width: 230px;
-margin-right: 5px;
-background-color: white;
+width: fit-content;
+margin-right: 55px;
 `;
 
 export const OptionsContainer = styled.div`
@@ -308,10 +337,10 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 height: 35px;
-width: 40px;
+width: 35px;
 border-radius: 50%;
 margin-top: 5px;
-margin-left: 60px;
+margin-right: 20px;
 cursor: pointer;
 background-color: #fff;
 `;
@@ -319,17 +348,13 @@ background-color: #fff;
 export const LoginContainer = styled.div`
 margin: 5px 5px 1px 10px;
 background-color: #f2f2f2;
-width: 150px;
+width: 120px;
 border-radius: 20px;
 border-color: #DCDCDC;
 border: 1px solid;
 color: #DCDCDC;
 transition: 0.5s;
 cursor: pointer;
-
-&:hover {
-   background-color: #00FFFF;
-}
 `;
 
 export const SpanButton = styled.span`
@@ -350,60 +375,56 @@ width: 22px;
 
 export const DropDownMenu = styled.div<ContainerProps>`
 display: ${({ openDropDownMenu }) => openDropDownMenu ? 'flex' : 'none'};
-  width: 200px;
-  flex-direction: column;
-  border-radius: 10px;
-  padding: 10 0px;
-  box-sizing: border-box;
-  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
-  position: absolute;
-  top: 8px;
-  right: 110px;
-  transition: 0.5s;
-  z-index: 2px;
-  background-color: #f8f8f8;
+flex-direction: column;
+box-sizing: border-box;
+position: fixed;
+width: 275px;
+border-radius: 10px;
+box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
+background-color: #f8f8f8;
+transition: 0.5s;
   
-
-  @media(max-width: 375px) {
-    right: 70px;
-  }
+@media(max-width: 375px) {
+width: 250px;
+}
 `;
+
 
 export const DropDownMenuContent = styled.div`
 display: flex;
 align-items: center;
 box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  z-index: 2px;
-  border-radius: 10px;
-  column-gap: 10px;
-  padding: 0 10px;
-  cursor: pointer;
+width: 100%;
+height: 40px;
+border-radius: 10px;
+margin-top: 15px;
+padding: 0 10px;
+cursor: pointer;
 
-  &:hover {
-    background-color: #e5e5e5;
-    cursor: pointer;
-  }
+span {
+margin-left: 23px;
+font-size: 16px;
+font-weight: 500;
+}
+
+&:hover {
+background-color: #e5e5e5;
+}
 `;
 
 export const UserInfoContainer = styled.div`
 display: flex;
 align-items: center;
-  width: 100%;
-  z-index: 2px;
-  height: 80px;
-  column-gap: 10px;
-`;
-export const UserName = styled.span`
-  font-size: 1.1rem;
-  font-weight: 400;
+width: 100%;
+height: fit-content;
+border-radius: 10px;
 `;
 
-export const LogOutButton = styled.button`
-  border: none;
-  outline: none;
-  font-size: 0.9rem;
-  font-weight: 300;
-  background-color: inherit;
+export const UserName = styled.span`
+  width: fit-content;
+  margin-left: 12px;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: default;
+  background-color: none;
 `;

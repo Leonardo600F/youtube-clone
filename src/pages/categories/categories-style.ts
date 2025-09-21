@@ -7,15 +7,17 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
 display: flex;
 align-items: center;
-width: ${({ openMenu }) => openMenu ? '91%' : '95%'};
-height: 45px;
-top: 55px;
 position: fixed;
+width: 100%;
+height: 55px;
+top: 55px; 
+left: ${({ openMenu }) => openMenu ? '270px' : '100px'}; 
 z-index: 1px;
 background-color: #fff;
 
 @media(max-width: 1920px) {
 width: 96%;
+top: 56px;
 }
 
 @media(max-width: 1559px) {
@@ -64,7 +66,7 @@ display: flex;
 align-items: center;
 justify-content: flex-start;
 height: 100%;
-margin-left: 5px;
+margin-left: 15px;
 z-index: 1px;
 column-gap: 10px;
 `;

@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const ShortsContainer = styled.div<{ openMenu: boolean }>`
 height: fit-content;
-width: 99%;
+width: 100%;
 margin-top: 40px;
 background-color: #fff;
 
 @media(max-width: 1920px) {
 height: 605px;
+width: 100%;
 }
 `;
 
@@ -62,8 +63,7 @@ display: flex;
 width: 35px;
 height: 35px;
 border-radius: 50%;
-position: absolute;
-right: 60px;
+margin-left: 2200px;
 transition: 0.3s;
 cursor: pointer;
 
@@ -71,9 +71,12 @@ cursor: pointer;
 background-color: #d3d3d3;
 }
 
+@media(max-width: 1920px) {
+right: 30px;
+}
+
 @media(max-width: 1559px) {
 right: 100px;
-
 }
 `;
 
@@ -89,6 +92,7 @@ export const SpanMessageContainer = styled.div`
 height: 50px;
 width: 98%;
 margin: 30px 0 0 25px;
+cursor: default;
 
 span {
 color: grey;

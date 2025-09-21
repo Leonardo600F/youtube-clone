@@ -167,7 +167,7 @@ const secondPosts = [
         icone: <PostsPictureContainer alt="" src={FunkyIcon} />,
         name: 'FunkyBlackCat • ',
         time: '3 dias',
-        text: 'Só avisando aqui, como eu tô só entrando no Black Myth Wukong agora as 23h do dia 19, vou postar só amanhã de manhã o vídeo do início. Depois vai ter live lá pelas 14 pra conti...',
+        text: 'Só avisando aqui, como eu tô só entrando no Black Myth Wukong agora as 23h do dia 19, vou postar só amanhã de manhã o vídeo do início. Depois vai ter live lá pelas 14 horas.',
         image: 'https://yt3.ggpht.com/sssAyIu-IJXbvFk6meF_7GC55N0ujNyVVIy_0QH4T5vBR_XRmB_I76XgSRAOIZIeBSbZW8nNpMGL=s640-c-fcrop64=1,38000000c7ffffff-rw-nd-v1',
         like: <LikeButtonIcon alt="" title="Gostei" src={LikeIcon} />,
         viewer: <LikeViewerNumber>4,9</LikeViewerNumber>,

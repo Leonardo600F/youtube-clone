@@ -21,7 +21,7 @@ import {
 } from "./secondPosts-style";
 
 export default function SecondPostsComponents({ secondPosts }: any) {
-    const { openPosts } = useContext(ComponentContext);
+    const { openPosts, openMenu } = useContext(ComponentContext);
 
     return (
         <Container openPosts={openPosts}>
@@ -33,8 +33,8 @@ export default function SecondPostsComponents({ secondPosts }: any) {
                         <PostTime>há {secondPosts.time} atrás</PostTime>
                     </ChannelImage>
 
-                    <PostText >{secondPosts.text}</PostText>
-                    <PostImage src={secondPosts.image} />
+                    <PostText openMenu={openMenu}>{secondPosts.text}</PostText>
+                    <PostImage openMenu={openMenu} src={secondPosts.image} />
 
                     <ButtonsContainer>
                         <PrimaryButtonsContainer>

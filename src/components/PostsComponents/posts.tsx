@@ -36,8 +36,8 @@ export default function PostsComponents({ post }: any) {
                     </ChannelImage>
 
 
-                    <PostText>{post.text}</PostText>
-                    <PostImage src={post.image} />
+                    <PostText openMenu={openMenu}>{post.text}</PostText>
+                    <PostImage openMenu={openMenu} src={post.image} />
 
                     <ButtonsContainer>
 

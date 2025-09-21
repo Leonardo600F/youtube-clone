@@ -2,134 +2,144 @@ import styled from "styled-components";
 
 export const Container = styled.div<{ openMenu: boolean }>`
  width: ${({ openMenu }) => openMenu ? '270px' : '100px'};
- height: calc(100vh - 55px);
+ height: 100vh;
  box-sizing: border-box;
- padding: 10px;
  top: 55px;
  display: flex;
  align-items: center;
  flex-direction: column;
- position: sticky;
+ position: fixed;
  overflow-y: auto;
+ background-color: #fff;
 
- @media(max-width: 1559px) {
- width: ${({ openMenu }) => openMenu ? '260px' : '90px'};
- }
+@media(max-width: 1920px) {
+width: ${({ openMenu }) => openMenu ? '260px' : '80px'};
+}
 `;
 
 export const MenuItemContainer = styled.div<{ openMenu: boolean }>`
 height: ${({ openMenu }) => openMenu ? '100%' : 'none'};
 width: 98%;
 margin-left: -12px;
-transition: 0.3s;
-cursor: pointer;
+margin-bottom: ${({ openMenu }) => openMenu ? '0px' : '6px'};
+cursor: default;
 
 :hover {
-  background-color: #f2f2f2; 
+background-color: #f2f2f2; 
+}
+
+@media(max-width: 1920px) {
 }
 `;
 
 export const MenuItem = styled.div<{ openMenu: boolean }>`
- min-height: ${({ openMenu }) => openMenu ? '40px' : '80px'};
- flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
- justify-content: ${({ openMenu }) => openMenu ? 'none' : 'center'};
- display: flex;
- box-sizing: border-box;
- width: 98%;
- align-items: center;
- border-radius: 10px;
- padding: 2px 15px;
- margin-bottom: ${({ openMenu }) => openMenu ? '5px' : '2px'};
- cursor: pointer;
-
- span {
-   font-weight: ${({ openMenu }) => openMenu ? '600' : '400'};
-   margin-left: ${({ openMenu }) => openMenu ? '25px' : 'none'};
-   font-size: ${({ openMenu }) => openMenu ? '14px' : '11px'};
- }
-
- @media(max-width: 1559px) {
- 
- span {
-   margin-left: ${({ openMenu }) => openMenu ? '20px' : 'none'};
-   font-size: ${({ openMenu }) => openMenu ? '12px' : '9px'};
- }
-
- }
-`;
-
-export const SpanItemContainer = styled.div`
-width: 80%;
-`;
-
-
-export const YouItem = styled.div<{ openMenu: boolean }>`
+width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
+min-height: ${({ openMenu }) => openMenu ? '40px' : '80px'};
 flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
 justify-content: ${({ openMenu }) => openMenu ? 'none' : 'center'};
-min-height: ${({ openMenu }) => openMenu ? '40px' : '5px'};
-margin: ${({ openMenu }) => openMenu ? '10px 0 5px' : 'none'};
-height: ${({ openMenu }) => openMenu ? '40px' : '80px'};
+margin-left: ${({ openMenu }) => openMenu ? '17px' : '10px'};
+margin-bottom: ${({ openMenu }) => openMenu ? '10px' : '2px'};
 display: flex;
-width: 98%;
+box-sizing: border-box;
+align-items: center;
+border-radius: 10px;
 padding: 2px 15px;
- border-radius: 10px;
- box-sizing: border-box;
- align-items: center;
- cursor: pointer;
+cursor: pointer;
 
- span {
-   font-weight: ${({ openMenu }) => openMenu ? '600' : '400'};
-   margin-left: ${({ openMenu }) => openMenu ? '0px' : 'none'};
-   font-size: ${({ openMenu }) => openMenu ? '18px' : '11px'};
- }
+span {
+font-weight: ${({ openMenu }) => openMenu ? '600' : '400'};
+margin-left: ${({ openMenu }) => openMenu ? '19px' : '0px'};
+font-size: ${({ openMenu }) => openMenu ? '14px' : '11px'};
+}
 
-  @media(max-width: 1559px) {
-  span {
-  font-size: ${({ openMenu }) => openMenu ? '16px' : '9px'};}
- }
+@media(max-width: 1920px) {
+min-height: ${({ openMenu }) => openMenu ? '40px' : '70px'};
+margin-left: ${({ openMenu }) => openMenu ? '16px' : '10px'};
+
+}
+
+@media(max-width: 1559px) {
+span {
+margin-left: ${({ openMenu }) => openMenu ? '20px' : 'none'};
+font-size: ${({ openMenu }) => openMenu ? '12px' : '9px'};
+}
+
+}
+`;
+
+export const YouItem = styled.div<{ openMenu: boolean }>`
+width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
+flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
+justify-content: ${({ openMenu }) => openMenu ? 'none' : 'center'};
+margin: ${({ openMenu }) => openMenu ? '10px 0 10px 17px' : '0px 0px 0px 10px'};
+min-height: ${({ openMenu }) => openMenu ? '40px' : '80px'};
+display: flex;
+border-radius: 10px;
+align-items: center;
+cursor: pointer;
+
+span {
+font-weight: ${({ openMenu }) => openMenu ? '600' : '400'};
+margin-left:  ${({ openMenu }) => openMenu ? '10px' : '0'};
+font-size: ${({ openMenu }) => openMenu ? '18px' : '11px'};
+}
+
+@media(max-width: 1920px) {
+min-height: ${({ openMenu }) => openMenu ? '40px' : '70px'};
+margin-left: ${({ openMenu }) => openMenu ? '16px' : '10px'};
+}
+
+@media(max-width: 1559px) {
+span {
+font-size: ${({ openMenu }) => openMenu ? '16px' : '9px'};}
+}
 `;
 
 export const MenuItemSecondPart = styled.div<{ openMenu: boolean }>`
-min-height: ${({ openMenu }) => openMenu ? '40px' : '0'};
-flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'none'};
-width: ${({ openMenu }) => openMenu ? '98%' : '0'};
-border-radius: ${({ openMenu }) => openMenu ? '10px' : '0'};
-padding: ${({ openMenu }) => openMenu ? '2px 15px' : '0'};;
-box-sizing: ${({ openMenu }) => openMenu ? 'border-box' : 'none'};
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
-align-items: ${({ openMenu }) => openMenu ? 'center' : 'none'};
-cursor: ${({ openMenu }) => openMenu ? 'pointer' : 'none'};
-margin-bottom: 7px;
+width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
+align-items: center;
+box-sizing: border-box;
+flex-direction: row;
+min-height: 40px;
+margin-left: 17px;
+margin-bottom: 10px;
+padding: 2px 15px;
+border-radius: 10px;
+cursor: pointer;
 
 span {
-  font-weight: ${({ openMenu }) => openMenu ? '600' : '0'};
-  margin-left: ${({ openMenu }) => openMenu ? '21px' : '0'};
-  font-size: ${({ openMenu }) => openMenu ? '14px' : '0'};
+font-weight: 600;
+margin-left: 19px;
+font-size: 14px;
 }
 
-  @media(max-width: 1559px) {
- span {
-
-  font-size: ${({ openMenu }) => openMenu ? '12px' : '0'};
+@media(max-width: 1920px) {
+width: 90%;
+margin-left: 16px;
+margin-bottom: 10px;
 }
- }
+
+@media(max-width: 1559px) {
+span {
+font-size: 12px;
+}
+}
 `;
 
 export const ButtonIcon = styled.img`
 width: 23px;
-margin-left: 10px;
 
 @media(max-width: 1559px) {
   width: 19px;
 }
 `;
 
-export const ContainerOneIcons = styled.img<{ openMenu: boolean }>`
-width: ${({ openMenu }) => openMenu ? '23px' : '22px'};
-margin-left: ${({ openMenu }) => openMenu ? '10px' : '0px'};
+export const ContainerOneIcons = styled.img`
+width: 23px;
 
 @media(max-width: 1559px) {
-width: ${({ openMenu }) => openMenu ? '19px' : '20px'};
+width: 20px;
 }
 `;
 
@@ -138,47 +148,49 @@ width: ${({ openMenu }) => openMenu ? '0' : '22px'};
 margin-left: ${({ openMenu }) => openMenu ? '10px' : '0px'};
 `;
 
-export const YouIconContainer = styled.div<{ openMenu: boolean }>`
-width: ${({ openMenu }) => openMenu ? 'none' : '23px'};
-`;
-
 export const LogOutYouMenuItem = styled.div<{ openMenu: boolean }>`
- min-height: ${({ openMenu }) => openMenu ? '40px' : '80px'};
- flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
- justify-content: ${({ openMenu }) => openMenu ? 'none' : 'center'};
- display: flex;
- box-sizing: border-box;
- width: 98%;
- align-items: center;
- border-radius: 10px;
- padding: 2px 15px;
- margin: ${({ openMenu }) => openMenu ? '10px 0 5px 0' : '0 0 2px 0'};
- cursor: pointer;
+min-height: ${({ openMenu }) => openMenu ? '40px' : '80px'};
+width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
+flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
+justify-content: ${({ openMenu }) => openMenu ? 'none' : 'center'};
+margin: ${({ openMenu }) => openMenu ? '10px 0 5px 17px' : '0 0 2px 10px'};
+display: flex;
+box-sizing: border-box;
+align-items: center;
+border-radius: 10px;
+padding: 2px 15px;
+cursor: pointer;
 
- span {
-   font-weight: ${({ openMenu }) => openMenu ? '600' : '400'};
-   margin-left: ${({ openMenu }) => openMenu ? '25px' : 'none'};
-   font-size: ${({ openMenu }) => openMenu ? '14px' : '11px'};
- }
+span {
+font-weight: ${({ openMenu }) => openMenu ? '600' : '400'};
+margin-left: ${({ openMenu }) => openMenu ? '19px' : 'none'};
+font-size: ${({ openMenu }) => openMenu ? '14px' : '11px'};
+}
 
-  @media(max-width: 1559px) {
+@media(max-width: 1920px) {
+min-height: ${({ openMenu }) => openMenu ? '40px' : '70px'};
+width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
+margin-left: ${({ openMenu }) => openMenu ? '16px' : '10px'};
+margin-bottom: 10px;
+}
 
-   span {
-   margin-left: ${({ openMenu }) => openMenu ? '25px' : 'none'};
-   font-size: ${({ openMenu }) => openMenu ? '12px' : '9px'};
- }
-
- }
+@media(max-width: 1559px) {
+span {
+margin-left: ${({ openMenu }) => openMenu ? '25px' : 'none'};
+font-size: ${({ openMenu }) => openMenu ? '12px' : '9px'};
+}
+}
 `;
 
 export const LogOutYouIconContainer = styled.div<{ openMenu: boolean }>`
-margin-left: ${({ openMenu }) => openMenu ? '10px' : '0px'};
+margin-left: 0;
 height: 23px;
 width: 23px;
 `;
 
 export const LogOutYouItemIcon = styled.img<{ openMenu: boolean }>`
 width: ${({ openMenu }) => openMenu ? '23px' : '22px'};
+background-color: none;
 
 @media(max-width: 1559px) {
 width: ${({ openMenu }) => openMenu ? '19px' : '20px'};
@@ -187,25 +199,15 @@ width: ${({ openMenu }) => openMenu ? '19px' : '20px'};
 
 
 export const LineContainer = styled.div<{ openMenu: boolean }>`
-width: ${({ openMenu }) => openMenu ? '100%' : '0'};
-height: ${({ openMenu }) => openMenu ? '10px' : '0'};
+display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
+width: 100%;
+height: 10px;
 `;
 
 export const Line = styled.div`
 width: 98%;
 height: 1px;
 background-color: #D3D3D3;
-`;
-
-export const SpanContainer = styled.div<{ openMenu: boolean }>`
-width: ${({ openMenu }) => openMenu ? '90%' : '0'};
-height: ${({ openMenu }) => openMenu ? '15px' : '0'};
-box-sizing: border-box;
-align-items: center;
-justify-content: center;
-display: flex;
-margin-bottom: 15px;
-margin-right: 20px;
 `;
 
 export const LoginContainer = styled.div<{ openMenu: boolean }>`
@@ -217,10 +219,12 @@ width: 100%;
 export const LoginRequestSpan = styled.span`
 width: 66%;
 height: 60px;
-padding-left: 25px;
+margin-top: 10px;
+margin-left: 25px;
 font-size: 15px;
 font-weight: 500;
 color: black;
+cursor: default;
 
 @media(max-width: 1559px) {
 font-size: 13px;
@@ -233,21 +237,23 @@ align-items: center;
 justify-content: space-evenly;
 height: 32px;
 width: 130px;
-margin: 70px 0 15px -67%;
+margin: 80px 0 15px -67%;
 border-radius: 20px;
 border: 1px solid;
-color: #DCDCDC;
 transition: 0.5s;
 cursor: pointer;
 border-color: #DCDCDC;
+color: #DCDCDC;
 background-color: #f2f2f2;
 
+span {
 font-size: 15px;
 font-weight: 600;
 color: #5353ec;
+}
 
 &:hover {
-   background-color: #00FFFF;
+background-color: #00FFFF;
 }
 
 @media(max-width: 1559px) {
@@ -255,18 +261,6 @@ color: #5353ec;
    height: 29px;
    font-size: 13px;
 }
-`;
-
-export const SpanButton = styled.span`
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-height: 100%;
-width: 100%;
-font-size: 15px;
-font-weight: 600;
-border-radius: 20px;
-color: #5353ec;
 `;
 
 export const LoginButtonIcon = styled.img`
@@ -278,38 +272,18 @@ width: 22px;
 `;
 
 export const PlusYouTubeContainer = styled.div<{ openMenu: boolean }>`
-width: ${({ openMenu }) => openMenu ? '100%' : '0'};
-height: ${({ openMenu }) => openMenu ? '15px' : '0'};
-box-sizing: border-box;
-align-items: center;
-justify-content: center;
-display: flex;
-margin-bottom: 10px;
-margin-top: 20px;
-`;
+display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
+width: fit-content;
+height: fit-content;
+margin: 10px 70px 10px 0;
+cursor: default;
 
-export const PlusYouTubeInfo = styled.span<{ openMenu: boolean }>`
-font-size: ${({ openMenu }) => openMenu ? '16px' : '0'};
-font-weight: ${({ openMenu }) => openMenu ? '700' : '0'};
-margin-right: ${({ openMenu }) => openMenu ? '26px' : '0'};
-
-@media(max-width: 1559px) {
-font-size: ${({ openMenu }) => openMenu ? '14px' : '0'};
-margin-right: ${({ openMenu }) => openMenu ? '55px' : '0'};
+span {
+font-weight: 700;
+font-size: 16px;
 }
-`;
 
-export const SpanInfo = styled.span<{ openMenu: boolean }>`
-font-weight: ${({ openMenu }) => openMenu ? '700' : '0'};
-font-size: ${({ openMenu }) => openMenu ? '16px' : '0'};
-margin-top: ${({ openMenu }) => openMenu ? '15px' : '0'};
-margin-right: ${({ openMenu }) => openMenu ? '110px' : '0'};
 
-@media(max-width: 1559px) {
-font-size: ${({ openMenu }) => openMenu ? '14px' : '0'};
-margin-left: ${({ openMenu }) => openMenu ? '0px' : '0px'};
-margin-right: ${({ openMenu }) => openMenu ? '90px' : '0'};
-}
 `;
 
 export const ChannelIcon = styled.img`
@@ -320,49 +294,129 @@ margin-right: 2px;
 `;
 
 export const CreditsContainer = styled.div<{ openMenu: boolean }>`
-width: ${({ openMenu }) => openMenu ? '98%' : '0'};
-height: ${({ openMenu }) => openMenu ? '18px' : '0'};
-margin-top: 10px;
-`;
+display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
+width: 80%;
+height: fit-content;
+margin: 20px 0px 80px 0px;
+cursor: default;
 
-export const CreditsSpan = styled.span<{ openMenu: boolean }>`
-font-size: ${({ openMenu }) => openMenu ? '11px' : '0'};
-font-weight: ${({ openMenu }) => openMenu ? '500' : '0'};
-color: ${({ openMenu }) => openMenu ? '#666666' : 'none'};
+span {
+font-size: 11px;
+font-weight: 700;
+color: #666666;
+}
+
+span:first-child {
+width: fit-content;
+height: fit-content;
+}
+
+span:last-child {
+width: fit-content;
+height: fit-content;
+margin-top: 25px;
+margin-left: -159px;
+}
+
+@media(max-width: 1920px) {
+
+span:last-child {
+margin-top: 20px;
+margin-left: -76%;
+}
+
+}
 `;
 
 export const YouItemArrow = styled.img<{ openMenu: boolean }>`
-width: ${({ openMenu }) => openMenu ? '13px' : '0'};
-display: flex;
-justify-content: center;
-alignt-items: center;
-margin-left: 8px;
+display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
+width: 12px;
 margin-top: 3px;
-
-@media(max-width: 1559px) {
-width: ${({ openMenu }) => openMenu ? '11px' : '0'};
-}
+margin-left: 15px;
 `;
 
 export const MusicIconContainer = styled.img`
 width: 10px;
 margin-left: 5px;
-color: grey;
 `;
 
 export const SocialMedia = styled.div<{ openMenu: boolean }>`
-height: ${({ openMenu }) => openMenu ? '50px' : '0'};
+height: ${({ openMenu }) => openMenu ? 'fit-content' : '0'};
 width: ${({ openMenu }) => openMenu ? '98%' : '0'};
 `;
 
 export const SocialMediaContainer = styled.div<{ openMenu: boolean }>`
-display: flex;
-justify-content: space-between;
+display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
+width: fit-content;
 align-items: center;
-margin-top: 20px;
+margin: 10px 0 10px 30px;
+cursor: default;
+
 `;
 
 export const SocialMediaIcons = styled.img<{ openMenu: boolean }>`
-width: ${({ openMenu }) => openMenu ? '25px' : '0'};
+width: 25px;
+cursor: pointer;
 `;
 
+export const ExplorerSpan = styled.span<{ openMenu: boolean }>`
+display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
+width: fit-content;
+height: fit-content;
+margin: 10px 130px 10px 0;
+cursor: default;
+
+span {
+font-weight: 700;
+font-size: 16px;
+}
+
+@media(max-width: 1559px) {
+font-size: 14px;
+margin-right: 90px;
+}
+}
+`;
+
+export const SubscribeSpan = styled.span<{ openMenu: boolean }>`
+display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
+width: fit-content;
+height: fit-content;
+margin: 10px 130px 10px 0;
+cursor: default;
+
+span {
+font-weight: 700;
+font-size: 16px;
+}
+
+@media(max-width: 1559px) {
+font-size: 14px;
+margin-right: 90px;
+}
+}
+`;
+
+export const ContactsSpan = styled.span<{ openMenu: boolean }>`
+display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
+width: fit-content;
+height: fit-content;
+margin-top: 10px;
+margin-left: 30px;
+cursor: default;
+
+span {
+font-weight: 700;
+font-size: 16px;
+}
+
+@media(max-width: 1920px) {
+margin-right: 10px;
+}
+
+@media(max-width: 1559px) {
+font-size: 14px;
+margin-right: 90px;
+}
+}
+`;

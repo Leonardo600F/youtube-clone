@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div<{ openMenu: boolean }>`
- width: 100%;
- height: ${({ openMenu }) => openMenu ? '420px' : '400px'};
- border-radius: 12px;
- cursor: pointer;
- background-color: #fff;
+width: 98%;
+height: ${({ openMenu }) => openMenu ? '420px' : '400px'};
+border-radius: 12px;
+cursor: pointer;
+background-color: #fff;
 
-   @media(max-width: 1920px) {
- height: ${({ openMenu }) => openMenu ? '430px' : '370px'};
- }
+@media(max-width: 1920px) {
+height: ${({ openMenu }) => openMenu ? '430px' : '370px'};
+}
 
-  @media(max-width: 1559px) {
- height: ${({ openMenu }) => openMenu ? '340px' : '345px'};
- }
+@media(max-width: 1559px) {
+height: ${({ openMenu }) => openMenu ? '340px' : '345px'};
+}
 `;
 
 export const BannerContainer = styled.div`
@@ -23,7 +23,7 @@ border-radius: 12px;
 transition: 0.5s;
 
 &:hover {
-   background-color: #ececec;
+background-color: #ececec;
 }
 `;
 
@@ -71,10 +71,10 @@ background-color: beige;
 `;
 
 export const TextContainer = styled.div`
-  display: flex;
-  height: fit-content;
-  flex-direction: column;
-  margin-top: 5px;
+display: flex;
+height: fit-content;
+flex-direction: column;
+margin-top: 5px;
 `;
 
 export const Title = styled.span<{ openMenu: boolean }>`

@@ -10,18 +10,15 @@ import {
     LineContainer,
     Line,
     ChannelIcon,
-    SpanContainer,
     LoginContainer,
     LoginRequestSpan,
+    SubscribeSpan,
+    ExplorerSpan,
+    ContactsSpan,
     MenuLoginContainer,
-    SpanButton,
     LoginButtonIcon,
     PlusYouTubeContainer,
-    PlusYouTubeInfo,
-    SpanInfo,
     CreditsContainer,
-    CreditsSpan,
-    YouIconContainer,
     LogOutYouMenuItem,
     LogOutYouIconContainer,
     LogOutYouItemIcon,
@@ -159,13 +156,13 @@ export default function Menu() {
     const { setCategoryId } = useCategoryContext();
 
     const items = [
-        { name: 'Início', link: '/', icon: <ContainerOneIcons openMenu={openMenu} alt="" title="Início" src={HomeIcon} /> },
-        { name: 'Shorts', link: '/', icon: <ContainerOneIcons openMenu={openMenu} alt="" title="Shorts" src={ShortsIcons} /> },
-        { name: 'Inscrições', link: '/', icon: <ContainerOneIcons openMenu={openMenu} alt="" title="Inscrições" src={SubIcon} /> }
+        { name: 'Início', link: '/', icon: <ContainerOneIcons alt="" title="Início" src={HomeIcon} /> },
+        { name: 'Shorts', link: '/', icon: <ContainerOneIcons alt="" title="Shorts" src={ShortsIcons} /> },
+        { name: 'Inscrições', link: '/', icon: <ContainerOneIcons alt="" title="Inscrições" src={SubIcon} /> }
     ];
 
     const logOutItems = [
-        { name: 'Histórico', link: '/', icon: <ContainerOneIcons openMenu={openMenu} alt="" title="Seu Histórico" src={HistoryIcon} /> }
+        { name: 'Histórico', link: '/', icon: <ContainerOneIcons alt="" title="Seu Histórico" src={HistoryIcon} /> }
     ];
 
     const navigate = useNavigate();
@@ -195,9 +192,7 @@ export default function Menu() {
 
                             <MenuItemContainer openMenu={openMenu}>
                                 <YouItem openMenu={openMenu} title="Você" onClick={() => navigate(youItem.link)}>
-                                    <YouIconContainer openMenu={openMenu}>
-                                        <YouItemIcon openMenu={openMenu} alt="" title="Você" src={YouIcon} />
-                                    </YouIconContainer>
+                                    <YouItemIcon openMenu={openMenu} alt="" title="Você" src={YouIcon} />
                                     <span>{youItem.name}</span>
                                     <YouItemArrow openMenu={openMenu} alt="" src={RightArrowIcon} />
                                 </YouItem>
@@ -259,18 +254,11 @@ export default function Menu() {
 
 
                 {login ?
-
-                    <SpanContainer openMenu={openMenu}>
-                        <SpanInfo openMenu={openMenu}>Inscrições</SpanInfo>
-                    </SpanContainer>
-
-                    :
-                    <SpanContainer openMenu={openMenu} />
-                }
-
-
-                {login ?
                     <>
+                        <SubscribeSpan openMenu={openMenu}>
+                            <span>Inscrições</span>
+                        </SubscribeSpan>
+
                         {subscribes.map((subscribes) => (
 
                             <MenuItemContainer openMenu={openMenu}>
@@ -286,11 +274,11 @@ export default function Menu() {
                     :
                     <LoginContainer openMenu={openMenu}>
 
-                        <LoginRequestSpan onClick={() => navigate('/sign-in')}>Faça login para curtir vídeos, comentar e se inscrever.</LoginRequestSpan>
+                        <LoginRequestSpan>Faça login para curtir vídeos, comentar e se inscrever.</LoginRequestSpan>
 
-                        <MenuLoginContainer>
+                        <MenuLoginContainer onClick={() => navigate('/sign-in')}>
                             <LoginButtonIcon alt="" src={LoginIcon} />
-                            Fazer login
+                            <span>Fazer login</span>
                         </MenuLoginContainer>
 
                     </LoginContainer>
@@ -301,10 +289,10 @@ export default function Menu() {
                     <Line />
                 </LineContainer>
 
-                <SpanContainer openMenu={openMenu}>
-                    <SpanInfo openMenu={openMenu}>Explorar</SpanInfo>
-                </SpanContainer>
 
+                <ExplorerSpan openMenu={openMenu}>
+                    <span>Explorar</span>
+                </ExplorerSpan>
 
                 {explorer.map((explorer) => (
                     <MenuItemContainer openMenu={openMenu}>
@@ -320,7 +308,7 @@ export default function Menu() {
                 </LineContainer>
 
                 <PlusYouTubeContainer openMenu={openMenu}>
-                    <PlusYouTubeInfo openMenu={openMenu}>Mais do YouTube</PlusYouTubeInfo>
+                    <span>Mais do YouTube</span>
                 </PlusYouTubeContainer>
 
 
@@ -350,30 +338,24 @@ export default function Menu() {
                     <Line />
                 </LineContainer>
 
-                <SpanContainer openMenu={openMenu}>
-                    <SpanInfo openMenu={openMenu}>Contatos</SpanInfo>
-                </SpanContainer>
-
                 <SocialMedia openMenu={openMenu}>
 
+                    <ContactsSpan openMenu={openMenu}>
+                        <span>Contatos</span>
+                    </ContactsSpan>
+
                     <SocialMediaContainer openMenu={openMenu}>
-                        <Link style={{ textDecoration: 'none' }} to='https://www.instagram.com/leonardo_marin_zem/' target="blank">
-                            <SocialMediaIcons openMenu={openMenu} alt="" title="Meu Instagram" src={Instagram} />
-                        </Link>
 
-                        <Link style={{ textDecoration: 'none' }} to='https://www.facebook.com/leonardo.marinzem/?locale=pt_BR' target="blank">
-                            <SocialMediaIcons openMenu={openMenu} alt="" title="Meu Facebook" src={FB} />
-                        </Link>
-
-                        <Link style={{ textDecoration: 'none' }} to='https://github.com/Leonardo600F' target="blank">
+                        <Link style={{ width: '25px', height: '25px' }} to='https://github.com/Leonardo600F' target="blank">
                             <SocialMediaIcons openMenu={openMenu} alt="" title="Meu GitHub" src={GitHub} />
                         </Link>
 
-                        <Link style={{ textDecoration: 'none' }} to='https://br.linkedin.com' target="blank">
+                        <Link style={{ width: '25px', height: '25px', marginLeft: '19px' }} to='https://br.linkedin.com' target="blank">
                             <SocialMediaIcons openMenu={openMenu} alt="" title="Meu LinkedIn" src={LinkedIn} />
                         </Link>
 
                     </SocialMediaContainer>
+
                 </SocialMedia>
 
                 <LineContainer openMenu={openMenu}>
@@ -381,10 +363,9 @@ export default function Menu() {
                 </LineContainer>
 
                 <CreditsContainer openMenu={openMenu}>
-                    <CreditsSpan openMenu={openMenu}>Todos os direitos reservados © </CreditsSpan>
-                    <CreditsSpan openMenu={openMenu}>Desenvolvido por: Leonardo Marin Zem</CreditsSpan>
+                    <span>Todos os direitos reservados © </span>
+                    <span >Desenvolvido por: Leonardo Marin Zem</span>
                 </CreditsContainer>
-
 
             </Container>
 

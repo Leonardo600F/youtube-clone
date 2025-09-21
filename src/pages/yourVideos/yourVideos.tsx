@@ -21,6 +21,7 @@ import {
     MessageContainer,
     EmptyInput
 } from './yourVideos-style';
+import Menu from "../../components/menu/menu";
 
 export default function YourVideos() {
 
@@ -159,80 +160,84 @@ export default function YourVideos() {
     }
 
     return (
-        <YourVideosContainer>
+        <>
+            <Menu />
+            <YourVideosContainer>
 
-            <Container openMenu={openMenu}>
-                <UserContainer>
-                    <UserProfile>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</UserProfile>
-                    <UserName>{user && user.name ? user.name : ''}</UserName>
-                    <AddVideoButton onClick={() => setHideModal(false)}>Cadastrar vídeo</AddVideoButton>
+                <Container openMenu={openMenu}>
+                    <UserContainer>
+                        <UserProfile>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</UserProfile>
+                        <UserName>{user && user.name ? user.name : ''}</UserName>
+                        <AddVideoButton onClick={() => setHideModal(false)}>Cadastrar vídeo</AddVideoButton>
 
-                    <Modal hideModal={hideModal}>
-                        <ModalContent>
-                            <CloseButton onClick={closeModal}>X</CloseButton>
-                            <ModalTitle>Enviar um novo vídeo</ModalTitle>
-                            <ThumbnailURL
-                                type="text"
-                                placeholder="URL"
-                                onChange={(e) => setThumbnail(e.target.value)}
-                                maxLength={200}
-                                ref={thumbnailRef}
-                                valid={thumbnailValid}
-                            />
-                            <MessageContainer>
-                                <EmptyInput valid={thumbnailValid}>
-                                    Digite a URL da thumbnail
-                                </EmptyInput>
-                            </MessageContainer>
-                            <VideoTitle
-                                type="text"
-                                onChange={(e) => setTitle(e.target.value)}
-                                placeholder="Título do vídeo"
-                                maxLength={100}
-                                ref={titleRef}
-                                valid={titleValid}
-                            />
-                            <MessageContainer>
-                                <EmptyInput valid={titleValid}>
-                                    Digite o título do vídeo
-                                </EmptyInput>
-                            </MessageContainer>
-                            <VideoDescription
-                                type="text"
-                                onChange={(e) => setDescription(e.target.value)}
-                                placeholder="Descrição do vídeo"
-                                maxLength={200}
-                                ref={descriptionRef}
-                                valid={descriptionValid}
-                            />
-                            <MessageContainer>
-                                <EmptyInput valid={descriptionValid}>
-                                    Digite a descrição do vídeo
-                                </EmptyInput>
-                            </MessageContainer>
+                        <Modal hideModal={hideModal}>
+                            <ModalContent>
+                                <CloseButton onClick={closeModal}>X</CloseButton>
+                                <ModalTitle>Enviar um novo vídeo</ModalTitle>
+                                <ThumbnailURL
+                                    type="text"
+                                    placeholder="URL"
+                                    onChange={(e) => setThumbnail(e.target.value)}
+                                    maxLength={200}
+                                    ref={thumbnailRef}
+                                    valid={thumbnailValid}
+                                />
+                                <MessageContainer>
+                                    <EmptyInput valid={thumbnailValid}>
+                                        Digite a URL da thumbnail
+                                    </EmptyInput>
+                                </MessageContainer>
+                                <VideoTitle
+                                    type="text"
+                                    onChange={(e) => setTitle(e.target.value)}
+                                    placeholder="Título do vídeo"
+                                    maxLength={100}
+                                    ref={titleRef}
+                                    valid={titleValid}
+                                />
+                                <MessageContainer>
+                                    <EmptyInput valid={titleValid}>
+                                        Digite o título do vídeo
+                                    </EmptyInput>
+                                </MessageContainer>
+                                <VideoDescription
+                                    type="text"
+                                    onChange={(e) => setDescription(e.target.value)}
+                                    placeholder="Descrição do vídeo"
+                                    maxLength={200}
+                                    ref={descriptionRef}
+                                    valid={descriptionValid}
+                                />
+                                <MessageContainer>
+                                    <EmptyInput valid={descriptionValid}>
+                                        Digite a descrição do vídeo
+                                    </EmptyInput>
+                                </MessageContainer>
 
-                            <AddVideoButton onClick={sendVideo}>Adicionar um vídeo</AddVideoButton>
-                            <ClearButton onClick={clearInputs}>Limpar</ClearButton>
-                        </ModalContent>
-                    </Modal>
-                </UserContainer>
-                {Array.isArray(userVideos) ? (
-                    userVideos.map((video: Videos) =>
-                        <YourVideosCards
-                            title={video.title}
-                            thumbnail={video.thumbnail}
-                            channelImage={user && user.name ? user.name.charAt(0).toUpperCase() : ''}
-                            details={video.description}
-                            publishedAt={getTimeDifference(video.publishedAt)}
-                            key={video.id}
-                        />)
-                )
-                    :
-                    (
-                        <h1>Esse canal não possui vídeos</h1>
-                    )}
-            </Container>
+                                <AddVideoButton onClick={sendVideo}>Adicionar um vídeo</AddVideoButton>
+                                <ClearButton onClick={clearInputs}>Limpar</ClearButton>
+                            </ModalContent>
+                        </Modal>
+                    </UserContainer>
+                    {Array.isArray(userVideos) ? (
+                        userVideos.map((video: Videos) =>
+                            <YourVideosCards
+                                title={video.title}
+                                thumbnail={video.thumbnail}
+                                channelImage={user && user.name ? user.name.charAt(0).toUpperCase() : ''}
+                                details={video.description}
+                                publishedAt={getTimeDifference(video.publishedAt)}
+                                key={video.id}
+                            />)
+                    )
+                        :
+                        (
+                            <h1>Esse canal não possui vídeos</h1>
+                        )}
+                </Container>
 
-        </YourVideosContainer>
+
+            </YourVideosContainer>
+        </>
     )
 }
