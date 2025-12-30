@@ -11,7 +11,7 @@ export default function ShortsComponent({ shortsVideo }: any) {
         <Container openMenu={openMenu}>
             <BannerContainer openMenu={openMenu}>
                 <ImageBanner src={shortsVideo.banner} openMenu={openMenu} />
-                <TitleContainer>
+                <TitleContainer openMenu={openMenu}>
                     <TextContainer>
                         <Title openMenu={openMenu}>{shortsVideo.title}</Title>
                         <TextCard openMenu={openMenu}>{shortsVideo.views} de visualizações</TextCard>
@@ -21,3 +21,15 @@ export default function ShortsComponent({ shortsVideo }: any) {
         </Container>
     )
 }
+
+/* <Container openMenu={openMenu}>
+            <BannerContainer openMenu={openMenu}>
+                <ImageBanner src={shortsVideo.banner} openMenu={openMenu} />
+                <TitleContainer openMenu={openMenu}>
+                    <TextContainer>
+                        <Title openMenu={openMenu}>{shortsVideo.title}</Title>
+                        <TextCard openMenu={openMenu}>{shortsVideo.views} de visualizações</TextCard>
+                    </TextContainer>
+                </TitleContainer>
+            </BannerContainer>
+        </Container> */

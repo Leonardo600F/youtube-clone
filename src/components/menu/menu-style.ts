@@ -15,6 +15,10 @@ export const Container = styled.div<{ openMenu: boolean }>`
 @media(max-width: 1920px) {
 width: ${({ openMenu }) => openMenu ? '260px' : '80px'};
 }
+
+@media(max-width: 1152px) {
+display: none;
+}
 `;
 
 export const MenuItemContainer = styled.div<{ openMenu: boolean }>`
@@ -26,9 +30,6 @@ cursor: default;
 
 :hover {
 background-color: #f2f2f2; 
-}
-
-@media(max-width: 1920px) {
 }
 `;
 
@@ -55,15 +56,6 @@ font-size: ${({ openMenu }) => openMenu ? '14px' : '11px'};
 @media(max-width: 1920px) {
 min-height: ${({ openMenu }) => openMenu ? '40px' : '70px'};
 margin-left: ${({ openMenu }) => openMenu ? '16px' : '10px'};
-
-}
-
-@media(max-width: 1559px) {
-span {
-margin-left: ${({ openMenu }) => openMenu ? '20px' : 'none'};
-font-size: ${({ openMenu }) => openMenu ? '12px' : '9px'};
-}
-
 }
 `;
 
@@ -89,10 +81,7 @@ min-height: ${({ openMenu }) => openMenu ? '40px' : '70px'};
 margin-left: ${({ openMenu }) => openMenu ? '16px' : '10px'};
 }
 
-@media(max-width: 1559px) {
-span {
-font-size: ${({ openMenu }) => openMenu ? '16px' : '9px'};}
-}
+
 `;
 
 export const MenuItemSecondPart = styled.div<{ openMenu: boolean }>`
@@ -119,28 +108,14 @@ width: 90%;
 margin-left: 16px;
 margin-bottom: 10px;
 }
-
-@media(max-width: 1559px) {
-span {
-font-size: 12px;
-}
-}
 `;
 
 export const ButtonIcon = styled.img`
 width: 23px;
-
-@media(max-width: 1559px) {
-  width: 19px;
-}
 `;
 
 export const ContainerOneIcons = styled.img`
 width: 23px;
-
-@media(max-width: 1559px) {
-width: 20px;
-}
 `;
 
 export const YouItemIcon = styled.img<{ openMenu: boolean }>`
@@ -173,13 +148,6 @@ width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
 margin-left: ${({ openMenu }) => openMenu ? '16px' : '10px'};
 margin-bottom: 10px;
 }
-
-@media(max-width: 1559px) {
-span {
-margin-left: ${({ openMenu }) => openMenu ? '25px' : 'none'};
-font-size: ${({ openMenu }) => openMenu ? '12px' : '9px'};
-}
-}
 `;
 
 export const LogOutYouIconContainer = styled.div<{ openMenu: boolean }>`
@@ -191,10 +159,6 @@ width: 23px;
 export const LogOutYouItemIcon = styled.img<{ openMenu: boolean }>`
 width: ${({ openMenu }) => openMenu ? '23px' : '22px'};
 background-color: none;
-
-@media(max-width: 1559px) {
-width: ${({ openMenu }) => openMenu ? '19px' : '20px'};
-}
 `;
 
 
@@ -225,10 +189,6 @@ font-size: 15px;
 font-weight: 500;
 color: black;
 cursor: default;
-
-@media(max-width: 1559px) {
-font-size: 13px;
-}
 `;
 
 export const MenuLoginContainer = styled.div`
@@ -255,20 +215,10 @@ color: #5353ec;
 &:hover {
 background-color: #00FFFF;
 }
-
-@media(max-width: 1559px) {
-   width: 110px;
-   height: 29px;
-   font-size: 13px;
-}
 `;
 
 export const LoginButtonIcon = styled.img`
 width: 22px;
-
-@media(max-width: 1559px) {
-   width: 19px;
-}
 `;
 
 export const PlusYouTubeContainer = styled.div<{ openMenu: boolean }>`
@@ -282,8 +232,6 @@ span {
 font-weight: 700;
 font-size: 16px;
 }
-
-
 `;
 
 export const ChannelIcon = styled.img`
@@ -323,9 +271,7 @@ margin-left: -159px;
 span:last-child {
 margin-top: 20px;
 margin-left: -76%;
-}
-
-}
+}}
 `;
 
 export const YouItemArrow = styled.img<{ openMenu: boolean }>`
@@ -351,7 +297,6 @@ width: fit-content;
 align-items: center;
 margin: 10px 0 10px 30px;
 cursor: default;
-
 `;
 
 export const SocialMediaIcons = styled.img<{ openMenu: boolean }>`
@@ -370,12 +315,6 @@ span {
 font-weight: 700;
 font-size: 16px;
 }
-
-@media(max-width: 1559px) {
-font-size: 14px;
-margin-right: 90px;
-}
-}
 `;
 
 export const SubscribeSpan = styled.span<{ openMenu: boolean }>`
@@ -388,12 +327,6 @@ cursor: default;
 span {
 font-weight: 700;
 font-size: 16px;
-}
-
-@media(max-width: 1559px) {
-font-size: 14px;
-margin-right: 90px;
-}
 }
 `;
 
@@ -412,11 +345,5 @@ font-size: 16px;
 
 @media(max-width: 1920px) {
 margin-right: 10px;
-}
-
-@media(max-width: 1559px) {
-font-size: 14px;
-margin-right: 90px;
-}
 }
 `;

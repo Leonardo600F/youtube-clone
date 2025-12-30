@@ -11,8 +11,6 @@ import {
     LoginContainer,
     GoogleIconContainer,
     LoginSpanContainer,
-    LoginSpan,
-    SecondLoginSpan,
     EmailInfoContainer,
     EmailContainer,
     EmailInput,
@@ -24,16 +22,13 @@ import {
     PasswordLabel,
     InvalidPasswordMessage,
     ShowPasswordContainer,
-    CheckboxContainer,
     StyledCheckbox,
-    ShowPasswordSpanContainer,
-    ShowPasswordSpan,
     ButtonsContainer,
     SignUpContainer,
     ButtonsContainerSpans,
     NextButtonContainer,
-    EmptyContainer,
-    EmptyMessage
+    EmailEmptyContainer,
+    PasswordEmptyContainer
 
 } from "./sign-in-styles";
 
@@ -101,13 +96,109 @@ export default function SignIn() {
 
     return (
         <MainContainer>
-
             <LoginContainer>
                 <GoogleIconContainer alt="" src={GoogleIcon} />
 
                 <LoginSpanContainer>
-                    <LoginSpan>Fazer login</LoginSpan>
-                    <SecondLoginSpan >Prosseguir no YouTube</SecondLoginSpan>
+                    <span>Fazer login</span>
+                    <span >Prosseguir no YouTube</span>
+                </LoginSpanContainer>
+
+                <EmailInfoContainer valid={validEmail}>
+
+                    <EmailContainer isFocused={isFocused} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)}>
+
+                        <EmailInput
+                            valid={validEmail}
+                            value={email}
+                            ref={emailRef}
+                            placeholder=" "
+                            type='email'
+                            onChange={(e) => setEmail(e.target.value)}
+
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    userLogin()
+                                }
+                            }}
+                        />
+
+                        <EmailLabel valid={validEmail}>E-mail ou telefone</EmailLabel>
+
+                    </EmailContainer>
+
+                    <EmailEmptyContainer valid={validEmail}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <span>Não foi possível encontrar sua Conta do Google.</span>
+                    </EmailEmptyContainer>
+
+                </EmailInfoContainer>
+
+                <PasswordInfoContainer valid={validPassword}>
+
+                    <PasswordContainer passwordFocused={passwordFocused} onFocus={() => setPasswordFocused(true)} onBlur={() => setPasswordFocused(false)}>
+                        <PasswordInput
+                            valid={validPassword}
+                            value={password}
+                            ref={passwordRef}
+                            maxLength={16}
+                            placeholder=" "
+                            type={showPassword ? 'text' : 'password'}
+                            onChange={(e) => setPassword(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    userLogin()
+                                }
+                                if (e.key === " ") {
+                                    e.preventDefault();
+                                }
+                            }}
+                        />
+                        <PasswordLabel valid={validPassword}>Digite sua senha</PasswordLabel>
+                    </PasswordContainer>
+
+                    <PasswordEmptyContainer valid={validPassword}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <span>Senha incorreta. Tente novamente.</span>
+                    </PasswordEmptyContainer>
+
+                </PasswordInfoContainer>
+
+                <ShowPasswordContainer>
+
+                    <StyledCheckbox
+                        checked={showPassword}
+                        onChange={() => setShowPassword(!showPassword)}
+                    />
+
+                    <span onClick={() => setShowPassword(!showPassword)}>Mostrar senha</span>
+                </ShowPasswordContainer>
+
+                <ButtonsContainer>
+
+                    <SignUpContainer onClick={() => navigate('/sign-up')}>
+                        <span>Criar conta</span>
+                    </SignUpContainer>
+
+                    <NextButtonContainer>
+                        <span onClick={userLogin} >Próxima</span>
+                    </NextButtonContainer>
+
+                </ButtonsContainer>
+
+
+            </LoginContainer>
+        </MainContainer>
+
+    )
+}
+
+/*  <LoginContainer>
+                <GoogleIconContainer alt="" src={GoogleIcon} />
+
+                <LoginSpanContainer>
+                    <span>Fazer login</span>
+                    <span >Prosseguir no YouTube</span>
                 </LoginSpanContainer>
 
                 <EmailInfoContainer>
@@ -172,27 +263,25 @@ export default function SignIn() {
                 </PasswordInfoContainer>
 
                 <ShowPasswordContainer>
-                    <StyledCheckbox onClick={() => setShowPassword(!showPassword)} />
-                    <ShowPasswordSpanContainer>
-                        <ShowPasswordSpan>Mostrar senha</ShowPasswordSpan>
-                    </ShowPasswordSpanContainer>
+
+                    <StyledCheckbox
+                        checked={showPassword}
+                        onChange={() => setShowPassword(!showPassword)}
+                    />
+
+                    <span onClick={() => setShowPassword(!showPassword)}>Mostrar senha</span>
                 </ShowPasswordContainer>
 
                 <ButtonsContainer>
 
                     <SignUpContainer onClick={() => navigate('/sign-up')}>
-                        <ButtonsContainerSpans style={{ color: "#4169E1" }}>Criar conta</ButtonsContainerSpans>
+                        <span>Criar conta</span>
                     </SignUpContainer>
 
                     <NextButtonContainer>
-                        <ButtonsContainerSpans style={{ paddingLeft: "25px", color: "#fff" }} onClick={userLogin} >Próxima</ButtonsContainerSpans>
+                        <span onClick={userLogin} >Próxima</span>
                     </NextButtonContainer>
 
                 </ButtonsContainer>
 
-            </LoginContainer>
-
-        </MainContainer>
-
-    )
-}
+            </LoginContainer>*/

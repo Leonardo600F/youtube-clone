@@ -1,6 +1,5 @@
 
 import {
-
     ButtonIcon,
     Container,
     MenuItem,
@@ -72,10 +71,8 @@ import ArtistIcon from '../../assets/avatar-artist.png';
 import CoD from '../../assets/avatar-cod.png';
 import Playstation from '../../assets/avatar-playstation.png';
 import PapoDeCarona from '../../assets/avatar-papo-de-carona.png';
-import Instagram from '../../assets/icon-instagram.png';
 import GitHub from '../../assets/icon-github.png';
 import VerifyIcon from '../../assets/icon-verify.png';
-import FB from '../../assets/icon-facebook.png';
 import LinkedIn from '../../assets/icon-linkedin.png';
 
 import { useContext } from "react";
@@ -146,7 +143,6 @@ const configs = [
 
 ];
 
-
 export default function Menu() {
 
     const { login } = useContext(UserContext);
@@ -169,10 +165,8 @@ export default function Menu() {
 
     return (
         <>
-
             <Container openMenu={openMenu}>
                 {items.map((items) => (
-
                     <MenuItemContainer openMenu={openMenu}>
                         <MenuItem openMenu={openMenu} onClick={() => navigate(items.link)}>
                             <div>{items.icon}</div>

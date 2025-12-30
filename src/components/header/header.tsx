@@ -14,7 +14,12 @@ import {
     ProfileImageContainer,
     DropDownMenuProfileImageContainer,
     HiddenIcon,
-    SearchButtonResponsive,
+    ResponsiveSearchButton,
+    ResponsiveSearchGeneralContainer,
+    ResponsiveSearchContainer,
+    ResponsiveSearchInputContainer,
+    ResponsiveSecondSearchButton,
+    ResponsiveBackButton,
     SearchContainer,
     SearchInputContainer,
     SearchInput,
@@ -42,9 +47,12 @@ import { useSearchContext } from "../../context/searchContext";
 
 import YouTubeLogoIcon from "../../assets/icon-youtube-logo.png";
 import SearchIcon from "../../assets/icon-search.png";
+import ResponsiveSearchIcon from "../../assets/icon-responsive-search.png";
 import MenuIcon from "../../assets/icon-menu.png";
 import CloseIcon from "../../assets/icon-close.png";
 import MicIcon from "../../assets/icon-mic.png";
+import LeftArrowIcon from '../../assets/icon-left-arrow-responsive.png';
+import ResponsiveMicIcon from "../../assets/icon-responsive-mic.png";
 import PlusIcon from "../../assets/icon-plus.png";
 import NotificationIcon from "../../assets/icon-notification.png";
 import OptionsIcon from "../../assets/icon-options.png";
@@ -177,15 +185,71 @@ export default function Header() {
 
             </LogoContainer>
 
-            <SearchButtonResponsive onClick={search}>
-                <ButtonIcon alt="Pesquisar" src={SearchIcon} />
-            </SearchButtonResponsive>
+            <ResponsiveSearchButton onClick={() => setOpenSearch(true)}>
+                <ButtonIcon title="Pesquisar" src={ResponsiveSearchIcon} />
+            </ResponsiveSearchButton>
+
+            <ResponsiveSearchGeneralContainer openSearch={openSearch}>
+
+                <ResponsiveBackButton title="Voltar" onClick={() => setOpenSearch(false)}>
+                    <ButtonIcon style={{ width: '20px', height: '20px', margin: '10px 0 0 10px' }} alt="Voltar" src={LeftArrowIcon} />
+                </ResponsiveBackButton>
+
+                <ResponsiveSearchContainer>
+
+                    <ResponsiveSearchInputContainer openBar={openBar} onFocus={() => setOpenBar(true)} onBlur={() => setOpenBar(false)}>
+
+                        <HiddenIcon openBar={openBar} alt="" src={SearchIcon} />
+
+                        <SearchInput
+                            openBar={openBar}
+                            ref={inputRef}
+                            value={inputValue}
+                            placeholder="Pesquisar"
+                            onChange={(e) => {
+                                handleInput(e.target.value)
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    setSearch(inputValue)
+                                    navigate('/search')
+                                    setOpenSearch(false)
+                                }
+                            }}
+                        />
+
+                        <KeyboardContainer alt="Teclado digital" src={KeyboardIcon} />
+
+                        <ClearButton
+                            clearButton={clearButton}
+                            onClick={clearInput}>
+
+                            <CloseImg src={CloseIcon} />
+                        </ClearButton>
+
+                    </ResponsiveSearchInputContainer>
+
+                </ResponsiveSearchContainer>
+
+                <ResponsiveSecondSearchButton onClick={() => {
+                    if (inputValue.trim() === '') {
+                        alert('Digite algo antes de pesquisar')
+                        return;
+                    }
+                    setSearch(inputValue)
+                    navigate('/search')
+                }}>
+                    <ButtonIcon alt="" src={ResponsiveSearchIcon} />
+                </ResponsiveSecondSearchButton>
+
+                <MicButton style={{ marginLeft: '7px' }}>
+                    <ButtonIcon alt="" title="Pesquisar com sua voz" src={ResponsiveMicIcon} />
+                </MicButton>
+
+            </ResponsiveSearchGeneralContainer>
 
             <SearchContainer openSearch={openSearch}>
 
-                <BackButton openSearch={openSearch} onClick={() => setOpenSearch(false)}>
-                    <img alt="" src={SearchIcon} style={{ width: '20px' }} />
-                </BackButton>
 
                 <SearchInputContainer openBar={openBar} onFocus={() => setOpenBar(true)} onBlur={() => setOpenBar(false)}>
 
@@ -227,13 +291,13 @@ export default function Header() {
                     setSearch(inputValue)
                     navigate('/search')
                 }}>
-                    <ButtonIcon alt="" src={SearchIcon} />
+                    <ButtonIcon alt="" src={ResponsiveSearchIcon} />
                 </SearchButton>
 
             </SearchContainer>
 
             <MicButton>
-                <ButtonIcon alt="" title="Pesquisar com sua voz" src={MicIcon} />
+                <ButtonIcon alt="" title="Pesquisar com sua voz" src={ResponsiveMicIcon} />
             </MicButton>
 
 
@@ -260,7 +324,7 @@ export default function Header() {
                 {login ?
                     <>
                         <ProfileImageContainer onClick={handleDropDownMenu} data-profile-button>
-                            {user && user.name ? user.name.charAt(0).toUpperCase() : ''}
+                            <span>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</span>
                         </ProfileImageContainer>
 
                         <DropDownMenuPortal openDropDownMenu={openDropDownMenu}>

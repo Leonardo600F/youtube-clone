@@ -10,24 +10,28 @@ interface ValidInput {
 }
 
 export const Container = styled.div<ContainerProps>`
- width: 100%;
-  max-width: 1600px;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 25px;
-  row-gap: 20px;
-  padding: ${({ openMenu }) => openMenu ? '70px 50px 0 330px' : '70px 10px 0 100px'};
-  box-sizing: border-box;
+display: flex;
+flex-wrap: wrap;
+box-sizing: border-box;
+width: 100%;
+max-width: 1600px;
+column-gap: 25px;
+row-gap: 20px;
+padding: ${({ openMenu }) => openMenu ? '70px 50px 0 330px' : '70px 10px 0 100px'};
 
-  @media(max-width: 834px) {
-    padding: 70px 10px 0 100px;
-    justify-content: center;
-  }
+@media(max-width: 1152px) {
+padding: 70px 0px 0 100px;
+}
 
-  @media(max-width: 414px) {
-    padding: 70px 10px 0 10px;
-    justify-content: center;
-  }
+@media(max-width: 834px) {
+padding: 70px 10px 0 100px;
+justify-content: center;
+}
+
+@media(max-width: 414px) {
+padding: 70px 10px 0 10px;
+justify-content: center;
+}
 `;
 
 export const YourVideosContainer = styled.div`
@@ -63,6 +67,7 @@ cursor: pointer;
 export const UserName = styled.h1`
 margin-left: 20px;
 margin-top: 4px;
+cursor: default;
 `;
 
 export const Modal = styled.div<ContainerProps>`

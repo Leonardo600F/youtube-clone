@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect, useMemo } from "react";
 import { ComponentContext } from "../../context/componentContext";
 import { useCategoryContext } from "../../context/searchCategories";
 
@@ -13,6 +13,16 @@ export default function Categories() {
 
     const { openMenu } = useContext(ComponentContext);
     const { setCategoryId } = useCategoryContext();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const [sliderPosition, setSliderPosition] = useState(0);
 
@@ -32,6 +42,17 @@ export default function Categories() {
         { name: 'Documentários', id: '26' }
     ];
 
+    const displayCategories = useMemo(() => {
+        if (windowWidth <= 393) return categoryButtons.slice(0, 4);
+        if (windowWidth <= 483) return categoryButtons.slice(0, 5);
+        if (windowWidth <= 635) return categoryButtons.slice(0, 6);
+        if (windowWidth <= 821) return categoryButtons.slice(0, 7);
+        if (windowWidth <= 930) return categoryButtons.slice(0, 8);
+        if (windowWidth <= 976) return categoryButtons.slice(0, 9);
+        if (windowWidth <= 1015) return categoryButtons.slice(0, 10);
+        return categoryButtons;
+    }, [windowWidth, categoryButtons]);
+
     function searchCategory(id: string) {
         setCategoryId(id)
     }
@@ -41,8 +62,8 @@ export default function Categories() {
 
         <Container openMenu={openMenu}>
             <SliderContent>
-                {categoryButtons.map((button, index) => (
-                    <Button onClick={() => searchCategory(button.id)} key={index}>{button.name}</Button>
+                {displayCategories.map((button, index) => (
+                    <Button openMenu={openMenu} onClick={() => searchCategory(button.id)} key={index}>{button.name}</Button>
                 ))}
             </SliderContent>
         </Container>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import moment from "moment";
-import { Container, HomeContainer, MainContainer } from './home-style';
-import { useState, useEffect, useContext } from "react";
+import { Container, MainContainer } from './home-style';
+import { useState, useEffect, useContext, useMemo } from "react";
 import { ComponentContext } from "../../context/componentContext";
 import { useCategoryContext } from "../../context/searchCategories";
 import Menu from "../../components/menu/menu";
@@ -9,10 +9,12 @@ import Categories from "../categories/categories";
 import VideosCardsComponent from "../../components/VideosCardsComponents/videosCardsComponent";
 import ShortsHome from "../shortsHome/shortsHome";
 import PostsHome from "../PostsHome/postsHome";
+import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
 
 export default function Home() {
 
     const { openMenu } = useContext(ComponentContext);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     interface Videos {
         id: string;
@@ -99,9 +101,32 @@ export default function Home() {
         }
     }
 
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const ResponsiveMenuApplication = useMemo(() => {
+        if (windowWidth >= 1153) {
+            return (
+                <Menu />
+            )
+        } else {
+            return (
+                <ResponsiveMenu />
+            )
+        }
+
+    }, [windowWidth])
+
     return (
         <>
-            <Menu />
+            {ResponsiveMenuApplication}
             <MainContainer openMenu={openMenu}>
                 <Categories />
                 <Container openMenu={openMenu}>

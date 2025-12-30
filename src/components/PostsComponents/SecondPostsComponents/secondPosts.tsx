@@ -21,13 +21,13 @@ import {
 } from "./secondPosts-style";
 
 export default function SecondPostsComponents({ secondPosts }: any) {
-    const { openPosts, openMenu } = useContext(ComponentContext);
+    const { openMenu, openPosts } = useContext(ComponentContext);
 
     return (
-        <Container openPosts={openPosts}>
-            <PostBannerContainer openPosts={openPosts}>
+        <Container openMenu={openMenu}>
+            <PostBannerContainer>
                 <PostBanner>
-                    <ChannelImage>
+                    <ChannelImage openMenu={openMenu}>
                         {secondPosts.icone}
                         <ChannelName>{secondPosts.name}</ChannelName>
                         <PostTime>há {secondPosts.time} atrás</PostTime>
@@ -37,7 +37,7 @@ export default function SecondPostsComponents({ secondPosts }: any) {
                     <PostImage openMenu={openMenu} src={secondPosts.image} />
 
                     <ButtonsContainer>
-                        <PrimaryButtonsContainer>
+                        <PrimaryButtonsContainer openMenu={openMenu}>
                             <LikeButtonContainer>{secondPosts.like}</LikeButtonContainer>
                             <LikeViewerContainer>{secondPosts.viewer} {secondPosts.count}</LikeViewerContainer>
                             <DeslikeButtonContainer >{secondPosts.deslike}</DeslikeButtonContainer>

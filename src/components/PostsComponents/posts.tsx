@@ -25,10 +25,44 @@ export default function PostsComponents({ post }: any) {
     const { openMenu } = useContext(ComponentContext);
 
     return (
-        <Container>
+        <Container openMenu={openMenu}>
             <PostBannerContainer>
                 <PostBanner>
-                    <ChannelImage>{post.icone}
+
+                    <ChannelImage openMenu={openMenu}>{post.icone}
+                        <ChannelName>{post.name}</ChannelName>
+                        <PostTime>há {post.time} atrás</PostTime>
+                    </ChannelImage>
+
+                    <PostText openMenu={openMenu}>{post.text}</PostText>
+                    <PostImage openMenu={openMenu} src={post.image} />
+
+                    <ButtonsContainer>
+
+                        <PrimaryButtonsContainer openMenu={openMenu}>
+                            <LikeButtonContainer>{post.like}</LikeButtonContainer>
+                            <LikeViewerContainer>{post.viewer} {post.count}</LikeViewerContainer>
+                            <DeslikeButtonContainer>{post.deslike}</DeslikeButtonContainer>
+                        </PrimaryButtonsContainer>
+
+                        <SecondButtonsContainer>
+                            <ShareButtonContainer>{post.share}</ShareButtonContainer>
+                            <CommentsButtonContainer>{post.comments} {post.numbers}</CommentsButtonContainer>
+                            <OptionsButtonContainer>{post.options}</OptionsButtonContainer>
+                        </SecondButtonsContainer>
+
+                    </ButtonsContainer>
+
+                </PostBanner>
+            </PostBannerContainer>
+        </Container>
+    )
+}
+
+/* <Container openMenu={openMenu}>
+            <PostBannerContainer>
+                <PostBanner>
+                    <ChannelImage openMenu={openMenu}>{post.icone}
 
                         <ChannelName>{post.name}</ChannelName>
                         <PostTime>há {post.time} atrás</PostTime>
@@ -41,7 +75,7 @@ export default function PostsComponents({ post }: any) {
 
                     <ButtonsContainer>
 
-                        <PrimaryButtonsContainer>
+                        <PrimaryButtonsContainer openMenu={openMenu}>
                             <LikeButtonContainer>{post.like}</LikeButtonContainer>
                             <LikeViewerContainer>{post.viewer} {post.count}</LikeViewerContainer>
                             <DeslikeButtonContainer>{post.deslike}</DeslikeButtonContainer>
@@ -56,6 +90,4 @@ export default function PostsComponents({ post }: any) {
                     </ButtonsContainer>
                 </PostBanner>
             </PostBannerContainer>
-        </Container>
-    )
-} 
+        </Container> */

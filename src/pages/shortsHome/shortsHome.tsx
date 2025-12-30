@@ -10,6 +10,7 @@ import {
     CloseButtonImage,
     ShortsLine,
     SpanMessageContainer,
+    SpanMessage,
     ReturnContainer
 } from "./shortsHome-style";
 
@@ -78,8 +79,9 @@ export default function ShortsHome() {
     }, []);
 
     const displayShorts = useMemo(() => {
-        if (windowWidth <= 819) return shortsVideo.slice(0, 1);
-        if (windowWidth <= 1559) return shortsVideo.slice(0, 5);
+        if (windowWidth <= 586) return shortsVideo.slice(0, 2);
+        if (windowWidth <= 976) return shortsVideo.slice(0, 3);
+        if (windowWidth <= 1680) return shortsVideo.slice(0, 5);
         if (windowWidth <= 1920) return shortsVideo.slice(0, 6);
         return shortsVideo;
     }, [windowWidth, shortsVideo]);
@@ -106,13 +108,13 @@ export default function ShortsHome() {
 
                 :
                 <SpanMessageContainer>
-                    <span>Esta ação vai ficar oculta por 30 dias</span>
+                    <SpanMessage>Esta ação vai ficar oculta por 30 dias</SpanMessage>
 
                     <ReturnContainer openShorts={openShorts} onClick={() => setOpenShorts(!openShorts)}>
                         <span>Desfazer</span>
                     </ReturnContainer>
-
                 </SpanMessageContainer>
+
 
             }
             <ShortsLine openShorts={openShorts} />

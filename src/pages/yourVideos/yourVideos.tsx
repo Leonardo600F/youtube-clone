@@ -4,6 +4,7 @@ import { ComponentContext } from "../../context/componentContext";
 import YourVideosCards from "../../components/yourVideosCards/yourVideosCards";
 
 import {
+
     Container,
     YourVideosContainer,
     UserContainer,
@@ -20,8 +21,11 @@ import {
     ClearButton,
     MessageContainer,
     EmptyInput
+
 } from './yourVideos-style';
+
 import Menu from "../../components/menu/menu";
+import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
 
 export default function YourVideos() {
 
@@ -162,6 +166,7 @@ export default function YourVideos() {
     return (
         <>
             <Menu />
+            <ResponsiveMenu />
             <YourVideosContainer>
 
                 <Container openMenu={openMenu}>

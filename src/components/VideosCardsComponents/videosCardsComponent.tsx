@@ -35,7 +35,6 @@ export default function VideosCardsComponent(props: Props) {
 
                     <ChannelImage openMenu={openMenu}>{props.channelImage}</ChannelImage>
                     <TextContainer>
-
                         <Title openMenu={openMenu}>{props.title}</Title>
                         <ChannelName>{props.channelName}</ChannelName>
 

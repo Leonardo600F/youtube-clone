@@ -32,10 +32,7 @@ import {
     ComparePasswordUserLabel,
     PasswordMessageContainer,
     ShowPasswordContainer,
-    CheckboxContainer,
     StyledCheckbox,
-    ShowPasswordSpanContainer,
-    ShowPasswordSpan,
     LoginPageContainer,
     LoginPage,
     NextButtonContainer,
@@ -189,7 +186,7 @@ export default function SignUp() {
                     </FirstNameUserContainer>
 
 
-                    <EmptyContainer style={{ margin: '86px 0 0 -98%' }} valid={userNameValid}>
+                    <EmptyContainer valid={userNameValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
                         <EmptyMessage>Digite um nome</EmptyMessage>
                     </EmptyContainer>
@@ -216,7 +213,7 @@ export default function SignUp() {
 
                     </SurnameUserContainer>
 
-                    <EmptyContainer style={{ margin: '86px 0 0 -98%' }} valid={userSurnameValid}>
+                    <EmptyContainer valid={userSurnameValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
                         <EmptyMessage>Digite um Sobrenome</EmptyMessage>
                     </EmptyContainer>
@@ -243,7 +240,7 @@ export default function SignUp() {
 
                     </EmailUserContainer>
 
-                    <EmptyContainer style={{ margin: '86px 0% 0 -98%' }} valid={userEmailValid}>
+                    <EmptyContainer valid={userEmailValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
                         <EmptyMessage>Digite um E-mail</EmptyMessage>
                     </EmptyContainer>
@@ -270,7 +267,7 @@ export default function SignUp() {
 
                     </PasswordUserContainer>
 
-                    <EmptyContainer style={{ margin: '86px 0% 0 -98%' }} valid={userPasswordValid}>
+                    <EmptyContainer valid={userPasswordValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
                         <EmptyMessage>Digite uma senha</EmptyMessage>
                     </EmptyContainer>
@@ -297,7 +294,7 @@ export default function SignUp() {
 
                     </ComparePasswordUserContainer>
 
-                    <EmptyContainer style={{ margin: '86px 0 0 -98%' }} valid={userPasswordValid}>
+                    <EmptyContainer valid={userPasswordValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
                         <EmptyMessage>Confirme sua senha</EmptyMessage>
                     </EmptyContainer>
@@ -311,17 +308,12 @@ export default function SignUp() {
 
                 <ShowPasswordContainer>
 
-                    <CheckboxContainer onClick={() => setShowPassword(!showPassword)}>
-                        <StyledCheckbox />
-                    </CheckboxContainer>
+                    <StyledCheckbox
+                        checked={showPassword}
+                        onChange={() => setShowPassword(!showPassword)}
+                    />
 
-                    <ShowPasswordSpanContainer>
-
-                        <ShowPasswordSpan>Mostrar senha</ShowPasswordSpan>
-
-                    </ShowPasswordSpanContainer>
-
-
+                    <span onClick={() => setShowPassword(!showPassword)}>Mostrar senha</span>
                 </ShowPasswordContainer>
 
                 <LoginPageContainer>
