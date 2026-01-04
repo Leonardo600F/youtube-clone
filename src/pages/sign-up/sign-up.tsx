@@ -193,6 +193,170 @@ export default function SignUp() {
 
                 </FirstNameContainer>
 
+                <SurnameContainer>
+                    <SurnameUserContainer surnameFocus={surnameFocus} onFocus={() => setSurnameFocus(true)} onBlur={() => setSurnameFocus(false)}>
+
+                        <SurnameUserInput
+                            valid={userSurnameValid}
+                            value={userSurname}
+                            ref={surnameRef}
+                            placeholder=' '
+                            type='text'
+                            onChange={(e) => {
+                                setUserSurname(e.target.value)
+                            }}
+                        />
+
+                        <SurnameLabel valid={userSurnameValid}>Sobrenome</SurnameLabel>
+
+                    </SurnameUserContainer>
+
+                    <EmptyContainer valid={userSurnameValid}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <EmptyMessage>Digite um Sobrenome</EmptyMessage>
+                    </EmptyContainer>
+
+                </SurnameContainer>
+
+                <EmailContainer>
+                    <EmailUserContainer emailFocus={emailFocus} onFocus={() => setEmailFocus(true)} onBlur={() => setEmailFocus(false)}>
+
+                        <EmailUserInput
+                            valid={userEmailValid}
+                            value={userEmail}
+                            ref={emailRef}
+                            placeholder=' '
+                            type='email'
+                            onChange={(e) => {
+                                setUserEmail(e.target.value)
+                            }
+                            }
+                        />
+
+                        <EmailUserLabel valid={userEmailValid}>E-mail</EmailUserLabel>
+
+                    </EmailUserContainer>
+
+                    <EmptyContainer valid={userEmailValid}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <EmptyMessage>Digite um E-mail</EmptyMessage>
+                    </EmptyContainer>
+                </EmailContainer>
+
+                <PasswordContainer>
+                    <PasswordUserContainer passwordFocus={passwordFocus} onFocus={() => setPasswordFocus(true)} onBlur={() => setPasswordFocus(false)}>
+
+                        <PasswordUserInput
+                            valid={userPasswordValid}
+                            value={userPassword}
+                            ref={passwordRef}
+                            placeholder=' '
+                            type={showPassword ? 'email' : 'password'}
+                            onChange={(e) => {
+                                setUserPassword(e.target.value)
+                            }
+                            }
+                        />
+
+                        <PasswordUserLabel valid={userPasswordValid}>Senha</PasswordUserLabel>
+
+                    </PasswordUserContainer>
+
+                    <EmptyContainer valid={userPasswordValid}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <EmptyMessage>Digite uma senha</EmptyMessage>
+                    </EmptyContainer>
+                </PasswordContainer>
+
+                <ComparePasswordContainer >
+                    <ComparePasswordUserContainer comparePasswordFocus={comparePasswordFocus} onFocus={() => setComparePasswordFocus(true)} onBlur={() => setComparePasswordFocus(false)}>
+
+                        <ComparePasswordUserInput
+                            valid={userPasswordValid}
+                            value={comparePassword}
+                            ref={comparePasswordRef}
+                            placeholder=' '
+                            type={showPassword ? 'email' : 'password'}
+                            onChange={(e) => {
+                                setComparePassword(e.target.value)
+                            }
+                            }
+                        />
+
+                        <ComparePasswordUserLabel valid={userPasswordValid}>Confirmar Senha</ComparePasswordUserLabel>
+
+                    </ComparePasswordUserContainer>
+
+                    <EmptyContainer valid={userPasswordValid}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <EmptyMessage>Confirme sua senha</EmptyMessage>
+                    </EmptyContainer>
+                </ComparePasswordContainer>
+
+                <PasswordMessageContainer>
+                    <span>Use 8 caracteres com uma combinação de letras, números e símbolos.</span>
+                </PasswordMessageContainer>
+
+                <ShowPasswordContainer>
+
+                    <StyledCheckbox
+                        checked={showPassword}
+                        onChange={() => setShowPassword(!showPassword)}
+                    />
+
+                    <span onClick={() => setShowPassword(!showPassword)}>Mostrar senha</span>
+                </ShowPasswordContainer>
+
+                <LoginPageContainer>
+                    <LoginPage>
+                        <span onClick={() => navigate('/sign-in')}>Faça login em vez disso</span>
+                    </LoginPage>
+                </LoginPageContainer>
+
+                <NextButtonContainer>
+                    <NextButton>
+                        <span onClick={createUser}>Próxima</span>
+                    </NextButton>
+                </NextButtonContainer>
+
+
+            </SignUpContainer>
+
+        </MainContainer>
+    )
+}
+
+/*         <MainContainer>
+
+            <SignUpContainer>
+
+                <GoogleIconContainer alt="ícone do Google" src={GoogleIcon} />
+                <Title>Criar uma conta no YouTube</Title>
+
+                <FirstNameContainer>
+                    <FirstNameUserContainer firstNameFocus={firstNameFocus} onFocus={() => setFirstNameFocus(true)} onBlur={() => setFirstNameFocus(false)}>
+
+                        <FirstNameUserInput
+                            valid={userNameValid}
+                            placeholder=' '
+                            type='text'
+                            value={userName}
+                            ref={nameRef}
+                            onChange={(e) => {
+                                setUserName(e.target.value)
+                            }}
+                        />
+                        <FirstNameLabel valid={userNameValid}>Nome</FirstNameLabel>
+
+                    </FirstNameUserContainer>
+
+
+                    <EmptyContainer valid={userNameValid}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <EmptyMessage>Digite um nome</EmptyMessage>
+                    </EmptyContainer>
+
+                </FirstNameContainer>
 
 
                 <SurnameContainer>
@@ -302,7 +466,7 @@ export default function SignUp() {
 
 
 
-                <PasswordMessageContainer>
+                <   >
                     <span>Use 8 caracteres com uma combinação de letras, números e símbolos.</span>
                 </PasswordMessageContainer>
 
@@ -330,6 +494,4 @@ export default function SignUp() {
 
             </SignUpContainer>
 
-        </MainContainer>
-    )
-}
+        </MainContainer> */

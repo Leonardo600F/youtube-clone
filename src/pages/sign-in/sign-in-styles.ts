@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
-interface InputValid {
-  valid: boolean;
-}
+interface InputValid {valid: boolean;}
+
+interface IsFocused {isFocused: boolean;}
+
+interface PasswordFocused {passwordFocused: boolean;}
 
 export const MainContainer = styled.div`
 display: flex;
@@ -82,6 +84,24 @@ border-radius: 50%;
 height: 43px;
 width: 43px;
 }
+
+@media(max-width: 599px) {
+height: 53px;
+width: 53px;
+margin: 20px 0 0 30px;  
+}
+
+@media(max-width: 550px) {
+margin-left: 15px;
+}
+
+@media(max-width: 400px) {
+margin-left: 4%;
+}
+
+@media(max-width: 400px) {
+margin-left: 4%;
+}
 `;
 
 export const LoginSpanContainer = styled.div`
@@ -100,11 +120,20 @@ margin: 1% 0 0 4%;
 font-size: 42px;
 font-weight: 600;
 margin: 2% 0 0 4%;
+
+@media(max-width: 500px) {margin-left: 5%;}
+
+@media(max-width: 400px) {margin-left: 6%;}
+
+@media(max-width: 350px) {margin-left: 7%;}
 }
 
 @media(max-width: 730px) {font-size: 38px;}
 
+@media(max-width: 599px) {font-size: 30px;}
+
 @media(max-width: 560px) {font-size: 33px;}
+
 }
 
 span:last-child {
@@ -114,6 +143,12 @@ margin: 1% 0 0 4%;
 @media(max-width: 976px) {
 font-weight: 500;
 margin-left: 4.3%;
+
+@media(max-width: 500px) {margin-left: 5%;}
+
+@media(max-width: 400px) {margin-left: 6%;}
+
+@media(max-width: 350px) {margin-left: 7%;}
 }
 
 @media(max-width: 730px) {font-size: 15px;}
@@ -128,7 +163,6 @@ height: ${({ valid }) => valid ? '38%' : '44%'};
 width: 50%;
 margin: -194px 0 0 50%;
 border-top-right-radius: 30px;
-background-color: green;
 
 @media(max-width: 1920px) {
 height: ${({ valid }) => valid ? '35%' : '41%'};
@@ -225,7 +259,7 @@ margin: 0px;
 }
 `;
 
-export const EmailContainer = styled.div<{ isFocused: boolean }>`
+export const EmailContainer = styled.div<IsFocused>`
 display: flex;
 height: 55px;
 width: 470px;
@@ -234,6 +268,7 @@ border: solid;
 border-radius: 5px;
 border-width: ${({ isFocused }) => isFocused ? '2px' : '1px'};
 border-color: ${({ isFocused }) => isFocused ? '#4169E1' : 'grey'};
+
 
 @media(max-width: 1920px) {
 width: 410px;
@@ -281,6 +316,14 @@ width: 385px;
 @media(max-width: 413px) {
 width: 330px;
 }
+
+@media(max-width: 360px) {
+width: 300px;
+}
+
+@media(max-width: 330px) {
+width: 280px;
+}
 `;
 
 export const EmailInput = styled.input<InputValid>`
@@ -319,7 +362,23 @@ max-height: 96.3%;
 }
 
 @media(max-width: 599px) {
-max-width: 98%;
+max-width: 97.5%;
+}
+
+@media(max-width: 535px) {
+max-width: 97%;
+}
+
+@media(max-width: 413px) {
+max-width: 96.3%;
+}
+
+@media(max-width: 360px) {
+max-width: 96%;
+}
+
+@media(max-width: 330px) {
+max-width: 95.5%;
 }
 
 &:focus + label,
@@ -330,13 +389,11 @@ font-size: 12px;
 transform: translateY(-27px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
-@media(max-width: 1920px) {
-transform: translateY(-24px);
-}
+@media(max-width: 1920px) {transform: translateY(-24px);}
 
-@media(max-width: 976px) {
-transform: translateY(-26px);
-}
+@media(max-width: 976px) {transform: translateY(-26px);}
+
+@media(max-width: 480px) {transform: translateY(-28px);}
 }
 `;
 
@@ -399,15 +456,23 @@ margin-left: -435px;
 }
 
 @media(max-width: 480px) {
-margin-left: -410px;
+margin-left: -405px;
 }
 
 @media(max-width: 450px) {
-margin-left: -380px;
+margin-left: -375px;
 }
 
 @media(max-width: 413px) {
-margin-left: -325px;
+margin-left: -320px;
+}
+
+@media(max-width: 360px) {
+margin-left: -290px;
+}
+
+@media(max-width: 330px) {
+margin-left: -270px;
 }
 `;
 
@@ -422,7 +487,6 @@ display: flex;
 width: 50%;
 height: ${({ valid }) => valid ? '15%' : '21%'};
 margin-left :50%;
-background-color: purple;
 
 @media(max-width: 1920px) {
 height: ${({ valid }) => valid ? '15%' : '20%'};
@@ -473,7 +537,7 @@ margin: 0 0 0 0%;
 }
 `;
 
-export const PasswordContainer = styled.div<{ passwordFocused: boolean }>`
+export const PasswordContainer = styled.div<PasswordFocused>`
 display: flex;
 height: 55px;
 width: 470px;
@@ -529,6 +593,14 @@ width: 385px;
 @media(max-width: 413px) {
 width: 330px;
 }
+
+@media(max-width: 360px) {
+width: 300px;
+}
+
+@media(max-width: 330px) {
+width: 280px;
+}
 `;
 
 export const PasswordInput = styled.input<InputValid>`
@@ -563,7 +635,27 @@ max-height: 96.3%;
 }
 
 @media(max-width: 599px) {
-max-width: 98%;
+max-width: 97.5%;
+}
+
+@media(max-width: 535px) {
+max-width: 97%;
+}
+
+@media(max-width: 480px) {
+max-width: 97%;
+}
+
+@media(max-width: 413px) {
+max-width: 96.3%;
+}
+
+@media(max-width: 360px) {
+max-width: 96%;
+}
+
+@media(max-width: 330px) {
+max-width: 95.5%;
 }
 
 &:focus + label,
@@ -575,13 +667,11 @@ font-size: 12px;
 transform: translateY(-27px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
-@media(max-width: 1920px) {
-transform: translateY(-24px);
-}
+@media(max-width: 1920px) {transform: translateY(-24px);}
 
-@media(max-width: 976px) {
-transform: translateY(-26px);
-}
+@media(max-width: 976px) {transform: translateY(-26px);}
+
+@media(max-width: 480px) {transform: translateY(-28px);}
 }
 `;
 
@@ -644,15 +734,23 @@ margin-left: -435px;
 }
 
 @media(max-width: 480px) {
-margin-left: -410px;
+margin-left: -405px;
 }
 
 @media(max-width: 450px) {
-margin-left: -380px;
+margin-left: -375px;
 }
 
 @media(max-width: 413px) {
-margin-left: -325px;
+margin-left: -320px;
+}
+
+@media(max-width: 360px) {
+margin-left: -290px;
+}
+
+@media(max-width: 330px) {
+margin-left: -270px;
 }
 `;
 
@@ -798,7 +896,6 @@ display: flex;
 height: 67px;
 width: 50%;
 margin: 50px 0 0 50%;
-background-color: blue;
 
 @media(max-width: 1760px) {
 margin-left: 45%;
@@ -856,6 +953,19 @@ margin-left: 34%;
 @media(max-width: 413px) {
 margin-left: 27%;
 }
+
+@media(max-width: 370px) {
+margin-left: 23%;
+}
+
+@media(max-width: 360px) {
+width: 260px;
+margin-left: 20%;
+}
+
+@media(max-width: 330px) {
+margin-left: 15%;
+}
 `;
 
 export const SignUpContainer = styled.div`
@@ -877,9 +987,7 @@ font-size: 14px;
 color: #4169E1;
 }
 
-&:hover {
-background-color: #F8F8FF;
-}
+&:hover {background-color: #F8F8FF;}
 
 @media(max-width: 1760px) {
 margin-left: 42%;
@@ -916,18 +1024,18 @@ cursor: pointer;
 background-color:rgb(150, 193, 233);
 
 span {
-width: fit-content;
-height: fit-content;
-margin: 11px 0 0 26px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
 border-radius: 50px;
 font-weight: 500;
 font-size: 14px;
 color:rgb(52, 93, 214);
 }
 
-&:hover {
-background-color: #6495ED;
-}
+&:hover {background-color: #6495ED;}
 `;
 
 export const EmailEmptyContainer = styled.div<InputValid>`
@@ -1104,6 +1212,35 @@ margin-left: -87.5%;
 @media(max-width: 390px) {
 margin-left: -89.8%;
 }
+
+@media(max-width: 380px) {
+margin-left: -92.3%;
+}
+
+@media(max-width: 370px) {
+margin-left: -95%;
+}
+
+@media(max-width: 360px) {
+margin-left: -89.3%;
+}
+
+@media(max-width: 350px) {
+margin-left: -91.6%;
+}
+
+@media(max-width: 340px) {
+margin-left: -94.3%;
+}
+
+@media(max-width: 330px) {
+margin-left: -91.3%;
+span {font-size: 13px;}
+}
+
+@media(max-width: 320px) {
+margin-left: -94%;
+}
 `;
 
 export const PasswordEmptyContainer = styled.div<InputValid>`
@@ -1271,5 +1408,34 @@ margin-left: -87.5%;
 
 @media(max-width: 390px) {
 margin-left: -89.8%;
+}
+
+@media(max-width: 380px) {
+margin-left: -92.3%;
+}
+
+@media(max-width: 370px) {
+margin-left: -95%;
+}
+
+@media(max-width: 360px) {
+margin-left: -89.3%;
+}
+
+@media(max-width: 350px) {
+margin-left: -91.6%;
+}
+
+@media(max-width: 340px) {
+margin-left: -94.3%;
+}
+
+@media(max-width: 330px) {
+margin-left: -91.3%;
+span {font-size: 13px;}
+}
+
+@media(max-width: 320px) {
+margin-left: -94%;
 }
 `;

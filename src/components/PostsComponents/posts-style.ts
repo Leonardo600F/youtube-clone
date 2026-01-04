@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{ openMenu: boolean }>`
+interface OpenMenu { openMenu: boolean;}
+
+export const Container = styled.div<OpenMenu>`
 width: 100%;
 height: 245px;
 margin-top: 20px;
@@ -597,7 +599,7 @@ font-size: 14px;
 }
 `;
 
-export const PostText = styled.span<{ openMenu: boolean }>`
+export const PostText = styled.span<OpenMenu>`
 display: flex;
 width: ${({ openMenu }) => openMenu ? '170px' : '200px'};
 height: ${({ openMenu }) => openMenu ? '130px' : '120px'};
@@ -890,7 +892,7 @@ width: 140px;
 }
 `;
 
-export const PostImage = styled.img<{ openMenu: boolean }>`
+export const PostImage = styled.img<OpenMenu>`
 display: flex;
 border-radius: 15px;
 width: 125px;
@@ -1224,7 +1226,7 @@ margin-top: 8px;
 }
 `;
 
-export const PrimaryButtonsContainer = styled.div<{ openMenu: boolean }>`
+export const PrimaryButtonsContainer = styled.div<OpenMenu>`
 display: flex;
 justify-content: space-between;
 align-items: center;

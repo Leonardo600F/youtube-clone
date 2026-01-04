@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{ openMenu: boolean }>`
+interface OpenMenu { openMenu: boolean; }
+
+export const Container = styled.div<OpenMenu>`
 width: 98%;
 height: ${({ openMenu }) => openMenu ? '455px' : '485px'};
 border-radius: 12px;
@@ -8,7 +10,7 @@ cursor: pointer;
 background-color: #fff;
 
 @media(max-width: 1920px) {
-height: ${({ openMenu }) => openMenu ? '430px' : '370px'};
+height: ${({ openMenu }) => openMenu ? '430px' : '365px'};
 }
 
 @media(max-width: 1760px) {
@@ -150,7 +152,7 @@ transition: 0.5s;
 &:hover {background-color: #ececec;}
 `;
 
-export const ImageBanner = styled.img<{ openMenu: boolean }>`
+export const ImageBanner = styled.img<OpenMenu>`
 width: ${({ openMenu }) => openMenu ? '97%' : '96%'};
 height: ${({ openMenu }) => openMenu ? '325px' : '350px'};
 margin-left: ${({ openMenu }) => openMenu ? '8px' : '11.5px'};
@@ -160,8 +162,8 @@ object-fit: cover;
 
 @media(max-width: 1920px) {
 width: ${({ openMenu }) => openMenu ? '97%' : '96%'};
-height: ${({ openMenu }) => openMenu ? '300px' : '230px'};
-margin-left: ${({ openMenu }) => openMenu ? '10px' : '10px'};
+height: ${({ openMenu }) => openMenu ? '300px' : '240px'};
+margin-left: ${({ openMenu }) => openMenu ? '8px' : '8.5px'};
 }
 
 @media(max-width: 1760px) {
@@ -366,7 +368,7 @@ height: 110px;
 }
 `;
 
-export const ChannelImage = styled.div<{ openMenu: boolean }>`
+export const ChannelImage = styled.div<OpenMenu>`
 display: flex;
 align-items: center;
 justify-content: center;
@@ -415,7 +417,7 @@ flex-direction: column;
 margin-top: 5px;
 `;
 
-export const Title = styled.span<{ openMenu: boolean }>`
+export const Title = styled.span<OpenMenu>`
 display: -webkit-box;
 -webkit-line-clamp: 2;
 -webkit-box-orient: vertical;

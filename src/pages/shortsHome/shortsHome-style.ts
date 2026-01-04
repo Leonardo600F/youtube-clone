@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
-export const ShortsContainer = styled.div<{ openMenu: boolean }>`
+interface OpenMenu {openMenu: boolean;}
+interface OpenButton {openButton: boolean;}
+interface OpenShorts {openShorts: boolean;}
+
+export const ShortsContainer = styled.div<OpenMenu>`
 height: fit-content;
 width: 100%;
 margin-top: 40px;
 background-color: green;
 `;
 
-export const ShortsSpanContainer = styled.div<{ openButton: boolean }>`
+export const ShortsSpanContainer = styled.div<OpenButton>`
 display: ${({ openButton }) => openButton ? 'flex' : 'none'};
 width: fit-content;
 align-items: center;
@@ -16,7 +20,7 @@ font-size: 20px;
 cursor: default;
 `;
 
-export const ShortsIconImage = styled.img<{ openButton: boolean }>`
+export const ShortsIconImage = styled.img<OpenButton>`
 width: 40px;
 margin-left: 10px;
 border-radius: 50px;
@@ -26,7 +30,7 @@ width: 35px;
 }
 `;
 
-export const Container = styled.div<{ openButton: boolean }>`
+export const Container = styled.div<OpenButton>`
 display: ${({ openButton }) => openButton ? 'grid' : 'none'};
 grid-template-columns: repeat(9, 1fr);
 column-gap: 3px;
@@ -58,14 +62,14 @@ column-gap: 11px;
 }
 `;
 
-export const ShortsLine = styled.div<{ openShorts: boolean }>`
+export const ShortsLine = styled.div<OpenShorts>`
 width: ${({ openShorts }) => openShorts ? '100%' : '0'};
 background-color: #989898;
 height: 1px;
 margin-top: 5px;
 `;
 
-export const CloseButtonContainer = styled.div<{ openMenu: boolean }>`
+export const CloseButtonContainer = styled.div<OpenMenu>`
 display: flex;
 width: 35px;
 height: 35px;
@@ -460,7 +464,7 @@ margin-left: 147px;
 }
 `;
 
-export const CloseButtonImage = styled.img<{ openShorts: boolean }>`
+export const CloseButtonImage = styled.img<OpenShorts>`
 display: flex;
 width: 30px;
 height: 30px;
@@ -485,7 +489,7 @@ margin: 50px 0 0 5px;
 }
 `;
 
-export const ReturnContainer = styled.div<{ openShorts: boolean }>`
+export const ReturnContainer = styled.div<OpenShorts>`
 height: 35px;
 width: 90px;
 margin: -27px 0px 0px 260px;

@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
-interface ContainerProps {
-    openMenu: boolean;
-}
+interface OpenMenu {openMenu: boolean;}
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div<OpenMenu>`
 width: 100%;
 max-width: 1600px;
 display: flex;

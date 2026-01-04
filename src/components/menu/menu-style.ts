@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{ openMenu: boolean }>`
+interface OpenMenu { openMenu: boolean;}
+
+export const Container = styled.div<OpenMenu>`
  width: ${({ openMenu }) => openMenu ? '270px' : '100px'};
  height: 100vh;
  box-sizing: border-box;
@@ -21,7 +23,7 @@ display: none;
 }
 `;
 
-export const MenuItemContainer = styled.div<{ openMenu: boolean }>`
+export const MenuItemContainer = styled.div<OpenMenu>`
 height: ${({ openMenu }) => openMenu ? '100%' : 'none'};
 width: 98%;
 margin-left: -12px;
@@ -33,7 +35,7 @@ background-color: #f2f2f2;
 }
 `;
 
-export const MenuItem = styled.div<{ openMenu: boolean }>`
+export const MenuItem = styled.div<OpenMenu>`
 width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
 min-height: ${({ openMenu }) => openMenu ? '40px' : '80px'};
 flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
@@ -59,7 +61,7 @@ margin-left: ${({ openMenu }) => openMenu ? '16px' : '10px'};
 }
 `;
 
-export const YouItem = styled.div<{ openMenu: boolean }>`
+export const YouItem = styled.div<OpenMenu>`
 width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
 flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
 justify-content: ${({ openMenu }) => openMenu ? 'none' : 'center'};
@@ -84,7 +86,7 @@ margin-left: ${({ openMenu }) => openMenu ? '16px' : '10px'};
 
 `;
 
-export const MenuItemSecondPart = styled.div<{ openMenu: boolean }>`
+export const MenuItemSecondPart = styled.div<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
 align-items: center;
@@ -118,12 +120,12 @@ export const ContainerOneIcons = styled.img`
 width: 23px;
 `;
 
-export const YouItemIcon = styled.img<{ openMenu: boolean }>`
+export const YouItemIcon = styled.img<OpenMenu>`
 width: ${({ openMenu }) => openMenu ? '0' : '22px'};
 margin-left: ${({ openMenu }) => openMenu ? '10px' : '0px'};
 `;
 
-export const LogOutYouMenuItem = styled.div<{ openMenu: boolean }>`
+export const LogOutYouMenuItem = styled.div<OpenMenu>`
 min-height: ${({ openMenu }) => openMenu ? '40px' : '80px'};
 width: ${({ openMenu }) => openMenu ? '90%' : '70px'};
 flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
@@ -150,19 +152,19 @@ margin-bottom: 10px;
 }
 `;
 
-export const LogOutYouIconContainer = styled.div<{ openMenu: boolean }>`
+export const LogOutYouIconContainer = styled.div<OpenMenu>`
 margin-left: 0;
 height: 23px;
 width: 23px;
 `;
 
-export const LogOutYouItemIcon = styled.img<{ openMenu: boolean }>`
+export const LogOutYouItemIcon = styled.img<OpenMenu>`
 width: ${({ openMenu }) => openMenu ? '23px' : '22px'};
 background-color: none;
 `;
 
 
-export const LineContainer = styled.div<{ openMenu: boolean }>`
+export const LineContainer = styled.div<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: 100%;
 height: 10px;
@@ -174,7 +176,7 @@ height: 1px;
 background-color: #D3D3D3;
 `;
 
-export const LoginContainer = styled.div<{ openMenu: boolean }>`
+export const LoginContainer = styled.div<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 height: 100%;
 width: 100%;
@@ -221,7 +223,7 @@ export const LoginButtonIcon = styled.img`
 width: 22px;
 `;
 
-export const PlusYouTubeContainer = styled.div<{ openMenu: boolean }>`
+export const PlusYouTubeContainer = styled.div<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: fit-content;
 height: fit-content;
@@ -241,7 +243,7 @@ border-radius: 50%;
 margin-right: 2px;
 `;
 
-export const CreditsContainer = styled.div<{ openMenu: boolean }>`
+export const CreditsContainer = styled.div<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: 80%;
 height: fit-content;
@@ -274,7 +276,7 @@ margin-left: -76%;
 }}
 `;
 
-export const YouItemArrow = styled.img<{ openMenu: boolean }>`
+export const YouItemArrow = styled.img<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: 12px;
 margin-top: 3px;
@@ -286,12 +288,12 @@ width: 10px;
 margin-left: 5px;
 `;
 
-export const SocialMedia = styled.div<{ openMenu: boolean }>`
+export const SocialMedia = styled.div<OpenMenu>`
 height: ${({ openMenu }) => openMenu ? 'fit-content' : '0'};
 width: ${({ openMenu }) => openMenu ? '98%' : '0'};
 `;
 
-export const SocialMediaContainer = styled.div<{ openMenu: boolean }>`
+export const SocialMediaContainer = styled.div<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: fit-content;
 align-items: center;
@@ -299,12 +301,12 @@ margin: 10px 0 10px 30px;
 cursor: default;
 `;
 
-export const SocialMediaIcons = styled.img<{ openMenu: boolean }>`
+export const SocialMediaIcons = styled.img<OpenMenu>`
 width: 25px;
 cursor: pointer;
 `;
 
-export const ExplorerSpan = styled.span<{ openMenu: boolean }>`
+export const ExplorerSpan = styled.span<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: fit-content;
 height: fit-content;
@@ -317,7 +319,7 @@ font-size: 16px;
 }
 `;
 
-export const SubscribeSpan = styled.span<{ openMenu: boolean }>`
+export const SubscribeSpan = styled.span<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: fit-content;
 height: fit-content;
@@ -330,7 +332,7 @@ font-size: 16px;
 }
 `;
 
-export const ContactsSpan = styled.span<{ openMenu: boolean }>`
+export const ContactsSpan = styled.span<OpenMenu>`
 display: ${({ openMenu }) => openMenu ? 'flex' : 'none'};
 width: fit-content;
 height: fit-content;

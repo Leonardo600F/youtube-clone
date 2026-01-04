@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
-interface ContainerProps {
-  openMenu: boolean;
-}
+interface OpenMenu {openMenu: boolean;}
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div<OpenMenu>`
 display: flex;
 align-items: center;
 position: fixed;
@@ -104,7 +102,7 @@ left: 0%;
 }
 `;
 
-export const Button = styled.button<ContainerProps>`
+export const Button = styled.button<OpenMenu>`
 height: 35px;
 display: inline-block;
 white-space: nowrap;

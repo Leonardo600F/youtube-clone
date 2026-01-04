@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{ openMenu: boolean }>`
+interface OpenMenu { openMenu: boolean;}
+
+export const Container = styled.div<OpenMenu>`
 height: ${({ openMenu }) => openMenu ? '555px' : '600px'};
 width: 100%;
 background-color: blue;
@@ -182,7 +184,7 @@ height: 300px;
 }
 `;
 
-export const BannerContainer = styled.div<{ openMenu: boolean }>`
+export const BannerContainer = styled.div<OpenMenu>`
 width: ${({ openMenu }) => openMenu ? '246px' : '265px'};
 height: ${({ openMenu }) => openMenu ? '500px' : '550px'};
 margin-top: 18px;
@@ -629,7 +631,7 @@ height: 278px;
 }
 `;
 
-export const ImageBanner = styled.img<{ openMenu: boolean }>`
+export const ImageBanner = styled.img<OpenMenu>`
 height: ${({ openMenu }) => openMenu ? '400px' : '450px'};
 width: ${({ openMenu }) => openMenu ? '225px' : '245px'};
 object-fit: cover;
@@ -1064,7 +1066,7 @@ height: 210px;
 }
 `;
 
-export const TitleContainer = styled.div<{ openMenu: boolean }>`
+export const TitleContainer = styled.div<OpenMenu>`
 width: 90%;
 margin-left: 9px;
 margin-top: 5px;
@@ -1125,7 +1127,7 @@ flex-direction: column;
 width: 100%;
 `;
 
-export const Title = styled.span<{ openMenu: boolean }>`
+export const Title = styled.span<OpenMenu>`
 display: flex;
 font-weight: 700;
 width: fit-content;
@@ -1171,7 +1173,7 @@ font-size: 11px;
 }
 `;
 
-export const TextCard = styled.div<{ openMenu: boolean }>`
+export const TextCard = styled.div<OpenMenu>`
 font-size: ${({ openMenu }) => openMenu ? '13px' : '16px'};
 width: fit-content;
 margin-top: 10px;

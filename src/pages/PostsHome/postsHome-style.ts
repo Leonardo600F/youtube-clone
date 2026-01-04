@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const PostsContainer = styled.div<{ openPosts: boolean }>`
+interface OpenPosts { openPosts: boolean;}
+
+export const PostsContainer = styled.div<OpenPosts>`
 display: grid;
 height: ${({ openPosts }) => openPosts ? '300px' : '290px'};
 width: 100%;
@@ -431,7 +433,7 @@ margin-top: 4px;
 }
 `;
 
-export const ShowMoreContainer = styled.div<{ openPosts: boolean }> `
+export const ShowMoreContainer = styled.div<OpenPosts> `
 width: 15%;
 height: 35px;
 margin-left: 42%;

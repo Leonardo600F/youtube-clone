@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div<{ openMenu: boolean }>`
+interface OpenMenu { openMenu: boolean;}
+
+export const MainContainer = styled.div<OpenMenu>`
 display: flex;
 flex-direction: column;
 box-sizing: border-box; 
@@ -23,7 +25,7 @@ padding-left: 15px;
 }
 `;
 
-export const Container = styled.div<{ openMenu: boolean }>`
+export const Container = styled.div<OpenMenu>`
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 width: 100%;
