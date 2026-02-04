@@ -26,7 +26,7 @@ export default function SecondPostsComponents({ secondPosts }: any) {
     return (
         <Container openMenu={openMenu}>
             <PostBannerContainer>
-                <PostBanner>
+                <PostBanner openMenu={openMenu}>
                     <ChannelImage openMenu={openMenu}>
                         {secondPosts.icone}
                         <ChannelName>{secondPosts.name}</ChannelName>

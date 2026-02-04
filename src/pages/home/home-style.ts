@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface OpenMenu { openMenu: boolean;}
+interface OpenMenu { openMenu: boolean }
 
 export const MainContainer = styled.div<OpenMenu>`
 display: flex;
@@ -13,17 +13,13 @@ background-color: red;
 
 @media(max-width: 1920px) {
 padding-top: 30px;
-padding-left: ${({ openMenu }) => openMenu ? '276px' : '94px'};
-}
+padding-left: ${({ openMenu }) => openMenu ? '276px' : '94px'}}
 
-@media(max-width: 1152px) {
-padding-left: 94px;
-}
+@media(max-width: 1312px) {padding-left: 89px}
 
-@media(max-width: 791px) {
-padding-left: 15px;
-}
-`;
+@media(max-width: 1152px) {padding-left: 94px}
+
+@media(max-width: 791px) {padding-left: 15px}`;
 
 export const Container = styled.div<OpenMenu>`
 display: grid;
@@ -33,25 +29,15 @@ column-gap: 5px;
 row-gap: 20px;
 margin-top: 35px;
 
-@media(max-width: 1920px) {
-grid-template-columns: ${({ openMenu }) => openMenu ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)'};
-}
+@media(max-width: 1920px) {grid-template-columns: ${({ openMenu }) => openMenu ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)'}}
 
-@media(max-width: 1760px) {
-grid-template-columns: repeat(3, 1fr);
-}
+@media(max-width: 1770px) {grid-template-columns: repeat(3, 1fr)}
 
 @media(max-width: 1152px) {
 margin-top: 20px;
 row-gap: 10px;
-column-gap: 0px;
-}
+column-gap: 0px}
 
-@media(max-width: 976px) {
-grid-template-columns: repeat(2, 1fr);
-}
+@media(max-width: 976px) {grid-template-columns: repeat(2, 1fr)}
 
-@media(max-width: 586px) {
-grid-template-columns: repeat(1, 1fr);
-}
-`;
+@media(max-width: 586px) {grid-template-columns: repeat(1, 1fr)}`;

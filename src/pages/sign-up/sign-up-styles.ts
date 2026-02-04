@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-interface InputValid {valid: boolean;}
+interface InputValid { valid: boolean; }
 
-interface FirstNameFocused {firstNameFocus: boolean;}
-interface SurnameFocused {surnameFocus: boolean;}
-interface EmailFocused {emailFocus: boolean;}
-interface PasswordFocused {passwordFocus: boolean;}
-interface ComparePasswordFocused {comparePasswordFocus: boolean;}
+interface FirstNameFocused { firstNameFocus: boolean; }
+interface SurnameFocused { surnameFocus: boolean; }
+interface EmailFocused { emailFocus: boolean; }
+interface PasswordFocused { passwordFocus: boolean; }
+interface ComparePasswordFocused { comparePasswordFocus: boolean; }
 
 export const MainContainer = styled.div`
 display: flex;
@@ -109,6 +109,11 @@ background-color: #fff;
 margin: 10% 0px 0 40px;
 }
 
+@media(max-width: 630px) {
+width: 226px;
+margin-left: 20px;
+}
+
 @media(max-width: 599px) {
 width: 560px;
 margin: 4% 0 0 26px;
@@ -177,13 +182,9 @@ border-radius: 5px;
 border-width: ${({ firstNameFocus }) => firstNameFocus ? '2px' : '1px'};
 border-color: ${({ firstNameFocus }) => firstNameFocus ? '#4169E1' : 'grey'};
 
-@media(max-width: 630px) {
-width: 220px;
-}
+@media(max-width: 630px) {width: 220px;}
 
-@media(max-width: 599px) {
-width: 99%;
-}
+@media(max-width: 599px) {width: 99%;}
 `;
 
 export const FirstNameUserInput = styled.input<InputValid>`
@@ -196,29 +197,24 @@ border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
 border-radius: 5px;
 border-color: red;
 padding-left: 10px;
-font-size: 16px;
+font-size: 16px;    
 outline: none;
 background-color: #fff;
 
-@media(max-width: 599px) {
-max-width: ${({ valid }) => valid ? '97.6%' : '98%'};
 
+@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'};}
 
-@media(max-width: 509px) {
-max-width: ${({ valid }) => valid ? '97.3%' : '98%'};
-}
+@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '98%'}};
 
-@media(max-width: 489px) {
-max-width: ${({ valid }) => valid ? '97%' : '97.5%'};
-}
+@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}};
 
-@media(max-width: 429px) {
-max-width: ${({ valid }) => valid ? '96%' : '97%'};
-}
+@media(max-width: 509px) {max-width: ${({ valid }) => valid ? '97.3%' : '98%'};}
 
-@media(max-width: 329px) {
-max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'};
-}
+@media(max-width: 489px) {max-width: ${({ valid }) => valid ? '97%' : '97.5%'};}
+
+@media(max-width: 429px) {max-width: ${({ valid }) => valid ? '96%' : '97%'};}
+
+@media(max-width: 329px) {max-width: ${({ valid }) => valid ? '95%' : '97%'};}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -227,6 +223,8 @@ width: 50px;
 font-size: 12px;
 transform: ${({ valid }) => valid ? 'translateY(-25px)' : 'translateY(-27px)'};
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
+
+@media(max-width: 890px) {transform: translateY(-27px);}
 
 @media(max-width: 630px) {transform: translateY(-25px);}
 
@@ -245,7 +243,10 @@ pointer-events: none;
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
+@media(max-width: 890px) {margin-top: ${({ valid }) => valid ? '17px' : '16px'};}
+
 @media(max-width: 599px) {
+margin-top: 18px;
 margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'};
 }
 
@@ -258,13 +259,11 @@ font-size: 14px;
 export const SurnameContainer = styled.div`
 display: flex;
 height: 100px;
-width: 255px;
+width: 260px;
 margin: -99px 0 0px 335px;
 background-color: #fff;
 
-@media(max-width: 1559px) {
-margin: -99px 0px 0 310px;
-}
+@media(max-width: 1559px) {margin: -99px 0px 0 310px;}
 
 @media(max-width: 630px) {
 width: 226px;
@@ -276,57 +275,31 @@ width: 560px;
 margin: 2% 0 0 26px;
 }
 
-@media(max-width: 589px) {
-width: 520px;
-}
+@media(max-width: 589px) {width: 520px;}
 
-@media(max-width: 559px) {
-width: 490px;
-}
+@media(max-width: 559px) {width: 490px;}
 
-@media(max-width: 529px) {
-width: 475px;
-}
+@media(max-width: 529px) {width: 475px;}
 
-@media(max-width: 509px) {
-width: 455px;
-}
+@media(max-width: 509px) {width: 455px;}
 
-@media(max-width: 489px) {
-width: 435px;
-}
+@media(max-width: 489px) {width: 435px;}
 
-@media(max-width: 469px) {
-width: 415px;
-}
+@media(max-width: 469px) {width: 415px;}
 
-@media(max-width: 449px) {
-width: 395px;
-}
+@media(max-width: 449px) {width: 395px;}
 
-@media(max-width: 429px) {
-width: 375px;
-}
+@media(max-width: 429px) {width: 375px;}
 
-@media(max-width: 409px) {
-width: 355px;
-}
+@media(max-width: 409px) {width: 355px;}
 
-@media(max-width: 389px) {
-width: 335px;
-}
+@media(max-width: 389px) {width: 335px;}
 
-@media(max-width: 369px) {
-width: 315px;
-}
+@media(max-width: 369px) {width: 315px;}
 
-@media(max-width: 349px) {
-width: 295px;
-}
+@media(max-width: 349px) {width: 295px;}
 
-@media(max-width: 329px) {
-width: 275px;
-}
+@media(max-width: 329px) {width: 275px;}
 `;
 
 export const SurnameUserContainer = styled.div<SurnameFocused>`
@@ -339,19 +312,15 @@ border-radius: 5px;
 border-width: ${({ surnameFocus }) => surnameFocus ? '2px' : '1px'};
 border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 
-@media(max-width: 630px) {
-width: 220px;
-}
+@media(max-width: 630px) {width: 220px;}
 
-@media(max-width: 599px) {
-width: 99%;
-}
+@media(max-width: 599px) {width: 99%;}
 `;
 
 export const SurnameUserInput = styled.input<InputValid>`
 width: 100%;
 height: 100%;
-max-width: 98%;
+max-width: ${({ valid }) => valid ? '95%' : '98%'};
 max-height: ${({ valid }) => valid ? '96%' : '100%'};
 margin: ${({ valid }) => valid ? 'none' : '-3px 0 0 -2px'};
 border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
@@ -362,29 +331,21 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
-@media(max-width: 599px) {
-max-width: ${({ valid }) => valid ? '97.9%' : '98%'};
-}
+@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'};}
 
-@media(max-width: 590px) {
-max-width: ${({ valid }) => valid ? '97.6%' : '98%'};
-}
+@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '98%'};}
 
-@media(max-width: 509px) {
-max-width: ${({ valid }) => valid ? '97%' : '97.5%'};
-}
+@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '97.9%' : '98%'};}
 
-@media(max-width: 489px) {
-max-width: ${({ valid }) => valid ? '97%' : '98%'};
-}
+@media(max-width: 590px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'};}
 
-@media(max-width: 429px) {
-max-width: ${({ valid }) => valid ? '96%' : '97%'};
-}
+@media(max-width: 509px) {max-width: ${({ valid }) => valid ? '97%' : '97.5%'};}
 
-@media(max-width: 329px) {
-max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'};
-}
+@media(max-width: 489px) {max-width: ${({ valid }) => valid ? '97%' : '98%'};}
+
+@media(max-width: 429px) {max-width: ${({ valid }) => valid ? '96%' : '97%'};}
+
+@media(max-width: 329px) {max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'};}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -394,11 +355,11 @@ font-size: 12px;
 transform: ${({ valid }) => valid ? 'translateY(-25px)' : 'translateY(-27px)'};
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
-@media(max-width: 630px) {transform: translateY(-25px);}
+@media(max-width: 890px) {transform: translateY(-27px)}
 
-@media(max-width: 349px) {transform: translateY(-30px);}
-}
-`;
+@media(max-width: 630px) {transform: translateY(-25px)}
+
+@media(max-width: 349px) {transform: translateY(-30px)}}`;
 
 export const SurnameLabel = styled.label<InputValid>`
 display: flex;
@@ -412,15 +373,15 @@ margin: ${({ valid }) => valid ? 'none' : '16px 0 0 -96%'};
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
+@media(max-width: 890px) {margin-top: ${({ valid }) => valid ? '17px' : '16px'}}
+
 @media(max-width: 599px) {
-margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'};
-}
+margin-top: 18px;
+margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
 
 @media(max-width: 349px) {
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
-font-size: 14px;
-}
-`;
+font-size: 14px}`;
 
 export const EmailContainer = styled.div`
 display: flex;
@@ -428,80 +389,45 @@ height: 100px;
 width: 540px;
 margin: 40px 0 0 60px;
 
-@media(max-width: 1559px) {
-margin-left: 40px;
-}
+@media(max-width: 1559px) {margin-left: 40px}
 
-@media(max-width: 1280px) {
-margin-top: 10px;
-}
+@media(max-width: 1280px) {margin-top: 10px}
+
+@media(max-width: 890px) {width: 530px}
 
 @media(max-width: 630px) {
 width: 482px;
-margin-left: 20px;
-}
+margin-left: 20px}
 
 @media(max-width: 599px) {
 width: 560px;
-margin: 2% 0 0 26px;
-}
+margin: 2% 0 0 26px}
 
-@media(max-width: 589px) {
-width: 520px;
-}
+@media(max-width: 589px) {width: 520px}
 
-@media(max-width: 559px) {
-width: 490px;
-}
+@media(max-width: 559px) {width: 490px}
 
-@media(max-width: 529px) {
-width: 475px;
-}
+@media(max-width: 529px) {width: 475px}
 
-@media(max-width: 509px) {
-width: 455px;
-}
+@media(max-width: 509px) {width: 455px}
 
-@media(max-width: 489px) {
-width: 435px;
-}
+@media(max-width: 489px) {width: 435px}
 
-@media(max-width: 469px) {
-width: 415px;
-}
+@media(max-width: 469px) {width: 415px}
 
-@media(max-width: 449px) {
-width: 395px;
-}
+@media(max-width: 449px) {width: 395px}
 
-@media(max-width: 429px) {
-width: 375px;
-}
+@media(max-width: 429px) {width: 375px}
 
-@media(max-width: 409px) {
-width: 355px;
-}
+@media(max-width: 409px) {width: 355px}
 
-@media(max-width: 409px) {
-width: 355px;
-}
+@media(max-width: 389px) {width: 335px}
 
-@media(max-width: 389px) {
-width: 335px;
-}
+@media(max-width: 369px) {width: 315px}
 
-@media(max-width: 369px) {
-width: 315px;
-}
+@media(max-width: 349px) {width: 295px}
 
-@media(max-width: 349px) {
-width: 295px;
-}
-
-@media(max-width: 329px) {
-width: 275px;
-}
-`;
+@media(max-width: 329px) {width: 275px}`;
 
 export const EmailUserContainer = styled.div<EmailFocused>`
 display: flex;
@@ -514,19 +440,17 @@ border-width: ${({ emailFocus }) => emailFocus ? '2px' : '1px'};
 border-color: ${({ emailFocus }) => emailFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {
-width: 477px;
-}
+@media(max-width: 890px) {width: 520px;}
 
-@media(max-width: 599px) {
-width: 99%;
-}   
+@media(max-width: 630px) {width: 477px;}
+
+@media(max-width: 599px) {width: 99%;}  
 `;
 
 export const EmailUserInput = styled.input<InputValid>`
 width: 100%;
 height: 100%;
-max-width: 98%;
+max-width: ${({ valid }) => valid ? '97.7%' : '98%'};
 max-height: ${({ valid }) => valid ? '96%' : '100%'};
 margin: ${({ valid }) => valid ? 'none' : '-4px 0 0 -2px'};
 border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
@@ -537,29 +461,21 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
-@media(max-width: 599px) {
-max-width: ${({ valid }) => valid ? '97.9%' : '98%'};
-}
+@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '97.5%' : '98%'}}
 
-@media(max-width: 590px) {
-max-width: ${({ valid }) => valid ? '97.6%' : '98%'};
-}
+@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '97.4%' : '98.9%'}}
 
-@media(max-width: 509px) {
-max-width: ${({ valid }) => valid ? '97%' : '97.5%'};
-}
+@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '97.9%' : '98%'}}
 
-@media(max-width: 489px) {
-max-width: ${({ valid }) => valid ? '97%' : '98%'};
-}
+@media(max-width: 590px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}}
 
-@media(max-width: 429px) {
-max-width: ${({ valid }) => valid ? '96%' : '97%'};
-}
+@media(max-width: 509px) {max-width: ${({ valid }) => valid ? '97%' : '97.5%'}}
 
-@media(max-width: 329px) {
-max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'};
-}
+@media(max-width: 489px) {max-width: ${({ valid }) => valid ? '97%' : '98%'}}
+
+@media(max-width: 429px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}
+
+@media(max-width: 329px) {max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'}}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -567,12 +483,10 @@ height: 15px;
 width: 53px;
 font-size: 12px;
 transform: translateY(-28px);
-color: ${({ valid }) => valid ? '#4169E1' : 'red'
-};
+color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 background-color: #fff;
 
-@media(max-width: 349px) {transform: translateY(-30px);}
-`;
+@media(max-width: 349px) {transform: translateY(-30px)}`;
 
 export const EmailUserLabel = styled.label<InputValid>`
 display: flex;
@@ -585,15 +499,11 @@ pointer-events: none;
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
-@media(max-width: 599px) {
-margin-left: ${({ valid }) => valid ? '-97%' : '-98%'};
-}
+@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'}}
 
 @media(max-width: 349px) {
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
-font-size: 14px;
-}
-`;
+font-size: 14px}`;
 
 export const PasswordContainer = styled.div`
 display: flex;
@@ -601,80 +511,43 @@ height: 100px;
 width: 255px;
 margin: 40px 0 0 60px;
 
-@media(max-width: 1559px) {
-margin: 40px 0 0 40px;
-}
+@media(max-width: 1559px) {margin: 40px 0 0 40px}
 
-@media(max-width: 1280px) {
-margin-top: 10px;
-}
+@media(max-width: 1280px) {margin-top: 10px}
 
 @media(max-width: 630px) {
-width: 230px;
-margin-left: 20px;
-}
+width: 226px;
+margin-left: 20px}
 
 @media(max-width: 599px) {
 width: 275px;
-margin-left: 26px;
-}
+margin-left: 26px}
 
-@media(max-width: 589px) {
-width: 245px;
-}
+@media(max-width: 589px) {width: 245px}
 
-@media(max-width: 579px) {
-width: 235px;
-}
+@media(max-width: 559px) {width: 240px}
 
-@media(max-width: 559px) {
-width: 240px;
-}
+@media(max-width: 529px) {width: 233px}
 
-@media(max-width: 529px) {
-width: 233px;
-}
+@media(max-width: 509px) {width: 222px}
 
-@media(max-width: 509px) {
-width: 222px;
-}
+@media(max-width: 489px) {width: 212px}
 
-@media(max-width: 489px) {
-width: 212px;
-}
+@media(max-width: 469px) {width: 202px}
 
-@media(max-width: 469px) {
-width: 202px;
-}
+@media(max-width: 449px) {width: 192px}
 
-@media(max-width: 449px) {
-width: 192px;
-}
+@media(max-width: 429px) {width: 182px}
 
-@media(max-width: 429px) {
-width: 182px;
-}
+@media(max-width: 409px) {width: 172px}
 
-@media(max-width: 409px) {
-width: 172px;
-}
+@media(max-width: 389px) {width: 162px}
 
-@media(max-width: 389px) {
-width: 162px;
-}
+@media(max-width: 369px) {width: 152px}
 
-@media(max-width: 369px) {
-width: 152px;
-}
+@media(max-width: 349px) {width: 142px}
 
-@media(max-width: 349px) {
-width: 142px;
-}
-
-@media(max-width: 329px) {
-width: 135px;
-}
-`;
+@media(max-width: 329px) {width: 135px}`;
 
 export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
@@ -687,19 +560,14 @@ border-width: ${({ passwordFocus }) => passwordFocus ? '2px' : '1px'};
 border-color: ${({ passwordFocus }) => passwordFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {
-width: 225px;
-}
+@media(max-width: 630px) {width: 220px}
 
-@media(max-width: 599px) {
-width: 98%;
-}
-`;
+@media(max-width: 599px) {width: 98%}`;
 
 export const PasswordUserInput = styled.input<InputValid>`
 width: 100%;
 height: 100%;
-max-width: 95.5%;
+max-width: ${({ valid }) => valid ? '95%' : '95.5%'};
 max-height: ${({ valid }) => valid ? '96%' : '100%'};
 margin: ${({ valid }) => valid ? 'none' : '-4px 0 0 -2px'};
 border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
@@ -710,34 +578,25 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
+@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'};}
 
-@media(max-width: 599px) {
-max-width: ${({ valid }) => valid ? '95%' : '96%'};
-}
+@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '96%'};}
 
-@media(max-width: 570px) {
-max-width: ${({ valid }) => valid ? '94.5%' : '96%'};
-}
+@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '95%' : '96%'};}
 
-@media(max-width: 509px) {
-max-width: ${({ valid }) => valid ? '94%' : '96%'};
-}
+@media(max-width: 570px) {max-width: ${({ valid }) => valid ? '94.5%' : '96%'};}
 
-@media(max-width: 489px) {
-max-width: ${({ valid }) => valid ? '93%' : '95%'};
-}
+@media(max-width: 509px) {max-width: ${({ valid }) => valid ? '94%' : '96%'};}
 
-@media(max-width: 409px) {
-max-width: ${({ valid }) => valid ? '92%' : '94%'};
-}
+@media(max-width: 489px) {max-width: ${({ valid }) => valid ? '93%' : '95%'};}
 
-@media(max-width: 389px) {
-max-width: ${({ valid }) => valid ? '91.2%' : '94%'};
-}
+@media(max-width: 409px) {max-width: ${({ valid }) => valid ? '92%' : '94%'};}
 
-@media(max-width: 330px) {
-max-width: ${({ valid }) => valid ? '91.2%' : '94%'};
-}
+@media(max-width: 389px) {max-width: ${({ valid }) => valid ? '91.2%' : '94%'};}
+
+@media(max-width: 330px) {max-width: ${({ valid }) => valid ? '91.2%' : '94%'};}
+
+@media(max-width: 322px) {max-width: ${({ valid }) => valid ? '91%' : '94%'};}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -778,12 +637,9 @@ height: 100px;
 width: 255px;
 margin: -100px 0 0 335px;
 
-@media(max-width: 1559px) {
-margin-left: 310px;
-}
+@media(max-width: 1559px) {margin-left: 310px;}
 
 @media(max-width: 630px) {
-width: 230px;
 margin-left: 273px;
 }
 
@@ -795,11 +651,6 @@ margin-left: 305px;
 @media(max-width: 589px) {
 width: 245px;
 margin-left: 300px;
-}
-
-@media(max-width: 579px) {
-width: 235px;
-margin-left: 270px;
 }
 
 @media(max-width: 559px) {
@@ -858,8 +709,8 @@ margin-left: 178px;
 }
 
 @media(max-width: 329px) {
-width: 135px;
-margin-left: 175px;
+width: 130px;
+margin-left: 170px;
 }
 `;
 
@@ -875,7 +726,7 @@ border-color: ${({ comparePasswordFocus }) => comparePasswordFocus ? '#4169E1' :
 background-color: #fff;
 
 @media(max-width: 630px) {
-width: 225px;
+width: 226px;
 }
 
 @media(max-width: 599px) {
@@ -886,7 +737,7 @@ width: 98%;
 export const ComparePasswordUserInput = styled.input<InputValid>`
 width: 100%;
 height: 100%;
-max-width: 95.4%;
+max-width: ${({ valid }) => valid ? '95%' : '95.5%'};
 max-height: ${({ valid }) => valid ? '96%' : '100%'};
 margin: ${({ valid }) => valid ? 'none' : '-4px 0 0 -2px'};
 border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
@@ -897,29 +748,27 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
-@media(max-width: 599px) {
-max-width: ${({ valid }) => valid ? '95%' : '96%'};
-}
+@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'};}
 
-@media(max-width: 570px) {
-max-width: ${({ valid }) => valid ? '94.5%' : '96%'};
-}
+@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '96%'};}
 
-@media(max-width: 509px) {
-max-width: ${({ valid }) => valid ? '94%' : '96%'};
-}
+@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '95%' : '96%'};}
 
-@media(max-width: 489px) {
-max-width: ${({ valid }) => valid ? '93%' : '95%'};
-}
+@media(max-width: 570px) {max-width: ${({ valid }) => valid ? '94.5%' : '96%'};}
 
-@media(max-width: 409px) {
-max-width: ${({ valid }) => valid ? '92%' : '94%'};
-}
+@media(max-width: 509px) {max-width: ${({ valid }) => valid ? '94%' : '96%'};}
 
-@media(max-width: 389px) {
-max-width: 91%;
-}
+@media(max-width: 489px) {max-width: ${({ valid }) => valid ? '93%' : '95%'};}
+
+@media(max-width: 409px) {max-width: ${({ valid }) => valid ? '92%' : '94%'};}
+
+@media(max-width: 389px) {max-width: 91%;}
+
+@media(max-width: 359px) {max-width: ${({ valid }) => valid ? '91%' : '94%'};}
+
+@media(max-width: 329px) {max-width: ${({ valid }) => valid ? '91%' : '96%'};}
+
+@media(max-width: 322px) {max-width: ${({ valid }) => valid ? '90%' : '96%'};}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {

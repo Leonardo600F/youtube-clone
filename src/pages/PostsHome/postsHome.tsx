@@ -244,17 +244,19 @@ export default function PostsHome() {
 
     const displayPosts = useMemo(() => {
         if (windowWidth <= 586) return posts.slice(0, 1);
-        if (windowWidth <= 976) return posts.slice(0, 2);
-        if (windowWidth <= 1559) return posts.slice(0, 3);
+        if (windowWidth <= 1062) return posts.slice(0, 2);
+        if (windowWidth <= 1576) return posts.slice(0, 3);
         if (windowWidth <= 1920) return posts.slice(0, 4);
+        if (windowWidth <= 2100) return posts.slice(0, 5);
         return posts;
     }, [windowWidth, posts]);
 
     const displaySecondPosts = useMemo(() => {
         if (windowWidth <= 586) return secondPosts.slice(0, 1);
-        if (windowWidth <= 976) return secondPosts.slice(0, 2);
-        if (windowWidth <= 1559) return secondPosts.slice(0, 3);
+        if (windowWidth <= 1062) return secondPosts.slice(0, 2);
+        if (windowWidth <= 1576) return secondPosts.slice(0, 3);
         if (windowWidth <= 1920) return secondPosts.slice(0, 4);
+        if (windowWidth <= 2100) return secondPosts.slice(0, 5);
         return secondPosts;
     }, [windowWidth, secondPosts]);
 

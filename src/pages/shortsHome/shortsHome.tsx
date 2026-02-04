@@ -81,7 +81,8 @@ export default function ShortsHome() {
     const displayShorts = useMemo(() => {
         if (windowWidth <= 586) return shortsVideo.slice(0, 2);
         if (windowWidth <= 976) return shortsVideo.slice(0, 3);
-        if (windowWidth <= 1680) return shortsVideo.slice(0, 5);
+        if (windowWidth <= 1102) return shortsVideo.slice(0, 4);
+        if (windowWidth <= 1705) return shortsVideo.slice(0, 5);
         if (windowWidth <= 1920) return shortsVideo.slice(0, 6);
         return shortsVideo;
     }, [windowWidth, shortsVideo]);

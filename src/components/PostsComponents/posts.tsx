@@ -27,7 +27,7 @@ export default function PostsComponents({ post }: any) {
     return (
         <Container openMenu={openMenu}>
             <PostBannerContainer>
-                <PostBanner>
+                <PostBanner openMenu={openMenu}>
 
                     <ChannelImage openMenu={openMenu}>{post.icone}
                         <ChannelName>{post.name}</ChannelName>
@@ -58,36 +58,3 @@ export default function PostsComponents({ post }: any) {
         </Container>
     )
 }
-
-/* <Container openMenu={openMenu}>
-            <PostBannerContainer>
-                <PostBanner>
-                    <ChannelImage openMenu={openMenu}>{post.icone}
-
-                        <ChannelName>{post.name}</ChannelName>
-                        <PostTime>há {post.time} atrás</PostTime>
-
-                    </ChannelImage>
-
-
-                    <PostText openMenu={openMenu}>{post.text}</PostText>
-                    <PostImage openMenu={openMenu} src={post.image} />
-
-                    <ButtonsContainer>
-
-                        <PrimaryButtonsContainer openMenu={openMenu}>
-                            <LikeButtonContainer>{post.like}</LikeButtonContainer>
-                            <LikeViewerContainer>{post.viewer} {post.count}</LikeViewerContainer>
-                            <DeslikeButtonContainer>{post.deslike}</DeslikeButtonContainer>
-                        </PrimaryButtonsContainer>
-
-                        <SecondButtonsContainer>
-                            <ShareButtonContainer>{post.share}</ShareButtonContainer>
-                            <CommentsButtonContainer>{post.comments} {post.numbers}</CommentsButtonContainer>
-                            <OptionsButtonContainer>{post.options}</OptionsButtonContainer>
-                        </SecondButtonsContainer>
-
-                    </ButtonsContainer>
-                </PostBanner>
-            </PostBannerContainer>
-        </Container> */
