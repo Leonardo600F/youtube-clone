@@ -325,15 +325,15 @@ margin-left: 710px}
 
 @media(max-width: 685px) {margin-left: 504px}
 
-@media(max-width: 670px) {margin-left: 494px}
+@media(max-width: 675px) {margin-left: 494px}
 
-@media(max-width: 665px) {margin-left: 490px}
+@media(max-width: 667px) {margin-left: 490px}
 
 @media(max-width: 660px) {margin-left: 484px}
 
 @media(max-width: 650px) {margin-left: 474px}
 
-@media(max-width: 640px) {margin-left: 464px}
+@media(max-width: 642px) {margin-left: 464px}
 
 @media(max-width: 635px) {margin-left: 460px}
 

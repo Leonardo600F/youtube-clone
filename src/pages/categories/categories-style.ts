@@ -80,12 +80,6 @@ font-size: 13.5px}
 
 @media(max-width: 1072px) {font-size: 13.5px}
 
-@media(max-width: 670px) {font-size: 12px}
-
-@media(max-width: 640px) {font-size: 11.7px}
-
-@media(max-width: 635px) {font-size: 14px}
-
 @media(max-width: 595px) {padding: 7px}
 
 @media(max-width: 590px) {font-size: 13.5px}

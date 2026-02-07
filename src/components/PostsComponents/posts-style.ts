@@ -227,27 +227,31 @@ width: ${({ openMenu }) => openMenu ? '379px' : '440px'}}
 
 @media(max-width: 726px) {width: 348px}
 
-@media(max-width: 710px) {width: 340px}
+@media(max-width: 720px) {width: 345px}
 
-@media(max-width: 700px) {width: 334px}
+@media(max-width: 713px) {width: 342px}
 
-@media(max-width: 690px) {width: 329px}
+@media(max-width: 705px) {width: 338px}
+
+@media(max-width: 700px) {width: 335px}
+
+@media(max-width: 690px) {width: 331px}
 
 @media(max-width: 685px) {width: 326px}
 
-@media(max-width: 680px) {width: 323px}
-
-@media(max-width: 670px) {
-width: 319px;
+@media(max-width: 675px) {
+width: 323px;
 height: 225px}
 
-@media(max-width: 665px) {width: 315px}
+@media(max-width: 667px) {width: 319px}
 
-@media(max-width: 660px) {width: 314px}
+@media(max-width: 660px) {width: 316px}
 
-@media(max-width: 650px) {width: 310px}
+@media(max-width: 655px) {width: 313px}
 
-@media(max-width: 640px) {width: 305px}
+@media(max-width: 650px) {width: 311px}
+
+@media(max-width: 642px) {width: 306px}
 
 @media(max-width: 635px) {width: 303px}
 
@@ -255,17 +259,21 @@ height: 225px}
 
 @media(max-width: 620px) {width: 295px}
 
-@media(max-width: 615px) {width: 292px}
+@media(max-width: 615px) {width: 293px}
 
 @media(max-width: 610px) {width: 290px}
 
-@media(max-width: 601px) {width: 285px}
+@media(max-width: 601px) {
+width: 287px;
+height: 215px}
 
-@media(max-width: 595px) {width: 282px}
+@media(max-width: 595px) {width: 283px}
 
 @media(max-width: 590px) {width: 280px}
 
-@media(max-width: 586px) {width: 562px}
+@media(max-width: 586px) {
+width: 562px;
+height: 230px}
 
 @media(max-width: 580px) {width: 558px}
 
@@ -415,13 +423,15 @@ margin-left: 9.6px}
 
 @media(max-width: 755px) {width: 93.7%}
 
-@media(max-width: 690px) {width: 92.5%}
+@media(max-width: 725px) {width: 93.5%}
 
-@media(max-width: 670px) {
-width: 92.2%;
-height: 89.6%}
+@media(max-width: 690px) {width: 93.3%}
 
-@media(max-width: 640px) {width: 91.7%}
+@media(max-width: 660px) {width: 93%}
+
+@media(max-width: 640px) {width: 92.8%}
+
+@media(max-width: 615px) {width: 92.4%}
 
 @media(max-width: 586px) {
 width: 100%;
@@ -643,22 +653,36 @@ line-height: 1.3}
 
 @media(max-width: 736px) {width: 183px}
 
+@media(max-width: 713px) {
+width: 173px;
+line-height: 1;
+font-size: 13.5px}
+
 @media(max-width: 710px) {margin-left: 12px}
+
+@media(max-width: 700px) {width: 163px}
 
 @media(max-width: 690px) {width: 155px}
 
-@media(max-width: 680px) {
-width: 145px;
-font-size: 12.2px}
+@media(max-width: 680px) {width: 161px}
 
-@media(max-width: 650px) {
+@media(max-width: 675px) {height: 100px}
+
+@media(max-width: 655px) {
 margin-left: 9px;
-width: 135px;
-font-size: 11.7px}
+width: 151px}
 
-@media(max-width: 630px) {height: 96px}
+@media(max-width: 635px) {
+width: 141px;
+font-size: 14px}
 
-@media(max-width: 601px) {width: 115px}
+@media(max-width: 601px) {
+width: 140px;
+height: 96px}
+
+@media(max-width: 590px) {
+width: 130px;
+font-size: 13px}
 
 @media(max-width: 586px) {
 width: 390px;
@@ -888,29 +912,37 @@ margin-left: 220px}
 
 @media(max-width: 736px) {margin-left: 195px}
 
-@media(max-width: 710px) {margin-left: 179px}
+@media(max-width: 713px) {margin-left: 185px}
+
+@media(max-width: 700px) {margin-left: 175px}
 
 @media(max-width: 690px) {margin-left: 169px}
 
-@media(max-width: 680px) {margin-left: 159px}
+@media(max-width: 680px) {
+width: 102px;
+margin-left: 175px}
 
-@media(max-width: 650px) {margin-left: 149px}
+@media(max-width: 675px) {
+height: 100px;
+margin-top: -100px}
 
-@media(max-width: 630px) {
+@media(max-width: 655px) {margin-left: 163px}
+
+@media(max-width: 635px) {
 width: 96px;
+margin-left: 151px}
+
+@media(max-width: 601px) {
 height: 96px;
 margin-top: -96px}
 
-@media(max-width: 601px) {
-width: 108px;
-height: 100px;
-margin-left: 130px}
+@media(max-width: 590px) {margin-left: 141px}
 
 @media(max-width: 586px) {
 width: 125px;
 height: 120px;
 margin-top: -120px;
-margin-left: 405px}
+margin-left: 400px}
 
 @media(max-width: 576px) {margin-left: 390px}
 
@@ -1052,7 +1084,9 @@ width: fit-content;
 height: fit-content;
 margin: 0 6px 0 6px;
 
-@media(max-width: 1559px) {margin: 0 10px 0 10px}`;
+@media(max-width: 1559px) {margin: 0 10px 0 10px}
+
+@media(max-width: 680px) {margin: 0 5px 0 5px}`;
 
 export const DeslikeButtonContainer = styled.div`
 display: flex;
@@ -1102,12 +1136,16 @@ transition: 0.3s;
 width: 32px;
 height: 32px}
 
-@media(max-width: 680px) {margin-right: 7px}
+@media(max-width: 680px) {
+width: 30px;
+height: 30px;
+margin-right: 7px}
 
 @media(max-width: 586px) {
-width: 31px;
-height: 31px;
-margin-right: 7px}
+width: 36px;
+height: 36px;
+margin-top: 4px;
+margin-right: 11px}
 
 @media(max-width: 393px) {
 width: 27px;
@@ -1139,12 +1177,14 @@ margin-right: 5px}
 
 @media(max-width: 720px) {margin-right: 10px}
 
+@media(max-width: 680px) {width: 60px}
+
 @media(max-width: 660px) {margin-right: 0px}
 
 @media(max-width: 586px) {
 width: 80px;
 height: 31px;
-margin-right: 7px}
+margin-right: 3px}
 
 @media(max-width: 393px) {
 width: 65px;
@@ -1179,13 +1219,15 @@ margin-top: -5px}
 
 @media(max-width: 1062px) {margin-top: 0px}
 
-@media(max-width: 730px) {margin-right: 17px}
-
-@media(max-width: 680px) {margin-right: 10px}
+@media(max-width: 680px) {
+width: 32px;
+height: 32px;
+margin-right: -7px}
 
 @media(max-width: 586px) {
 width: 31px;
-height: 31px}
+height: 31px;
+margin-right: 10px}
 
 @media(max-width: 393px) {
 width: 27px;

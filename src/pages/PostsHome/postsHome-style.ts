@@ -22,6 +22,8 @@ grid-template-columns: repeat(3, 1fr)}
 
 @media(max-width: 670px) {height: ${({ openPosts }) => openPosts ? '260px' : '270px'}}
 
+@media(max-width: 601px) {height: ${({ openPosts }) => openPosts ? '250px' : '260px'}}
+
 @media(max-width: 586px) {height: ${({ openPosts }) => openPosts ? '630px' : '270px'}}
 
 @media(max-width: 393px) {height: ${({ openPosts }) => openPosts ? '610px' : '250px'}}`
@@ -82,8 +84,8 @@ width: 20px;
 height: 20px}
 
 @media(max-width: 586px) {
-width: 25px;
-height: 25px}
+width: 23px;
+height: 23px}
 
 @media(max-width: 393px) {
 width: 22px;
@@ -100,7 +102,9 @@ color: #787878;
 
 @media(max-width: 1440px) {font-size: 14px}
 
-@media(max-width: 586px) {font-size: 19px}
+@media(max-width: 680px) {font-size: 12.5px}
+
+@media(max-width: 586px) {font-size: 15px}
 
 @media(max-width: 393px) {font-size: 14.5px}`;
 
@@ -120,8 +124,8 @@ width: 20px;
 height: 20px}
 
 @media(max-width: 586px) {
-width: 25px;
-height: 25px}
+width: 23px;
+height: 23px}
 
 @media(max-width: 393px) {
 width: 22px;
@@ -144,6 +148,10 @@ width: 22px;
 height: 22px;
 margin-left: 6px}
 
+@media(max-width: 680px) {
+width: 20px;
+height: 20px}
+
 @media(max-width: 586px) {
 width: 25px;
 height: 25px}
@@ -165,9 +173,15 @@ width: 18px;
 height: 18px;
 margin: 8px 0 0 10px}
 
+@media(max-width: 680px) {
+width: 15px;
+height: 15px;
+margin: 10px 0 0 7px}
+
 @media(max-width: 586px) {
 width: 23px;
-height: 23px}
+height: 23px;
+margin: 7px 0 0 9px}
 
 @media(max-width: 393px) {
 width: 19px;
@@ -183,6 +197,10 @@ font-weight: bold;
 @media(max-width: 1440px) {
 font-size: 13px;
 margin: 8px 0 0 8px}
+
+@media(max-width: 680px) {
+margin-left: 6px;
+font-size: 12px}
 
 @media(max-width: 586px) {font-size: 15px}
 
@@ -204,12 +222,18 @@ height: 25px;}
 width: 22px;
 height: 22px}
 
-@media(max-width: 586px) {margin-top: 2px;}
+@media(max-width: 680px) {
+width: 20px;
+height: 20px}
+
+@media(max-width: 586px) {
+width: 25px;
+height: 25px}
 
 @media(max-width: 393px) {
 width: 22px;
 height: 22px;
-margin-top: 4px;}`;
+margin-top: 4px}`;
 
 export const ShowMoreContainer = styled.div<OpenPosts> `
 width: 15%;

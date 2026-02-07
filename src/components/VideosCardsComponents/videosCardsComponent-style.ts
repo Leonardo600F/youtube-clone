@@ -53,9 +53,7 @@ background-color: #fff;
 
 @media(max-width: 700px) {height: 315px}
 
-@media(max-width: 685px) {height: 300px}
-
-@media(max-width: 670px) {height: 285px}
+@media(max-width: 601px) {height: 305px}
 
 @media(max-width: 586px) {height: 420px}
 
@@ -194,13 +192,19 @@ height: 237px}
 
 @media(max-width: 700px) {height: 185px}
 
-@media(max-width: 685px) {height: 170px}
+@media(max-width: 690px) {margin-left: 10px}
 
-@media(max-width: 670px) {
-height: 155px;
-margin-left: 6px}
+@media(max-width: 650px) {width: 93.3%}
+
+@media(max-width: 627px) {height: 178px}
+
+@media(max-width: 601px) {
+height: 165px;
+margin-top: 8.5px;
+margin-left: 9.5px}
 
 @media(max-width: 586px) {
+width: 96%;
 height: 290px;
 margin-top: 10px;
 margin-left: 11px}
