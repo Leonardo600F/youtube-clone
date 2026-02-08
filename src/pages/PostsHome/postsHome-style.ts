@@ -24,7 +24,7 @@ grid-template-columns: repeat(3, 1fr)}
 
 @media(max-width: 601px) {height: ${({ openPosts }) => openPosts ? '250px' : '260px'}}
 
-@media(max-width: 586px) {height: ${({ openPosts }) => openPosts ? '630px' : '270px'}}
+@media(max-width: 586px) {height: ${({ openPosts }) => openPosts ? '630px' : '275px'}}
 
 @media(max-width: 393px) {height: ${({ openPosts }) => openPosts ? '610px' : '250px'}}`
 
@@ -202,7 +202,9 @@ margin: 8px 0 0 8px}
 margin-left: 6px;
 font-size: 12px}
 
-@media(max-width: 586px) {font-size: 15px}
+@media(max-width: 586px) {
+margin-top: 6px;
+font-size: 15px}
 
 @media(max-width: 393px) {font-size: 13px}`;
 

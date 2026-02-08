@@ -43,7 +43,8 @@ export default function Categories() {
     ];
 
     const displayCategories = useMemo(() => {
-        if (windowWidth <= 393) return categoryButtons.slice(0, 4);
+        if (windowWidth <= 336) return categoryButtons.slice(0, 3);
+        if (windowWidth <= 403) return categoryButtons.slice(0, 4);
         if (windowWidth <= 615) return categoryButtons.slice(0, 5);
         if (windowWidth <= 820) return categoryButtons.slice(0, 6);
         if (windowWidth <= 966) return categoryButtons.slice(0, 7);

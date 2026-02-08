@@ -60,7 +60,15 @@ span {
 font-size: 13px;
 font-weight: 600;
 margin-left: 10px;
-color: #000}
+color: #000
+
+@media(max-width: 1312px) {font-size: 14px}
+
+@media(max-width: 640px) {font-size: 13.4px}
+
+@media(max-width: 380px) {margin-left: 5px}
+
+@media(max-width: 353px) {font-size: 12.5px}}
 
 @media(max-width: 1559px) {
 margin-top: 7px;
@@ -72,8 +80,7 @@ width: 80px}
 @media(max-width: 1312px) {
 width: 95px;
 height: 38px;
-margin-right: 10px;
-span {font-size: 14px}}
+margin-right: 10px}
 
 @media(max-width: 1128px) {margin-right: 10px}
 
@@ -87,17 +94,15 @@ margin-top: 2px}
 
 @media(max-width: 870px) {margin-right: 15px}
 
-@media(max-width: 640px) {
-width: 80px;
-span {font-size: 13.4px}}
+@media(max-width: 640px) {width: 80px}
 
 @media(max-width: 570px) {margin-right: 7px}
 
 @media(max-width: 483px) {margin-right: 2px}
 
-@media(max-width: 353px) {
-width: 70px;
-span {font-size: 12.5px}}`;
+@media(max-width: 380px) {width: 70px}
+
+@media(max-width: 353px) {width: 70px}`;
 
 export const PlusIconContainer = styled.img`
 margin-left: -10px;
@@ -115,7 +120,12 @@ width: 25px}
 
 @media(max-width: 640px) {
 height: 22px;
-width: 22px}`;
+width: 22px}
+
+@media(max-width: 380px) {
+height: 19px;
+width: 19px;
+margin-left: -5px}`;
 
 export const NotificationIconContainer = styled.div`
 display: flex; 
@@ -129,7 +139,7 @@ margin: 2px 20px 0 0;
 
 &:hover {background-color: #9fd3c7}
 
-@media(max-width: 1440px) {margin-top: 4px}
+@media(max-width: 1440px) {margin-top: 2px}
 
 @media(max-width: 1312px) {
 width: 40px;
@@ -144,7 +154,7 @@ margin-right: 7px}
 
 @media(max-width: 383px) {margin-right: 1px}
 
-@media(max-width: 343px) {display: none}`;
+@media(max-width: 345px) {display: none}`;
 
 export const ProfileImageContainer = styled.div`
 display: flex; 
@@ -158,7 +168,7 @@ cursor: pointer;
 
 &:hover {background-color: #9fd3c7}
 
-@media(max-width: 1440px) {margin-top: 4px}
+@media(max-width: 1440px) {margin-top: 2px}
 
 @media(max-width: 1312px) {
 width: 40px;
@@ -437,29 +447,36 @@ background-color: #f8f8f8;
 
 @media(max-width: 503px) {margin-left: 15px}
 
-@media(max-width: 493px) {margin-left: 30px}
+@media(max-width: 490px) {margin-left: 20px}
 
-@media(max-width: 453px) {margin-left: 17px}
+@media(max-width: 474px) {margin-left: 11px}
 
-@media(max-width: 443px) {margin-left: 12px}
+@media(max-width: 464px) {margin-left: 7px}
 
-@media(max-width: 433px) {margin-left: 40px}
+@media(max-width: 454px) {margin-left: 3px}
 
-@media(max-width: 423px) {margin-left: 30px}
+@media(max-width: 450px) {margin-left: 33px}
 
-@media(max-width: 413px) {margin-left: 20px}
+@media(max-width: 423px) {margin-left: 24px}
 
-@media(max-width: 403px) {margin-left: 10px}
+@media(max-width: 413px) {margin-left: 15px}
 
-@media(max-width: 393px) {margin-left: 0px}
+@media(max-width: 405px) {margin-left: 10px}
+
+@media(max-width: 396px) {margin-left: 0px}
+
+@media(max-width: 380px) {margin-left: 6px}
+
+@media(max-width: 370px) {margin-left: 3px}
 
 @media(max-width: 345px) {
 width: 35px;
-height: 35px;}
+height: 35px;
+margin-left: 30px}
 
-@media(max-width: 333px) {margin-left: 10px;}
+@media(max-width: 333px) {margin-left: 20px}
 
-@media(max-width: 323px) {margin-left: 5px;}`;
+@media(max-width: 323px) {margin-left: 5px}`;
 
 export const ResponsiveSearchGeneralContainer = styled.div<Responsive>`
 display: none;
@@ -769,11 +786,17 @@ margin-left: -35px}
 
 @media(max-width: 620px) {margin-left: -15px}
 
+@media(max-width: 578px) {margin-left: -5px}
+
 @media(max-width: 523px) {margin-right: 5px}
 
-@media(max-width: 443px) {margin-right: 6px}
+@media(max-width: 495px) {margin-right: 2px}
 
-@media(max-width: 433px) {display: none}`;
+@media(max-width: 490px) {margin-right: 5px}
+
+@media(max-width: 474px) {margin-right: 2px}
+
+@media(max-width: 450px) {display: none}`;
 
 export const HeaderButton = styled.div`
 display: flex;
@@ -841,7 +864,7 @@ font-weight: 600;
 border-radius: 20px 20px 20px 20px;
 color: #5353ec;`;
 
-export const LoginButtonIcon = styled.img`width: 22px;`;
+export const LoginButtonIcon = styled.img`width: 22px`;
 
 export const DropDownMenu = styled.div<ContainerProps>`
 display: ${({ openDropDownMenu }) => openDropDownMenu ? 'flex' : 'none'};
@@ -856,9 +879,9 @@ transition: 0.5s;
 
 @media(max-width: 1128px) {
 margin-top: -50px;
-margin-right: 50px;}
+margin-right: 50px}
   
-@media(max-width: 375px) {width: 250px;}`;
+@media(max-width: 375px) {width: 250px}`;
 
 
 export const DropDownMenuContent = styled.div`
@@ -875,9 +898,9 @@ cursor: pointer;
 span {
 margin-left: 23px;
 font-size: 16px;
-font-weight: 500;}
+font-weight: 500}
 
-&:hover {background-color: #e5e5e5;}`;
+&:hover {background-color: #e5e5e5}`;
 
 export const UserInfoContainer = styled.div`
 display: flex;
@@ -886,7 +909,7 @@ width: 100%;
 height: fit-content;
 border-radius: 10px;
 
-@media(max-width: 1128px) {margin-top: 15px;}`;
+@media(max-width: 1128px) {margin-top: 15px}`;
 
 export const UserName = styled.span`
 width: fit-content;

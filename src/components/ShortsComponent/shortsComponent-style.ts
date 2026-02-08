@@ -417,12 +417,13 @@ height: 390px}
 
 @media(max-width: 586px) {
 width: 278px;
-height: 475px}
+height: 475px;
+background-color: white}
 
-@media(max-width: 576px) {width: 271px}
+@media(max-width: 578px) {width: 274px}
 
 @media(max-width: 570px) {
-width: 268px;
+width: 270px;
 height: 465px}
 
 @media(max-width: 563px) {
@@ -502,7 +503,7 @@ height: 327px}
 @media(max-width: 335px) {width: 150px}
 
 @media(max-width: 325px) {
-width: 145px;
+width: 148px;
 height: 278px}`;
 
 export const ImageBanner = styled.img<OpenMenu>`
@@ -840,10 +841,8 @@ height: 381px}
 width: 252.5px;
 height: 381px}
 
-@media(max-width: 576px) {width: 251px}
-
 @media(max-width: 570px) {
-width: 248px;
+width: 250px;
 height: 371px}
 
 @media(max-width: 563px) {
@@ -921,7 +920,7 @@ height: 244px}
 @media(max-width: 335px) {width: 131px}
 
 @media(max-width: 325px) {
-width: 126px;
+width: 128px;
 height: 210px}`;
 
 export const TitleContainer = styled.div<OpenMenu>`

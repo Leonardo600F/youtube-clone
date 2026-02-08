@@ -209,42 +209,53 @@ height: 290px;
 margin-top: 10px;
 margin-left: 11px}
 
+@media(max-width: 536px) {width: 95.5%}
+
 @media(max-width: 523px) {height: 270px}
 
 @media(max-width: 513px) {height: 260px}
 
-@media(max-width: 503px) {
-height: 250px;
-margin-left: 9px}
+@media(max-width: 503px) {height: 250px}
 
 @media(max-width: 493px) {
 height: 240px;
 margin-left: 10px}
 
 @media(max-width: 483px) {
-height: 230px;
-margin-left: 9px}
+width: 95.7%;
+height: 230px}
 
-@media(max-width: 473px) {height: 220px}
+@media(max-width: 473px) {
+width: 95.5%;
+height: 220px}
 
-@media(max-width: 443px) {height: 207px}
+@media(max-width: 463px) {width: 95.3%}
 
-@media(max-width: 433px) {margin-left: 7.5px}
+@media(max-width: 443px) {
+width: 95.1%;
+height: 207px}
 
-@media(max-width: 403px) {margin-left: 8px}
+@media(max-width: 433px) {width: 94.9%}
 
-@media(max-width: 393px) {margin-left: 7.5px}
+@media(max-width: 408px) {width: 94.7%}
 
-@media(max-width: 383px) {margin-left: 6.5px}
+@media(max-width: 400px) {width: 94.5%}
 
-@media(max-width: 353px) {margin-left: 6.7px}
+@media(max-width: 393px) {width: 94.7%}
 
-@media(max-width: 343px) {margin-left: 6.6px}
+@media(max-width: 383px) {width: 94.5%}
 
-@media(max-width: 333px) {margin-left: 6px}
+@media(max-width: 375px) {width: 94.3%}
+
+@media(max-width: 367px) {width: 94.1%}
+
+@media(max-width: 345px) {width: 93.9%}
+
+@media(max-width: 336px) {width: 93.6%}
 
 @media(max-width: 323px) {
 height: 177px;
+width: 96%;
 margin-top: 6px;
 margin-left: 6px}`;
 

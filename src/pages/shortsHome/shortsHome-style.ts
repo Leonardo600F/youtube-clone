@@ -343,7 +343,7 @@ margin-left: 710px}
 
 @media(max-width: 610px) {margin-left: 434px}
 
-@media(max-width: 601px) {margin-left: 424px}
+@media(max-width: 603px) {margin-left: 424px}
 
 @media(max-width: 590px) {margin-left: 414px}
 
@@ -403,7 +403,7 @@ margin-left: 710px}
 
 @media(max-width: 333px) {margin-left: 157px}
 
-@media(max-width: 320px) {margin-left: 147px}`;
+@media(max-width: 323px) {margin-left: 147px}`;
 
 export const CloseButtonImage = styled.img<OpenShorts>`
 display: flex;
@@ -412,10 +412,10 @@ height: 30px;
 margin: 4px 0 0 2px;
 border-radius: 50%;
 
-@media(max-width: 969px) {
+@media(max-width: 966px) {
 width: 36px;
 height: 36px;
-margin: 5px 0 0 4px}`;
+margin: 5px 0 0 5px}`;
 
 export const SpanMessageContainer = styled.div`
 height: 50px;

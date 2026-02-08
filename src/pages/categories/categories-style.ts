@@ -80,61 +80,9 @@ font-size: 13.5px}
 
 @media(max-width: 1072px) {font-size: 13.5px}
 
-@media(max-width: 595px) {padding: 7px}
+@media(max-width: 423px) {padding: 8px}
 
-@media(max-width: 590px) {font-size: 13.5px}
-
-@media(max-width: 570px) {font-size: 13.2px}
-
-@media(max-width: 563px) {
-padding: 6.5px;
-font-size: 13px}
-
-@media(max-width: 543px) {
-padding: 6px;
-font-size: 12.5px}
-
-@media(max-width: 523px) {
-padding: 7px;
-font-size: 11.6px}
-
-@media(max-width: 513px) {
-padding: 7.5px;
-font-size: 11px}
-
-@media(max-width: 503px) {
-padding: 7px;
-font-size: 11px}
-
-@media(max-width: 493px) {padding: 6.4px}
-
-@media(max-width: 483px) {
-padding: 8.5px;
-font-size: 14px}
-
-@media(max-width: 423px) {
-padding: 8px;
-font-size: 13.5px}
-
-@media(max-width: 413px) {font-size: 13px}
-
-@media(max-width: 403px) {font-size: 12.5px}
-
-@media(max-width: 393px) {
-padding: 8.5px;
-font-size: 14px}
-
-@media(max-width: 353px) {
-padding: 8px;
-font-size: 13.5px}
-
-@media(max-width: 343px) {font-size: 13.3px}
-
-@media(max-width: 333px) {font-size: 12.6px}
-
-@media(max-width: 323px) {
-padding: 8px;
-font-size: 12px}`;
+@media(max-width: 413px) {padding: 7.5px}`;
 
 
 export const SliderContent = styled.div`
@@ -144,4 +92,6 @@ justify-content: flex-start;
 height: 100%;
 margin-left: 15px;
 z-index: 1px;
-column-gap: 10px`;
+column-gap: 10px;
+
+@media(max-width: 363px) {margin-left: 5px}`;
