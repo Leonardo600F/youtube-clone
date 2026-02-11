@@ -48,8 +48,8 @@ export default function Categories() {
         if (windowWidth <= 615) return categoryButtons.slice(0, 5);
         if (windowWidth <= 820) return categoryButtons.slice(0, 6);
         if (windowWidth <= 966) return categoryButtons.slice(0, 7);
-        if (windowWidth <= 1052) return categoryButtons.slice(0, 8);
-        if (windowWidth <= 1122) return categoryButtons.slice(0, 9);
+        if (windowWidth <= 1082) return categoryButtons.slice(0, 8);
+        if (windowWidth <= 1160) return categoryButtons.slice(0, 9);
         if (windowWidth <= 1232) return categoryButtons.slice(0, 10);
         if (windowWidth <= 1320) return categoryButtons.slice(0, 11);
         if (windowWidth <= 1451) return categoryButtons.slice(0, 12);

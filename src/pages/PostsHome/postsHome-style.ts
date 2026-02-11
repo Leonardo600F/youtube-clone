@@ -13,8 +13,7 @@ grid-template-columns: repeat(6, 1fr);
 @media(max-width: 1920px) {grid-template-columns: repeat(4, 1fr)}
 
 @media(max-width: 1559px) {
-height: ${({ openPosts }) => openPosts ? '295px' : '310px'};
-grid-template-columns: repeat(3, 1fr)}
+height: ${({ openPosts }) => openPosts ? '295px' : '310px'}}
 
 @media(max-width: 1440px) {height: ${({ openPosts }) => openPosts ? '275px' : '285px'}}
 
@@ -24,7 +23,8 @@ grid-template-columns: repeat(3, 1fr)}
 
 @media(max-width: 601px) {height: ${({ openPosts }) => openPosts ? '250px' : '260px'}}
 
-@media(max-width: 586px) {height: ${({ openPosts }) => openPosts ? '630px' : '275px'}}
+@media(max-width: 586px) {height: ${({ openPosts }) => openPosts ? '300px' : '570px'};
+grid-template-columns: 1fr;}
 
 @media(max-width: 393px) {height: ${({ openPosts }) => openPosts ? '610px' : '250px'}}`
 

@@ -272,8 +272,9 @@ height: 215px}
 @media(max-width: 590px) {width: 280px}
 
 @media(max-width: 586px) {
+top: 10px;
 width: 562px;
-height: 230px}
+height: 240px}
 
 @media(max-width: 580px) {width: 558px}
 

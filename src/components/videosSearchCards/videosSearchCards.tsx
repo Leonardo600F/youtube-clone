@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Container, Banner, TitleContainer, TextContainer, Title, TextCard, ChannelContainer, ChannelImage, DescriptionContainer } from "./videosSearchCards-styles";
+import { ComponentContext } from "../../context/componentContext";
 
 interface Props {
     title: string;
@@ -11,14 +13,17 @@ interface Props {
 
 
 export default function VideosSearchCards(props: Props) {
-    return (
-        <Container>
 
-            <Banner style={{ backgroundImage: `url(${props.thumbnail})` }}></Banner>
+    const { openMenu } = useContext(ComponentContext);
+
+    return (
+        <Container openMenu={openMenu}>
+
+            <Banner openMenu={openMenu} style={{ backgroundImage: `url(${props.thumbnail})` }}></Banner>
 
             <TitleContainer>
                 <TextContainer>
-                    <Title>{props.title}</Title>
+                    <Title openMenu={openMenu}>{props.title}</Title>
                     <TextCard>{props.details}</TextCard>
                 </TextContainer>
 

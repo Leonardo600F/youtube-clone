@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { ComponentContext } from "../../context/componentContext";
 import { useSearchContext } from "../../context/searchContext";
 import { Container, SearchContainer } from "./searchPage-style";
+import Menu from "../../components/menu/menu";
 
 export default function SearchPage() {
 
@@ -49,7 +50,7 @@ export default function SearchPage() {
             }
         }
     }
-    
+
     function getPublishedTime(publishedAt: string) {
         const now = moment();
         const publishedTime = moment(publishedAt);
@@ -86,24 +87,27 @@ export default function SearchPage() {
     }
 
     return (
+        <>
+            <Menu />
+            <SearchContainer>
 
-        <SearchContainer>
+                <Container openMenu={openMenu}>
+                    {videosApi.map((video) => (
+                        <VideosSearchCards
+                            title={video.snippet.title}
+                            thumbnail={video.snippet.thumbnails.high?.url}
+                            channelImage={video.snippet.channelTitle.charAt(0).toUpperCase()}
+                            channelName={video.snippet.channelTitle}
+                            details={`150 mil - ${getPublishedTime(video.snippet.publishedAt)}`}
+                            description={video.snippet.description}
+                            key={video.id.videoId}
+                        />
+                    ))}
+                </Container>
 
-            <Container openMenu={openMenu}>
-            {videosApi.map((video) => (
-                    <VideosSearchCards
-                        title={video.snippet.title}
-                        thumbnail={video.snippet.thumbnails.high?.url}
-                        channelImage={video.snippet.channelTitle.charAt(0).toUpperCase()}
-                        channelName={video.snippet.channelTitle}
-                        details={`150 mil - ${getPublishedTime(video.snippet.publishedAt)}`}
-                        description={video.snippet.description}
-                        key={video.id.videoId}
-                    />
-                ))}
-            </Container>
+            </SearchContainer>
 
-        </SearchContainer>
+        </>
 
     )
 }

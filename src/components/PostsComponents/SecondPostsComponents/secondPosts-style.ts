@@ -342,7 +342,7 @@ transition: 0.5s;
 cursor: pointer;
 background-color: #fff;
 
-&:hover {background-color: #ececec;}`;
+&:hover {background-color: #ececec}`;
 
 export const PostBanner = styled.div<OpenMenu>`
 width: 95.8%;
