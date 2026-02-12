@@ -1,11 +1,12 @@
 import axios from "axios";
 import moment from "moment";
 import VideosSearchCards from "../../components/videosSearchCards/videosSearchCards";
-import { useContext, useEffect, useState } from "react";
+import { useState, useEffect, useContext, useMemo } from "react";
 import { ComponentContext } from "../../context/componentContext";
 import { useSearchContext } from "../../context/searchContext";
 import { Container, SearchContainer } from "./searchPage-style";
 import Menu from "../../components/menu/menu";
+import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
 
 export default function SearchPage() {
 
@@ -28,6 +29,7 @@ export default function SearchPage() {
 
     const { openMenu } = useContext(ComponentContext);
     const { search } = useSearchContext();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
         if (search !== '') {
@@ -86,9 +88,31 @@ export default function SearchPage() {
         }
     }
 
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const ResponsiveMenuApplication = useMemo(() => {
+        if (windowWidth >= 1313) {
+            return (
+                <Menu />
+            )
+        } else {
+            return (
+                <ResponsiveMenu />
+            )
+        }
+
+    }, [windowWidth])
+
     return (
         <>
-            <Menu />
+            {ResponsiveMenuApplication}
             <SearchContainer>
 
                 <Container openMenu={openMenu}>

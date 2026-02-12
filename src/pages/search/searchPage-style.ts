@@ -11,7 +11,7 @@ row-gap: 20px;
 padding: ${({ openMenu }) => openMenu ? '100px 50px 0 330px' : '100px 10px 0 100px'};
 box-sizing: border-box;
 
-@media(max-width: 834px) {padding: 100px 10px 0 100px}
+@media(max-width: 1312px) {padding: 100px 10px 0 100px}
 
 @media(max-width: 600px) {row-gap: 30px}
 
