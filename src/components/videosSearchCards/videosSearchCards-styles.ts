@@ -78,7 +78,42 @@ margin-left: 0%}
 
 @media(max-width: 1040px) {width: 900px}
 
-@media(max-width: 1010px) {width: 880px}
+@media(max-width: 1010px) {
+width: 880px;
+margin-top: -60px;
+margin-bottom: 80px}
+
+@media(max-width: 990px) {width: 850px}
+
+@media(max-width: 970px) {width: 820px}
+
+@media(max-width: 940px) {width: 790px}
+
+@media(max-width: 910px) {width: 760px}
+
+@media(max-width: 880px) {width: 730px}
+
+@media(max-width: 850px) {
+width: 700px;
+margin-bottom: 50px}
+
+@media(max-width: 810px) {width: 670px}
+
+@media(max-width: 791px) {
+width: 750px;
+margin-left: -80px}
+
+@media(max-width: 780px) {width: 730px}
+
+@media(max-width: 770px) {width: 720px}
+
+@media(max-width: 760px) {width: 705px}
+
+@media(max-width: 740px) {width: 685px}
+
+@media(max-width: 720px) {width: 665px}
+
+@media(max-width: 700px) {width: 645px}
 
 @media(max-width: 600px) {
 flex-direction: column;
@@ -102,6 +137,34 @@ height: 280px}
 @media(max-width: 1060px) {
 min-width: 450px;
 height: 265px}
+
+@media(max-width: 990px) {
+min-width: 380px;
+height: 220px}
+
+@media(max-width: 910px) {
+min-width: 370px;
+height: 215px}
+
+@media(max-width: 880px) {
+min-width: 355px;
+height: 210px}
+
+@media(max-width: 810px) {
+min-width: 335px;
+height: 195px}
+
+@media(max-width: 791px) {
+min-width: 370px;
+height: 215px}
+
+@media(max-width: 760px) {
+min-width: 350px;
+height: 200px}
+
+@media(max-width: 700px) {
+min-width: 330px;
+height: 190px}
 
 @media(max-width: 600px) {
 min-width: 480px;
@@ -165,7 +228,9 @@ color: #0f0f0f;
 
 @media(max-width: 1312px) {font-size: 19px}
 
-@media(max-width: 1020px) {font-size: 17px}`;
+@media(max-width: 1020px) {font-size: 17px}
+
+@media(max-width: 791px) {font-size: 15px}`;
 
 export const TextCard = styled.span`
 font-size: 15px;
@@ -183,4 +248,5 @@ width: fit-content;
 overflow: hidden;
 text-overflow: ellipsis;
 text-align: justify;
+background-color: green;
 margin-top: 20px`;

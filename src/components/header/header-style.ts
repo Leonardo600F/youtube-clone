@@ -394,6 +394,8 @@ cursor: pointer;
 
 @media(max-width: 802px) {width: 120px}
 
+@media(max-width: 760px) {width: 140px}
+
 @media(max-width: 710px) {width: 200px}
 
 @media(max-width: 660px) {width: 230px}`;
