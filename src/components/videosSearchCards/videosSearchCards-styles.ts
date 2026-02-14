@@ -115,9 +115,29 @@ margin-left: -80px}
 
 @media(max-width: 700px) {width: 645px}
 
-@media(max-width: 600px) {
-flex-direction: column;
-width: 98%}`;
+@media(max-width: 680px) {width: 625px}
+
+@media(max-width: 660px) {width: 610px}
+
+@media(max-width: 640px) {width: 590px}
+
+@media(max-width: 620px) {width: 575px}
+
+@media(max-width: 600px) {width: 560px}
+
+@media(max-width: 590px) {width: 545px}
+
+@media(max-width: 575px) {width: 530px}
+
+@media(max-width: 560px) {width: 515px}
+
+@media(max-width: 545px) {width: 500px}
+
+@media(max-width: 530px) {width: 485px}
+
+@media(max-width: 515px) {width: 470px}
+
+`;
 
 export const Banner = styled.div<OpenMenu>`
 min-width: 540px;
@@ -166,10 +186,27 @@ height: 200px}
 min-width: 330px;
 height: 190px}
 
-@media(max-width: 600px) {
-min-width: 480px;
-max-width: 480px;
-height: 260px}
+@media(max-width: 680px) {min-width: 310px}
+
+@media(max-width: 660px) {
+min-width: 305px;
+height: 175px}
+
+@media(max-width: 620px) {
+min-width: 285px;
+height: 170px}
+
+@media(max-width: 590px) {
+min-width: 270px;
+height: 160px}
+
+@media(max-width: 560px) {
+min-width: 260px;
+height: 155px}
+
+@media(max-width: 545px) {
+min-width: 250px;
+height: 150px}
 
 @media(max-width: 414px) {
 min-width: 100%;
@@ -181,7 +218,7 @@ display: flex;
 width: 100%;
 flex-direction: column;
 
-@media(max-width: 600px) {margin-top: 5px}`;
+@media(max-width: 640px) {margin-left: -10px}`;
 
 export const ChannelImage = styled.div`
 display: flex;
@@ -230,11 +267,20 @@ color: #0f0f0f;
 
 @media(max-width: 1020px) {font-size: 17px}
 
+@media(max-width: 900px) {
+width: 370px;
+background-color: red}
+
+@media(max-width: 880px) {width: 355px}
+
+@media(max-width: 851px) {width: 328px}
+
+@media(max-width: 811px) {width: 318px}
+
 @media(max-width: 791px) {font-size: 15px}`;
 
 export const TextCard = styled.span`
 font-size: 15px;
-color: #8c8c8c
 
 @media(max-width: 2000px) {font-size: 13px}
 
@@ -248,5 +294,13 @@ width: fit-content;
 overflow: hidden;
 text-overflow: ellipsis;
 text-align: justify;
+margin-top: 20px;
 background-color: green;
-margin-top: 20px`;
+
+@media(max-width: 900px) {width: 90%}
+
+@media(max-width: 881px) {width: 355px}
+
+@media(max-width: 811px) {width: 3px}
+
+@media(max-width: 851px) {width: 325px}`;
