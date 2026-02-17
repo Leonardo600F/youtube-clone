@@ -137,6 +137,21 @@ margin-left: -80px}
 
 @media(max-width: 515px) {width: 470px}
 
+@media(max-width: 500px) {width: 460px}
+
+@media(max-width: 490px) {width: 450px}
+
+@media(max-width: 480px) {width: 440px}
+
+@media(max-width: 470px) {width: 430px}
+
+@media(max-width: 455px) {width: 420px}
+
+@media(max-width: 445px) {width: 415px}
+
+@media(max-width: 435px) {width: 405px}
+
+
 `;
 
 export const Banner = styled.div<OpenMenu>`
@@ -208,6 +223,18 @@ height: 155px}
 min-width: 250px;
 height: 150px}
 
+@media(max-width: 500px) {
+min-width: 240px;
+height: 140px}
+
+@media(max-width: 480px) {
+min-width: 235px;
+height: 135px}
+
+@media(max-width: 455px) {min-width: 230px}
+
+@media(max-width: 435px) {min-width: 220px}
+
 @media(max-width: 414px) {
 min-width: 100%;
 max-width: 100%;
@@ -277,7 +304,43 @@ background-color: red}
 
 @media(max-width: 811px) {width: 318px}
 
-@media(max-width: 791px) {font-size: 15px}`;
+@media(max-width: 791px) {font-size: 15px}
+
+@media(max-width: 771px) {width: 332px}
+
+@media(max-width: 741px) {width: 317px}
+
+@media(max-width: 721px) {width: 297px}
+
+@media(max-width: 661px) {width: 286px}
+
+@media(max-width: 641px) {width: 275px}
+
+@media(max-width: 601px) {width: 267px}
+
+@media(max-width: 571px) {width: 253px}
+
+@media(max-width: 561px) {width: 246px}
+
+@media(max-width: 545px) {
+width: 242px;
+-webkit-line-clamp: 1}
+
+@media(max-width: 531px) {width: 227px}
+
+@media(max-width: 511px) {width: 212px}
+
+@media(max-width: 490px) {width: 202px}
+
+@media(max-width: 480px) {width: 197px}
+
+@media(max-width: 470px) {width: 187px}
+
+@media(max-width: 455px) {width: 183px}
+
+@media(max-width: 445px) {width: 179px}
+
+`;
 
 export const TextCard = styled.span`
 font-size: 15px;
@@ -295,12 +358,54 @@ overflow: hidden;
 text-overflow: ellipsis;
 text-align: justify;
 margin-top: 20px;
-background-color: green;
+background-color: yellow;
 
 @media(max-width: 900px) {width: 90%}
 
 @media(max-width: 881px) {width: 355px}
 
-@media(max-width: 811px) {width: 3px}
+@media(max-width: 851px) {width: 327px}
 
-@media(max-width: 851px) {width: 325px}`;
+@media(max-width: 811px) {width: 317px}
+
+@media(max-width: 791px) {width: 361px}
+
+@media(max-width: 781px) {width: 341px}
+
+@media(max-width: 771px) {width: 330px}
+
+@media(max-width: 741px) {width: 315px}
+
+@media(max-width: 721px) {width: 296px}
+
+@media(max-width: 661px) {width: 288px}
+
+@media(max-width: 641px) {width: 278px}
+
+@media(max-width: 601px) {width: 268px}
+
+@media(max-width: 571px) {width: 252px}
+
+@media(max-width: 561px) {width: 247px}
+
+@media(max-width: 545px) {width: 242px}
+
+@media(max-width: 531px) {width: 228px}
+
+@media(max-width: 511px) {width: 212px}
+
+@media(max-width: 490px) {width: 202px}
+
+@media(max-width: 480px) {width: 197px}
+
+@media(max-width: 470px) {width: 187px}
+
+@media(max-width: 455px) {width: 183px}
+
+@media(max-width: 445px) {
+width: 179px;
+height: 45px;
+margin-top: 10px}
+
+
+`

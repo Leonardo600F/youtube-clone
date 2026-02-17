@@ -451,6 +451,8 @@ background-color: #f8f8f8;
 
 @media(max-width: 490px) {margin-left: 20px}
 
+@media(max-width: 480px) {margin-left: 10px}
+
 @media(max-width: 474px) {margin-left: 11px}
 
 @media(max-width: 464px) {margin-left: 7px}
