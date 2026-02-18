@@ -137,7 +137,10 @@ margin-left: -80px}
 
 @media(max-width: 515px) {width: 470px}
 
-@media(max-width: 500px) {width: 460px}
+@media(max-width: 500px) {
+width: 460px;
+margin-top: -90px;
+margin-bottom: 70px}
 
 @media(max-width: 490px) {width: 450px}
 
@@ -150,6 +153,30 @@ margin-left: -80px}
 @media(max-width: 445px) {width: 415px}
 
 @media(max-width: 435px) {width: 405px}
+
+@media(max-width: 430px) {width: 395px}
+
+@media(max-width: 420px) {width: 390px}
+
+@media(max-width: 415px) {width: 380px}
+
+@media(max-width: 405px) {width: 370px}
+
+@media(max-width: 395px) {width: 360px}
+
+@media(max-width: 385px) {width: 346px}
+
+@media(max-width: 375px) {width: 340px}
+
+@media(max-width: 365px) {width: 335px}
+
+@media(max-width: 360px) {width: 325px}
+
+@media(max-width: 350px) {width: 310px}
+
+@media(max-width: 340px) {width: 305px}
+
+@media(max-width: 330px) {width: 299px}
 
 
 `;
@@ -235,10 +262,37 @@ height: 135px}
 
 @media(max-width: 435px) {min-width: 220px}
 
-@media(max-width: 414px) {
-min-width: 100%;
-max-width: 100%;
-height: 190px}`;
+@media(max-width: 430px) {
+min-width: 210px;
+height: 125px}
+
+@media(max-width: 420px) {
+min-width: 200px;
+height: 115px}
+
+@media(max-width: 405px) {
+min-width: 190px;
+height: 112px}
+
+@media(max-width: 385px) {
+min-width: 185px;
+height: 108px}
+
+@media(max-width: 375px) {
+min-width: 180px;
+height: 104px}
+
+@media(max-width: 350px) {
+min-width: 175px;
+height: 100px}
+
+@media(max-width: 340px) {
+min-width: 305px;
+height: 175px}
+
+@media(max-width: 330px) {
+min-width: 295px;
+height: 170px}`;
 
 export const TitleContainer = styled.div`
 display: flex;
@@ -264,16 +318,28 @@ background-color: beige;
 min-width: 30px;
 max-width: 30px;
 min-height: 30px;
-max-height: 30px}`;
+max-height: 30px}
+
+@media(max-width: 415px) {
+min-width: 23px;
+max-width: 23px;
+min-height: 23px;
+max-height: 23px}
+
+@media(max-width: 340px) {display: none}`;
 
 export const TextContainer = styled.div`
 display: flex;
-flex-direction: column`;
+flex-direction: column
+
+@media(max-width: 340px) {display: none}`;
 
 export const ChannelContainer = styled.div`
 display: flex;
 align-items: center;
-margin-top: 10px`;
+margin-top: 10px
+
+@media(max-width: 340px) {display: none}`;
 
 export const Title = styled.span<OpenMenu>`
 display: -webkit-box;
@@ -340,6 +406,22 @@ width: 242px;
 
 @media(max-width: 445px) {width: 179px}
 
+@media(max-width: 415px) {
+width: 173px;
+font-size: 13.5px}
+
+@media(max-width: 395px) {width: 164px}
+
+@media(max-width: 385px) {width: 154px}
+
+@media(max-width: 375px) {width: 147px}
+
+@media(max-width: 360px) {width: 138px}
+
+@media(max-width: 350px) {width: 128px}
+
+@media(max-width: 340px) {display: none}
+
 `;
 
 export const TextCard = styled.span`
@@ -347,7 +429,13 @@ font-size: 15px;
 
 @media(max-width: 2000px) {font-size: 13px}
 
-@media(max-width: 1312px) {font-size: 12.7px}`;
+@media(max-width: 1312px) {font-size: 12.7px}
+
+@media(max-width: 415px) {font-size: 11.5px}
+
+@media(max-width: 340px) {display: none}
+
+`;
 
 export const DescriptionContainer = styled.div`
 display: -webkit-box;
@@ -406,6 +494,20 @@ background-color: yellow;
 width: 179px;
 height: 45px;
 margin-top: 10px}
+
+@media(max-width: 415px) {width: 173px}
+
+@media(max-width: 395px) {width: 164px}
+
+@media(max-width: 385px) {width: 154px}
+
+@media(max-width: 375px) {width: 148px}
+
+@media(max-width: 360px) {width: 138px}
+
+@media(max-width: 350px) {width: 128px}
+
+@media(max-width: 340px) {display: none}
 
 
 `

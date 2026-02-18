@@ -13,8 +13,6 @@ box-sizing: border-box;
 
 @media(max-width: 1312px) {padding: 100px 10px 0 100px}
 
-@media(max-width: 600px) {row-gap: 30px}
+@media(max-width: 600px) {row-gap: 30px}`;
 
-@media(max-width: 414px) {padding: 100px 10px 0 10px}`;
-
-export const SearchContainer = styled.div`width: 100%;`;
+export const SearchContainer = styled.div`width: 100%`;
