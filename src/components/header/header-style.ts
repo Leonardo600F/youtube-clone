@@ -811,30 +811,6 @@ margin-right: 55px;
 
 @media(max-width: 1400px) {margin-right: 15px;}`;
 
-export const OptionsContainer = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 35px;
-width: 35px;
-border-radius: 50%;
-margin-top: 5px;
-margin-right: 10px;
-cursor: pointer;
-background-color: #fff;
-
-@media(max-width: 1312px) {
-margin-top: 0px;
-margin-right: 0px;}
-
-@media(max-width: 400px) {
-height: 25px;
-width: 25px;
-margin-top: 5px;
-margin-right: 0px;}
-
-@media(max-width: 334px) {display: none;}`;
-
 export const LoginContainer = styled.div`
 width: 120px;
 margin: 5px 5px 1px 10px;

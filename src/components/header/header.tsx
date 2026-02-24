@@ -30,7 +30,6 @@ import {
     CloseImg,
     MicButton,
     HeaderButton,
-    OptionsContainer,
     LoginContainer,
     SpanButton,
     LoginButtonIcon,
@@ -55,7 +54,6 @@ import LeftArrowIcon from '../../assets/icon-left-arrow-responsive.png';
 import ResponsiveMicIcon from "../../assets/icon-responsive-mic.png";
 import PlusIcon from "../../assets/icon-plus.png";
 import NotificationIcon from "../../assets/icon-notification.png";
-import OptionsIcon from "../../assets/icon-options.png";
 import LoginIcon from "../../assets/icon-login.png";
 import KeyboardIcon from "../../assets/icon-keyboard.png";
 import LogoutIcon from "../../assets/icon-logout.png";
@@ -313,16 +311,7 @@ export default function Header() {
                         <NotificationIconContainer>
                             <ButtonIcon alt="" title="Notificações" src={NotificationIcon} />
                         </NotificationIconContainer>
-                    </>
-                    :
-                    <OptionsContainer>
-                        <ButtonIcon style={{ width: '23px', marginLeft: '5px' }} alt="" title="Configurações" src={OptionsIcon} />
-                    </OptionsContainer>
-                }
 
-
-                {login ?
-                    <>
                         <ProfileImageContainer onClick={handleDropDownMenu} data-profile-button>
                             <span>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</span>
                         </ProfileImageContainer>

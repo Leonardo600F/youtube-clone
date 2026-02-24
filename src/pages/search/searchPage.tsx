@@ -122,7 +122,7 @@ export default function SearchPage() {
                             thumbnail={video.snippet.thumbnails.high?.url}
                             channelImage={video.snippet.channelTitle.charAt(0).toUpperCase()}
                             channelName={video.snippet.channelTitle}
-                            details={`150 mil - ${getPublishedTime(video.snippet.publishedAt)}`}
+                            details={`• 150 mil • ${getPublishedTime(video.snippet.publishedAt)}`}
                             description={video.snippet.description}
                             key={video.id.videoId}
                         />

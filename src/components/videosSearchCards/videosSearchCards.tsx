@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Container, Banner, TitleContainer, TextContainer, Title, TextCard, ChannelContainer, ChannelImage, DescriptionContainer } from "./videosSearchCards-styles";
+import { Container, Banner, TitleContainer, TextContainer, Title, TextCard, ChannelContainer, ChannelImage, ResponsiveChannelTitle, ChannelDetails, DescriptionContainer, ResponsiveTextCard } from "./videosSearchCards-styles";
 import { ComponentContext } from "../../context/componentContext";
 
 interface Props {
@@ -28,14 +28,14 @@ export default function VideosSearchCards(props: Props) {
                 </TextContainer>
 
                 <ChannelContainer>
-                    <ChannelImage>
-                        {props.channelImage}
-                    </ChannelImage>
-                    <TextCard>{props.channelName}</TextCard>
+                    <ChannelImage>{props.channelImage}</ChannelImage>
+                    <ResponsiveChannelTitle>{props.title}</ResponsiveChannelTitle>
+                    <ChannelDetails>{props.channelName} {props.details}</ChannelDetails>
                 </ChannelContainer>
 
                 <DescriptionContainer>
                     <TextCard>{props.description}</TextCard>
+                    <ResponsiveTextCard>{props.description}</ResponsiveTextCard>
                 </DescriptionContainer>
 
             </TitleContainer>
