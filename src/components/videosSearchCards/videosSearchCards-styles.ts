@@ -131,20 +131,24 @@ margin-left: -80px}
 
 @media(max-width: 560px) {width: 515px}
 
+@media(max-width: 550px) {height: 388px}
+
 @media(max-width: 540px) {width: 505px}
 
 @media(max-width: 530px) {width: 495px}
 
-@media(max-width: 550px) {height: 388px}
+@media(max-width: 520px) {width: 485px}
 
-@media(max-width: 515px) {width: 470px}
+@media(max-width: 510px) {width: 475px}
 
 @media(max-width: 500px) {
-width: 460px;
+width: 465px;
 margin-top: -90px;
 margin-bottom: 70px}
 
-@media(max-width: 490px) {width: 450px}
+@media(max-width: 490px) {
+width: 455px;
+height: 367px}
 
 @media(max-width: 480px) {width: 440px}
 
@@ -178,10 +182,7 @@ margin-bottom: 70px}
 
 @media(max-width: 340px) {width: 305px}
 
-@media(max-width: 330px) {width: 299px}
-
-
-`;
+@media(max-width: 330px) {width: 299px}`;
 
 export const Banner = styled.div<OpenMenu>`
 min-width: 540px;
@@ -260,6 +261,14 @@ height: 281px}
 min-width: 495px;
 height: 271px}
 
+@media(max-width: 520px) {min-width: 485px}
+
+@media(max-width: 510px) {min-width: 475px}
+
+@media(max-width: 500px) {min-width: 465px}
+
+@media(max-width: 490px) {min-width: 455px}
+
 `;
 
 export const TitleContainer = styled.div`
@@ -296,6 +305,8 @@ max-height: 30px}
 
 @media(max-width: 540px) {margin-top: -25px}
 
+@media(max-width: 490px) {margin-top: -45px}
+
 @media(max-width: 415px) {
 min-width: 23px;
 max-width: 23px;
@@ -318,12 +329,22 @@ font-size: 15px;
 font-weight: 600;
 background-color: yellow}
 
-
 @media(max-width: 540px) {
 width: 463px;
 margin-top: -25px}
 
-@media(max-width: 530px) {width: 453px}`;
+@media(max-width: 530px) {width: 453px}
+
+@media(max-width: 520px) {width: 443px}
+
+@media(max-width: 510px) {width: 433px}
+
+@media(max-width: 500px) {width: 423px}
+
+@media(max-width: 490px) {
+width: 413px;
+margin-top: -45px;
+font-size: 13px}`;
 
 export const TextContainer = styled.div`
 display: flex;
@@ -412,7 +433,17 @@ margin-left: -472px}
 
 @media(max-width: 540px) {margin-left: -462px}
 
-@media(max-width: 530px) {margin-left: -452px}`;
+@media(max-width: 530px) {margin-left: -452px}
+
+@media(max-width: 520px) {margin-left: -442px}
+
+@media(max-width: 510px) {margin-left: -432px}
+
+@media(max-width: 500px) {margin-left: -422px}
+
+@media(max-width: 490px) {
+margin-top: 15px;
+margin-left: -412px}`;
 
 export const DescriptionContainer = styled.div`
 display: -webkit-box;
@@ -460,8 +491,20 @@ margin-left: 40px}
 
 @media(max-width: 540px) {width: 463px}
 
-@media(max-width: 530px) {width: 453px}`
+@media(max-width: 530px) {width: 453px}
+
+@media(max-width: 520px) {width: 443px}
+
+@media(max-width: 510px) {width: 433px}
+
+@media(max-width: 500px) {width: 423px}
+
+@media(max-width: 490px) {width: 413px}
+
+`
 
 export const ResponsiveTextCard = styled.span`
 display: flex;
-font-size: 14px`
+font-size: 14px;
+
+@media(max-width: 490px) {font-size: 12px}`
