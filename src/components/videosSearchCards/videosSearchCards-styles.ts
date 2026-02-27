@@ -127,7 +127,7 @@ margin-left: -80px}
 
 @media(max-width: 590px) {width: 545px}
 
-@media(max-width: 575px) {width: 530px}
+@media(max-width: 575px) {width: 535px}
 
 @media(max-width: 560px) {width: 515px}
 
@@ -150,39 +150,53 @@ margin-bottom: 70px}
 width: 455px;
 height: 367px}
 
-@media(max-width: 480px) {width: 440px}
+@media(max-width: 480px) {
+width: 445px;
+height: 352px}
 
-@media(max-width: 470px) {width: 430px}
+@media(max-width: 470px) {width: 435px}
 
-@media(max-width: 455px) {width: 420px}
+@media(max-width: 460px) {width: 425px}
 
-@media(max-width: 445px) {width: 415px}
+@media(max-width: 450px) {
+width: 415px;
+height: 324px}
 
-@media(max-width: 435px) {width: 405px}
+@media(max-width: 440px) {width: 405px}
 
 @media(max-width: 430px) {width: 395px}
 
-@media(max-width: 420px) {width: 390px}
+@media(max-width: 420px) {width: 385px}
 
-@media(max-width: 415px) {width: 380px}
+@media(max-width: 410px) {
+width: 375px;
+height: 318px}
 
-@media(max-width: 405px) {width: 370px}
+@media(max-width: 400px) {width: 365px}
 
-@media(max-width: 395px) {width: 360px}
+@media(max-width: 390px) {
+width: 355px;
+height: 308px}
 
-@media(max-width: 385px) {width: 346px}
+@media(max-width: 380px) {width: 345px}
 
-@media(max-width: 375px) {width: 340px}
+@media(max-width: 370px) {
+width: 335px;
+height: 298px}
 
-@media(max-width: 365px) {width: 335px}
+@media(max-width: 360px) {
+width: 325px;
+height: 310px}
 
-@media(max-width: 360px) {width: 325px}
-
-@media(max-width: 350px) {width: 310px}
+@media(max-width: 350px) {width: 315px}
 
 @media(max-width: 340px) {width: 305px}
 
-@media(max-width: 330px) {width: 299px}`;
+@media(max-width: 330px) {
+width: 295px;
+height: 290px}
+
+@media(max-width: 323px) {width: 288px}`;
 
 export const Banner = styled.div<OpenMenu>`
 min-width: 540px;
@@ -269,7 +283,53 @@ height: 271px}
 
 @media(max-width: 490px) {min-width: 455px}
 
-`;
+@media(max-width: 480px) {
+min-width: 445px;
+height: 261px}
+
+@media(max-width: 470px) {min-width: 435px}
+
+@media(max-width: 460px) {min-width: 425px}
+
+@media(max-width: 450px) {
+min-width: 415px;
+height: 251px}
+
+@media(max-width: 440px) {min-width: 405px}
+
+@media(max-width: 430px) {min-width: 395px}
+
+@media(max-width: 420px) {min-width: 385px}
+
+@media(max-width: 410px) {
+min-width: 375px;
+height: 241px}
+
+@media(max-width: 400px) {min-width: 365px}
+
+@media(max-width: 390px) {
+min-width: 355px;
+height: 231px}
+
+@media(max-width: 380px) {min-width: 345px}
+
+@media(max-width: 370px) {
+min-width: 335px;
+height: 221px}
+
+@media(max-width: 360px) {min-width: 325px}
+
+@media(max-width: 350px) {
+min-width: 315px;
+height: 211px}
+
+@media(max-width: 340px) {min-width: 305px}
+
+@media(max-width: 330px) {
+min-width: 295px;
+height: 201px}
+
+@media(max-width: 323px) {min-width: 288px}`;
 
 export const TitleContainer = styled.div`
 display: flex;
@@ -280,7 +340,21 @@ width: 100%;
 
 @media(max-width: 550px) {
 margin-top: 295px;
-margin-left: -103%}`;
+margin-left: -103%}
+
+@media(max-width: 450px) {margin-top: 285px}
+
+@media(max-width: 410px) {margin-top: 275px}
+
+@media(max-width: 390px) {margin-top: 265px}
+
+@media(max-width: 370px) {margin-top: 255px}
+
+@media(max-width: 350px) {margin-top: 245px}
+
+@media(max-width: 330px) {margin-top: 235px}
+
+@media(max-width: 323px) {margin-top: 228px}`;
 
 export const ChannelImage = styled.div`
 display: flex;
@@ -305,13 +379,7 @@ max-height: 30px}
 
 @media(max-width: 540px) {margin-top: -25px}
 
-@media(max-width: 490px) {margin-top: -45px}
-
-@media(max-width: 415px) {
-min-width: 23px;
-max-width: 23px;
-min-height: 23px;
-max-height: 23px}`;
+@media(max-width: 490px) {margin-top: -45px}`;
 
 export const ResponsiveChannelTitle = styled.span`
 display: none;
@@ -344,7 +412,41 @@ margin-top: -25px}
 @media(max-width: 490px) {
 width: 413px;
 margin-top: -45px;
-font-size: 13px}`;
+font-size: 13px}
+
+@media(max-width: 480px) {width: 402px}
+
+@media(max-width: 470px) {width: 392px}
+
+@media(max-width: 460px) {width: 382px}
+
+@media(max-width: 450px) {width: 371px}
+
+@media(max-width: 440px) {width: 361px}
+
+@media(max-width: 430px) {width: 351px}
+
+@media(max-width: 420px) {width: 341px}
+
+@media(max-width: 410px) {width: 330px}
+
+@media(max-width: 400px) {width: 320px}
+
+@media(max-width: 390px) {width: 310px}
+
+@media(max-width: 380px) {width: 299px}
+
+@media(max-width: 370px) {width: 289px}
+
+@media(max-width: 360px) {width: 279px}
+
+@media(max-width: 350px) {width: 268px}
+
+@media(max-width: 340px) {width: 258px}
+
+@media(max-width: 330px) {width: 248px}
+
+@media(max-width: 323px) {width: 241px}`;
 
 export const TextContainer = styled.div`
 display: flex;
@@ -378,7 +480,7 @@ color: #0f0f0f;
 @media(max-width: 1020px) {font-size: 17px}
 
 @media(max-width: 900px) {
-width: 370px;
+width: 374px;
 background-color: blue}
 
 @media(max-width: 880px) {width: 355px}
@@ -401,7 +503,7 @@ background-color: blue}
 
 @media(max-width: 601px) {width: 267px}
 
-@media(max-width: 571px) {width: 253px}
+@media(max-width: 575px) {width: 258px}
 
 @media(max-width: 561px) {width: 246px}
 
@@ -418,18 +520,25 @@ width: fit-content;
 
 @media(max-width: 550px) {display: none}`;
 
-
 export const ChannelDetails = styled.span`
 font-size: 15px;
+background-color: purple;
 
 @media(max-width: 2000px) {font-size: 13px}
 
 @media(max-width: 1312px) {font-size: 12.7px}
 
+@media(max-width: 550px) {display: none}`;
+
+export const ResponsiveChannelDetails = styled.span`
+display: none;
+
 @media(max-width: 550px) {
+display: flex;
 width: fit-content;
 margin-top: 30px;
-margin-left: -472px}
+margin-left: -472px;
+font-size: 12.5px}
 
 @media(max-width: 540px) {margin-left: -462px}
 
@@ -443,7 +552,42 @@ margin-left: -472px}
 
 @media(max-width: 490px) {
 margin-top: 15px;
-margin-left: -412px}`;
+margin-left: -412px}
+
+@media(max-width: 480px) {margin-left: -402px}
+
+@media(max-width: 470px) {margin-left: -392px}
+
+@media(max-width: 460px) {margin-left: -382px}
+
+@media(max-width: 450px) {margin-left: -372px}
+
+@media(max-width: 440px) {margin-left: -362px}
+
+@media(max-width: 430px) {margin-left: -352px}
+
+@media(max-width: 420px) {margin-left: -342px}
+
+@media(max-width: 410px) {margin-left: -331px}
+
+@media(max-width: 400px) {margin-left: -322px}
+
+@media(max-width: 390px) {margin-left: -312px}
+
+@media(max-width: 380px) {margin-left: -299px}
+
+@media(max-width: 370px) {margin-left: -289px}
+
+@media(max-width: 360px) {margin-left: -279px}
+
+@media(max-width: 350px) {margin-left: -269px}
+
+@media(max-width: 340px) {margin-left: -259px}
+
+@media(max-width: 330px) {margin-left: -249px}
+
+@media(max-width: 323px) {margin-left: -243px}
+`;
 
 export const DescriptionContainer = styled.div`
 display: -webkit-box;
@@ -456,9 +600,69 @@ text-align: justify;
 margin-top: 20px;
 background-color: yellow;
 
-@media(max-width: 900px) {width: 90%}
+@media(max-width: 2000px) {width: 752px}
 
-@media(max-width: 881px) {width: 355px}
+@media(max-width: 1800px) {width: 692px}
+
+@media(max-width: 1700px) {width: 684px}
+
+@media(max-width: 1650px) {width: 774px}
+
+@media(max-width: 1600px) {width: 784px}
+
+@media(max-width: 1570px) {width: 744px}
+
+@media(max-width: 1520px) {width: 724px}
+
+@media(max-width: 1490px) {width: 684px}
+
+@media(max-width: 1470px) {width: 644px}
+
+@media(max-width: 1420px) {width: 624px}
+
+@media(max-width: 1390px) {width: 594px}
+
+@media(max-width: 1312px) {width: 624px}
+
+@media(max-width: 1300px) {width: 604px}
+
+@media(max-width: 1285px) {width: 584px}
+
+@media(max-width: 1265px) {width: 564px}
+
+@media(max-width: 1240px) {width: 544px}
+
+@media(max-width: 1220px) {width: 524px}
+
+@media(max-width: 1200px) {width: 554px}
+
+@media(max-width: 1180px) {width: 534px}
+
+@media(max-width: 1160px) {width: 514px}
+
+@media(max-width: 1140px) {width: 494px}
+
+@media(max-width: 1120px) {width: 474px}
+
+@media(max-width: 1100px) {width: 454px}
+
+@media(max-width: 1080px) {width: 434px}
+
+@media(max-width: 1060px) {width: 454px}
+
+@media(max-width: 1040px) {width: 434px}
+
+@media(max-width: 1010px) {width: 414px}
+
+@media(max-width: 990px) {width: 454px}
+
+@media(max-width: 970px) {width: 424px}
+
+@media(max-width: 940px) {width: 394px}
+
+@media(max-width: 910px) {width: 374px}
+
+@media(max-width: 881px) {width: 358px}
 
 @media(max-width: 851px) {width: 327px}
 
@@ -480,7 +684,7 @@ background-color: yellow;
 
 @media(max-width: 601px) {width: 268px}
 
-@media(max-width: 571px) {width: 252px}
+@media(max-width: 575px) {width: 259px}
 
 @media(max-width: 561px) {width: 247px}
 
@@ -501,10 +705,19 @@ margin-left: 40px}
 
 @media(max-width: 490px) {width: 413px}
 
-`
+@media(max-width: 480px) {width: 402px}
+
+@media(max-width: 470px) {width: 392px}
+
+@media(max-width: 460px) {width: 382px}
+
+@media(max-width: 450px) {display: none}`;
 
 export const ResponsiveTextCard = styled.span`
+display: none;
+
+@media(max-width: 550px) {
 display: flex;
-font-size: 14px;
+font-size: 14px;}
 
 @media(max-width: 490px) {font-size: 12px}`

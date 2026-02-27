@@ -11,16 +11,11 @@ import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
 export default function SearchPage() {
 
     interface Videos {
-        id: {
-            videoId: string;
-        }
+        id: { videoId: string }
+
         snippet: {
             title: string;
-            thumbnails: {
-                high: {
-                    url: string;
-                }
-            }
+            thumbnails: { high: { url: string } }
             channelTitle: string;
             publishedAt: string;
             description: string;
@@ -32,9 +27,7 @@ export default function SearchPage() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
-        if (search !== '') {
-            load()
-        }
+        if (search !== '') { load() }
     }, [search])
 
     const [videosApi, setVideosApi] = useState<Videos[]>([]);
@@ -47,9 +40,8 @@ export default function SearchPage() {
                 const resposta = await axios.get(URL);
                 setVideosApi(resposta.data.items);
             }
-            catch (error) {
-                console.log(error)
-            }
+
+            catch (error) { console.log(error) }
         }
     }
 
@@ -122,7 +114,7 @@ export default function SearchPage() {
                             thumbnail={video.snippet.thumbnails.high?.url}
                             channelImage={video.snippet.channelTitle.charAt(0).toUpperCase()}
                             channelName={video.snippet.channelTitle}
-                            details={`• 150 mil • ${getPublishedTime(video.snippet.publishedAt)}`}
+                            details={`90 mil visualizações • ${getPublishedTime(video.snippet.publishedAt)}`}
                             description={video.snippet.description}
                             key={video.id.videoId}
                         />

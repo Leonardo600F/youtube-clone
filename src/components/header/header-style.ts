@@ -812,7 +812,8 @@ margin-right: 55px;
 @media(max-width: 1400px) {margin-right: 15px;}`;
 
 export const LoginContainer = styled.div`
-width: 120px;
+width: 125px;
+height: 35px;
 margin: 5px 5px 1px 10px;
 border-radius: 20px;
 border: 1px solid;
@@ -824,14 +825,12 @@ cursor: pointer;
 
 @media(max-width: 1312px) {margin-top: 1px;}
 
-@media(max-width: 400px) {
-margin-right: -10px;
-height: 30px;}
+@media(max-width: 400px) {margin-right: -5px}
 
 @media(max-width: 345px) {
 width: 115px;
 height: 30px;
-margin-right: -6px;}`;
+margin-right: -6px}`;
 
 export const SpanButton = styled.span`
 display: flex;
