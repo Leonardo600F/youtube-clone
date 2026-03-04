@@ -15,7 +15,7 @@ export default function SearchPage() {
 
         snippet: {
             title: string;
-            thumbnails: { high: { url: string } }
+            thumbnails: { high: { url: string } };
             channelTitle: string;
             publishedAt: string;
             description: string;
@@ -23,11 +23,25 @@ export default function SearchPage() {
     }
 
     const { openMenu } = useContext(ComponentContext);
-    const { search } = useSearchContext();
+    const { search, setSearch } = useSearchContext();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
-        if (search !== '') { load() }
+        const savedSearch = localStorage.getItem('searchTerm');
+        if (savedSearch && savedSearch !== '') {
+            setSearch(savedSearch);
+        }
+    }, [setSearch]);
+
+    useEffect(() => {
+        if (search === '') {
+            localStorage.removeItem('searchTerm');
+            setVideosApi([]);
+            return;
+        }
+
+        localStorage.setItem('searchTerm', search);
+        load();
     }, [search])
 
     const [videosApi, setVideosApi] = useState<Videos[]>([]);

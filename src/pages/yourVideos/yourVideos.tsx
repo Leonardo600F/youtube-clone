@@ -1,7 +1,9 @@
-import { useContext, useState, useRef } from "react";
+import { useContext, useState, useEffect, useRef, useMemo } from "react";
 import { UserContext } from '../../context/userContext'
 import { ComponentContext } from "../../context/componentContext";
 import YourVideosCards from "../../components/yourVideosCards/yourVideosCards";
+import Menu from "../../components/menu/menu";
+import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
 
 import {
 
@@ -14,32 +16,33 @@ import {
     ModalContent,
     ModalTitle,
     CloseButton,
+    CloseImg,
     ThumbnailURL,
     VideoTitle,
     VideoDescription,
     AddVideoButton,
+    ModalAddVideoButton,
     ClearButton,
     MessageContainer,
     EmptyInput
 
 } from './yourVideos-style';
 
-import Menu from "../../components/menu/menu";
-import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
+import CloseIcon from "../../assets/icon-close.png";
 
 export default function YourVideos() {
 
     interface Videos {
-        id: string
-        title: string
-        thumbnail: string
-        description: string
-        publishedAt: string
+        id: string;
+        title: string;
+        thumbnail: string;
+        description: string;
+        publishedAt: string;
     }
 
     const { openMenu } = useContext(ComponentContext);
-
-    const { user, userVideos, createVideos, token } = useContext(UserContext)
+    const { user, userVideos, createVideos, token } = useContext(UserContext);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 
     const USER_ID = user?.user_id;
@@ -163,10 +166,31 @@ export default function YourVideos() {
         }
     }
 
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const ResponsiveMenuApplication = useMemo(() => {
+        if (windowWidth >= 1313) {
+            return (
+                <Menu />
+            )
+        } else {
+            return (
+                <ResponsiveMenu />
+            )
+        }
+
+    }, [windowWidth])
+
     return (
         <>
-            <Menu />
-            <ResponsiveMenu />
+            {ResponsiveMenuApplication}
             <YourVideosContainer>
 
                 <Container openMenu={openMenu}>
@@ -177,8 +201,12 @@ export default function YourVideos() {
 
                         <Modal hideModal={hideModal}>
                             <ModalContent>
-                                <CloseButton onClick={closeModal}>X</CloseButton>
-                                <ModalTitle>Enviar um novo vídeo</ModalTitle>
+
+                                <CloseButton onClick={closeModal}>
+                                    <CloseImg src={CloseIcon} />
+                                </CloseButton>
+
+                                <ModalTitle>Enviar um vídeo</ModalTitle>
                                 <ThumbnailURL
                                     type="text"
                                     placeholder="URL"
@@ -219,7 +247,7 @@ export default function YourVideos() {
                                     </EmptyInput>
                                 </MessageContainer>
 
-                                <AddVideoButton onClick={sendVideo}>Adicionar um vídeo</AddVideoButton>
+                                <ModalAddVideoButton onClick={sendVideo}>Adicionar um vídeo</ModalAddVideoButton>
                                 <ClearButton onClick={clearInputs}>Limpar</ClearButton>
                             </ModalContent>
                         </Modal>

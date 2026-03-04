@@ -2,7 +2,7 @@ import './App-style';
 import { MainContainer } from "./App-style";
 import { ComponentStorage } from './context/componentContext';
 import { UserStorage } from "./context/userContext";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import Header from "./components/header/header";
 import AppRoutes from "./routes/routes";
 
