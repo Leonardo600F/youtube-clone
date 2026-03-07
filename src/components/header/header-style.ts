@@ -675,27 +675,31 @@ cursor: pointer;
 
 @media(max-width: 2272px) {margin-left: -615px}
 
-@media(max-width: 2235px) {margin-left: -596px}
+@media(max-width: 2242px) {margin-left: -596px}
 
-@media(max-width: 2193px) {margin-left: -576px}
+@media(max-width: 2197px) {margin-left: -576px}
 
-@media(max-width: 2160px) {margin-left: -556px}
+@media(max-width: 2172px) {margin-left: -556px}
 
-@media(max-width: 2111px) {margin-left: -536px}
+@media(max-width: 2129px) {margin-left: -536px}
 
-@media(max-width: 2090px) {margin-left: -526px}
+@media(max-width: 2093px) {margin-left: -510px}
 
 @media(max-width: 2060px) {margin-left: -510px}
 
-@media(max-width: 2030px) {margin-left: -490px}
+@media(max-width: 2040px) {margin-left: -480px}
 
 @media(max-width: 1995px) {margin-left: -470px}
 
-@media(max-width: 1943px) {margin-left: -450px}
+@media(max-width: 1965px) {margin-left: -445px}
+
+@media(max-width: 1943px) {margin-left: -435px}
 
 @media(max-width: 1920px) {margin-left: -430px}
 
-@media(max-width: 1860px) {margin-left: -410px}
+@media(max-width: 1885px) {margin-left: -410px}
+
+@media(max-width: 1853px) {margin-left: -400px}
 
 @media(max-width: 1830px) {margin-left: -390px}
 
@@ -705,11 +709,11 @@ cursor: pointer;
 
 @media(max-width: 1760px) {margin-left: -350px}
 
-@media(max-width: 1680px) {margin-left: -320px}
+@media(max-width: 1692px) {margin-left: -320px}
 
-@media(max-width: 1620px) {margin-left: -300px}
+@media(max-width: 1629px) {margin-left: -300px}
 
-@media(max-width: 1587px) {margin-left: -280px}
+@media(max-width: 1593px) {margin-left: -280px}
 
 @media(max-width: 1559px) {margin-left: -290px}
 
@@ -738,6 +742,8 @@ cursor: pointer;
 @media(max-width: 1172px) {margin-left: -45px}
 
 @media(max-width: 1140px) {margin-left: -35px}
+
+@media(max-width: 1130px) {margin-left: -15px}
 
 @media(max-width: 1112px) {margin-left: -20px}
 

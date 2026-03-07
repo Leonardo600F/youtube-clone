@@ -24,7 +24,8 @@ import {
     ModalAddVideoButton,
     ClearButton,
     MessageContainer,
-    EmptyInput
+    EmptyInput,
+    ModalLine
 
 } from './yourVideos-style';
 
@@ -202,11 +203,14 @@ export default function YourVideos() {
                         <Modal hideModal={hideModal}>
                             <ModalContent>
 
+                                <ModalTitle>Enviar um vídeo</ModalTitle>
+
                                 <CloseButton onClick={closeModal}>
                                     <CloseImg src={CloseIcon} />
                                 </CloseButton>
 
-                                <ModalTitle>Enviar um vídeo</ModalTitle>
+                                <ModalLine />
+
                                 <ThumbnailURL
                                     type="text"
                                     placeholder="URL"

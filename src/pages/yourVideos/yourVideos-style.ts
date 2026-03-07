@@ -73,27 +73,59 @@ background-color: rgba(0,0,0,0.5);`;
 export const ModalContent = styled.div`
 display: flex;
 flex-direction: column;
-width: 50vw;
-height: 80vh;
+width: 1200px;
+height: 900px;
 padding: 20px 45px;
+margin-top: -10px;
 border-radius: 12px;
 box-sizing: border-box;
 background-color: #fff;
 
-@media(max-width: 834px) {
-width: 80vw;
-height: 50vh;
-padding: 20px 10px}
+@media(max-width: 1580px) {width: 1050px}
+
+@media(max-width: 1280px) {width: 950px}
+
+@media(max-width: 1150px) {width: 850px}
+
+@media(max-width: 1050px) {width: 750px}
+
+@media(max-width: 900px) {
+width: 650px;
+margin-left: 50px}
+
+@media(max-width: 800px) {width: 600px}
+
+@media(max-width: 700px) {
+width: 550px;
+margin-left: -10px}
 
 @media(max-width: 600px) {
-width: 98vw;
-height: 60vh;
-padding: 20px 10px}`;
+width: 500px;
+height: 650px;
+padding: 20px 12px}
+
+@media(max-width: 540px) {
+width: 450px;
+margin-left: 0;
+}
+
+@media(max-width: 490px) {width: 410px}
+
+`;
 
 export const ModalTitle = styled.h1`
 text-align: center;
+margin: 0;
 font-size: 30px;
-margin: 0;`;
+
+@media(max-width: 800px) {font-size: 28px}
+
+@media(max-width: 600px) {font-size: 26px}
+
+@media(max-width: 540px) {margin-left: -20px}
+
+@media(max-width: 490px) {font-size: 23px}
+`;
 
 export const CloseButton = styled.button`
 display: flex;
@@ -102,8 +134,7 @@ justify-content: center;
 position: absolute;
 width: 40px;
 height: 40px;
-top: 12vh;
-right: 27vw;
+margin-left: 1070px;
 padding-left: 7px;
 font-weight: 700;
 border-radius: 50%;
@@ -111,17 +142,68 @@ border: none;
 outline: none;
 cursor: pointer;
 
-&:hover {background-color: #C8C8C8}
+&:hover {background-color: #C0C0C0}
 
-@media(max-width: 834px) {
-right: 8vw;
-top: 23vh}
+@media(max-width: 1580px) {margin-left: 920px}
+
+@media(max-width: 1280px) {margin-left: 820px}
+
+@media(max-width: 1150px) {margin-left: 720px}
+
+@media(max-width: 1050px) {margin-left: 620px}
+
+@media(max-width: 900px) {margin-left: 520px}
+
+@media(max-width: 800px) {margin-left: 470px}
+
+@media(max-width: 700px) {margin-left: 425px}
+
+@media(max-width: 600px) {margin-left: 435px}
+
+@media(max-width: 540px) {margin-left: 385px}
+
+@media(max-width: 490px) {
+width: 35px;
+height: 35px;
+margin-left: 345px}
+`;
+
+export const CloseImg = styled.img`
+width: 25px;
+
+@media(max-width: 490px) {width: 20px}`;
+
+export const ModalLine = styled.div`
+width: 1200px;
+height: 1px;
+margin-top: 10px;
+margin-left: -45px;
+background-color: #B0B0B0;
+
+@media(max-width: 1580px) {
+width: 1050px;
+margin-left: -45px}
+
+@media(max-width: 1280px) {width: 950px}
+
+@media(max-width: 1150px) {width: 850px}
+
+@media(max-width: 1050px) {width: 750px}
+
+@media(max-width: 900px) {width: 650px}
+
+@media(max-width: 800px) {width: 600px}
+
+@media(max-width: 700px) {width: 550px}
 
 @media(max-width: 600px) {
-right: 0;
-top: 18vh}`;
+width: 500px;
+margin-left: -12px}
 
-export const CloseImg = styled.img`width: 25px`;
+@media(max-width: 540px) {width: 450px}
+
+@media(max-width: 490px) {width: 410px}
+`;
 
 export const ThumbnailURL = styled.input<ValidInput>`
 width: 100%;
@@ -185,7 +267,7 @@ background-color: #1a75ff;
 &:hover {background-color: #005ce6}`;
 
 export const ModalAddVideoButton = styled.button`
-width: 130px;
+width: 140px;
 height: 45px;
 border: none;
 border-radius: 5px;
@@ -200,7 +282,7 @@ background-color: #1a75ff;
 &:hover {background-color: #005ce6}`;
 
 export const ClearButton = styled.button`
-width: 130px;
+width: 140px;
 height: 45px;
 border: none;
 border-radius: 5px;
