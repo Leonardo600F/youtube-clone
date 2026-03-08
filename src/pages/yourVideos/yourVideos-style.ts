@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface ContainerProps {
   openMenu?: boolean;
-  hideModal?: boolean
+  hideModal?: boolean;
 }
 
 interface ValidInput { valid: boolean }
@@ -101,17 +101,38 @@ margin-left: -10px}
 
 @media(max-width: 600px) {
 width: 500px;
-height: 650px;
 padding: 20px 12px}
 
 @media(max-width: 540px) {
 width: 450px;
-margin-left: 0;
-}
+margin-left: 0}
 
 @media(max-width: 490px) {width: 410px}
 
-`;
+@media(max-width: 430px) {width: 360px}
+
+@media(max-width: 380px) {width: 330px}
+
+@media(max-width: 350px) {width: 300px}
+
+
+@media(max-height: 1010px) {height: 830px}
+
+@media(max-height: 944px) {height: 750px}
+
+@media(max-height: 860px) {height: 700px}
+
+@media(max-height: 810px) {height: 650px}
+
+@media(max-height: 750px) {height: 600px}
+
+@media(max-height: 700px) {height: 550px}
+
+@media(max-height: 650px) {height: 500px}
+
+@media(max-height: 600px) {height: 450px}
+
+@media(max-height: 550px) {height: 400px}`;
 
 export const ModalTitle = styled.h1`
 text-align: center;
@@ -125,7 +146,12 @@ font-size: 30px;
 @media(max-width: 540px) {margin-left: -20px}
 
 @media(max-width: 490px) {font-size: 23px}
-`;
+
+@media(max-width: 430px) {font-size: 22px}
+
+@media(max-width: 350px) {
+margin-left: -30px;
+font-size: 20px}`;
 
 export const CloseButton = styled.button`
 display: flex;
@@ -166,7 +192,14 @@ cursor: pointer;
 width: 35px;
 height: 35px;
 margin-left: 345px}
-`;
+
+@media(max-width: 430px) {margin-left: 295px}
+
+@media(max-width: 380px) {
+margin-top: -3px;
+margin-left: 270px}
+
+@media(max-width: 350px) {margin-left: 240px}`;
 
 export const CloseImg = styled.img`
 width: 25px;
@@ -203,7 +236,12 @@ margin-left: -12px}
 @media(max-width: 540px) {width: 450px}
 
 @media(max-width: 490px) {width: 410px}
-`;
+
+@media(max-width: 430px) {width: 360px}
+
+@media(max-width: 380px) {width: 330px}
+
+@media(max-width: 350px) {width: 300px}`;
 
 export const ThumbnailURL = styled.input<ValidInput>`
 width: 100%;
