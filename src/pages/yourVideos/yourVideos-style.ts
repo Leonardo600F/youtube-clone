@@ -15,17 +15,18 @@ width: 100%;
 padding: ${({ openMenu }) => openMenu ? '70px 50px 0 330px' : '70px 10px 0 100px'};
 column-gap: 25px;
 row-gap: 20px;
-background-color: #fff;
 
 @media(max-width: 1312px) {padding: 70px 0px 0 100px}
 
+@media(max-width: 1070px) {
+column-gap: 0px;
+padding: 60px 0px 0 90px}
+
 @media(max-width: 834px) {
 justify-content: center;
-padding: 70px 10px 0 100px}
+padding: 70px 10px 0 100px}`;
 
-@media(max-width: 414px) {padding: 70px 10px 0 10px}`;
-
-export const YourVideosContainer = styled.div`width: 100%`;
+export const YourVideosContainer = styled.div`width: 100%;`;
 
 export const UserContainer = styled.div`
 display: flex;
@@ -48,12 +49,17 @@ min-height: 50px;
 max-height: 50px;
 font-size: 30px;
 cursor: pointer;
-background-color: beige`;
+background-color: beige;
+
+@media(max-width: 963px) {margin-left: 20px}`;
 
 export const UserName = styled.h1`
 margin-top: 4px;
 margin-left: 20px;
-cursor: default`;
+cursor: default;
+
+@media(max-width: 1009px) {margin-left: 15px}
+`;
 
 export const Modal = styled.div<ContainerProps>`
 visibility: ${({ hideModal }) => hideModal ? 'hidden' : 'visible'};
