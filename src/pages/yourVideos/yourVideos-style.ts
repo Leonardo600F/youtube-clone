@@ -22,6 +22,8 @@ row-gap: 20px;
 column-gap: 0px;
 padding: 60px 0px 0 90px}
 
+@media(max-width: 963px) {flex-direction: column;}
+
 @media(max-width: 834px) {
 justify-content: center;
 padding: 70px 10px 0 100px}`;
@@ -49,7 +51,7 @@ min-height: 50px;
 max-height: 50px;
 font-size: 30px;
 cursor: pointer;
-background-color: beige;
+background-color: beige;;
 
 @media(max-width: 963px) {margin-left: 20px}`;
 

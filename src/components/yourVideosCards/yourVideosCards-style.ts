@@ -59,7 +59,7 @@ width: 275px;
 height: 275px}
 
 @media(max-width: 963px) {
-width: 280px;
+width: 830px;
 height: 280px;
 margin-left: 10px}
 
@@ -101,14 +101,18 @@ height: 180px}
 
 @media(max-width: 980px) {height: 170px}
 
-@media(max-width: 963px) {height: 180px}
+@media(max-width: 963px) {
+width: 380px;
+height: 265px}
 
 `;
 
 export const TitleContainer = styled.div`
 display: flex;
 width: 100%;
-margin-top: 7px`;
+margin-top: 7px;
+
+@media(max-width: 963px) {display: none}`;
 
 export const ChannelImage = styled.div`
 display: flex;
@@ -121,7 +125,15 @@ min-width: 35px;
 max-width: 35px;
 min-height: 35px;
 max-height: 35px;
-background-color: beige`;
+background-color: beige;
+
+@media(max-width: 963px) {
+min-width: 45px;
+max-width: 45px;
+min-height: 45px;
+max-height: 45px;
+margin-top: 10px;
+font-size: 25px}`;
 
 export const TextContainer = styled.div`
 display: flex;
@@ -134,7 +146,12 @@ overflow: hidden;
 text-overflow: ellipsis;
 -webkit-line-clamp: 2; 
 -webkit-box-orient: vertical;
-color: #0f0f0f`;
+color: #0f0f0f;
+
+@media(max-width: 963px) {
+margin-left: 10px;
+font-size: 25px;
+}`;
 
 export const TextCard = styled.span`
 display: -webkit-box;
@@ -143,4 +160,54 @@ display: -webkit-box;
 overflow: hidden;
 text-overflow: ellipsis;
 font-size: 15px;
-color: #8c8c8c`;
+color: #8c8c8c;`;
+
+export const ResponsiveTitleContainer = styled.div`
+display: none;
+
+@media(max-width: 963px) {
+display: flex;
+width: 425px;
+height: 266px;
+margin-top: -269px;
+margin-left: 400px;
+border-radius: 12px; }`;
+
+export const ResponsiveChannelName = styled.span`
+display: none;
+
+@media(max-width: 963px) {
+display: flex;
+margin-top: -39px;
+margin-left: 70px;
+font-weight: 600;
+font-size: 21px;
+color: #0f0f0f;}`;
+
+export const ResponsiveDescription = styled.div`
+display: none;
+
+@media(max-width: 963px) {
+display: flex;
+width: 412px;
+height: fit-content;
+margin-top: 20px;
+margin-left: 10px;
+
+span {
+display: -webkit-box;
+-webkit-line-clamp: 2; 
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size: 17px;
+color: #8c8c8c;}
+
+}`;
+
+export const ResponsivePublishedData = styled.div`
+display: none;
+
+@media(max-width: 963px) {
+display: flex;}
+`;

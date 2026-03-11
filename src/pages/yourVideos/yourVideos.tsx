@@ -262,6 +262,7 @@ export default function YourVideos() {
                                 title={video.title}
                                 thumbnail={video.thumbnail}
                                 channelImage={user && user.name ? user.name.charAt(0).toUpperCase() : ''}
+                                channelName={user && user.name ? user.name : ''}
                                 details={video.description}
                                 publishedAt={getTimeDifference(video.publishedAt)}
                                 key={video.id}
