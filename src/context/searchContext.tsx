@@ -13,7 +13,9 @@ interface SearchContextProps {
 const SearchContext = createContext<SearchContextData>({} as SearchContextData);
 
 export const SearchProvider: React.FC<SearchContextProps> = ({ children }) => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState(
+    () => localStorage.getItem('searchTerm') || ''
+  );
 
   return (
     <SearchContext.Provider value={{ search, setSearch }}>

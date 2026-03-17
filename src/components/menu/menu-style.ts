@@ -3,16 +3,16 @@ import styled from "styled-components";
 interface OpenMenu { openMenu: boolean }
 
 export const Container = styled.div<OpenMenu>`
- width: ${({ openMenu }) => openMenu ? '270px' : '100px'};
- height: 100vh;
- box-sizing: border-box;
- top: 55px;
- display: flex;
- align-items: center;
- flex-direction: column;
- position: fixed;
- overflow-y: auto;
- background-color: red;
+width: ${({ openMenu }) => openMenu ? '270px' : '100px'};
+height: 100vh;
+box-sizing: border-box;
+top: 55px;
+display: flex;
+align-items: center;
+flex-direction: column;
+position: fixed;
+overflow-y: auto;
+background-color: #fff;
 
 @media(max-width: 1920px) {width: ${({ openMenu }) => openMenu ? '260px' : '80px'}}
 

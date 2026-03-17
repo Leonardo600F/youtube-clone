@@ -41,6 +41,7 @@ export default function YourVideosCards(props: Props) {
                     <Title>{props.title}</Title>
                     <ChannelImage>{props.channelImage}</ChannelImage>
                     <ResponsiveChannelName>{props.channelName}</ResponsiveChannelName>
+                    <ResponsivePublishedData><span>{props.publishedAt}</span></ResponsivePublishedData>
                     <ResponsiveDescription><span>{props.details}</span></ResponsiveDescription>
 
                 </TextContainer>
@@ -49,8 +50,3 @@ export default function YourVideosCards(props: Props) {
         </Container>
     )
 }
-
-/*                 
-                    <ResponsivePublishedData>{props.publishedAt}</ResponsivePublishedData>
-                    <TextCard>{props.details}</TextCard>
-                    <TextCard >{props.publishedAt}</TextCard> */

@@ -63,6 +63,10 @@ width: 830px;
 height: 280px;
 margin-left: 10px}
 
+@media(max-width: 935px) {
+width: 810px;
+height: 260px}
+
 
 `;
 
@@ -104,6 +108,10 @@ height: 180px}
 @media(max-width: 963px) {
 width: 380px;
 height: 265px}
+
+@media(max-width: 935px) {
+width: 360px;
+height: 245px}
 
 `;
 
@@ -151,7 +159,10 @@ color: #0f0f0f;
 @media(max-width: 963px) {
 margin-left: 10px;
 font-size: 25px;
-}`;
+}
+
+
+`;
 
 export const TextCard = styled.span`
 display: -webkit-box;
@@ -171,7 +182,14 @@ width: 425px;
 height: 266px;
 margin-top: -269px;
 margin-left: 400px;
-border-radius: 12px; }`;
+border-radius: 12px;
+background-color: grey}
+
+@media(max-width: 935px) {
+width: 422px;
+height: 252px;
+margin-top: -252px;
+margin-left: 385px}`;
 
 export const ResponsiveChannelName = styled.span`
 display: none;
@@ -193,6 +211,7 @@ width: 412px;
 height: fit-content;
 margin-top: 20px;
 margin-left: 10px;
+background-color: red;
 
 span {
 display: -webkit-box;
@@ -209,5 +228,15 @@ export const ResponsivePublishedData = styled.div`
 display: none;
 
 @media(max-width: 963px) {
-display: flex;}
+display: flex;
+width: fit-content;
+margin-top: 7px;
+margin-left: 70px;
+
+span {
+font-size: 15px;
+font-weight: 600;
+color: #0f0f0f;
+
+}
 `;

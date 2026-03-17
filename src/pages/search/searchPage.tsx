@@ -27,14 +27,7 @@ export default function SearchPage() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
-        const savedSearch = localStorage.getItem('searchTerm');
-        if (savedSearch && savedSearch !== '') {
-            setSearch(savedSearch);
-        }
-    }, [setSearch]);
-
-    useEffect(() => {
-        if (search === '') {
+        if (!search) {
             localStorage.removeItem('searchTerm');
             setVideosApi([]);
             return;
@@ -42,7 +35,7 @@ export default function SearchPage() {
 
         localStorage.setItem('searchTerm', search);
         load();
-    }, [search])
+    }, [search]);
 
     const [videosApi, setVideosApi] = useState<Videos[]>([]);
     const API_KEY = 'AIzaSyBxEcjsvy6W7j5rt6WaR0Ixix-gC4yQJJE';
