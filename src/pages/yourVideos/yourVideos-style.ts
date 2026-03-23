@@ -22,22 +22,16 @@ row-gap: 20px;
 column-gap: 0px;
 padding: 60px 0px 0 90px}
 
-@media(max-width: 963px) {flex-direction: column;}
+@media(max-width: 963px) {flex-direction: column}
 
-@media(max-width: 834px) {
-justify-content: center;
-padding: 70px 10px 0 100px}`;
+@media(max-width: 791px) {padding-top: 50px}`;
 
 export const YourVideosContainer = styled.div`width: 100%;`;
 
 export const UserContainer = styled.div`
 display: flex;
 width: 100%;
-height: 90px;
-
-@media(max-width: 834px) {
-height: 150px;
-justify-content: center}`;
+height: 90px;`;
 
 export const UserProfile = styled.div`
 display: flex;
@@ -53,7 +47,10 @@ font-size: 30px;
 cursor: pointer;
 background-color: beige;;
 
-@media(max-width: 963px) {margin-left: 20px}`;
+@media(max-width: 963px) {margin-left: 20px}
+
+@media(max-width: 791px) {margin-left: -50px}
+`;
 
 export const UserName = styled.h1`
 margin-top: 4px;

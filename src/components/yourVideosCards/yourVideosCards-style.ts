@@ -67,7 +67,40 @@ margin-left: 10px}
 width: 810px;
 height: 260px}
 
+@media(max-width: 915px) {
+width: 788px;
+height: 250px}
 
+@media(max-width: 895px) {
+width: 768px;
+height: 240px}
+
+@media(max-width: 875px) {
+width: 740px;
+height: 230px}
+
+@media(max-width: 845px) {
+width: 710px;
+height: 220px}
+
+@media(max-width: 815px) {
+width: 680px;
+height: 210px}
+
+@media(max-width: 791px) {
+width: 740px;
+height: 230px;
+margin-left: -50px}
+
+@media(max-width: 785px) {width: 730px}
+
+@media(max-width: 775px) {width: 720px}
+
+@media(max-width: 765px) {
+width: 700px;
+height: 220px}
+
+@media(max-width: 745px) {width: 687px}
 `;
 
 export const Banner = styled.img`
@@ -113,6 +146,35 @@ height: 265px}
 width: 360px;
 height: 245px}
 
+@media(max-width: 915px) {
+width: 350px;
+height: 235px}
+
+@media(max-width: 895px) {
+width: 340px;
+height: 225px}
+
+@media(max-width: 875px) {
+width: 320px;
+height: 215px}
+
+@media(max-width: 845px) {
+width: 300px;
+height: 205px}
+
+@media(max-width: 815px) {
+width: 280px;
+height: 195px}
+
+@media(max-width: 791px) {
+width: 300px;
+height: 215px}
+
+@media(max-width: 765px) {
+width: 290px;
+height: 205px}
+
+
 `;
 
 export const TitleContainer = styled.div`
@@ -141,7 +203,16 @@ max-width: 45px;
 min-height: 45px;
 max-height: 45px;
 margin-top: 10px;
-font-size: 25px}`;
+font-size: 25px}
+
+@media(max-width: 875px) {
+min-width: 40px;
+max-width: 40px;
+min-height: 40px;
+max-height: 40px;
+margin-top: 10px;
+font-size: 22px}
+`;
 
 export const TextContainer = styled.div`
 display: flex;
@@ -158,9 +229,9 @@ color: #0f0f0f;
 
 @media(max-width: 963px) {
 margin-left: 10px;
-font-size: 25px;
-}
+font-size: 25px}
 
+@media(max-width: 875px) {font-size: 21px}
 
 `;
 
@@ -189,7 +260,57 @@ background-color: grey}
 width: 422px;
 height: 252px;
 margin-top: -252px;
-margin-left: 385px}`;
+margin-left: 385px}
+
+@media(max-width: 915px) {
+width: 412px;
+height: 235px;
+margin-top: -238px;
+margin-left: 370px}
+
+@media(max-width: 895px) {
+width: 402px;
+height: 225px;
+margin-top: -228px;
+margin-left: 360px}
+
+@media(max-width: 875px) {
+width: 392px;
+height: 215px;
+margin-top: -218px;
+margin-left: 340px}
+
+@media(max-width: 845px) {
+width: 382px;
+height: 205px;
+margin-top: -208px;
+margin-left: 320px}
+
+@media(max-width: 815px) {
+width: 372px;
+height: 195px;
+margin-top: -198px;
+margin-left: 300px}
+
+@media(max-width: 791px) {
+width: 416px;
+height: 215px;
+margin-top: -218px;
+margin-left: 315px}
+
+@media(max-width: 785px) {width: 406px}
+
+@media(max-width: 775px) {width: 396px}
+
+@media(max-width: 765px) {
+height: 205px;
+width: 386px;
+margin-top: -208px;
+margin-left: 305px}
+
+@media(max-width: 745px) {width: 376px}
+
+`;
 
 export const ResponsiveChannelName = styled.span`
 display: none;
@@ -200,7 +321,12 @@ margin-top: -39px;
 margin-left: 70px;
 font-weight: 600;
 font-size: 21px;
-color: #0f0f0f;}`;
+color: #0f0f0f;}
+
+@media(max-width: 875px) {
+margin-left: 60px;
+font-size: 19px}
+`;
 
 export const ResponsiveDescription = styled.div`
 display: none;
@@ -211,7 +337,27 @@ width: 412px;
 height: fit-content;
 margin-top: 20px;
 margin-left: 10px;
-background-color: red;
+background-color: green;
+
+@media(max-width: 915px) {width: 400px}
+
+@media(max-width: 895px) {width: 390px}
+
+@media(max-width: 875px) {width: 380px}
+
+@media(max-width: 845px) {width: 370px}
+
+@media(max-width: 815px) {width: 360px}
+
+@media(max-width: 791px) {width: 403px}
+
+@media(max-width: 785px) {width: 393px}
+
+@media(max-width: 775px) {width: 383px}
+
+@media(max-width: 765px) {width: 373px}
+
+@media(max-width: 745px) {width: 363px}
 
 span {
 display: -webkit-box;
@@ -220,7 +366,9 @@ display: -webkit-box;
 overflow: hidden;
 text-overflow: ellipsis;
 font-size: 17px;
-color: #8c8c8c;}
+color: #8c8c8c;
+
+@media(max-width: 875px) {font-size: 14px}}
 
 }`;
 
@@ -231,12 +379,17 @@ display: none;
 display: flex;
 width: fit-content;
 margin-top: 7px;
-margin-left: 70px;
+margin-left: 70px}
+
+@media(max-width: 875px) {
+margin-top: 0px;
+margin-left: 60px}
 
 span {
 font-size: 15px;
 font-weight: 600;
 color: #0f0f0f;
 
-}
+@media(max-width: 875px) {font-size: 13px}}
+
 `;
