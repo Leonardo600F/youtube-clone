@@ -50,6 +50,8 @@ background-color: beige;;
 @media(max-width: 963px) {margin-left: 20px}
 
 @media(max-width: 791px) {margin-left: -50px}
+
+@media(max-width: 700px) {margin-left: -75px}
 `;
 
 export const UserName = styled.h1`

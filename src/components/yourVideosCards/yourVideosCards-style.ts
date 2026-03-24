@@ -101,6 +101,35 @@ width: 700px;
 height: 220px}
 
 @media(max-width: 745px) {width: 687px}
+
+@media(max-width: 732px) {width: 677px}
+
+@media(max-width: 720px) {
+width: 667px;
+height: 215px}
+
+@media(max-width: 710px) {width: 657px}
+
+@media(max-width: 700px) {margin-left: -75px}
+
+@media(max-width: 680px) {
+width: 640px;
+height: 205px}
+
+@media(max-width: 660px) {width: 630px}
+
+@media(max-width: 650px) {
+width: 613px;
+height: 200px}
+
+@media(max-width: 635px) {width: 598px}
+
+@media(max-width: 622px) {
+width: 585px;
+height: 190px}
+
+@media(max-width: 608px) {width: 570px}
+
 `;
 
 export const Banner = styled.img`
@@ -174,6 +203,25 @@ height: 215px}
 width: 290px;
 height: 205px}
 
+@media(max-width: 720px) {
+width: 285px;
+height: 200px}
+
+@media(max-width: 680px) {
+width: 275px;
+height: 190px}
+
+@media(max-width: 650px) {
+width: 270px;
+height: 185px}
+
+@media(max-width: 635px) {width: 265px}
+
+@media(max-width: 622px) {
+width: 260px;
+height: 175px}
+
+@media(max-width: 608px) {width: 255px}
 
 `;
 
@@ -232,6 +280,8 @@ margin-left: 10px;
 font-size: 25px}
 
 @media(max-width: 875px) {font-size: 21px}
+
+@media(max-width: 710px) {font-size: 19px}
 
 `;
 
@@ -310,6 +360,44 @@ margin-left: 305px}
 
 @media(max-width: 745px) {width: 376px}
 
+@media(max-width: 732px) {width: 366px}
+
+@media(max-width: 720px) {
+width: 361px;
+height: 200px;
+margin-top: -203px;
+margin-left: 300px}
+
+@media(max-width: 710px) {width: 351px}
+
+@media(max-width: 680px) {
+width: 341px;
+height: 190px;
+margin-top: -193px;
+margin-left: 290px}
+
+@media(max-width: 660px) {width: 331px}
+
+@media(max-width: 650px) {
+width: 321px;
+height: 185px;
+margin-top: -189px;
+margin-left: 285px}
+
+@media(max-width: 635px) {
+width: 311px;
+margin-left: 280px}
+
+@media(max-width: 622px) {
+width: 301px;
+height: 175px;
+margin-top: -179px;
+margin-left: 277px}
+
+@media(max-width: 608px) {
+width: 291px;
+margin-left: 272px}
+
 `;
 
 export const ResponsiveChannelName = styled.span`
@@ -326,6 +414,8 @@ color: #0f0f0f;}
 @media(max-width: 875px) {
 margin-left: 60px;
 font-size: 19px}
+
+@media(max-width: 710px) {font-size: 17.5px}
 `;
 
 export const ResponsiveDescription = styled.div`
@@ -358,6 +448,24 @@ background-color: green;
 @media(max-width: 765px) {width: 373px}
 
 @media(max-width: 745px) {width: 363px}
+
+@media(max-width: 732px) {width: 353px}
+
+@media(max-width: 720px) {width: 348px}
+
+@media(max-width: 710px) {width: 338px}
+
+@media(max-width: 680px) {width: 328px}
+
+@media(max-width: 660px) {width: 318px}
+
+@media(max-width: 650px) {width: 308px}
+
+@media(max-width: 635px) {width: 298px}
+
+@media(max-width: 622px) {width: 288px}
+
+@media(max-width: 608px) {width: 278px}
 
 span {
 display: -webkit-box;
