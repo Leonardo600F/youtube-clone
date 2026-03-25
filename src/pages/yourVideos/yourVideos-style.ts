@@ -52,6 +52,13 @@ background-color: beige;;
 @media(max-width: 791px) {margin-left: -50px}
 
 @media(max-width: 700px) {margin-left: -75px}
+
+@media(max-width: 590px) {
+min-width: 45px;
+max-width: 45px;
+min-height: 45px;
+max-height: 45px;
+font-size: 25px}
 `;
 
 export const UserName = styled.h1`
@@ -60,6 +67,10 @@ margin-left: 20px;
 cursor: default;
 
 @media(max-width: 1009px) {margin-left: 15px}
+
+@media(max-width: 590px) {font-size: 28px}
+
+@media(max-width: 523px) {font-size: 25.5px}
 `;
 
 export const Modal = styled.div<ContainerProps>`
@@ -309,7 +320,21 @@ cursor: pointer;
 color: #fff;
 background-color: #1a75ff;
 
-&:hover {background-color: #005ce6}`;
+&:hover {background-color: #005ce6}
+
+@media(max-width: 590px) {
+width: 115px;
+height: 37px;
+margin-left: 23px}
+
+@media(max-width: 523px) {
+width: 105px;
+font-size: 0.7rem}
+
+@media(max-width: 493px) {margin-left: 16px}
+
+
+`;
 
 export const ModalAddVideoButton = styled.button`
 width: 140px;
