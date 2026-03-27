@@ -24,9 +24,11 @@ padding: 60px 0px 0 90px}
 
 @media(max-width: 963px) {flex-direction: column}
 
-@media(max-width: 791px) {padding-top: 50px}`;
+@media(max-width: 791px) {padding-top: 50px}
 
-export const YourVideosContainer = styled.div`width: 100%;`;
+@media(max-width: 423px) {padding-top: 25px}`;
+
+export const YourVideosContainer = styled.div`width: 100%`;
 
 export const UserContainer = styled.div`
 display: flex;
@@ -45,7 +47,7 @@ min-height: 50px;
 max-height: 50px;
 font-size: 30px;
 cursor: pointer;
-background-color: beige;;
+background-color: beige;
 
 @media(max-width: 963px) {margin-left: 20px}
 
@@ -59,6 +61,16 @@ max-width: 45px;
 min-height: 45px;
 max-height: 45px;
 font-size: 25px}
+
+@media(max-width: 482px) {margin-left: -85px}
+
+@media(max-width: 423px) {
+min-width: 52px;
+max-width: 52px;
+min-height: 52px;
+max-height: 52px;
+font-size: 30px}
+
 `;
 
 export const UserName = styled.h1`
@@ -71,6 +83,15 @@ cursor: default;
 @media(max-width: 590px) {font-size: 28px}
 
 @media(max-width: 523px) {font-size: 25.5px}
+
+@media(max-width: 458px) {
+font-size: 24px;
+margin-top: 6px;
+margin-left: 10px}
+
+@media(max-width: 423px) {font-size: 30px}
+
+
 `;
 
 export const Modal = styled.div<ContainerProps>`
@@ -332,6 +353,16 @@ width: 105px;
 font-size: 0.7rem}
 
 @media(max-width: 493px) {margin-left: 16px}
+
+@media(max-width: 458px) {
+width: 98px;
+margin-left: 13px}
+
+@media(max-width: 423px) {
+width: 295px;
+margin-top: 60px;
+font-size: 1rem;
+margin-left: -295px}
 
 
 `;

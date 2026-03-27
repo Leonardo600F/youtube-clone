@@ -6,6 +6,7 @@ height: 340px;
 border-radius: 12px;
 margin-left: 20px;
 cursor: pointer;
+background-color: purple;
 
 &:hover {background-color: #ececec}
 
@@ -152,6 +153,28 @@ height: 173px}
 
 @media(max-width: 493px) {width: 462px}
 
+@media(max-width: 482px) {margin-left: -85px}
+
+@media(max-width: 472px) {
+width: 448px;
+height: 168px}
+
+@media(max-width: 458px) {width: 428px}
+
+@media(max-width: 438px) {
+width: 413px;
+height: 163px}
+
+@media(max-width: 423px) {
+width: 400px;
+height: 158px}
+
+@media(max-width: 410px) {
+width: 390px;
+height: 153px}
+
+@media(max-width: 400px) {width: 380px}
+
 `;
 
 export const Banner = styled.img`
@@ -267,6 +290,27 @@ height: 160px}
 
 @media(max-width: 493px) {width: 215px}
 
+@media(max-width: 472px) {
+width: 210px;
+height: 155px}
+
+@media(max-width: 458px) {
+width: 205px;
+margin-left: 6px}
+
+@media(max-width: 438px) {
+width: 200px;
+height: 150px;
+margin-left: 6px}
+
+@media(max-width: 423px) {
+width: 190px;
+height: 145px}
+
+@media(max-width: 410px) {height: 140px}
+
+@media(max-width: 400px) {width: 185px}
+
 `;
 
 export const TitleContainer = styled.div`
@@ -310,6 +354,15 @@ max-width: 35px;
 min-height: 35px;
 max-height: 35px;
 font-size: 20px}
+
+@media(max-width: 438px) {
+min-width: 30px;
+max-width: 30px;
+min-height: 30px;
+max-height: 30px;
+font-size: 18px}
+
+
 `;
 
 export const TextContainer = styled.div`
@@ -336,6 +389,8 @@ font-size: 25px}
 @media(max-width: 575px) {font-size: 18.3px}
 
 @media(max-width: 493px) {font-size: 17px}
+
+@media(max-width: 438px) {font-size: 15px}
 
 `;
 
@@ -489,6 +544,41 @@ margin-left: 235px}
 @media(max-width: 493px) {
 width: 225px;
 margin-left: 230px}
+
+@media(max-width: 472px) {
+width: 215px;
+height: 154px;
+margin-top: -159px;
+margin-left: 225px}
+
+@media(max-width: 458px) {
+width: 205px;
+margin-left: 217px}
+
+@media(max-width: 438px) {
+width: 195px;
+height: 149px;
+margin-top: -154px;
+margin-left: 212px}
+
+@media(max-width: 423px) {
+width: 190px;
+height: 144px;
+margin-top: -149px;
+margin-left: 203px}
+
+@media(max-width: 410px) {
+width: 180px;
+height: 139px;
+margin-top: -144px;
+margin-left: 203px}
+
+@media(max-width: 400px) {
+height: 139px;
+margin-top: -144px;
+margin-left: 195px}
+
+
 `;
 
 export const ResponsiveChannelName = styled.span`
@@ -513,6 +603,11 @@ margin-left: 50px;
 font-size: 17px}
 
 @media(max-width: 493px) {font-size: 15.5px}
+
+@media(max-width: 438px) {
+margin-top: -32px;
+margin-left: 44px;
+font-size: 14px}
 
 
 `;
@@ -582,6 +677,22 @@ background-color: green;
 
 @media(max-width: 493px) {width: 211px}
 
+@media(max-width: 472px) {width: 204px}
+
+@media(max-width: 458px) {width: 194px}
+
+@media(max-width: 438px) {
+width: 189px;
+margin-left: 5px}
+
+@media(max-width: 423px) {
+width: 184px;
+margin-left: 5px}
+
+@media(max-width: 410px) {width: 173px}
+
+@media(max-width: 400px) {width: 169px}
+
 span {
 display: -webkit-box;
 -webkit-line-clamp: 2; 
@@ -593,7 +704,9 @@ color: #8c8c8c;
 
 @media(max-width: 875px) {font-size: 14px}
 
-@media(max-width: 493px) {font-size: 12.5px}}
+@media(max-width: 493px) {font-size: 12.5px}
+
+@media(max-width: 438px) {font-size: 11px}}
 
 }`;
 
@@ -612,6 +725,8 @@ margin-left: 60px}
 
 @media(max-width: 575px) {margin-left: 50px}
 
+@media(max-width: 438px) {margin-left: 45px}
+
 span {
 font-size: 15px;
 font-weight: 600;
@@ -621,6 +736,8 @@ color: #0f0f0f;
 
 @media(max-width: 575px) {font-size: 12.5px}
 
-@media(max-width: 493px) {font-size: 12px}}
+@media(max-width: 493px) {font-size: 12px}
+
+@media(max-width: 438px) {font-size: 11px}}
 
 `;
