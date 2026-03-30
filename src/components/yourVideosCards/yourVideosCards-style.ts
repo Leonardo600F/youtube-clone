@@ -6,7 +6,7 @@ height: 340px;
 border-radius: 12px;
 margin-left: 20px;
 cursor: pointer;
-background-color: purple;
+background-color: #fff;
 
 &:hover {background-color: #ececec}
 
@@ -175,6 +175,26 @@ height: 153px}
 
 @media(max-width: 400px) {width: 380px}
 
+@media(max-width: 390px) {
+width: 370px;
+height: 138px}
+
+@media(max-width: 379px) {width: 360px}
+
+@media(max-width: 369px) {
+width: 350px;
+height: 133px}
+
+@media(max-width: 359px) {width: 340px}
+
+@media(max-width: 349px) {
+width: 330px;
+height: 128px}
+
+@media(max-width: 339px) {width: 320px}
+
+@media(max-width: 329px) {width: 307px}
+
 `;
 
 export const Banner = styled.img`
@@ -311,6 +331,26 @@ height: 145px}
 
 @media(max-width: 400px) {width: 185px}
 
+@media(max-width: 390px) {
+width: 175px;
+height: 125px}
+
+@media(max-width: 379px) {width: 170px}
+
+@media(max-width: 369px) {
+width: 170px;
+height: 120px}
+
+@media(max-width: 359px) {width: 165px}
+
+@media(max-width: 349px) {
+width: 160px;
+height: 115px}
+
+@media(max-width: 339px) {width: 155px}
+
+@media(max-width: 329px) {width: 150px}
+
 `;
 
 export const TitleContainer = styled.div`
@@ -362,6 +402,15 @@ min-height: 30px;
 max-height: 30px;
 font-size: 18px}
 
+@media(max-width: 390px) {
+min-width: 33px;
+max-width: 33px;
+min-height: 33px;
+max-height: 33px;
+margin-top: 5px;
+margin-left: 0px;
+font-size: 20px}
+
 
 `;
 
@@ -376,7 +425,9 @@ overflow: hidden;
 text-overflow: ellipsis;
 -webkit-line-clamp: 2; 
 -webkit-box-orient: vertical;
+border-radius: 8px;
 color: #0f0f0f;
+background-color: none;
 
 @media(max-width: 963px) {
 margin-left: 10px;
@@ -388,9 +439,19 @@ font-size: 25px}
 
 @media(max-width: 575px) {font-size: 18.3px}
 
-@media(max-width: 493px) {font-size: 17px}
+@media(max-width: 493px) {
+-webkit-line-clamp: 1; 
+font-size: 17px}
 
 @media(max-width: 438px) {font-size: 15px}
+
+@media(max-width: 390px) {
+font-size: 15.5px;
+margin-left: 1px}
+
+@media(max-width: 359px) {font-size: 14.5px}
+
+@media(max-width: 349px) {font-size: 13.5px}
 
 `;
 
@@ -412,8 +473,7 @@ width: 425px;
 height: 266px;
 margin-top: -269px;
 margin-left: 400px;
-border-radius: 12px;
-background-color: grey}
+border-radius: 12px;}
 
 @media(max-width: 935px) {
 width: 422px;
@@ -578,6 +638,40 @@ height: 139px;
 margin-top: -144px;
 margin-left: 195px}
 
+@media(max-width: 390px) {
+width: 177px;
+height: 124px;
+margin-top: -129px;
+margin-left: 188px}
+
+@media(max-width: 379px) {
+width: 172px;
+margin-left: 183px}
+
+@media(max-width: 369px) {
+width: 164px;
+height: 119px;
+margin-top: -125px;
+margin-left: 180px}
+
+@media(max-width: 359px) {
+width: 159px;
+margin-left: 175px}
+
+@media(max-width: 349px) {
+width: 154px;
+height: 114px;
+margin-top: -119px;
+margin-left: 170px}
+
+@media(max-width: 339px) {
+width: 149px;
+margin-left: 166px}
+
+@media(max-width: 329px) {
+width: 139px;
+margin-left: 161px}
+
 
 `;
 
@@ -609,6 +703,8 @@ margin-top: -32px;
 margin-left: 44px;
 font-size: 14px}
 
+@media(max-width: 390px) {display: none}
+
 
 `;
 
@@ -621,7 +717,7 @@ width: 412px;
 height: fit-content;
 margin-top: 20px;
 margin-left: 10px;
-background-color: green;
+background-color: none;
 
 @media(max-width: 915px) {width: 400px}
 
@@ -685,13 +781,28 @@ background-color: green;
 width: 189px;
 margin-left: 5px}
 
-@media(max-width: 423px) {
-width: 184px;
-margin-left: 5px}
+@media(max-width: 423px) {width: 184px}
 
 @media(max-width: 410px) {width: 173px}
 
 @media(max-width: 400px) {width: 169px}
+
+@media(max-width: 390px) {
+width: 176px;
+margin-top: 15px;
+margin-left: 0}
+
+@media(max-width: 379px) {width: 171px}
+
+@media(max-width: 369px) {width: 163px}
+
+@media(max-width: 359px) {width: 158px}
+
+@media(max-width: 349px) {width: 153px}
+
+@media(max-width: 339px) {width: 147px}
+
+@media(max-width: 329px) {width: 138px}
 
 span {
 display: -webkit-box;
@@ -727,6 +838,8 @@ margin-left: 60px}
 
 @media(max-width: 438px) {margin-left: 45px}
 
+@media(max-width: 390px) {margin-top: -25px}
+
 span {
 font-size: 15px;
 font-weight: 600;
@@ -738,6 +851,8 @@ color: #0f0f0f;
 
 @media(max-width: 493px) {font-size: 12px}
 
-@media(max-width: 438px) {font-size: 11px}}
+@media(max-width: 438px) {font-size: 11px}
+
+@media(max-width: 390px) {font-size: 14px}}
 
 `;

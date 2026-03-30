@@ -65,6 +65,36 @@ export const UserStorage = ({ children }: any) => {
         })
     }
 
+    const deleteVideo = (video_id: string) => {
+        const storedToken = localStorage.getItem('token');
+
+        if (!storedToken) {
+            alert('Sessão expirada. Por favor, faça login novamente.');
+            logOut();
+            return;
+        }
+
+        const authToken = `Bearer ${storedToken}`;
+
+        api.delete(`/videos/delete-video/${video_id}`, {
+            headers: {
+                Authorization: authToken,
+            },
+        })
+            .then(() => {
+                alert('Vídeo removido com sucesso!');
+                getUser(storedToken);
+            })
+            .catch((error) => {
+                if (error.response?.status === 401) {
+                    alert('Sessão expirada. Por favor, faça login novamente.');
+                    logOut();
+                } else {
+                    alert('Não foi possível remover o vídeo. Tente novamente.');
+                }
+            });
+    };
+
     const getUser = async (token: string) => {
         if (!token) {
             logOut();
@@ -149,6 +179,7 @@ export const UserStorage = ({ children }: any) => {
             showPassword, setShowPassword,
             user,
             createVideos,
+            deleteVideo,
             userVideos,
             openMenu,
             setOpenMenu,

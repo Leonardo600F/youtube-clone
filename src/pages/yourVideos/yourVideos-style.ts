@@ -71,6 +71,20 @@ min-height: 52px;
 max-height: 52px;
 font-size: 30px}
 
+@media(max-width: 339px) {
+min-width: 48px;
+max-width: 48px;
+min-height: 48px;
+max-height: 48px;
+font-size: 28px}
+
+@media(max-width: 320px) {
+min-width: 44px;
+max-width: 44px;
+min-height: 44px;
+max-height: 44px;
+font-size: 26px}
+
 `;
 
 export const UserName = styled.h1`
@@ -90,6 +104,14 @@ margin-top: 6px;
 margin-left: 10px}
 
 @media(max-width: 423px) {font-size: 30px}
+
+@media(max-width: 379px) {font-size: 28px}
+
+@media(max-width: 359px) {font-size: 26px}
+
+@media(max-width: 339px) {font-size: 24px}
+
+@media(max-width: 320px) {font-size: 22.5px}
 
 
 `;
@@ -363,6 +385,26 @@ width: 295px;
 margin-top: 60px;
 font-size: 1rem;
 margin-left: -295px}
+
+@media(max-width: 379px) {
+width: 275px;
+margin-left: -275px}
+
+@media(max-width: 359px) {
+width: 253px;
+margin-left: -255px}
+
+@media(max-width: 339px) {
+width: 235px;
+margin-top: 50px;
+font-size: 0.9rem;
+margin-left: -235px}
+
+@media(max-width: 320px) {
+width: 220px;
+margin-top: 45px;
+font-size: 0.8rem;
+margin-left: -220px}
 
 
 `;
