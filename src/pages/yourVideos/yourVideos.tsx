@@ -34,7 +34,8 @@ import CloseIcon from "../../assets/icon-close.png";
 export default function YourVideos() {
 
     interface Videos {
-        id: string;
+        id?: string;
+        video_id?: string;
         title: string;
         thumbnail: string;
         description: string;
@@ -44,7 +45,6 @@ export default function YourVideos() {
     const { openMenu } = useContext(ComponentContext);
     const { user, userVideos, createVideos, token } = useContext(UserContext);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
 
     const USER_ID = user?.user_id;
 
@@ -259,13 +259,14 @@ export default function YourVideos() {
                     {Array.isArray(userVideos) ? (
                         userVideos.map((video: Videos) =>
                             <YourVideosCards
+                                videoId={video.video_id || video.id || ''}
                                 title={video.title}
                                 thumbnail={video.thumbnail}
                                 channelImage={user && user.name ? user.name.charAt(0).toUpperCase() : ''}
                                 channelName={user && user.name ? user.name : ''}
                                 details={video.description}
                                 publishedAt={getTimeDifference(video.publishedAt)}
-                                key={video.id}
+                                key={video.video_id || video.id}
                             />)
                     )
                         :

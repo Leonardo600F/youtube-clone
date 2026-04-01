@@ -1,5 +1,24 @@
 import styled from "styled-components";
 
+export const DeleteVideoButton = styled.div`
+display: none;
+position: fixed;
+justify-content: center;
+align-items: center;
+width: 35px;
+height: 35px;
+border-radius: 50px;
+margin-top: 13px;
+margin-left: 285px;
+background-color: #ececec;
+`;
+
+export const DeleteVideoButtonIcon = styled.img`
+display: flex;
+width: 20px;
+height: 20px;
+`;
+
 export const Container = styled.div`
 width: 340px;
 height: 340px;
@@ -9,6 +28,8 @@ cursor: pointer;
 background-color: #fff;
 
 &:hover {background-color: #ececec}
+
+&:hover ${DeleteVideoButton} {display: flex}
 
 @media(max-width: 1230px) {
 width: 330px;
@@ -409,10 +430,7 @@ min-height: 33px;
 max-height: 33px;
 margin-top: 5px;
 margin-left: 0px;
-font-size: 20px}
-
-
-`;
+font-size: 20px}`;
 
 export const TextContainer = styled.div`
 display: flex;

@@ -1,6 +1,13 @@
+import { UserContext } from '../../context/userContext';
+import { useContext } from "react";
+
+import TrashIcon from "../../assets/icon-trash.png";
+
 import {
     Banner,
     ChannelImage,
+    DeleteVideoButton,
+    DeleteVideoButtonIcon,
     Container,
     TextCard,
     TextContainer,
@@ -13,6 +20,7 @@ import {
 } from './yourVideosCards-style'
 
 interface Props {
+    videoId: string
     title: string
     thumbnail: string
     channelImage: string
@@ -23,8 +31,23 @@ interface Props {
 
 export default function YourVideosCards(props: Props) {
 
+    const { deleteVideo } = useContext(UserContext);
+
+    const deleteVideoFunction = () => {
+        if (!props.videoId) {
+            alert('Não foi possível identificar o vídeo para excluir.');
+            return;
+        }
+        deleteVideo(props.videoId)
+    }
+
     return (
         <Container>
+
+            <DeleteVideoButton title="Apagar vídeo enviado." onClick={deleteVideoFunction}>
+                <DeleteVideoButtonIcon src={TrashIcon} />
+            </DeleteVideoButton>
+
             <Banner alt="thumbnail" src={props.thumbnail} />
 
             <TitleContainer>
