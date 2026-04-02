@@ -1,5 +1,5 @@
 import { UserContext } from '../../context/userContext';
-import { useContext } from "react";
+import { useState, useContext } from "react";
 
 import TrashIcon from "../../assets/icon-trash.png";
 
@@ -8,6 +8,10 @@ import {
     ChannelImage,
     DeleteVideoButton,
     DeleteVideoButtonIcon,
+    DeleteVideoModal,
+    DeleteButton,
+    BackButton,
+    Modal,
     Container,
     TextCard,
     TextContainer,
@@ -33,6 +37,8 @@ export default function YourVideosCards(props: Props) {
 
     const { deleteVideo } = useContext(UserContext);
 
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+
     const deleteVideoFunction = () => {
         if (!props.videoId) {
             alert('Não foi possível identificar o vídeo para excluir.');
@@ -42,34 +48,52 @@ export default function YourVideosCards(props: Props) {
     }
 
     return (
-        <Container>
+        <>
+            <Container>
 
-            <DeleteVideoButton title="Apagar vídeo enviado." onClick={deleteVideoFunction}>
-                <DeleteVideoButtonIcon src={TrashIcon} />
-            </DeleteVideoButton>
+                <DeleteVideoButton title="Apagar vídeo enviado." onClick={() => setIsDeleteModalOpen(true)}>
+                    <DeleteVideoButtonIcon src={TrashIcon} />
+                </DeleteVideoButton>
 
-            <Banner alt="thumbnail" src={props.thumbnail} />
+                <Banner alt="thumbnail" src={props.thumbnail} />
 
-            <TitleContainer>
-                <ChannelImage>{props.channelImage}</ChannelImage>
-                <TextContainer>
-                    <Title>{props.title}</Title>
-                    <TextCard>{props.details}</TextCard>
-                    <TextCard style={{ fontSize: '13px', marginTop: '5px' }}>{props.publishedAt}</TextCard>
-                </TextContainer>
-            </TitleContainer>
-
-            <ResponsiveTitleContainer>
-                <TextContainer>
-                    <Title>{props.title}</Title>
+                <TitleContainer>
                     <ChannelImage>{props.channelImage}</ChannelImage>
-                    <ResponsiveChannelName>{props.channelName}</ResponsiveChannelName>
-                    <ResponsivePublishedData><span>{props.publishedAt}</span></ResponsivePublishedData>
-                    <ResponsiveDescription><span>{props.details}</span></ResponsiveDescription>
+                    <TextContainer>
+                        <Title>{props.title}</Title>
+                        <TextCard>{props.details}</TextCard>
+                        <TextCard style={{ fontSize: '13px', marginTop: '5px' }}>{props.publishedAt}</TextCard>
+                    </TextContainer>
+                </TitleContainer>
 
-                </TextContainer>
-            </ResponsiveTitleContainer>
+                <ResponsiveTitleContainer>
+                    <TextContainer>
+                        <Title>{props.title}</Title>
+                        <ChannelImage>{props.channelImage}</ChannelImage>
+                        <ResponsiveChannelName>{props.channelName}</ResponsiveChannelName>
+                        <ResponsivePublishedData><span>{props.publishedAt}</span></ResponsivePublishedData>
+                        <ResponsiveDescription><span>{props.details}</span></ResponsiveDescription>
 
-        </Container>
+                    </TextContainer>
+                </ResponsiveTitleContainer>
+
+            </Container>
+
+            <Modal isDeleteModalOpen={isDeleteModalOpen}>
+                <DeleteVideoModal isDeleteModalOpen={isDeleteModalOpen}>
+                    <span>Você deseja excluir este vídeo?</span>
+
+                    <DeleteButton>
+                        <span>Sim, excluir</span>
+                    </DeleteButton>
+
+                    <BackButton>
+                        <span>Não,voltar</span>
+                    </BackButton>
+
+                </DeleteVideoModal>
+            </Modal>
+
+        </>
     )
 }

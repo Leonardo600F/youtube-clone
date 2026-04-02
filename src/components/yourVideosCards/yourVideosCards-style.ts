@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface Modal {
+    isDeleteModalOpen: boolean
+}
+
 export const DeleteVideoButton = styled.div`
 display: none;
 position: fixed;
@@ -10,13 +14,68 @@ height: 35px;
 border-radius: 50px;
 margin-top: 13px;
 margin-left: 285px;
-background-color: #ececec;
-`;
+background-color: #ececec;`;
 
 export const DeleteVideoButtonIcon = styled.img`
 display: flex;
 width: 20px;
-height: 20px;
+height: 20px;`;
+
+export const Modal = styled.div<Modal>`
+display: ${({ isDeleteModalOpen }) => isDeleteModalOpen ? 'flex' : 'none'};
+align-items: center;
+justify-content: center;
+position: fixed;
+width: 100vw;
+height: 100vh;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+z-index: 5;
+background-color: rgba(0,0,0,0.5);`;
+
+export const DeleteVideoModal = styled.div<Modal>`
+display: ${({ isDeleteModalOpen }) => isDeleteModalOpen ? 'flex' : 'none'};
+width: 600px;
+height: 300px;
+border-radius: 12px;
+background-color: #fff;
+
+span {
+position: fixed;
+height: fit-content;
+margin-top: 70px;
+margin-left: 110px;
+font-size: 25px;
+cursor: default}`;
+
+export const DeleteButton = styled.div`
+display: flex;
+width: 120px;
+height: 50px;
+margin-top: 200px;
+margin-left: 110px;
+border-radius: 20px;
+cursor: pointer;
+background-color: purple;
+
+span {
+display: flex;
+font-size: 15px;
+background-color: red;
+}
+`;
+
+export const BackButton = styled.div`
+display: flex;
+width: 120px;
+height: 50px;
+margin-top: 200px;
+margin-left: 60px;
+border-radius: 20px;
+cursor: pointer;
+background-color: red;
 `;
 
 export const Container = styled.div`
