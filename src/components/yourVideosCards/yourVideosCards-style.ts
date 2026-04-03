@@ -14,12 +14,90 @@ height: 35px;
 border-radius: 50px;
 margin-top: 13px;
 margin-left: 285px;
-background-color: #ececec;`;
+background-color: #ececec;
+
+@media(max-width: 1230px) {margin-left: 270px}
+
+@media(max-width: 1200px) {margin-left: 260px}
+
+@media(max-width: 1143px) {margin-left: 250px}
+
+@media(max-width: 1114px) {margin-left: 237px}
+
+@media(max-width: 1018px) {margin-left: 230px}
+
+@media(max-width: 980px) {margin-left: 215px}
+
+@media(max-width: 963px) {
+width: 45px;
+height: 45px;
+margin-top: 5px;
+margin-left: 80%;
+background-color: #fff}
+
+@media(max-width: 875px) {
+width: 40px;
+height: 40px;
+margin-left: 78%;
+background-color: #fff}
+
+@media(max-width: 791px) {margin-left: 87%}
+
+@media(max-width: 765px) {margin-left: 84%}
+
+@media(max-width: 719px) {margin-left: 620px}
+
+@media(max-width: 710px) {margin-left: 605px}
+
+@media(max-width: 680px) {margin-left: 590px}
+
+@media(max-width: 660px) {margin-left: 575px}
+
+@media(max-width: 650px) {margin-left: 560px}
+
+@media(max-width: 635px) {margin-left: 545px}
+
+@media(max-width: 622px) {margin-left: 530px}
+
+@media(max-width: 608px) {margin-left: 515px}
+
+@media(max-width: 590px) {margin-left: 500px}
+
+@media(max-width: 575px) {margin-left: 485px}
+
+@media(max-width: 555px) {
+width: 35px;
+height: 35px;
+margin-left: 475px}
+
+@media(max-width: 536px) {
+margin-top: 145px;
+margin-left: 460px}
+
+@media(max-width: 523px) {
+margin-top: 140px;
+margin-left: 445px}
+
+`;
 
 export const DeleteVideoButtonIcon = styled.img`
 display: flex;
 width: 20px;
-height: 20px;`;
+height: 20px;
+
+@media(max-width: 963px) {
+width: 25px;
+height: 25px}
+
+@media(max-width: 875px) {
+width: 23px;
+height: 23px}
+
+@media(max-width: 555px) {
+width: 20px;
+height: 20px}
+
+`;
 
 export const Modal = styled.div<Modal>`
 display: ${({ isDeleteModalOpen }) => isDeleteModalOpen ? 'flex' : 'none'};
@@ -52,30 +130,46 @@ cursor: default}`;
 
 export const DeleteButton = styled.div`
 display: flex;
-width: 120px;
+width: 135px;
 height: 50px;
 margin-top: 200px;
 margin-left: 110px;
 border-radius: 20px;
 cursor: pointer;
-background-color: purple;
+transition: 0.6s;
+background-color: #E5E4E2;
+
+&:hover {background-color: #87CEFA;}
 
 span {
 display: flex;
+margin-top: 15px;
+margin-left: 31px; 
 font-size: 15px;
-background-color: red;
-}
-`;
+font-weight: 600;
+cursor: pointer;}`;
 
 export const BackButton = styled.div`
 display: flex;
-width: 120px;
+width: 135px;
 height: 50px;
 margin-top: 200px;
-margin-left: 60px;
+margin-left: 70px;
 border-radius: 20px;
 cursor: pointer;
-background-color: red;
+transition: 0.6s;
+background-color: #E5E4E2;
+
+&:hover {background-color: #E62020}
+
+span {
+display: flex;
+margin-top: 15px;
+margin-left: 31px; 
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
+}
 `;
 
 export const Container = styled.div`

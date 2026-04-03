@@ -43,8 +43,11 @@ export default function YourVideosCards(props: Props) {
         if (!props.videoId) {
             alert('Não foi possível identificar o vídeo para excluir.');
             return;
+        } else {
+            setIsDeleteModalOpen(true);
+            deleteVideo(props.videoId)
         }
-        deleteVideo(props.videoId)
+
     }
 
     return (
@@ -80,18 +83,20 @@ export default function YourVideosCards(props: Props) {
             </Container>
 
             <Modal isDeleteModalOpen={isDeleteModalOpen}>
+
                 <DeleteVideoModal isDeleteModalOpen={isDeleteModalOpen}>
                     <span>Você deseja excluir este vídeo?</span>
 
-                    <DeleteButton>
+                    <DeleteButton onClick={deleteVideoFunction}>
                         <span>Sim, excluir</span>
                     </DeleteButton>
 
-                    <BackButton>
-                        <span>Não,voltar</span>
+                    <BackButton onClick={() => setIsDeleteModalOpen(false)}>
+                        <span>Não, voltar</span>
                     </BackButton>
 
                 </DeleteVideoModal>
+
             </Modal>
 
         </>
