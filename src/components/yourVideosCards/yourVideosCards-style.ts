@@ -78,6 +78,50 @@ margin-left: 460px}
 margin-top: 140px;
 margin-left: 445px}
 
+@media(max-width: 513px) {margin-left: 430px}
+
+@media(max-width: 503px) {
+margin-top: 130px;
+margin-left: 415px}
+
+@media(max-width: 472px) {margin-left: 400px}
+
+@media(max-width: 458px) {margin-left: 385px}
+
+@media(max-width: 438px) {
+margin-top: 120px;
+margin-left: 370px}
+
+@media(max-width: 423px) {margin-left: 355px}
+
+@media(max-width: 410px) {
+margin-top: 115px;
+margin-left: 340px}
+
+@media(max-width: 390px) {
+width: 30px;
+height: 30px;
+margin-top: 105px;
+margin-left: 330px}
+
+@media(max-width: 379px) {margin-left: 320px}
+
+@media(max-width: 369px) {
+margin-top: 100px;
+margin-left: 310px}
+
+@media(max-width: 359px) {margin-left: 300px}
+
+@media(max-width: 349px) {
+margin-top: 95px;
+margin-left: 290px}
+
+@media(max-width: 339px) {margin-left: 280px}
+
+@media(max-width: 329px) {
+margin-top: 90px;
+margin-left: 270px}
+
 `;
 
 export const DeleteVideoButtonIcon = styled.img`
@@ -96,6 +140,10 @@ height: 23px}
 @media(max-width: 555px) {
 width: 20px;
 height: 20px}
+
+@media(max-width: 390px) {
+width: 15px;
+height: 15px}
 
 `;
 
