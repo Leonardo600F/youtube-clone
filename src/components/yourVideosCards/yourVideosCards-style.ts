@@ -159,7 +159,7 @@ right: 0;
 left: 0;
 bottom: 0;
 z-index: 5;
-background-color: rgba(0,0,0,0.5);`;
+background-color: rgba(0,0,0,0.5)`;
 
 export const DeleteVideoModal = styled.div<Modal>`
 display: ${({ isDeleteModalOpen }) => isDeleteModalOpen ? 'flex' : 'none'};
@@ -174,7 +174,30 @@ height: fit-content;
 margin-top: 70px;
 margin-left: 110px;
 font-size: 25px;
-cursor: default}`;
+cursor: default;
+
+@media(max-width: 600px) {
+font-size: 23px;
+margin-left: 105px}
+
+@media(max-width: 536px) {margin-left: 90px}
+
+}
+
+@media(max-width: 650px) {
+width: 580px;
+height: 285px}
+
+@media(max-width: 600px) {width: 540px}
+
+@media(max-width: 560px) {
+width: 520px;
+height: 280px}
+
+@media(max-width: 536px) {width: 500px}
+
+
+`;
 
 export const DeleteButton = styled.div`
 display: flex;
@@ -187,7 +210,7 @@ cursor: pointer;
 transition: 0.6s;
 background-color: #E5E4E2;
 
-&:hover {background-color: #87CEFA;}
+&:hover {background-color: #87CEFA}
 
 span {
 display: flex;
@@ -195,7 +218,16 @@ margin-top: 15px;
 margin-left: 31px; 
 font-size: 15px;
 font-weight: 600;
-cursor: pointer;}`;
+cursor: pointer;
+
+@media(max-width: 600px) {
+margin-top: 13px;
+margin-left: 26px}}
+
+@media(max-width: 600px) {
+width: 125px;
+height: 45px}
+`;
 
 export const BackButton = styled.div`
 display: flex;
@@ -217,7 +249,15 @@ margin-left: 31px;
 font-size: 15px;
 font-weight: 600;
 cursor: pointer;
-}
+
+@media(max-width: 600px) {
+margin-top: 13px;
+margin-left: 26px}}
+
+@media(max-width: 600px) {
+width: 125px;
+height: 45px;
+margin-left: 60px}
 `;
 
 export const Container = styled.div`
