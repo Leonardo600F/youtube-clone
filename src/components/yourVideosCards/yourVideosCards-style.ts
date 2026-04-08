@@ -182,6 +182,16 @@ margin-left: 105px}
 
 @media(max-width: 536px) {margin-left: 90px}
 
+@media(max-width: 516px) {
+margin-left: 85px;
+font-size: 21px}
+
+@media(max-width: 490px) {margin-left: 80px}
+
+@media(max-width: 437px) {
+font-size: 19px;
+margin-left: 75px}
+
 }
 
 @media(max-width: 650px) {
@@ -195,6 +205,20 @@ width: 520px;
 height: 280px}
 
 @media(max-width: 536px) {width: 500px}
+
+@media(max-width: 516px) {width: 470px}
+
+@media(max-width: 490px) {
+width: 450px;
+height: 260px}
+
+@media(max-width: 470px) {
+width: 425px;
+height: 255px}
+
+@media(max-width: 437px) {
+width: 405px;
+height: 250px}
 
 
 `;
@@ -222,11 +246,45 @@ cursor: pointer;
 
 @media(max-width: 600px) {
 margin-top: 13px;
-margin-left: 26px}}
+margin-left: 26px}
+
+@media(max-width: 536px) {
+margin-left: 23px;
+font-size: 14.5px}
+
+@media(max-width: 516px) {
+margin-left: 22px;
+font-size: 14px}
+
+@media(max-width: 437px) {
+margin-top: 11.5px;
+margin-left: 20px;
+font-size: 13px}
+
+}
 
 @media(max-width: 600px) {
 width: 125px;
-height: 45px}
+height: 45px;}
+
+@media(max-width: 536px) {
+width: 120px;
+margin-left: 95px}
+
+@media(max-width: 516px) {
+width: 115px;
+height: 42px;
+margin-left: 85px}
+
+@media(max-width: 490px) {
+margin-top: 185px;
+margin-left: 80px}
+
+@media(max-width: 437px) {
+width: 105px;
+height: 39px;
+margin-left: 75px}
+
 `;
 
 export const BackButton = styled.div`
@@ -252,12 +310,40 @@ cursor: pointer;
 
 @media(max-width: 600px) {
 margin-top: 13px;
-margin-left: 26px}}
+margin-left: 26px}
+
+@media(max-width: 536px) {
+margin-left: 23px;
+font-size: 14.5px}
+
+@media(max-width: 516px) {
+margin-left: 22px;
+font-size: 14px}
+
+@media(max-width: 437px) {
+margin-top: 11.5px;
+margin-left: 20px;
+font-size: 13px}}
 
 @media(max-width: 600px) {
 width: 125px;
 height: 45px;
 margin-left: 60px}
+
+@media(max-width: 536px) {width: 120px}
+
+@media(max-width: 516px) {
+width: 115px;
+height: 42px}
+
+@media(max-width: 490px) {
+margin-top: 185px;
+margin-left: 55px}
+
+@media(max-width: 437px) {
+width: 105px;
+height: 39px;
+margin-left: 52px}
 `;
 
 export const Container = styled.div`
