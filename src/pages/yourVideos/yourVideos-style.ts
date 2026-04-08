@@ -33,7 +33,7 @@ export const YourVideosContainer = styled.div`width: 100%`;
 export const UserContainer = styled.div`
 display: flex;
 width: 100%;
-height: 90px;`;
+height: 90px`;
 
 export const UserProfile = styled.div`
 display: flex;
@@ -83,9 +83,7 @@ min-width: 44px;
 max-width: 44px;
 min-height: 44px;
 max-height: 44px;
-font-size: 26px}
-
-`;
+font-size: 26px}`;
 
 export const UserName = styled.h1`
 margin-top: 4px;
@@ -111,14 +109,10 @@ margin-left: 10px}
 
 @media(max-width: 339px) {font-size: 24px}
 
-@media(max-width: 320px) {font-size: 22.5px}
-
-
-`;
+@media(max-width: 320px) {font-size: 22.5px}`;
 
 export const Modal = styled.div<ContainerProps>`
-visibility: ${({ hideModal }) => hideModal ? 'hidden' : 'visible'};
-display: flex;
+display: ${({ hideModal }) => hideModal ? 'none' : 'flex'};
 align-items: center;
 justify-content: center;
 position: fixed;

@@ -120,9 +120,7 @@ margin-left: 290px}
 
 @media(max-width: 329px) {
 margin-top: 90px;
-margin-left: 270px}
-
-`;
+margin-left: 270px}`;
 
 export const DeleteVideoButtonIcon = styled.img`
 display: flex;
@@ -143,9 +141,7 @@ height: 20px}
 
 @media(max-width: 390px) {
 width: 15px;
-height: 15px}
-
-`;
+height: 15px}`;
 
 export const Modal = styled.div<Modal>`
 display: ${({ isDeleteModalOpen }) => isDeleteModalOpen ? 'flex' : 'none'};
@@ -192,7 +188,22 @@ font-size: 21px}
 font-size: 19px;
 margin-left: 75px}
 
-}
+@media(max-width: 418px) {margin-left: 65px}
+
+@media(max-width: 400px) {margin-left: 52px}
+
+@media(max-width: 380px) {
+font-size: 18px;
+margin-left: 50px}
+
+@media(max-width: 360px) {margin-left: 42px}
+
+@media(max-width: 340px) {margin-left: 30px}
+
+@media(max-width: 320px) {
+font-size: 17.5px;
+margin-left: 26px}}
+
 
 @media(max-width: 650px) {
 width: 580px;
@@ -220,8 +231,25 @@ height: 255px}
 width: 405px;
 height: 250px}
 
+@media(max-width: 418px) {
+width: 385px;
+height: 245px}
 
-`;
+@media(max-width: 400px) {width: 365px}
+
+@media(max-width: 380px) {
+width: 345px;
+height: 240px}
+
+@media(max-width: 360px) {
+width: 325px;
+height: 235px}
+
+@media(max-width: 340px) {
+width: 305px;
+height: 230px}
+
+@media(max-width: 320px) {width: 295px}`;
 
 export const DeleteButton = styled.div`
 display: flex;
@@ -261,11 +289,14 @@ margin-top: 11.5px;
 margin-left: 20px;
 font-size: 13px}
 
-}
+@media(max-width: 380px) {
+margin-top: 11.5px;
+margin-left: 18px;
+font-size: 12px}}
 
 @media(max-width: 600px) {
 width: 125px;
-height: 45px;}
+height: 45px}
 
 @media(max-width: 536px) {
 width: 120px;
@@ -285,7 +316,20 @@ width: 105px;
 height: 39px;
 margin-left: 75px}
 
-`;
+@media(max-width: 418px) {margin-left: 62px}
+
+@media(max-width: 400px) {margin-left: 48px}
+
+@media(max-width: 380px) {
+width: 95px;
+margin-top: 175px;
+margin-left: 46px}
+
+@media(max-width: 360px) {
+margin-top: 165px;
+margin-left: 40px}
+
+@media(max-width: 340px) {margin-left: 28px}`;
 
 export const BackButton = styled.div`
 display: flex;
@@ -323,7 +367,12 @@ font-size: 14px}
 @media(max-width: 437px) {
 margin-top: 11.5px;
 margin-left: 20px;
-font-size: 13px}}
+font-size: 13px}
+
+@media(max-width: 380px) {
+margin-top: 11.5px;
+margin-left: 18px;
+font-size: 12px}}
 
 @media(max-width: 600px) {
 width: 125px;
@@ -344,7 +393,21 @@ margin-left: 55px}
 width: 105px;
 height: 39px;
 margin-left: 52px}
-`;
+
+@media(max-width: 400px) {margin-left: 45px}
+
+@media(max-width: 380px) {
+width: 95px;
+margin-top: 175px;
+margin-left: 54px}
+
+@media(max-width: 360px) {
+margin-top: 165px;
+margin-left: 50px}
+
+@media(max-width: 340px) {margin-left: 57px}
+
+@media(max-width: 320px) {margin-left: 47px}`;
 
 export const Container = styled.div`
 width: 340px;
@@ -541,9 +604,7 @@ height: 128px}
 
 @media(max-width: 339px) {width: 320px}
 
-@media(max-width: 329px) {width: 307px}
-
-`;
+@media(max-width: 329px) {width: 307px}`;
 
 export const Banner = styled.img`
 width: 95%;
@@ -796,9 +857,7 @@ margin-left: 1px}
 
 @media(max-width: 359px) {font-size: 14.5px}
 
-@media(max-width: 349px) {font-size: 13.5px}
-
-`;
+@media(max-width: 349px) {font-size: 13.5px}`;
 
 export const TextCard = styled.span`
 display: -webkit-box;
@@ -807,7 +866,7 @@ display: -webkit-box;
 overflow: hidden;
 text-overflow: ellipsis;
 font-size: 15px;
-color: #8c8c8c;`;
+color: #8c8c8c`;
 
 export const ResponsiveTitleContainer = styled.div`
 display: none;
@@ -818,7 +877,7 @@ width: 425px;
 height: 266px;
 margin-top: -269px;
 margin-left: 400px;
-border-radius: 12px;}
+border-radius: 12px}
 
 @media(max-width: 935px) {
 width: 422px;
@@ -1015,10 +1074,7 @@ margin-left: 166px}
 
 @media(max-width: 329px) {
 width: 139px;
-margin-left: 161px}
-
-
-`;
+margin-left: 161px}`;
 
 export const ResponsiveChannelName = styled.span`
 display: none;
@@ -1029,7 +1085,7 @@ margin-top: -39px;
 margin-left: 70px;
 font-weight: 600;
 font-size: 21px;
-color: #0f0f0f;}
+color: #0f0f0f}
 
 @media(max-width: 875px) {
 margin-left: 60px;
@@ -1048,10 +1104,7 @@ margin-top: -32px;
 margin-left: 44px;
 font-size: 14px}
 
-@media(max-width: 390px) {display: none}
-
-
-`;
+@media(max-width: 390px) {display: none}`;
 
 export const ResponsiveDescription = styled.div`
 display: none;
@@ -1162,9 +1215,7 @@ color: #8c8c8c;
 
 @media(max-width: 493px) {font-size: 12.5px}
 
-@media(max-width: 438px) {font-size: 11px}}
-
-}`;
+@media(max-width: 438px) {font-size: 11px}}}`;
 
 export const ResponsivePublishedData = styled.div`
 display: none;
@@ -1198,6 +1249,4 @@ color: #0f0f0f;
 
 @media(max-width: 438px) {font-size: 11px}
 
-@media(max-width: 390px) {font-size: 14px}}
-
-`;
+@media(max-width: 390px) {font-size: 14px}}`;
