@@ -144,7 +144,11 @@ export default function SignIn() {
                             maxLength={16}
                             placeholder=" "
                             type={showPassword ? 'text' : 'password'}
-                            onChange={(e) => setPassword(e.target.value)}
+                            onChange={(e) => {
+                                const passwordValue = e.target.value;
+                                setPassword(passwordValue);
+                                setValidPassword(passwordValue.trim() !== '' && passwordValue.length >= 8);
+                            }}
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter') {
                                     userLogin()

@@ -137,6 +137,7 @@ height: ${({ valid }) => valid ? '38%' : '44%'};
 width: 50%;
 margin: -194px 0 0 50%;
 border-top-right-radius: 30px;
+background-color: red;
 
 @media(max-width: 1920px) {height: ${({ valid }) => valid ? '35%' : '41%'}}
 
@@ -148,6 +149,10 @@ margin-left: 45%}
 height: ${({ valid }) => valid ? '34%' : '40%'};
 width: 53%;
 margin: -192px 0 0 47%}
+
+@media(max-width: 1629px) {
+height: ${({ valid }) => valid ? '35.6%' : '42%'};
+margin: -190px 0 0 46.8%}
 
 @media(max-width: 1559px) {
 height: ${({ valid }) => valid ? '38.6%' : '44%'};
@@ -218,6 +223,8 @@ border-color: ${({ isFocused }) => isFocused ? '#4169E1' : 'grey'};
 
 @media(max-width: 1920px) {width: 410px}
 
+@media(max-width: 1629px) {width: 395px}
+
 @media(max-width: 1200px) {width: 370px}
 
 @media(max-width: 976px) {width: 380px}
@@ -266,6 +273,8 @@ background-color: #fff;
 @media(max-width: 1920px) {max-width: ${({ valid }) => valid ? '398px' : '98%'}}
 
 @media(max-width: 1680px) {max-width: ${({ valid }) => valid ? '398px' : '98%'}}
+
+@media(max-width: 1629px) {max-width: ${({ valid }) => valid ? '383px' : '98%'}}
 
 @media(max-width: 1200px) {max-width: ${({ valid }) => valid ? '358px' : '98%'}}
 
@@ -319,6 +328,8 @@ background-color: #fff;
 
 @media(max-width: 1920px) {margin: 18px 0 0 -400px}
 
+@media(max-width: 1629px) {margin-left: -385px}
+
 @media(max-width: 1200px) {margin: 18px 0 0 -355px}
 
 @media(max-width: 1102px) {margin-left: -365px}
@@ -354,13 +365,14 @@ background-color: #fff;
 export const ExclamationIconContainer = styled.img`
 width: 20px;
 height: 20px;
-border-radius: 50px;`;
+border-radius: 50px`;
 
 export const PasswordInfoContainer = styled.div<InputValid>`
 display: flex;
 width: 50%;
 height: ${({ valid }) => valid ? '15%' : '21%'};
-margin-left :50%;
+margin-left: 50%;
+background-color: purple;
 
 @media(max-width: 1920px) {height: ${({ valid }) => valid ? '15%' : '20%'}}
 
@@ -371,17 +383,19 @@ height: ${({ valid }) => valid ? '15%' : '21%'};
 width: 53%;
 margin-left: 47%}
 
+@media(max-width: 1629px) {margin-left: 46.8%}
+
 @media(max-width: 1559px) {
 height: ${({ valid }) => valid ? '15%' : '21%'};
 margin-left: 46.8%}
 
-@media(max-width: 1200px) {
-width: 53.9%;
-margin-left: 46%}
-
 @media(max-width: 1280px) {
 height: ${({ valid }) => valid ? '15%' : '20%'};
 margin-left: 45%}
+
+@media(max-width: 1200px) {
+width: 53.9%;
+margin-left: 46%}
 
 @media(max-width: 1152px) {
 height: ${({ valid }) => valid ? '16%' : '22%'};
@@ -409,6 +423,8 @@ border-width: ${({ passwordFocused }) => passwordFocused ? '2px' : '1px'};
 border-color: ${({ passwordFocused }) => passwordFocused ? '#4169E1' : 'grey'};
 
 @media(max-width: 1920px) {width: 410px}
+
+@media(max-width: 1629px) {width: 395px}
 
 @media(max-width: 1200px) {width: 370px}
 
@@ -444,7 +460,7 @@ export const PasswordInput = styled.input<InputValid>`
 width: 100%;
 height: 100%;
 max-width: ${({ valid }) => valid ? '458px' : '98%'};
-max-height: ${({ valid }) => valid ? '96%' : '98%'};
+max-height: ${({ valid }) => valid ? '96.3%' : '98%'};
 margin: ${({ valid }) => valid ? 'none' : '-2px 0px 0 -2px'};
 border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
 border-color: red;
@@ -454,36 +470,37 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
-@media(max-width: 2488px) {max-height: ${({ valid }) => valid ? '96%' : '98%'};}
+@media(max-width: 2488px) {max-height: ${({ valid }) => valid ? '96.3%' : '98%'}}
 
-@media(max-width: 1920px) {max-width: ${({ valid }) => valid ? '398px' : '98%'};}
+@media(max-width: 1920px) {max-width: ${({ valid }) => valid ? '398px' : '98%'}}
 
-@media(max-width: 1200px) {max-width: ${({ valid }) => valid ? '358px' : '98%'};}
+@media(max-width: 1629px) {max-width: ${({ valid }) => valid ? '383px' : '98%'}}
 
-@media(max-width: 976px) {max-width: ${({ valid }) => valid ? '368.2px' : '98%'};}
+@media(max-width: 1200px) {max-width: ${({ valid }) => valid ? '358px' : '98%'}}
+
+@media(max-width: 976px) {max-width: ${({ valid }) => valid ? '368.2px' : '98%'}}
 
 @media(max-width: 830px) {
 max-width: 96.5%;
-max-height: 96.3%;
-}
+max-height: 96.3%}
 
-@media(max-width: 631px) {max-width: ${({ valid }) => valid ? '96%' : '97%'};}
+@media(max-width: 631px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}
 
-@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '95.5%' : '96%'};}
+@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '95.5%' : '96%'}}
 
-@media(max-width: 599px) {max-width: 97.7%;}
+@media(max-width: 599px) {max-width: 97.7%}
 
-@media(max-width: 535px) {max-width: ${({ valid }) => valid ? '96%' : '97.5%'};}
+@media(max-width: 535px) {max-width: ${({ valid }) => valid ? '96%' : '97.5%'}}
 
-@media(max-width: 480px) {max-width: 97.2%;}
+@media(max-width: 480px) {max-width: 97.2%}
 
-@media(max-width: 450px) {max-width: 97%;}
+@media(max-width: 450px) {max-width: 97%}
 
-@media(max-width: 413px) {max-width: ${({ valid }) => valid ? '96%' : '97%'};}
+@media(max-width: 413px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}
 
-@media(max-width: 360px) {max-width: 96%;}
+@media(max-width: 360px) {max-width: 96%}
 
-@media(max-width: 330px) {max-width: 95.5%;}
+@media(max-width: 330px) {max-width: 95.5%}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -494,13 +511,11 @@ font-size: 12px;
 transform: translateY(-27px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
-@media(max-width: 1920px) {transform: translateY(-24px);}
+@media(max-width: 1920px) {transform: translateY(-24px)}
 
-@media(max-width: 976px) {transform: translateY(-28px);}
+@media(max-width: 976px) {transform: translateY(-28px)}
 
-@media(max-width: 480px) {transform: translateY(-28px);}
-}
-`;
+@media(max-width: 480px) {transform: translateY(-28px)}}`;
 
 export const PasswordLabel = styled.label<InputValid>`
 height: 21px;
@@ -512,73 +527,41 @@ pointer-events: none;
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
-@media(max-width: 1920px) {
-margin: 18px 0 0 -400px;
-}
+@media(max-width: 1920px) {margin: 18px 0 0 -400px}
 
-@media(max-width: 1200px) {
-margin: 18px 0 0 -355px;
-}
+@media(max-width: 1629px) {margin-left: -385px}
 
-@media(max-width: 1102px) {
-margin-left: -365px;
-}
+@media(max-width: 1200px) {margin: 18px 0 0 -355px}
 
-@media(max-width: 1090px) {
-margin-left: -355px;
-}
+@media(max-width: 1102px) {margin-left: -365px}
 
-@media(max-width: 1080px) {
-margin-left: -365px;
-}
+@media(max-width: 1090px) {margin-left: -355px}
 
-@media(max-width: 1060px) {
-margin-left: -355px;
-}
+@media(max-width: 1080px) {margin-left: -365px}
 
-@media(max-width: 976px) {
-margin-left: -370px;
-}
+@media(max-width: 1060px) {margin-left: -355px}
 
-@media(max-width: 830px) {
-margin: 19px 0px 0px -330px;
-}
+@media(max-width: 976px) {margin-left: -370px}
 
-@media(max-width: 730px) {
-margin-left: -310px;
-}
+@media(max-width: 830px) {margin: 19px 0px 0px -330px}
 
-@media(max-width: 630px) {
-margin-left: -275px;
-}
+@media(max-width: 730px) {margin-left: -310px}
 
-@media(max-width: 599px) {
-margin-left: -500px;
-}
+@media(max-width: 630px) {margin-left: -275px}
 
-@media(max-width: 535px) {
-margin-left: -430px;
-}
+@media(max-width: 599px) {margin-left: -500px}
 
-@media(max-width: 480px) {
-margin-left: -405px;
-}
+@media(max-width: 535px) {margin-left: -430px}
 
-@media(max-width: 450px) {
-margin-left: -375px;
-}
+@media(max-width: 480px) {margin-left: -405px}
 
-@media(max-width: 413px) {
-margin-left: -320px;
-}
+@media(max-width: 450px) {margin-left: -375px}
 
-@media(max-width: 360px) {
-margin-left: -290px;
-}
+@media(max-width: 413px) {margin-left: -320px}
 
-@media(max-width: 330px) {
-margin-left: -270px;
-}`;
+@media(max-width: 360px) {margin-left: -290px}
+
+@media(max-width: 330px) {margin-left: -270px}`;
 
 export const InvalidPasswordMessage = styled.span`
 display: block;
@@ -593,6 +576,7 @@ export const ShowPasswordContainer = styled.div`
 display: flex;
 width: fit-content;
 height: fit-content;
+margin-top: 4px;
 margin-left: 548px;
 
 span {
@@ -629,7 +613,7 @@ cursor: pointer}
 
 @media(max-width: 1760px) {margin-left: 405px}
 
-@media(max-width: 1680px) {margin-left: 405px}
+@media(max-width: 1629px) {margin-left: 390px}
 
 @media(max-width: 1559px) {margin-left: 485px}
 
@@ -688,76 +672,48 @@ height: 67px;
 width: 50%;
 margin: 50px 0 0 50%;
 
-@media(max-width: 1760px) {
-margin-left: 45%;
-}
+@media(max-width: 1760px) {margin-left: 45%}
 
-@media(max-width: 1680px) {
-margin-left: 47%;
-}
+@media(max-width: 1680px) {margin-left: 47%}
 
-@media(max-width: 1559px) {
-margin-left: 50%;
-}
+@media(max-width: 1559px) {margin-left: 50%}
 
-@media(max-width: 1280px) {
-margin-left: 48%;
-}
+@media(max-width: 1280px) {margin-left: 48%}
 
 @media(max-width: 976px) {
 height: 60px;
 margin-top: 30px;
-margin-left: 49.7%;
-}
+margin-left: 49.7%}
 
-@media(max-width: 830px) {
-margin-top: 50px;
-}
+@media(max-width: 830px) {margin-top: 50px}
 
 @media(max-width: 599px) {
 margin-top: 37px;
-margin-left: 46%;
-}
+margin-left: 46%}
 
-@media(max-width: 559px) {
-margin-left: 49.5%;
-}
+@media(max-width: 559px) {margin-left: 49.5%}
 
-@media(max-width: 535px) {
-margin-left: 41.5%;
-}
+@media(max-width: 535px) {margin-left: 41.5%}
 
-@media(max-width: 485px) {
-margin-left: 44%;
-}
+@media(max-width: 485px) {margin-left: 44%}
 
 @media(max-width: 480px) {
 width: 290px;
-margin-left: 37%;
-}
+margin-left: 37%}
 
 @media(max-width: 460px) {
 width: 270px;
-margin-left: 34%;
-}
+margin-left: 34%}
 
-@media(max-width: 413px) {
-margin-left: 27%;
-}
+@media(max-width: 413px) {margin-left: 27%}
 
-@media(max-width: 370px) {
-margin-left: 23%;
-}
+@media(max-width: 370px) {margin-left: 23%}
 
 @media(max-width: 360px) {
 width: 260px;
-margin-left: 20%;
-}
+margin-left: 20%}
 
-@media(max-width: 330px) {
-margin-left: 15%;
-}
-`;
+@media(max-width: 330px) {margin-left: 15%}`;
 
 export const SignUpContainer = styled.div`
 display: flex;
@@ -775,27 +731,17 @@ margin: 11px 0 0 18px;
 border-radius: 50px;
 font-weight: 500;
 font-size: 14px;
-color: #4169E1;
-}
+color: #4169E1}
 
-&:hover {background-color: #F8F8FF;}
+&:hover {background-color: #F8F8FF}
 
-@media(max-width: 1760px) {
-margin-left: 42%;
-}
+@media(max-width: 1760px) {margin-left: 42%}
 
-@media(max-width: 1559px) {
-margin-left: 37%;
-}
+@media(max-width: 1559px) {margin-left: 37%}
 
-@media(max-width: 830px) {
-margin-left: 22%;
-}
+@media(max-width: 830px) {margin-left: 22%}
 
-@media(max-width: 630px) {
-margin-left: 8%;
-}
-`;
+@media(max-width: 630px) {margin-left: 8%}`;
 
 export const ButtonsContainerSpans = styled.span`
 width: 100%;
