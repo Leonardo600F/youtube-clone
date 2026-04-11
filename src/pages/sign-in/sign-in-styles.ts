@@ -137,7 +137,6 @@ height: ${({ valid }) => valid ? '38%' : '44%'};
 width: 50%;
 margin: -194px 0 0 50%;
 border-top-right-radius: 30px;
-background-color: red;
 
 @media(max-width: 1920px) {height: ${({ valid }) => valid ? '35%' : '41%'}}
 
@@ -151,7 +150,7 @@ width: 53%;
 margin: -192px 0 0 47%}
 
 @media(max-width: 1629px) {
-height: ${({ valid }) => valid ? '35.6%' : '42%'};
+height: ${({ valid }) => valid ? '33%' : '40%'};
 margin: -190px 0 0 46.8%}
 
 @media(max-width: 1559px) {
@@ -284,13 +283,13 @@ background-color: #fff;
 max-width: 96.5%;
 max-height: 96.3%}
 
-@media(max-width: 631px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}  
+@media(max-width: 631px) {max-width: 96.2%}
 
 @media(max-width: 630px) {max-width: ${({ valid }) => valid ? '95.5%' : '96%'}}
 
 @media(max-width: 599px) {max-width: 97.7%}
 
-@media(max-width: 535px) {max-width: ${({ valid }) => valid ? '96%' : '97.5%'}}
+@media(max-width: 535px) {max-width: ${({ valid }) => valid ? '97.4%' : '98%'}}
 
 @media(max-width: 480px) {max-width: 97.2%}
 
@@ -298,11 +297,11 @@ max-height: 96.3%}
 max-width: 97%;
 max-height: ${({ valid }) => valid ? '96%' : '98%'}}
 
-@media(max-width: 413px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}
+@media(max-width: 413px) {max-width: ${({ valid }) => valid ? '96.5%' : '97%'}}
 
 @media(max-width: 360px) {max-width: 96%}
 
-@media(max-width: 330px) {max-width: 95.5%}
+@media(max-width: 330px) {max-width: 95.8%}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -372,7 +371,6 @@ display: flex;
 width: 50%;
 height: ${({ valid }) => valid ? '15%' : '21%'};
 margin-left: 50%;
-background-color: purple;
 
 @media(max-width: 1920px) {height: ${({ valid }) => valid ? '15%' : '20%'}}
 
@@ -484,23 +482,23 @@ background-color: #fff;
 max-width: 96.5%;
 max-height: 96.3%}
 
-@media(max-width: 631px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}
+@media(max-width: 631px) {max-width: 96.2%}
 
-@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '95.5%' : '96%'}}
+@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '95.7%' : '96%'}}
 
 @media(max-width: 599px) {max-width: 97.7%}
 
-@media(max-width: 535px) {max-width: ${({ valid }) => valid ? '96%' : '97.5%'}}
+@media(max-width: 535px) {max-width: ${({ valid }) => valid ? '97.4%' : '98%'}}
 
 @media(max-width: 480px) {max-width: 97.2%}
 
 @media(max-width: 450px) {max-width: 97%}
 
-@media(max-width: 413px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}
+@media(max-width: 413px) {max-width: ${({ valid }) => valid ? '96.5%' : '97%'}}
 
 @media(max-width: 360px) {max-width: 96%}
 
-@media(max-width: 330px) {max-width: 95.5%}
+@media(max-width: 330px) {max-width: 95.8%}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
