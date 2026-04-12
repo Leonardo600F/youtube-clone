@@ -40,7 +40,17 @@ height: 690px}
 @media(max-width: 599px) {
 width: 100%;
 height: 100%;
-border-radius: 0}`;
+border-radius: 0}
+
+//Responsividade de altura//
+
+@media(max-height: 915px) {height: 800px}
+
+@media(max-height: 825px) {height: 700px}
+
+@media(max-height: 725px) {height: 600px}
+
+`;
 
 export const GoogleIconContainer = styled.img`
 width: 50px;
@@ -59,7 +69,10 @@ margin: 20px 0 0 20px}
 
 @media(max-width: 349px) {
 width: 50px;
-height: 50px}`;
+height: 50px}
+
+@media(max-height: 825px) {margin-top: 2%}
+`;
 
 export const Title = styled.h2`
 display: flex;
@@ -123,7 +136,14 @@ margin: 4% 0 0 26px}
 
 @media(max-width: 349px) {width: 295px}
 
-@media(max-width: 329px) {width: 275px}`;
+@media(max-width: 329px) {width: 275px}
+
+//Responsividade de altura//
+
+@media(max-height: 825px) {margin-top: 6%}
+
+
+`;
 
 export const FirstNameUserContainer = styled.div<FirstNameFocused>`
 display: flex;
@@ -382,7 +402,13 @@ margin: 2% 0 0 26px}
 
 @media(max-width: 349px) {width: 295px}
 
-@media(max-width: 329px) {width: 275px}`;
+@media(max-width: 329px) {width: 275px}
+
+//Responsividade de altura//
+
+@media(max-height: 825px) {margin-top: 30px}
+
+`;
 
 export const EmailUserContainer = styled.div<EmailFocused>`
 display: flex;
@@ -503,7 +529,11 @@ margin-left: 26px}
 
 @media(max-width: 349px) {width: 142px}
 
-@media(max-width: 329px) {width: 135px}`;
+@media(max-width: 329px) {width: 135px}
+
+//Responsividade de altura//
+
+@media(max-height: 825px) {margin-top: 30px}`;
 
 export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
@@ -771,7 +801,12 @@ color: #2F4F4F;
 
 @media(max-width: 599px) {margin-left: 26px}
 
-@media(max-width: 359px) {margin-top: 5px}`;
+@media(max-width: 359px) {margin-top: 5px}
+
+//Responsividade de altura//
+
+@media(max-height: 825px) {margin-top: 6px}
+`;
 
 export const ShowPasswordContainer = styled.div`
 display: flex;
@@ -793,7 +828,12 @@ cursor: pointer}
 
 @media(max-width: 1559px) {margin-left: 40px}
 
-@media(max-width: 630px) {margin-left: 25px}`;
+@media(max-width: 630px) {margin-left: 25px}
+
+//Responsividade de altura//
+
+@media(max-height: 825px) {margin-top: 10px}
+`;
 
 export const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })`
 dispay: flex;
