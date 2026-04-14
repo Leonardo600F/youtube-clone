@@ -8,7 +8,6 @@ width: 1350px;
 margin: -45px 0 45px 30%;
 column-gap: 15px;
 cursor: pointer;
-background-color: grey;
 
 @media(max-width: 2000px) {
 width: 1310px;
@@ -450,8 +449,7 @@ font-size: 13px}
 
 export const TextContainer = styled.div`
 display: flex;
-flex-direction: column;
-background-color: grey`;
+flex-direction: column;`;
 
 export const ChannelContainer = styled.div`
 display: flex;
@@ -479,9 +477,7 @@ color: #0f0f0f;
 
 @media(max-width: 1020px) {font-size: 17px}
 
-@media(max-width: 900px) {
-width: 374px;
-background-color: blue}
+@media(max-width: 900px) {width: 374px}
 
 @media(max-width: 880px) {width: 355px}
 
@@ -522,7 +518,6 @@ width: fit-content;
 
 export const ChannelDetails = styled.span`
 font-size: 15px;
-background-color: purple;
 
 @media(max-width: 2000px) {font-size: 13px}
 
@@ -598,7 +593,6 @@ overflow: hidden;
 text-overflow: ellipsis;
 text-align: justify;
 margin-top: 20px;
-background-color: yellow;
 
 @media(max-width: 2000px) {width: 752px}
 

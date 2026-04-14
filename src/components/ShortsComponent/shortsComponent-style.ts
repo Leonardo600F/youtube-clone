@@ -5,7 +5,6 @@ interface OpenMenu { openMenu: boolean }
 export const Container = styled.div<OpenMenu>`
 height: ${({ openMenu }) => openMenu ? '555px' : '600px'};
 width: 100%;
-background-color: blue;
 
 @media(max-width: 2526px) {height: ${({ openMenu }) => openMenu ? '535px' : '590px'}}
 
@@ -927,7 +926,6 @@ export const TitleContainer = styled.div<OpenMenu>`
 width: 90%;
 margin-left: 9px;
 margin-top: 5px;
-background-color: green;
 
 @media(max-width: 1920px) {
 width: 88%;
@@ -966,7 +964,6 @@ font-weight: 700;
 width: fit-content;
 font-size: 15px;
 color: #0f0f0f;
-background-color: blue;
 
 @media(max-width: 2380px) {font-size: ${({ openMenu }) => openMenu ? '14px' : '15px'};}
 

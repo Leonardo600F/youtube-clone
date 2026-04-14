@@ -329,7 +329,7 @@ background-color: #fff;
 
 @media(max-width: 1629px) {margin-left: -385px}
 
-@media(max-width: 1200px) {margin: 18px 0 0 -355px}
+@media(max-width: 1200px) {margin: 15px 0 0 -355px}
 
 @media(max-width: 1102px) {margin-left: -365px}
 
@@ -529,7 +529,7 @@ background-color: #fff;
 
 @media(max-width: 1629px) {margin-left: -385px}
 
-@media(max-width: 1200px) {margin: 18px 0 0 -355px}
+@media(max-width: 1200px) {margin: 15px 0 0 -355px}
 
 @media(max-width: 1102px) {margin-left: -365px}
 

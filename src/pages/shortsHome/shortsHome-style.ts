@@ -8,7 +8,7 @@ export const ShortsContainer = styled.div<OpenMenu>`
 height: fit-content;
 width: 100%;
 margin-top: 40px;
-background-color: green`;
+background-color: #fff`;
 
 export const ShortsSpanContainer = styled.div<OpenButton>`
 display: ${({ openButton }) => openButton ? 'flex' : 'none'};
@@ -30,7 +30,6 @@ display: ${({ openButton }) => openButton ? 'grid' : 'none'};
 grid-template-columns: repeat(9, 1fr);
 column-gap: 3px;
 width: 100%;
-background-color: grey;
 
 @media(max-width: 1920px) {column-gap: 8px}
 

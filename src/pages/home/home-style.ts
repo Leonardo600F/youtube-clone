@@ -9,7 +9,7 @@ box-sizing: border-box;
 width: 99%;
 padding-top: 35px;
 padding-left: ${({ openMenu }) => openMenu ? '286px' : '115px'};
-background-color: red;
+background-color: #fff;
 
 @media(max-width: 1920px) {
 padding-top: 30px;

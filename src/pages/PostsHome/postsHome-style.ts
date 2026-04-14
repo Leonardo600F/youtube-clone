@@ -7,7 +7,7 @@ display: grid;
 height: ${({ openPosts }) => openPosts ? '300px' : '290px'};
 width: 100%;
 column-gap: 5px;
-background-color: blue;
+background-color: #fff;
 grid-template-columns: repeat(6, 1fr);
 
 @media(max-width: 1920px) {grid-template-columns: repeat(4, 1fr)}

@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-interface MenuProps {
-    openMenu: boolean;
-}
+interface MenuProps { openMenu: boolean }
 
 export const Overlay = styled.div<MenuProps>`
 display: ${({ openMenu }) => openMenu ? 'block' : 'none'};
@@ -13,8 +11,7 @@ width: 100%;
 height: 100%;
 top: 0;
 z-index: 2;
-background-color: rgba(0, 0, 0, 0.5);
-`;
+background-color: rgba(0, 0, 0, 0.5)`;
 
 export const Menu = styled.div<MenuProps>`
 display: flex;
@@ -30,7 +27,7 @@ top: 55px;
 @media(max-width: 791px) {display: none}`;
 
 export const MenuItemContainer = styled.div`
-width: 98%
+width: 98%;
 :hover {background-color: #f2f2f2}`;
 
 export const MenuItem = styled.div`
@@ -90,7 +87,7 @@ box-sizing: border-box;
 overflow-y: auto;
 top: 0;
 left: ${({ openMenu }) => openMenu ? '0' : '-100%'};
-background-color: #5f9ea0;
+background-color: #fff;
 z-index: 3;
 transition: 0.2s`;
 
@@ -121,9 +118,9 @@ margin-bottom: 5px;
 border-radius: 10px;
 padding: 2px 15px;
 cursor: pointer;
-background-color: purple;
+background-color: #fff;
 
-:hover {background-color: #fff}
+:hover {background-color: #f2f2f2}
 
 span {
 margin-left: 23px;
