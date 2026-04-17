@@ -42,15 +42,21 @@ width: 100%;
 height: 100%;
 border-radius: 0}
 
-Responsividade de altura:
+/* Responsividade de altura */
+@media (max-height: 915px) {height: 800px}
+
 @media (max-height: 915px) {
 @media (max-width: 599px) {height: 100vh}}
 
-@media (max-height: 915px) {height: 800px}
-
 @media (max-height: 825px) {height: 700px}
 
+@media (max-height: 825px) {
+@media (max-width: 599px) {height: 100vh}}
+
 @media (max-height: 725px) {height: 600px}
+
+@media (max-height: 725px) {
+@media (max-width: 599px) {height: 100vh}}
 
 @media (max-height: 625px) {height: 550px}
 
@@ -66,35 +72,35 @@ border-radius: 50%;
 
 @media(max-width: 1559px) {
 width: 40px;
-height: 40px}
+height: 40px;}
 
 @media(max-width: 599px) {
 width: 55px;
 height: 55px;
-margin: 20px 0 0 20px}
+margin: 20px 0 0 20px;}
 
 @media(max-width: 349px) {
 width: 50px;
-height: 50px}
+height: 50px;}
 
-Responsividade de altura:
-@media(max-height: 825px) {margin-top: 2%}
+/* Responsividade de altura */
+@media (max-height: 825px) {margin-top: 0px}
 
 @media(max-height: 725px) {margin-top: 1%}
-
-@media(max-height: 625px) {
-width: 40px;
-height: 40px}
 
 @media (max-height: 700px) {
 @media (max-width: 599px) {
 width: 45px;
-height: 45px}}
+height: 45px;}}
+
+@media(max-height: 625px) {
+width: 40px;
+height: 40px;}
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {
 width: 40px;
-height: 40px}}`;
+height: 40px;}}`;
 
 export const Title = styled.h2`
 display: flex;
@@ -117,7 +123,7 @@ margin: 20px 0 0 26px}
 
 @media(max-width: 349px) {font-size: 20px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media(max-height: 725px) {margin-top: 5px}
 
 @media (max-height: 700px) {
@@ -175,7 +181,7 @@ margin: 4% 0 0 26px}
 
 @media(max-width: 329px) {width: 275px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 6%}
 
 @media (max-height: 783px) {
@@ -211,7 +217,7 @@ background-color: #fff;
 
 @media(max-width: 599px) {width: 99%}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 0px}}
 
@@ -298,7 +304,7 @@ margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 600px) {
 @media (max-width: 599px) {font-size: 14.5px}}
 `;
@@ -346,7 +352,7 @@ margin: 2% 0 0 26px}
 
 @media(max-width: 329px) {width: 275px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 783px) {
 @media (max-width: 599px) {margin-top: 8px}}
 
@@ -378,7 +384,7 @@ border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 
 @media(max-width: 599px) {width: 99%}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 0px}}
 
@@ -455,18 +461,18 @@ margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 600px) {
 @media (max-width: 599px) {font-size: 14.5px}}`;
 
 export const EmailContainer = styled.div`
 display: flex;
 height: 100px;
-width: 538px;
+width: 530px;
 margin: 40px 0 0 60px;
 background-color: red;
 
-@media(max-width: 1559px) {margin-left: 40px}
+@media(max-width: 1559px) {margin-left: 39px}
 
 @media(max-width: 1280px) {margin-top: 10px}
 
@@ -506,7 +512,7 @@ margin: 2% 0 0 26px}
 
 @media(max-width: 329px) {width: 275px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 30px}
 
 @media (max-height: 783px) {
@@ -527,7 +533,7 @@ Responsividade de altura:
 export const EmailUserContainer = styled.div<EmailFocused>`
 display: flex;
 height: 55px;
-width: 527px;
+width: 525px;
 margin-top: 15px;
 border: solid;
 border-radius: 5px;
@@ -541,7 +547,7 @@ background-color: #fff;
 
 @media(max-width: 599px) {width: 99%}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 0px}}
 
@@ -612,7 +618,7 @@ background-color: #fff;
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 600px) {
 @media (max-width: 599px) {font-size: 14.5px}}`;
 
@@ -661,7 +667,7 @@ margin-left: 26px}
 
 @media(max-width: 329px) {width: 135px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 30px}
 
 @media (max-height: 783px) {
@@ -694,7 +700,7 @@ background-color: #fff;
 
 @media(max-width: 599px) {width: 98%}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 0px}}
 
@@ -767,7 +773,7 @@ background-color: #fff;
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 600px) {
 @media (max-width: 599px) {font-size: 14.5px}}`;
 
@@ -781,6 +787,7 @@ background-color: red;
 @media(max-width: 1559px) {margin-left: 310px}
 
 @media(max-width: 630px) {
+width: 230px;
 margin-left: 273px}
 
 @media(max-width: 599px) {
@@ -839,7 +846,7 @@ margin-left: 178px}
 width: 130px;
 margin-left: 170px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 674px) {
 @media (max-width: 599px) {
 height: 85px;
@@ -873,7 +880,7 @@ background-color: #fff;
 
 @media(max-width: 599px) {width: 98%}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 0px}}
 
@@ -950,7 +957,7 @@ font-size: 14px}
 
 @media(max-width: 329px) {width: 110px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 600px) {
 @media (max-width: 599px) {font-size: 14.5px}}`;
 
@@ -990,7 +997,7 @@ color: #2F4F4F;
 @media(max-width: 329px) {font-size: 10.4px}
 
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 600px) {
 @media (max-width: 599px) {font-size: 14px}}}
 
@@ -1004,7 +1011,7 @@ Responsividade de altura:
 @media(max-width: 359px) {margin-top: 5px}
 
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 6px}
 
 @media (max-height: 580px) {margin-top: 3px}`;
@@ -1031,7 +1038,7 @@ cursor: pointer}
 
 @media(max-width: 630px) {margin-left: 25px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 10px}`;
 
 export const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })`
@@ -1052,7 +1059,7 @@ background-color: #fff;
 
 @media(max-width: 630px) {margin-left: 20px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 18px}}
 
@@ -1091,7 +1098,7 @@ height: 35px;
 
 span {font-size: 12px}}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 625px) {
 height: 45px;
 width: 195px;
@@ -1166,7 +1173,7 @@ width: 110px}
 width: 90px;
 margin-left: 14px}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 625px) {
 width: 145px;
 height: 45px;
@@ -1186,7 +1193,7 @@ background-color: #fff;
 
 @media(max-width: 630px) {margin: 76px 0 0 -100%}
 
-Responsividade de altura:
+/* Responsividade de altura */
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 62px}}
 
