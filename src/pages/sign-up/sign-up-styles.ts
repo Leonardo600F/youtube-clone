@@ -420,7 +420,12 @@ margin-left: 26px}
 
 @media (max-height: 625px) {
 height: 88px;
-margin-top: 10px}
+margin-top: -88px}
+
+@media (max-height: 625px) {
+@media (max-width: 599px) {margin-top: 10px}}
+
+
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {height: 77px}}
