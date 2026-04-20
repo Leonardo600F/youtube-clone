@@ -151,11 +151,11 @@ font-size: 23px}}
 @media (max-width: 599px) {font-size: 26px}}
 
 @media (max-height: 625px) {
-margin: 1px 0 0 30%;
+margin: 1px 0 0 113px;
 font-size: 23px}
 
 @media (max-height: 625px) {
-@media(max-width: 625px) {margin-left: 28px}}
+@media (max-width: 599px) {margin-left: 25px}}
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {
@@ -370,7 +370,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: -99px 0 0px 335px;
-background-color: red;
+background-color: #fff;
 
 @media(max-width: 1559px) {margin: -99px 0px 0 310px}
 
@@ -424,8 +424,6 @@ margin-top: -88px}
 
 @media (max-height: 625px) {
 @media (max-width: 599px) {margin-top: 10px}}
-
-
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {height: 77px}}
@@ -501,6 +499,50 @@ background-color: #fff;
 @media(max-width: 429px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}
 
 @media(max-width: 329px) {max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'}}
+
+/* Responsividade de altura */
+@media (max-height: 625px) {
+@media (max-width: 625px) {
+max-width: ${({ valid }) => valid ? '208px' : '97.5%'};
+max-height: ${({ valid }) => valid ? '53px' : '100%'}}}
+
+@media (max-height: 625px) {
+@media (max-width: 599px) {max-width: ${({ valid }) => valid ? '97.9%' : '97.5%'}}}
+
+@media (max-height: 625px) {
+@media (max-width: 599px) {max-width: ${({ valid }) => valid ? '97.9%' : '97.5%'}}}
+
+@media (max-height: 625px) {
+@media (max-width: 559px) {max-width: ${({ valid }) => valid ? '97.6%' : '97.5%'}}}
+
+@media (max-height: 625px) {
+@media (max-width: 516px) {max-width: ${({ valid }) => valid ? '97.3%' : '97.5%'}}}
+
+@media (max-height: 625px) {
+@media (max-width: 479px) {max-width: ${({ valid }) => valid ? '97.1%' : '97.5%'}}}
+
+@media (max-height: 625px) {
+@media (max-width: 447px) {max-width: ${({ valid }) => valid ? '96.9%' : '97.5%'}}}
+
+@media (max-height: 625px) {
+@media (max-width: 422px) {
+max-width: ${({ valid }) => valid ? '96.7%' : '97.5%'};
+background-color: #fff}}
+
+@media (max-height: 625px) {
+@media (max-width: 408px) {max-width: ${({ valid }) => valid ? '96.6%' : '97.5%'}}
+
+@media (max-height: 625px) {
+@media (max-width: 387px) {max-width: ${({ valid }) => valid ? '96.4%' : '97.5%'}}
+
+@media (max-height: 625px) {
+@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '96.2%' : '97.5%'}}
+
+@media (max-height: 625px) {
+@media (max-width: 348px) {max-width: ${({ valid }) => valid ? '95.9%' : '97.5%'}}
+
+}
+
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -1156,14 +1198,21 @@ color: #2F4F4F;
 @media(max-width: 599px) {font-size: 16px}}
 
 @media (max-height: 600px) {
-@media (max-width: 599px) {font-size: 14px}}}
+@media (max-width: 599px) {font-size: 14px}}
+
+@media (max-height: 625px) {
+@media (max-width: 387px) {font-size: 12.5px}}
+
+@media (max-height: 625px) {
+@media (max-width: 360px) {font-size: 11.5px}}
+
+}
 
 @media(max-width: 1559px) {margin: 10px 0 0 40px}
 
 @media(max-width: 630px) {margin-left: 23px}
 
-@media(max-width: 599px) {
-margin-left: 26px}
+@media(max-width: 599px) {margin-left: 26px}
 
 @media(max-width: 359px) {margin-top: 5px}
 
@@ -1209,7 +1258,6 @@ display: flex;
 height: fit-content;
 width: fit-content;
 margin: 30px 0px 0 60px;
-background-color: #fff;
 
 @media(max-width: 1559px) {margin-left: 30px}
 
@@ -1219,8 +1267,7 @@ background-color: #fff;
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 18px}}
 
-@media (max-height: 625px) {margin-top: 19px}
-`;
+@media (max-height: 625px) {margin-top: 19px}`;
 
 export const LoginPage = styled.div`
 display: flex;
@@ -1258,8 +1305,18 @@ span {font-size: 12px}}
 @media (max-height: 625px) {
 height: 45px;
 width: 195px;
-
 span{font-size: 15px}}
+
+@media (max-height: 625px) {
+@media (max-width: 360px) {
+width: 168px;
+height: 40px;
+span {font-size: 13px}}
+
+@media (max-height: 625px) {
+@media (max-width: 340px) {
+width: 155px;
+span {font-size: 12px}}}
 `;
 
 export const NextButtonContainer = styled.div`
@@ -1278,7 +1335,30 @@ margin: -79px 0 0 65%;
 
 @media(max-width: 449px) {margin-left: 57%}
 
-@media(max-width: 389px) {margin-top: -69px}`;
+@media(max-width: 389px) {margin-top: -69px}
+
+/* Responsividade de altura */
+@media(max-height: 625px) {
+@media (max-width: 549px) {margin-left: 325px}}
+
+@media(max-height: 625px) {
+@media (max-width: 529px) {margin-left: 305px}}
+
+@media(max-height: 625px) {
+@media (max-width: 501px) {margin-left: 285px}}
+
+@media(max-height: 625px) {
+@media (max-width: 463px) {margin-left: 265px}}
+
+@media(max-height: 625px) {
+@media (max-width: 440px) {margin-left: 245px}}
+
+@media(max-height: 625px) {
+@media (max-width: 416px) {margin-left: 225px}}
+
+@media(max-height: 625px) {
+@media (max-width: 387px) {margin: -78px 0 0 200px}}
+`;
 
 export const NextButton = styled.div`
 display: flex;
@@ -1333,7 +1413,17 @@ margin-left: 14px}
 @media (max-height: 625px) {
 width: 145px;
 height: 45px;
-margin-top: 32px}`;
+margin-top: 32px}
+
+@media(max-height: 625px) {
+@media (max-width: 483px) {width: 120px}}
+
+@media (max-height: 625px) {
+@media (max-width: 360px) {
+width: 115px;
+height: 40px;
+margin: 40px 0 0 15px;}}
+`;
 
 export const ExclamationIconContainer = styled.img`
 width: 20px;
