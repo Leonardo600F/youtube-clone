@@ -150,9 +150,10 @@ font-size: 23px}}
 @media (max-height: 700px) {
 @media (max-width: 599px) {font-size: 26px}}
 
-@media (max-height: 625px) {
-margin: 1px 0 0 113px;
-font-size: 23px}
+@media (max-height: 700px) {
+@media (max-width: 329px) {font-size: 21px}}
+
+@media (max-height: 625px) {margin: 1px 0 0 113px}
 
 @media (max-height: 625px) {
 @media (max-width: 599px) {margin-left: 25px}}
@@ -166,6 +167,8 @@ font-size: 23px}}
 @media (max-width: 599px) {
 margin: -3px 0 0 26px;
 font-size: 20px}}
+
+
 `;
 
 export const FirstNameContainer = styled.div`
@@ -173,7 +176,6 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: 10% 0px 0 60px;
-background-color: red;
 
 @media(max-width: 1559px) {margin: 10% 0px 0 40px}
 
@@ -294,11 +296,15 @@ background-color: #fff;
 
 @media(max-width: 599px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}}
 
-@media(max-width: 524px) {max-width: 458px}
+@media(max-width: 526px) {
+max-width: ${({ valid }) => valid ? '458px' : '98%'};
+max-height: ${({ valid }) => valid ? '53px' : '98%'}}
 
 @media(max-width: 516px) {max-height: 53px}
 
-@media(max-width: 509px) {max-width: 418px}
+@media(max-width: 509px) {max-width: 437px}
+
+@media(max-width: 489px) {max-width: 417px}
 
 @media(max-width: 469px) {max-width: 398px}
 
@@ -315,6 +321,10 @@ background-color: #fff;
 @media(max-width: 349px) {max-width: 279px}
 
 @media(max-width: 329px) {max-width: 259.5px}
+
+/* Responsividade de altura */
+@media (max-height: 625px) {
+@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -486,11 +496,13 @@ background-color: #fff;
 
 @media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '98%'}}
 
-@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '97.9%' : '98%'}}
+@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '98%'}}
 
 @media(max-width: 590px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}}
 
-@media(max-width: 524px) {max-width: ${({ valid }) => valid ? '97.3%' : '98%'}}
+@media(max-width: 526px) {
+max-width: ${({ valid }) => valid ? '458px' : '98%'};
+max-height: ${({ valid }) => valid ? '53px' : '98%'}}
 
 @media(max-width: 509px) {max-width: ${({ valid }) => valid ? '97%' : '97.5%'}}
 
@@ -507,13 +519,16 @@ max-width: ${({ valid }) => valid ? '208px' : '97.5%'};
 max-height: ${({ valid }) => valid ? '53px' : '100%'}}}
 
 @media (max-height: 625px) {
-@media (max-width: 599px) {max-width: ${({ valid }) => valid ? '97.9%' : '97.5%'}}}
+@media (max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '97.5%'}}}
 
 @media (max-height: 625px) {
-@media (max-width: 599px) {max-width: ${({ valid }) => valid ? '97.9%' : '97.5%'}}}
+@media (max-width: 589px) {max-width: ${({ valid }) => valid ? '502px' : '97.5%'}}}
 
 @media (max-height: 625px) {
 @media (max-width: 559px) {max-width: ${({ valid }) => valid ? '97.6%' : '97.5%'}}}
+
+@media (max-height: 625px) {
+@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
 
 @media (max-height: 625px) {
 @media (max-width: 516px) {max-width: ${({ valid }) => valid ? '97.3%' : '97.5%'}}}
@@ -527,7 +542,7 @@ max-height: ${({ valid }) => valid ? '53px' : '100%'}}}
 @media (max-height: 625px) {
 @media (max-width: 422px) {
 max-width: ${({ valid }) => valid ? '96.7%' : '97.5%'};
-background-color: #fff}}
+background-color: #fff}}    
 
 @media (max-height: 625px) {
 @media (max-width: 408px) {max-width: ${({ valid }) => valid ? '96.6%' : '97.5%'}}
@@ -541,7 +556,10 @@ background-color: #fff}}
 @media (max-height: 625px) {
 @media (max-width: 348px) {max-width: ${({ valid }) => valid ? '95.9%' : '97.5%'}}
 
-}
+@media (max-height: 625px) {
+@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}
+
+@media (max-height: 600px) {@media (max-width: 599px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
 
 
 &:focus + label,
@@ -596,7 +614,7 @@ display: flex;
 height: 100px;
 width: 530px;
 margin: 40px 0 0 60px;
-background-color: red;
+background-color: #fff;
 
 @media(max-width: 1559px) {margin-left: 39px}
 
@@ -714,11 +732,13 @@ background-color: #fff;
 
 @media(max-width: 630px) {max-width: ${({ valid }) => valid ? '97.4%' : '98.9%'}}
 
-@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '97.9%' : '98%'}}
+@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '98%'}}
 
 @media(max-width: 590px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}}
 
-@media(max-width: 524px) {max-width: ${({ valid }) => valid ? '97.3%' : '98%'}}
+@media(max-width: 526px) {
+max-width: ${({ valid }) => valid ? '458px' : '98%'};
+max-height: ${({ valid }) => valid ? '53px' : '98%'}}
 
 @media(max-width: 509px) {max-width: ${({ valid }) => valid ? '97%' : '97.5%'}}
 
@@ -727,6 +747,10 @@ background-color: #fff;
 @media(max-width: 429px) {max-width: ${({ valid }) => valid ? '96%' : '97%'}}
 
 @media(max-width: 329px) {max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'}}
+
+/* Responsividade de altura */
+@media (max-height: 625px) {
+@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -776,7 +800,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: 40px 0 0 60px;
-background-color: red;
+background-color: #fff;
 
 @media(max-width: 1559px) {margin: 40px 0 0 40px}
 
@@ -953,7 +977,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: -100px 0 0 335px;
-background-color: red;
+background-color: #fff;
 
 @media(max-width: 1559px) {margin-left: 310px}
 
@@ -1201,10 +1225,16 @@ color: #2F4F4F;
 @media (max-width: 599px) {font-size: 14px}}
 
 @media (max-height: 625px) {
+@media (max-width: 519px) {font-size: 13px}}
+
+@media (max-height: 625px) {
 @media (max-width: 387px) {font-size: 12.5px}}
 
 @media (max-height: 625px) {
 @media (max-width: 360px) {font-size: 11.5px}}
+
+@media (max-height: 625px) {
+@media (max-width: 340px) {font-size: 11px}}
 
 }
 
@@ -1267,7 +1297,11 @@ margin: 30px 0px 0 60px;
 @media (max-height: 674px) {
 @media (max-width: 599px) {margin-top: 18px}}
 
-@media (max-height: 625px) {margin-top: 19px}`;
+@media (max-height: 625px) {margin-top: 19px}
+
+@media (max-height: 619px) {
+@media (max-width: 519px) {margin-top: 12px}}
+`;
 
 export const LoginPage = styled.div`
 display: flex;
@@ -1423,6 +1457,11 @@ margin-top: 32px}
 width: 115px;
 height: 40px;
 margin: 40px 0 0 15px;}}
+
+@media (max-height: 625px) {
+@media (max-width: 340px) {
+width: 110px;
+margin-left: 0px;}}
 `;
 
 export const ExclamationIconContainer = styled.img`
