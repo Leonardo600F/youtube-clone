@@ -45,30 +45,23 @@ border-radius: 0}
 /* Responsividade de altura */
 @media (max-height: 915px) {height: 800px}
 
-@media (max-height: 915px) {
-@media (max-width: 599px) {height: 100vh}}
+@media (max-height: 915px) {@media (max-width: 599px) {height: 100vh}}
 
 @media (max-height: 825px) {height: 700px}
 
-@media (max-height: 825px) {
-@media (max-width: 599px) {height: 100vh}}
+@media (max-height: 825px) {@media (max-width: 599px) {height: 100vh}}
 
 @media (max-height: 725px) {height: 600px}
 
-@media (max-height: 725px) {
-@media (max-width: 599px) {height: 100vh}}
+@media (max-height: 725px) {@media (max-width: 599px) {height: 100vh}}
 
 @media (max-height: 625px) {height: 550px}
 
-@media(max-height: 625px) {
-@media(max-width: 599px) {height: 100vh}}
+@media(max-height: 625px) {@media(max-width: 599px) {height: 100vh}}
 
 @media (max-height: 580px) {height: 525px}
 
-@media (max-height: 580px) {
-@media(max-width: 599px) {height: 100vh}}
-
-`;
+@media (max-height: 580px) {@media(max-width: 599px) {height: 100vh}}`;
 
 export const GoogleIconContainer = styled.img`
 width: 50px;
@@ -78,7 +71,7 @@ border-radius: 50%;
 
 @media(max-width: 1559px) {
 width: 40px;
-height: 40px;}
+height: 40px}
 
 @media(max-width: 599px) {
 width: 55px;
@@ -87,7 +80,7 @@ margin: 20px 0 0 20px}
 
 @media(max-width: 349px) {
 width: 50px;
-height: 50px;}
+height: 50px}
 
 /* Responsividade de altura */
 @media (max-height: 825px) {margin-top: 0px}
@@ -102,11 +95,11 @@ height: 40px}}
 @media (max-height: 700px) {
 @media (max-width: 599px) {
 width: 45px;
-height: 45px;}}
+height: 45px}}
 
 @media(max-height: 625px) {
 width: 40px;
-height: 40px;}
+height: 40px}
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {
@@ -116,8 +109,7 @@ height: 40px}}
 @media (max-height: 580px) {
 @media (max-width: 599px) {
 width: 32px;
-height: 32px}}
-`;
+height: 32px}}`;
 
 export const Title = styled.h2`
 display: flex;
@@ -166,13 +158,12 @@ font-size: 23px}}
 margin-top: 2px;
 font-size: 23px}}
 
+@media (max-height: 600px) {@media (max-width: 329px) {font-size: 21.5px}}
+
 @media (max-height: 580px) {
 @media (max-width: 599px) {
 margin: -3px 0 0 26px;
-font-size: 20px}}
-
-
-`;
+font-size: 20px}}`;
 
 export const FirstNameContainer = styled.div`
 display: flex;
@@ -219,8 +210,7 @@ margin: 4% 0 0 26px}
 /* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 6%}
 
-@media (max-height: 783px) {
-@media (max-width: 599px) {margin-top: 8px}}
+@media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px}}
 
 @media(max-height: 725px) {margin-top: 3%}
 
@@ -229,22 +219,17 @@ margin: 4% 0 0 26px}
 height: 86px;
 margin-top: 10px}}
 
-@media (max-height: 700px) {
-@media (max-width: 599px) {margin-top: 6px}}
+@media (max-height: 700px) {@media (max-width: 599px) {margin-top: 6px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {height: 85px}}
+@media (max-height: 674px) {@media (max-width: 599px) {height: 85px}}
 
 @media (max-height: 625px) {height: 88px}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {height: 77px}}
+@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
 @media (max-height: 580px) {height: 82px}
 
-@media (max-height: 580px) { 
-@media (max-width: 599px) {height: 74px}}
-`;
+@media (max-height: 580px) { @media (max-width: 599px) {height: 74px}}`;
 
 export const FirstNameUserContainer = styled.div<FirstNameFocused>`
 display: flex;
@@ -262,22 +247,17 @@ background-color: #fff;
 @media(max-width: 599px) {width: 99%}
 
 /* Responsividade de altura */
-@media(max-height: 725px) {
-@media(max-width: 599px) {margin-top: 3px}}
+@media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {margin-top: 0px}}
+@media (max-height: 674px) {@media (max-width: 599px) {margin-top: 0px}}
 
 @media (max-height: 625px) {margin-top: 3px}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {height: 49px}}
+@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
 @media (max-height: 580px) {height: 50px}
 
-@media (max-height: 580px) {
-@media (max-width: 599px) {height: 45px}}
-`;
+@media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const FirstNameUserInput = styled.input<InputValid>`
 width: 100%;
@@ -326,38 +306,29 @@ max-height: ${({ valid }) => valid ? '53px' : '98%'}}
 @media(max-width: 329px) {max-width: 259.5px}
 
 /* Responsividade de altura */
-@media (max-height: 625px) {
-@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 509px) {max-width: ${({ valid }) => valid ? '438px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 509px) {max-width: ${({ valid }) => valid ? '438px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 489px) {max-width: ${({ valid }) => valid ? '417px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 489px) {max-width: ${({ valid }) => valid ? '417px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 469px) {max-width: ${({ valid }) => valid ? '397.5px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 469px) {max-width: ${({ valid }) => valid ? '397.5px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 449px) {max-width: ${({ valid }) => valid ? '379px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 449px) {max-width: ${({ valid }) => valid ? '379px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 429px) {max-width: ${({ valid }) => valid ? '359px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 429px) {max-width: ${({ valid }) => valid ? '359px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 409px) {max-width: ${({ valid }) => valid ? '339px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 409px) {max-width: ${({ valid }) => valid ? '339px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 389px) {max-width: ${({ valid }) => valid ? '319px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 389px) {max-width: ${({ valid }) => valid ? '319px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '299px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '299px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 349px) {max-width: ${({ valid }) => valid ? '279px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 349px) {max-width: ${({ valid }) => valid ? '279px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}}
+
+@media (max-height: 600px) {@media (max-width: 549px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -369,13 +340,8 @@ color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 890px) {transform: translateY(-27px)}
 
-@media(max-width: 349px) {transform: translateY(-30px)}
-
 /* Responsividade de altura */
-@media (max-height: 580px) {
-@media (max-width: 599px) {transform: translateY(-26px)}}}
-
-`;
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
 
 export const FirstNameLabel = styled.label<InputValid>`
 display: flex;
@@ -399,14 +365,14 @@ margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
 
 /* Responsividade de altura */
-@media (max-height: 600px) {
-@media (max-width: 599px) {font-size: 14.5px}}
+@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
+
+@media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
 margin-top: 14px;
-font-size: 14px}}
-`;
+font-size: 14px}}`;
 
 export const SurnameContainer = styled.div`
 display: flex;
@@ -452,24 +418,19 @@ margin-left: 26px}
 @media(max-width: 329px) {width: 275px}
 
 /* Responsividade de altura */
-@media(max-height: 725px) {
-@media(max-width: 599px) {height: 86px}}
+@media(max-height: 725px) {@media(max-width: 599px) {height: 86px}}
 
-@media (max-height: 783px) {
-@media (max-width: 599px) {margin-top: 8px}}
+@media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {height: 85px}}
+@media (max-height: 674px) {@media (max-width: 599px) {height: 85px}}
 
 @media (max-height: 625px) {
 height: 88px;
 margin-top: -88px}
 
-@media (max-height: 625px) {
-@media (max-width: 599px) {margin-top: 10px}}
+@media (max-height: 625px) {@media (max-width: 599px) {margin-top: 10px}}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {height: 77px}}
+@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
 @media (max-height: 580px) {
 height: 82px;
@@ -495,21 +456,17 @@ border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 @media(max-width: 599px) {width: 99%}
 
 /* Responsividade de altura */
-@media(max-height: 725px) {
-@media(max-width: 599px) {margin-top: 3px}}
+@media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {margin-top: 0px}}
+@media (max-height: 674px) {@media (max-width: 599px) {margin-top: 0px}}
 
 @media (max-height: 625px) {margin-top: 3px}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {height: 49px}}
+@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
 @media (max-height: 580px) {height: 50px}
 
-@media (max-height: 580px) {
-@media (max-width: 599px) {height: 45px}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const SurnameUserInput = styled.input<InputValid>`
 width: 100%;
@@ -551,56 +508,37 @@ max-height: ${({ valid }) => valid ? '53px' : '98%'}}
 max-width: ${({ valid }) => valid ? '208px' : '97.5%'};
 max-height: ${({ valid }) => valid ? '53px' : '100%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 589px) {max-width: ${({ valid }) => valid ? '502px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 589px) {max-width: ${({ valid }) => valid ? '502px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 559px) {max-width: ${({ valid }) => valid ? '97.6%' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 559px) {max-width: ${({ valid }) => valid ? '97.6%' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 516px) {max-width: ${({ valid }) => valid ? '97.3%' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 516px) {max-width: ${({ valid }) => valid ? '97.3%' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 509px) {max-width: ${({ valid }) => valid ? '425px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 509px) {max-width: ${({ valid }) => valid ? '437px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 499px) {max-width: ${({ valid }) => valid ? '437px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 489px) {max-width: ${({ valid }) => valid ? '417px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 489px) {max-width: ${({ valid }) => valid ? '417px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 479px) {max-width: ${({ valid }) => valid ? '97.1%' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 479px) {max-width: ${({ valid }) => valid ? '97.1%' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 447px) {max-width: ${({ valid }) => valid ? '96.9%' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 447px) {max-width: ${({ valid }) => valid ? '96.9%' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 428px) {max-width: ${({ valid }) => valid ? '358px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 428px) {max-width: ${({ valid }) => valid ? '358px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 422px) {max-width: ${({ valid }) => valid ? '96.7%' : '97.5%'}}}    
 
-@media (max-height: 625px) {
-@media (max-width: 422px) {max-width: ${({ valid }) => valid ? '96.7%' : '97.5%'}}}    
+@media (max-height: 625px) {@media (max-width: 408px) {max-width: ${({ valid }) => valid ? '96.6%' : '97.5%'}}
 
-@media (max-height: 625px) {
-@media (max-width: 408px) {max-width: ${({ valid }) => valid ? '96.6%' : '97.5%'}}
+@media (max-height: 625px) {@media (max-width: 389px) {max-width: ${({ valid }) => valid ? '319px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 389px) {max-width: ${({ valid }) => valid ? '319px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '96.2%' : '97.5%'}}
 
-@media (max-height: 625px) {
-@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '96.2%' : '97.5%'}}
+@media (max-height: 625px) {@media (max-width: 348px) {max-width: ${({ valid }) => valid ? '95.9%' : '97.5%'}}
 
-@media (max-height: 625px) {
-@media (max-width: 348px) {max-width: ${({ valid }) => valid ? '95.9%' : '97.5%'}}
-
-@media (max-height: 625px) {
-@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}
+@media (max-height: 625px) {@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
 
@@ -615,11 +553,8 @@ color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 890px) {transform: translateY(-27px)}
 
-@media(max-width: 349px) {transform: translateY(-30px)}
-
 /* Responsividade de altura */
-@media (max-height: 580px) {
-@media (max-width: 599px) {transform: translateY(-25px)}}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-25px)}}}`;
 
 export const SurnameLabel = styled.label<InputValid>`
 display: flex;
@@ -644,8 +579,9 @@ margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
 
 /* Responsividade de altura */
-@media (max-height: 600px) {
-@media (max-width: 599px) {font-size: 14.5px}}
+@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
+
+@media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
@@ -702,26 +638,21 @@ margin: 2% 0 0 26px}
 /* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 30px}
 
-@media (max-height: 783px) {
-@media (max-width: 599px) {margin-top: 8px;}}
+@media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px;}}
 
 @media(max-height: 725px) {margin-top: 10px}
 
-@media(max-height: 725px) {
-@media(max-width: 599px) {height: 86px}}
+@media(max-height: 725px) {@media(max-width: 599px) {height: 86px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {height: 85px}}
+@media (max-height: 674px) {@media (max-width: 599px) {height: 85px}}
 
 @media (max-height: 625px) {height: 88px}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {height: 77px}}
+@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
 @media (max-height: 580px) {height: 82px}
 
-@media (max-height: 580px) {
-@media (max-width: 599px) {height: 74px}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {height: 74px}}`;
 
 export const EmailUserContainer = styled.div<EmailFocused>`
 display: flex;
@@ -741,21 +672,17 @@ background-color: #fff;
 @media(max-width: 599px) {width: 99%}
 
 /* Responsividade de altura */
-@media(max-height: 725px) {
-@media(max-width: 599px) {margin-top: 3px}}
+@media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {margin-top: 0px}}
+@media (max-height: 674px) {@media (max-width: 599px) {margin-top: 0px}}
 
 @media (max-height: 625px) {margin-top: 3px}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {height: 49px}}
+@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
 @media (max-height: 580px) {height: 50px}
 
-@media (max-height: 580px) {
-@media (max-width: 599px) {height: 45px}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const EmailUserInput = styled.input<InputValid>`
 width: 100%;
@@ -792,38 +719,29 @@ max-height: ${({ valid }) => valid ? '53px' : '98%'}}
 @media(max-width: 329px) {max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'}}
 
 /* Responsividade de altura */
-@media (max-height: 625px) {
-@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 509px) {max-width: ${({ valid }) => valid ? '438px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 509px) {max-width: ${({ valid }) => valid ? '438px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 489px) {max-width: ${({ valid }) => valid ? '417px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 489px) {max-width: ${({ valid }) => valid ? '417px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 469px) {max-width: ${({ valid }) => valid ? '397.5px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 469px) {max-width: ${({ valid }) => valid ? '397.5px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 449px) {max-width: ${({ valid }) => valid ? '379px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 449px) {max-width: ${({ valid }) => valid ? '379px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 429px) {max-width: ${({ valid }) => valid ? '359px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 429px) {max-width: ${({ valid }) => valid ? '359px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 409px) {max-width: ${({ valid }) => valid ? '339px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 409px) {max-width: ${({ valid }) => valid ? '339px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 389px) {max-width: ${({ valid }) => valid ? '319px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 389px) {max-width: ${({ valid }) => valid ? '319px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '299px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '299px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 349px) {max-width: ${({ valid }) => valid ? '279px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 349px) {max-width: ${({ valid }) => valid ? '279px' : '97.5%'}}}
 
-@media (max-height: 625px) {
-@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}}
+@media (max-height: 625px) {@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}}
+
+@media (max-height: 600px) {@media (max-width: 549px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -834,11 +752,8 @@ transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 background-color: #fff;
 
-@media(max-width: 349px) {transform: translateY(-30px)}
-
 /* Responsividade de altura */
-@media (max-height: 580px) {
-@media (max-width: 599px) {transform: translateY(-25px)}}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-25px)}}}`;
 
 export const EmailUserLabel = styled.label<InputValid>`
 display: flex;
@@ -858,13 +773,14 @@ margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
 
 /* Responsividade de altura */
-@media (max-height: 600px) {
-@media (max-width: 599px) {font-size: 14.5px}}
+@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
+
+@media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
 margin-top: 14px;
-font-size: 14px}}   `;
+font-size: 14px}}`;
 
 export const PasswordContainer = styled.div`
 display: flex;
@@ -915,26 +831,21 @@ margin-top: 60px}
 /* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 30px}
 
-@media (max-height: 783px) {
-@media (max-width: 599px) {margin-top: 8px;}}
+@media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px;}}
 
 @media(max-height: 725px) {margin-top: 10px}
 
-@media(max-height: 725px) {
-@media(max-width: 599px) {height: 86px}}
+@media(max-height: 725px) {@media(max-width: 599px) {height: 86px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {height: 85px}}
+@media (max-height: 674px) {@media (max-width: 599px) {height: 85px}}
 
 @media (max-height: 625px) {height: 88px}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {height: 77px}}
+@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
 @media (max-height: 580px) {height: 82px}
 
-@media (max-height: 580px) {
-@media (max-width: 599px) {height: 74px}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {height: 74px}}`;
 
 export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
@@ -952,21 +863,17 @@ background-color: #fff;
 @media(max-width: 599px) {width: 98%}
 
 /* Responsividade de altura */
-@media(max-height: 725px) {
-@media(max-width: 599px) {margin-top: 3px}}
+@media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {margin-top: 0px}}
+@media (max-height: 674px) {@media (max-width: 599px) {margin-top: 0px}}
 
 @media (max-height: 625px) {margin-top: 3px}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {height: 49px}}
+@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
 @media (max-height: 580px) {height: 50px}
 
-@media (max-height: 580px) {
-@media (max-width: 599px) {height: 45px}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const PasswordUserInput = styled.input<InputValid>`
 width: 100%;
@@ -980,7 +887,7 @@ border-radius: 5px;
 padding-left: 10px;
 font-size: 16px;
 outline: none;
-background-color: green;
+background-color: #fff;
 
 @media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'}}
 
@@ -1021,6 +928,8 @@ background-color: green;
 
 @media (max-height: 625px) {@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '118px' : '94%'}}}
 
+@media (max-height: 600px) {@media (max-width: 549px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
+
 &:focus + label,
 &:not(:placeholder-shown) + label {
 height: 15px;
@@ -1029,11 +938,8 @@ font-size: 12px;
 transform: ${({ valid }) => valid ? 'translateY(-28px)' : 'translateY(-27px)'};
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
-@media(max-width: 349px) {transform: translateY(-30px)}
-
 /* Responsividade de altura */
-@media (max-height: 580px) {
-@media (max-width: 599px) {transform: translateY(-25px)}}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-25px)}}}`;
 
 export const PasswordUserLabel = styled.label<InputValid>`
 display: flex;
@@ -1054,8 +960,9 @@ margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
 
 /* Responsividade de altura */
-@media (max-height: 600px) {
-@media (max-width: 599px) {font-size: 14.5px}}
+@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
+
+@media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
@@ -1204,13 +1111,15 @@ border-radius: 5px;
 padding-left: 10px;
 font-size: 16px;
 outline: none;
-background-color: grey;
+background-color: #fff;
 
 @media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'}}
 
 @media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '96%'}}
 
 @media(max-width: 599px) {max-width: ${({ valid }) => valid ? '95%' : '96%'}}
+
+@media(max-width: 570px) {max-width: ${({ valid }) => valid ? '94.5%' : '96%'}}
 
 @media(max-width: 570px) {max-width: ${({ valid }) => valid ? '94.5%' : '96%'}}
 
@@ -1229,8 +1138,7 @@ background-color: grey;
 @media(max-width: 322px) {max-width: ${({ valid }) => valid ? '90%' : '96%'}}
 
 /* Responsividade de altura */
-@media (max-height: 625px) {
-@media (max-width: 473px) {max-width: ${({ valid }) => valid ? '194px' : '94%'}}}
+@media (max-height: 625px) {@media (max-width: 473px) {max-width: ${({ valid }) => valid ? '194px' : '94%'}}}
 
 @media (max-height: 625px) {
 @media (max-width: 470px) {
@@ -1253,6 +1161,8 @@ max-height: ${({ valid }) => valid ? '53px' : '94%'}}}
 
 @media (max-height: 625px) {@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '114px' : '94%'}}}
 
+@media (max-height: 600px) {@media (max-width: 549px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
+
 &:focus + label,
 &:not(:placeholder-shown) + label {
 height: 15px;
@@ -1261,11 +1171,8 @@ font-size: 12px;
 transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
-@media(max-width: 349px) {transform: translateY(-30px)}
-
 /* Responsividade de altura */
-@media (max-height: 580px) {
-@media (max-width: 599px) {transform: translateY(-25px)}}}`;
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-25px)}}}`;
 
 export const ComparePasswordUserLabel = styled.label<InputValid>`
 display: flex;
@@ -1288,8 +1195,9 @@ font-size: 14px}
 @media(max-width: 329px) {width: 110px}
 
 /* Responsividade de altura */
-@media (max-height: 600px) {
-@media (max-width: 599px) {font-size: 14.5px}}
+@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
+
+@media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
