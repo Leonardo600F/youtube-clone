@@ -137,6 +137,7 @@ height: ${({ valid }) => valid ? '38%' : '44%'};
 width: 50%;
 margin: -194px 0 0 50%;
 border-top-right-radius: 30px;
+background-color: green;
 
 @media(max-width: 1920px) {height: ${({ valid }) => valid ? '35%' : '41%'}}
 
@@ -371,6 +372,7 @@ display: flex;
 width: 50%;
 height: ${({ valid }) => valid ? '15%' : '21%'};
 margin-left: 50%;
+background-color: red;
 
 @media(max-width: 1920px) {height: ${({ valid }) => valid ? '15%' : '20%'}}
 
@@ -408,7 +410,7 @@ margin-left: 43.5%}
 @media(max-width: 599px) {
 width: 100%;
 height: ${({ valid }) => valid ? '10.6%' : '12.2%'};
-margin: 0 0 0 0%}}`;
+margin: 0%}}`;
 
 export const PasswordContainer = styled.div<PasswordFocused>`
 display: flex;

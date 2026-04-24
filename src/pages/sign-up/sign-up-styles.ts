@@ -383,7 +383,6 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: -99px 0 0px 335px;
-background-color: #fff;
 
 @media(max-width: 1559px) {margin: -99px 0px 0 310px}
 
@@ -393,7 +392,7 @@ margin-left: 276px}
 
 @media(max-width: 599px) {
 width: 560px;
-margin-left: 26px}
+margin: 15px 0 0 26px}
 
 @media(max-width: 589px) {width: 520px}
 
@@ -422,7 +421,9 @@ margin-left: 26px}
 @media(max-width: 329px) {width: 275px}
 
 /* Responsividade de altura */
-@media(max-height: 725px) {@media(max-width: 599px) {height: 86px}}
+@media (max-height: 825px) {@media (max-width: 599px) {margin-top: 10px}}
+
+@media(max-height: 725px) {@media (max-width: 599px) {height: 86px}}
 
 @media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px}}
 
@@ -613,7 +614,6 @@ display: flex;
 height: 100px;
 width: 530px;
 margin: 40px 0 0 60px;
-background-color: #fff;
 
 @media(max-width: 1559px) {margin-left: 39px}
 
@@ -627,7 +627,7 @@ margin-left: 20px}
 
 @media(max-width: 599px) {
 width: 560px;
-margin: 2% 0 0 26px}
+margin: 15px 0 0 26px}
 
 @media(max-width: 589px) {width: 520px}
 
@@ -658,7 +658,9 @@ margin: 2% 0 0 26px}
 /* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 30px}
 
-@media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px;}}
+@media(max-height: 825px) {@media (max-width: 599px) {margin-top: 10px}}
+
+@media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px}}
 
 @media(max-height: 725px) {margin-top: 10px}
 
@@ -823,8 +825,7 @@ margin-left: 20px}
 
 @media(max-width: 599px) {
 width: 275px;
-margin-left: 26px;
-margin-top: 60px}
+margin: 18px 0 0 26px}
 
 @media(max-width: 589px) {width: 245px}
 
@@ -854,6 +855,8 @@ margin-top: 60px}
 
 /* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 30px}
+
+@media(max-height: 825px) {@media (max-width: 599px) {margin-top: 10px}}
 
 @media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px;}}
 
@@ -928,6 +931,8 @@ background-color: #fff;
 @media(max-width: 409px) {max-width: ${({ valid }) => valid ? '92%' : '94%'}}
 
 @media(max-width: 389px) {max-width: ${({ valid }) => valid ? '91.2%' : '94%'}}
+
+@media(max-width: 329px) {max-width: ${({ valid }) => valid ? '119px' : '96%'}}
 
 @media(max-width: 322px) {max-width: ${({ valid }) => valid ? '91%' : '94%'}}
 
@@ -1161,7 +1166,7 @@ background-color: #fff;
 
 @media(max-width: 359px) {max-width: ${({ valid }) => valid ? '91%' : '94%'}}
 
-@media(max-width: 329px) {max-width: ${({ valid }) => valid ? '91%' : '96%'}}
+@media(max-width: 329px) {max-width: ${({ valid }) => valid ? '114px' : '96%'}}
 
 @media(max-width: 322px) {max-width: ${({ valid }) => valid ? '90%' : '96%'}}
 
