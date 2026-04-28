@@ -25,7 +25,6 @@ import {
     StyledCheckbox,
     ButtonsContainer,
     SignUpContainer,
-    ButtonsContainerSpans,
     NextButtonContainer,
     EmailEmptyContainer,
     PasswordEmptyContainer
