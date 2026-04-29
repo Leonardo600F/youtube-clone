@@ -20,7 +20,6 @@ import {
     PasswordContainer,
     PasswordInput,
     PasswordLabel,
-    InvalidPasswordMessage,
     ShowPasswordContainer,
     StyledCheckbox,
     ButtonsContainer,

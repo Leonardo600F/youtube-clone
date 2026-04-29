@@ -66,12 +66,15 @@ border-radius: 0}
 export const GoogleIconContainer = styled.img`
 width: 50px;
 height: 50px;
-margin: 5% 0px 0 46%;
+margin: 45px 0px 0 300px;
 border-radius: 50%;
 
 @media(max-width: 1559px) {
 width: 40px;
-height: 40px}
+height: 40px;
+margin-left: 280px}
+
+@media(max-width: 630px) {margin-left: 240px}
 
 @media(max-width: 599px) {
 width: 55px;
@@ -85,7 +88,7 @@ height: 50px}
 /* Responsividade de altura */
 @media (max-height: 825px) {margin-top: 0px}
 
-@media(max-height: 725px) {margin-top: 1%}
+@media(max-height: 725px) {margin-top: 10px}
 
 @media(max-height: 725px) {
 @media(max-width: 599px) {
@@ -115,12 +118,14 @@ export const Title = styled.h2`
 display: flex;
 height: fit-content;
 width: fit-content;
-margin-left: 25%;
+margin-left: 155px;
 font-weight: 500;
 font-size: 30px;
 cursor: default;
 
 @media(max-width: 1559px) {font-size: 23px}
+
+@media(max-width: 630px) {margin-left: 125px}
 
 @media(max-width: 599px) {
 font-weight: 400;
@@ -169,9 +174,9 @@ export const FirstNameContainer = styled.div`
 display: flex;
 height: 100px;
 width: 255px;
-margin: 10% 0px 0 60px;
+margin: 50px 0px 0 60px;
 
-@media(max-width: 1559px) {margin: 10% 0px 0 40px}
+@media(max-width: 1559px) {margin: 50px 0px 0 40px}
 
 @media(max-width: 630px) {
 width: 226px;
@@ -179,7 +184,7 @@ margin-left: 20px}
 
 @media(max-width: 599px) {
 width: 560px;
-margin: 4% 0 0 26px}
+margin: 0px 0 0 26px}
 
 @media(max-width: 589px) {width: 520px}
 
@@ -244,7 +249,7 @@ background-color: #fff;
 
 @media(max-width: 630px) {width: 220px}
 
-@media(max-width: 599px) {width: 99%}
+@media(max-width: 599px) {width: 554px}
 
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
@@ -260,10 +265,8 @@ background-color: #fff;
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const FirstNameUserInput = styled.input<InputValid>`
-width: 100%;
-height: 100%;
-max-width: 95%;
-max-height: ${({ valid }) => valid ? '96%' : '100%'};
+width: 238px;
+height: 53px;
 margin: ${({ valid }) => valid ? 'none' : '-3px 0 0 -2px'};
 border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
 border-radius: 5px;
@@ -351,7 +354,7 @@ export const FirstNameLabel = styled.label<InputValid>`
 display: flex;
 height: 21px;
 width: 50px;
-margin: ${({ valid }) => valid ? '15px 0 0 -94%' : '16px 0 0 -98%'};
+margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '19px 0 0 -98%'};
 font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
@@ -458,7 +461,7 @@ border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 
 @media(max-width: 630px) {width: 220px}
 
-@media(max-width: 599px) {width: 99%}
+@media(max-width: 599px) {width: 554px}
 
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
@@ -474,10 +477,8 @@ border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const SurnameUserInput = styled.input<InputValid>`
-width: 100%;
-height: 100%;
-max-width: 95%;
-max-height: ${({ valid }) => valid ? '96%' : '100%'};
+width: 238px;
+height: 53px;
 margin: ${({ valid }) => valid ? 'none' : '-3px 0 0 -2px'};
 border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
 border-color: red;
@@ -569,7 +570,7 @@ max-height: ${({ valid }) => valid ? '53px' : '100%'}}}
 height: 15px;
 width: 80px;
 font-size: 12px;
-transform: ${({ valid }) => valid ? 'translateY(-25px)' : 'translateY(-27px)'};
+transform: ${({ valid }) => valid ? 'translateY(-27px)' : 'translateY(-27px)'};
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 890px) {transform: translateY(-27px)}
@@ -691,7 +692,7 @@ background-color: #fff;
 
 @media(max-width: 630px) {width: 477px}
 
-@media(max-width: 599px) {width: 99%}
+@media(max-width: 599px) {width: 554px}
 
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
@@ -887,7 +888,7 @@ background-color: #fff;
 
 @media(max-width: 630px) {width: 220px}
 
-@media(max-width: 599px) {width: 98%}
+@media(max-width: 599px) {width: 554px}
 
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
@@ -1113,7 +1114,7 @@ background-color: #fff;
 
 @media(max-width: 630px) {width: 226px}
 
-@media(max-width: 599px) {width: 98%}
+@media(max-width: 599px) {width: 554px}
 
 /* Responsividade de altura */
 @media(max-height: 725px) {
