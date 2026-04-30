@@ -27,7 +27,7 @@ background-color: #fff;
 
 @media(max-width: 1559px) {
 width: 600px;
-height: 800px}
+height: 800px}  
 
 @media(max-width: 1280px) {
 width: 600px;
@@ -268,7 +268,7 @@ export const FirstNameUserInput = styled.input<InputValid>`
 width: 238px;
 height: 53px;
 margin: ${({ valid }) => valid ? 'none' : '-3px 0 0 -2px'};
-border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
+border: ${({ valid }) => valid ? 'none' : 'solid 3px'};
 border-radius: 5px;
 border-color: red;
 padding-left: 10px;
@@ -276,9 +276,7 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
-@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'}}
-
-@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '98%'}}
+@media(max-width: 630px) {width: 208px}
 
 @media(max-width: 599px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}}
 
@@ -342,10 +340,8 @@ max-height: ${({ valid }) => valid ? '53px' : '98%'}}
 height: 15px;
 width: 50px;
 font-size: 12px;
-transform: ${({ valid }) => valid ? 'translateY(-25px)' : 'translateY(-27px)'};
+transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
-
-@media(max-width: 890px) {transform: translateY(-27px)}
 
 /* Responsividade de altura */
 @media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
@@ -354,14 +350,14 @@ export const FirstNameLabel = styled.label<InputValid>`
 display: flex;
 height: 21px;
 width: 50px;
-margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '19px 0 0 -98%'};
+margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '17px 0 0 -240px'};
 font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
-@media(max-width: 890px) {margin-top: ${({ valid }) => valid ? '17px' : '16px'}}
+@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'};}
 
 @media(max-width: 599px) {
 margin-top: 18px;
@@ -385,9 +381,9 @@ export const SurnameContainer = styled.div`
 display: flex;
 height: 100px;
 width: 255px;
-margin: -99px 0 0px 335px;
+margin: -99.5px 0 0px 335px;
 
-@media(max-width: 1559px) {margin: -99px 0px 0 310px}
+@media(max-width: 1559px) {margin: -99.7px 0 0 310px}
 
 @media(max-width: 630px) {
 width: 226px;
@@ -479,16 +475,14 @@ border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 export const SurnameUserInput = styled.input<InputValid>`
 width: 238px;
 height: 53px;
-margin: ${({ valid }) => valid ? 'none' : '-3px 0 0 -2px'};
-border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
+margin: ${({ valid }) => valid ? '0' : '-3px 0 0 -2px'};
+border: ${({ valid }) => valid ? 'none' : 'solid 3px'};
 border-color: red;
 border-radius: 5px;
 padding-left: 10px;
 font-size: 16px;
 outline: none;
 background-color: #fff;
-
-@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'}}
 
 @media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '98%'}}
 
@@ -509,60 +503,59 @@ max-height: ${({ valid }) => valid ? '53px' : '98%'}}
 @media(max-width: 329px) {max-width: ${({ valid }) => valid ? '95.3%' : '97.3%'}}
 
 /* Responsividade de altura */
-@media (max-height: 625px) {
-@media (max-width: 625px) {
+@media (max-height: 625px) and (max-width: 625px) {
 max-width: ${({ valid }) => valid ? '208px' : '97.5%'};
-max-height: ${({ valid }) => valid ? '53px' : '100%'}}}
+max-height: ${({ valid }) => valid ? '53px' : '100%'}}
 
-@media (max-height: 625px) {@media (max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 589px) {max-width: ${({ valid }) => valid ? '502px' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 589px) {max-width: ${({ valid }) => valid ? '502px' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 559px) {max-width: ${({ valid }) => valid ? '97.6%' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 559px) {max-width: ${({ valid }) => valid ? '97.6%' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 529px) {max-width: ${({ valid }) => valid ? '457.4px' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 516px) {max-width: ${({ valid }) => valid ? '97.3%' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 516px) {max-width: ${({ valid }) => valid ? '97.3%' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 509px) {max-width: ${({ valid }) => valid ? '437px' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 509px) {max-width: ${({ valid }) => valid ? '437px' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 489px) {max-width: ${({ valid }) => valid ? '417px' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 489px) {max-width: ${({ valid }) => valid ? '417px' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 479px) {max-width: ${({ valid }) => valid ? '97.1%' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 479px) {max-width: ${({ valid }) => valid ? '97.1%' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 447px) {max-width: ${({ valid }) => valid ? '96.9%' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 447px) {max-width: ${({ valid }) => valid ? '96.9%' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 428px) {max-width: ${({ valid }) => valid ? '358px' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 428px) {max-width: ${({ valid }) => valid ? '358px' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 422px) {max-width: ${({ valid }) => valid ? '96.7%' : '97.5%'}}}    
+@media (max-height: 625px) and (max-width: 422px) {max-width: ${({ valid }) => valid ? '96.7%' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 408px) {max-width: ${({ valid }) => valid ? '96.6%' : '97.5%'}}
+@media (max-height: 625px) and (max-width: 408px) {max-width: ${({ valid }) => valid ? '96.6%' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 389px) {max-width: ${({ valid }) => valid ? '319px' : '97.5%'}}}
+@media (max-height: 625px) and (max-width: 389px) {max-width: ${({ valid }) => valid ? '319px' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '96.2%' : '97.5%'}}
+@media (max-height: 625px) and (max-width: 369px) {max-width: ${({ valid }) => valid ? '96.2%' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 348px) {max-width: ${({ valid }) => valid ? '95.9%' : '97.5%'}}
+@media (max-height: 625px) and (max-width: 348px) {max-width: ${({ valid }) => valid ? '95.9%' : '97.5%'}}
 
-@media (max-height: 625px) {@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}
+@media (max-height: 625px) and (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
+@media (max-height: 600px) and (max-width: 599px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}
 
-@media (max-height: 600px) {@media (max-width: 448px) {max-width: ${({ valid }) => valid ? '378.5px' : '100%'}}}
+@media (max-height: 600px) and (max-width: 448px) {max-width: ${({ valid }) => valid ? '378.5px' : '100%'}}
 
-@media (max-height: 600px) {@media (max-width: 429px) {max-width: ${({ valid }) => valid ? '358.5px' : '100%'}}}
+@media (max-height: 600px) and (max-width: 429px) {max-width: ${({ valid }) => valid ? '358.5px' : '100%'}}
 
-@media (max-height: 600px) {@media (max-width: 409px) {max-width: ${({ valid }) => valid ? '338.5px' : '100%'}}}
+@media (max-height: 600px) and (max-width: 409px) {max-width: ${({ valid }) => valid ? '338.5px' : '100%'}}
 
-@media (max-height: 600px) {@media (max-width: 389px) {max-width: ${({ valid }) => valid ? '318.5px' : '100%'}}}
+@media (max-height: 600px) and (max-width: 389px) {max-width: ${({ valid }) => valid ? '318.5px' : '100%'}}
 
-@media (max-height: 600px) {@media (max-width: 369px) {max-width: ${({ valid }) => valid ? '298.5px' : '100%'}}}
+@media (max-height: 600px) and (max-width: 369px) {max-width: ${({ valid }) => valid ? '298.5px' : '100%'}}
 
-@media (max-height: 600px) {@media (max-width: 349px) {max-width: ${({ valid }) => valid ? '279px' : '100%'}}}
+@media (max-height: 600px) and (max-width: 349px) {max-width: ${({ valid }) => valid ? '279px' : '100%'}}
 
-@media (max-height: 600px) {@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '100%'}}}
+@media (max-height: 600px) and (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '100%'}}
 
-@media (max-height: 580px) {@media (max-width: 599px) {max-height: ${({ valid }) => valid ? '43px' : '100%'}}}
+@media (max-height: 580px) and (max-width: 599px) {max-height: ${({ valid }) => valid ? '43px' : '100%'}}
 
 
 &:focus + label,
@@ -570,27 +563,22 @@ max-height: ${({ valid }) => valid ? '53px' : '100%'}}}
 height: 15px;
 width: 80px;
 font-size: 12px;
-transform: ${({ valid }) => valid ? 'translateY(-27px)' : 'translateY(-27px)'};
+transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
-@media(max-width: 890px) {transform: translateY(-27px)}
-
 /* Responsividade de altura */
-@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-25px)}}}`;
+@media (max-height: 580px) and (max-width: 599px) {transform: translateY(-25px)}}`;
 
 export const SurnameLabel = styled.label<InputValid>`
 display: flex;
 height: 21px;
 width: 80px;
-margin: 15px 0 0 -94%;
 font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
-margin: ${({ valid }) => valid ? 'none' : '16px 0 0 -98%'};
+margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '17px 0 0 -240px'};
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
-
-@media(max-width: 890px) {margin-top: ${({ valid }) => valid ? '17px' : '16px'}}
 
 @media(max-width: 599px) {
 margin-top: 18px;
@@ -708,20 +696,18 @@ background-color: #fff;
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const EmailUserInput = styled.input<InputValid>`
-width: 100%;
-height: 100%;
-max-width: ${({ valid }) => valid ? '97.7%' : '98%'};
-max-height: ${({ valid }) => valid ? '96%' : '100%'};
+width: 513px;
+height: 53px;
 margin: ${({ valid }) => valid ? 'none' : '-4px 0 0 -2px'};
-border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
+border: ${({ valid }) => valid ? 'none' : 'solid 3px'};
 border-color: red;
 border-radius: 5px;
 padding-left: 10px;
 font-size: 16px;
 outline: none;
-background-color: #fff;
+background-color: #fff  ;
 
-@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '97.5%' : '98%'}}
+@media(max-width: 890px) {width: 508px}}
 
 @media(max-width: 630px) {max-width: ${({ valid }) => valid ? '97.4%' : '98.9%'}}
 
@@ -786,7 +772,7 @@ export const EmailUserLabel = styled.label<InputValid>`
 display: flex;
 height: 21px;
 width: 50px;
-margin: ${({ valid }) => valid ? '18px 0 0 -97%' : '15px 0 0 -98%'};
+margin: ${({ valid }) => valid ? '19px 0 0 -503px' : '17px 0 0 -510px'};
 font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
@@ -904,12 +890,10 @@ background-color: #fff;
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const PasswordUserInput = styled.input<InputValid>`
-width: 100%;
-height: 100%;
-max-width: ${({ valid }) => valid ? '95%' : '95.5%'};
-max-height: ${({ valid }) => valid ? '96%' : '100%'};
+width: 238px;
+height: 53px;
 margin: ${({ valid }) => valid ? 'none' : '-4px 0 0 -2px'};
-border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
+border: ${({ valid }) => valid ? 'none' : 'solid 3px'};
 border-color: red;
 border-radius: 5px;
 padding-left: 10px;
@@ -969,7 +953,7 @@ background-color: #fff;
 height: 15px;
 width: 53px;
 font-size: 12px;
-transform: ${({ valid }) => valid ? 'translateY(-28px)' : 'translateY(-27px)'};
+transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 /* Responsividade de altura */
@@ -982,8 +966,7 @@ width: 50px;
 font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
-margin-top: ${({ valid }) => valid ? '18px' : '15px'};
-margin-left: ${({ valid }) => valid ? '-93%' : '-95%'};
+margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '17px 0 0 -240px'};
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
@@ -1134,12 +1117,10 @@ background-color: #fff;
 @media (max-width: 599px) {height: 45px}}`;
 
 export const ComparePasswordUserInput = styled.input<InputValid>`
-width: 100%;
-height: 100%;
-max-width: ${({ valid }) => valid ? '95%' : '95.5%'};
-max-height: ${({ valid }) => valid ? '96%' : '100%'};
+width: 238px;
+height: 53px;
 margin: ${({ valid }) => valid ? 'none' : '-4px 0 0 -2px'};
-border: ${({ valid }) => valid ? 'none' : 'solid 2px'};
+border: ${({ valid }) => valid ? 'none' : 'solid 3px'};
 border-color: red;
 border-radius: 5px;
 padding-left: 10px;
@@ -1219,8 +1200,7 @@ width: 120px;
 font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
-margin-top: ${({ valid }) => valid ? '18px' : '15px'};
-margin-left: ${({ valid }) => valid ? '-94%' : '-95%'};
+margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '17px 0 0 -240px'};
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
@@ -1412,19 +1392,21 @@ export const NextButtonContainer = styled.div`
 display: flex;
 height: fit-content;
 width: fit-content;
-margin: -79px 0 0 65%;
+margin: -48px 0 0 390px;
 
-@media(max-width: 549px) {margin-left: 66%}
+@media (max-width: 890px) {margin: -75px 0 0 395px}
 
-@media(max-width: 509px) {margin-left: 63%}
+@media (max-width: 549px) {margin-left: 66%}
 
-@media(max-width: 489px) {margin-left: 61%}
+@media (max-width: 509px) {margin-left: 63%}
 
-@media(max-width: 469px) {margin-left: 59%}
+@media (max-width: 489px) {margin-left: 61%}
 
-@media(max-width: 449px) {margin-left: 57%}
+@media (max-width: 469px) {margin-left: 59%}
 
-@media(max-width: 389px) {margin-top: -69px}
+@media (max-width: 449px) {margin-left: 57%}
+
+@media (max-width: 389px) {margin-top: -69px}
 
 /* Responsividade de altura */
 @media(max-height: 625px) {
@@ -1453,8 +1435,6 @@ export const NextButton = styled.div`
 display: flex;
 height: 50px;
 width: 150px;
-margin-top: 25px;
-margin-left: 7px;
 border-radius: 50px;
 cursor: pointer;
 background-color: #1E90FF;
@@ -1471,12 +1451,18 @@ font-weight: 500;
 border-radius: 50px;
 color: #fff;
 
+@media(max-width: 890px) {font-size: 15px}
+
 @media(max-width: 559px) {font-size: 14px}}
 
 @media(max-width: 1559px) {
 height: 45px;
 width: 130px;
 margin-top: 35px}
+
+@media(max-width: 890px) {
+width: 120px;
+height: 40px}
 
 @media(max-width: 599px) {margin-left: 55px}
 
@@ -1511,13 +1497,12 @@ margin-top: 32px}
 @media (max-width: 360px) {
 width: 115px;
 height: 40px;
-margin: 40px 0 0 15px;}}
+margin: 40px 0 0 15px}}
 
 @media (max-height: 625px) {
 @media (max-width: 340px) {
 width: 110px;
-margin-left: 0px;}}
-`;
+margin-left: 0px}}`;
 
 export const ExclamationIconContainer = styled.img`
 width: 20px;
@@ -1553,10 +1538,11 @@ background-color: #fff;
 
 export const EmptyMessage = styled.span`
 display: block;
-width: 87%;
+width: fit-content;
 height: 21px;
 font-size: 13px;
 color: red;
 cursor: default;
+background-color: #fff;
 
 @media(max-width: 329px) {font-size: 12px}`;
