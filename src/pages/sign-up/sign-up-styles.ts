@@ -245,7 +245,7 @@ border: solid;
 border-radius: 5px;
 border-width: ${({ firstNameFocus }) => firstNameFocus ? '2px' : '1px'};
 border-color: ${({ firstNameFocus }) => firstNameFocus ? '#4169E1' : 'grey'};
-background-color: #fff;
+background-color: grey;
 
 @media(max-width: 630px) {width: 220px}
 
@@ -278,7 +278,7 @@ background-color: #fff;
 
 @media(max-width: 630px) {width: 208px}
 
-@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}}
+@media(max-width: 599px) {width: 542px}
 
 @media(max-width: 526px) {
 max-width: ${({ valid }) => valid ? '458px' : '98%'};
@@ -357,7 +357,7 @@ pointer-events: none;
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
-@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'};}
+@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'}}
 
 @media(max-width: 599px) {
 margin-top: 18px;
@@ -387,7 +387,7 @@ margin: -99.5px 0 0px 335px;
 
 @media(max-width: 630px) {
 width: 226px;
-margin-left: 276px}
+margin: -99px 0 0 276px}
 
 @media(max-width: 599px) {
 width: 560px;
@@ -475,7 +475,7 @@ border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 export const SurnameUserInput = styled.input<InputValid>`
 width: 238px;
 height: 53px;
-margin: ${({ valid }) => valid ? '0' : '-3px 0 0 -2px'};
+margin: ${({ valid }) => valid ? 'none' : '-3px 0 0 -2px'};
 border: ${({ valid }) => valid ? 'none' : 'solid 3px'};
 border-color: red;
 border-radius: 5px;
@@ -484,9 +484,9 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
-@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '98%'}}
+@media(max-width: 630px) {width: 208px}
 
-@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '98%'}}
+@media(max-width: 599px) {width: 542px}
 
 @media(max-width: 590px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}}
 
@@ -579,6 +579,8 @@ pointer-events: none;
 margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '17px 0 0 -240px'};
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
+
+@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'}}
 
 @media(max-width: 599px) {
 margin-top: 18px;
@@ -705,13 +707,15 @@ border-radius: 5px;
 padding-left: 10px;
 font-size: 16px;
 outline: none;
-background-color: #fff  ;
+background-color: #fff;
 
-@media(max-width: 890px) {width: 508px}}
+@media (max-width: 630px) {width: 450px}
 
-@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '97.4%' : '98.9%'}}
+@media(max-width: 890px) {width: 508px}
 
-@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '542px' : '98%'}}
+@media(max-width: 630px) {width: 465px}
+
+@media(max-width: 599px) {width: 542px}
 
 @media(max-width: 590px) {max-width: ${({ valid }) => valid ? '97.6%' : '98%'}}
 
@@ -779,6 +783,8 @@ pointer-events: none;
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
+@media(max-width: 630px) {margin-left: ${({ valid }) => valid ? '-463px' : '-473px'}}
+
 @media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'}}
 
 @media(max-width: 349px) {
@@ -800,7 +806,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: 40px 0 0 60px;
-background-color: #fff;
+background-color: red;
 
 @media(max-width: 1559px) {margin: 40px 0 0 40px}
 
@@ -870,7 +876,7 @@ border: solid;
 border-radius: 5px;
 border-width: ${({ passwordFocus }) => passwordFocus ? '2px' : '1px'};
 border-color: ${({ passwordFocus }) => passwordFocus ? '#4169E1' : 'grey'};
-background-color: #fff;
+background-color: grey;
 
 @media(max-width: 630px) {width: 220px}
 
@@ -901,11 +907,11 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
-@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'}}
+@media(max-width: 890px) {width: 238px}
 
-@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '96%'}}
+@media(max-width: 630px) {width: 208px}
 
-@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '95%' : '96%'}}
+@media(max-width: 599px) {width: 260px}
 
 @media(max-width: 570px) {max-width: ${({ valid }) => valid ? '94.5%' : '96%'}}
 
@@ -970,7 +976,9 @@ margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '17px 0 0 -240px'};
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
-@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-94%' : '-95%'}}
+@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'}}
+
+@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-257px' : '-10px'}}
 
 @media(max-width: 349px) {
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
@@ -991,7 +999,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: -100px 0 0 335px;
-background-color: #fff;
+background-color: red;
 
 @media(max-width: 1559px) {margin-left: 310px}
 
@@ -1093,9 +1101,9 @@ border: solid;
 border-radius: 5px;
 border-width: ${({ comparePasswordFocus }) => comparePasswordFocus ? '2px' : '1px'};
 border-color: ${({ comparePasswordFocus }) => comparePasswordFocus ? '#4169E1' : 'grey'};
-background-color: #fff;
+background-color: grey;
 
-@media(max-width: 630px) {width: 226px}
+@media(max-width: 630px) {width: 220px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -1128,11 +1136,11 @@ font-size: 16px;
 outline: none;
 background-color: #fff;
 
-@media(max-width: 890px) {max-width: ${({ valid }) => valid ? '94.6%' : '95.6%'}}
+@media(max-width: 890px) {width: 238px}
 
-@media(max-width: 630px) {max-width: ${({ valid }) => valid ? '94%' : '96%'}}
+@media(max-width: 630px) {width: 208px}
 
-@media(max-width: 599px) {max-width: ${({ valid }) => valid ? '95%' : '96%'}}
+@media(max-width: 599px) {width: 260px}
 
 @media(max-width: 570px) {max-width: ${({ valid }) => valid ? '94.5%' : '96%'}}
 
@@ -1204,7 +1212,9 @@ margin: ${({ valid }) => valid ? '19px 0 0 -234px' : '17px 0 0 -240px'};
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
-@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-94%' : '-95%'}}
+@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'}}
+
+@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-257px' : '-200'}}
 
 @media(max-width: 349px) {
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
@@ -1394,7 +1404,11 @@ height: fit-content;
 width: fit-content;
 margin: -48px 0 0 390px;
 
-@media (max-width: 890px) {margin: -75px 0 0 395px}
+@media (max-width: 1559px) {margin: -74px 0 0 423px}
+
+@media (max-width: 890px) {margin: -75px 0 0 432px}
+
+@media (max-width: 630px) {margin-left: 370px}
 
 @media (max-width: 549px) {margin-left: 66%}
 
@@ -1428,8 +1442,7 @@ margin: -48px 0 0 390px;
 @media (max-width: 416px) {margin-left: 225px}}
 
 @media(max-height: 625px) {
-@media (max-width: 389px) {margin: -77px 0 0 200px}}
-`;
+@media (max-width: 389px) {margin: -77px 0 0 200px}}`;
 
 export const NextButton = styled.div`
 display: flex;
@@ -1451,18 +1464,16 @@ font-weight: 500;
 border-radius: 50px;
 color: #fff;
 
-@media(max-width: 890px) {font-size: 15px}
+@media(max-width: 1559px) {font-size: 15px}
 
 @media(max-width: 559px) {font-size: 14px}}
 
 @media(max-width: 1559px) {
-height: 45px;
+height: 40px;
 width: 130px;
 margin-top: 35px}
 
-@media(max-width: 890px) {
-width: 120px;
-height: 40px}
+@media(max-width: 890px) {width: 120px}
 
 @media(max-width: 599px) {margin-left: 55px}
 
