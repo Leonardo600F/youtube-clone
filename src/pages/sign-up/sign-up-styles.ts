@@ -805,7 +805,7 @@ background-color: #fff;
 
 @media(max-width: 630px) {margin-left: ${({ valid }) => valid ? '-463px' : '-473px'}}
 
-@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'}}
+@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
 
 @media(max-width: 349px) {
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
@@ -904,7 +904,7 @@ background-color: grey;
 
 @media(max-width: 589px) {width: 239px}
 
-@media(max-width: 559px) {width: 209px}
+@media(max-width: 559px) {width: 220px}
 
 @media(max-width: 529px) {width: 201px}
 
@@ -961,7 +961,7 @@ background-color: #fff;
 
 @media(max-width: 589px) {width: 227px}
 
-@media(max-width: 559px) {width: 196px}
+@media(max-width: 559px) {width: 207px}
 
 @media(max-width: 529px) {width: 189px}
 
@@ -1030,6 +1030,8 @@ background-color: #fff;
 
 @media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'}}
 
+@media(max-width: 559px) {margin-left: ${({ valid }) => valid ? '-206px' : '-210px'}}
+
 @media(max-width: 349px) {
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
 font-size: 14px}
@@ -1060,6 +1062,10 @@ margin-left: 273px}
 @media(max-width: 599px) {
 width: 280px;
 margin-left: 310px}
+
+@media(max-width: 589px) {
+width: 244px;
+margin-left: 302px}
 
 @media(max-width: 559px) {
 width: 225px;
@@ -1153,7 +1159,7 @@ background-color: #fff;
 
 @media(max-width: 589px) {width: 239px}
 
-@media(max-width: 559px) {width: 209px}
+@media(max-width: 559px) {width: 220px}
 
 @media(max-width: 529px) {width: 201px}
 
@@ -1214,7 +1220,7 @@ background-color: #fff;
 
 @media(max-width: 589px) {width: 227px}
 
-@media(max-width: 559px) {width: 196px}
+@media(max-width: 559px) {width: 207px}
 
 @media(max-width: 529px) {width: 189px}
 
@@ -1287,6 +1293,8 @@ background-color: #fff;
 @media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'}}
 
 @media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'}}
+
+@media(max-width: 559px) {margin-left: ${({ valid }) => valid ? '-206px' : '-210px'}}
 
 @media(max-width: 349px) {
 margin-top: ${({ valid }) => valid ? '21px' : '18px'};
@@ -1485,7 +1493,7 @@ margin: -48px 0 0 390px;
 
 @media(max-width: 589px) {margin-left: 423px}
 
-@media (max-width: 549px) {margin-left: 330px}
+@media (max-width: 559px) {margin-left: 385px}
 
 @media (max-width: 509px) {margin-left: 63%}
 
