@@ -175,7 +175,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: 50px 0px 0 60px;
-background-color: #fff;
+background-color: green;
 
 @media(max-width: 1559px) {margin: 50px 0px 0 40px}
 
@@ -214,7 +214,7 @@ margin: 0 0 0 26px}
 @media(max-width: 329px) {width: 275px}
 
 /* Responsividade de altura */
-@media(max-height: 825px) {margin-top: 6%}
+@media (max-height: 825px) {margin-top: 40px}
 
 @media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px}}
 
@@ -232,6 +232,8 @@ margin-top: 10px}}
 @media (max-height: 625px) and (min-width: 600px) {height: 88px}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
+
+@media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 82px}
 
@@ -390,7 +392,9 @@ margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
 
 @media (max-width: 349px) {margin-left: ${({ valid }) => valid ? '-280px' : '-282px'}}
 
-@media (max-width: 329px) {margin-left: ${({ valid }) => valid ? '-260px' : '-262px'}}
+@media (max-width: 329px) {
+margin-left: ${({ valid }) => valid ? '-260px' : '-262px'};
+font-size: 14px}
 
 /* Responsividade de altura */
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
@@ -651,7 +655,9 @@ margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
 
 @media (max-width: 349px) {margin-left: ${({ valid }) => valid ? '-280px' : '-282px'}}
 
-@media (max-width: 329px) {margin-left: ${({ valid }) => valid ? '-260px' : '-262px'}}
+@media (max-width: 329px) {
+margin-left: ${({ valid }) => valid ? '-260px' : '-262px'};
+font-size: 14px}
 
 /* Responsividade de altura */
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
@@ -887,7 +893,9 @@ background-color: #fff;
 
 @media (max-width: 349px) {margin-left: ${({ valid }) => valid ? '-280px' : '-282px'}}
 
-@media (max-width: 329px) {margin-left: ${({ valid }) => valid ? '-260px' : '-262px'}}
+@media (max-width: 329px) {
+margin-left: ${({ valid }) => valid ? '-260px' : '-262px'};
+font-size: 14px}
 
 /* Responsividade de altura */
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
@@ -1139,7 +1147,9 @@ background-color: #fff;
 
 @media(max-width: 349px) {margin-left: ${({ valid }) => valid ? '-127px' : '-129px'}}
 
-@media(max-width: 329px) {margin-left: ${({ valid }) => valid ? '-117px' : '-119px'}}
+@media(max-width: 329px) {
+margin-left: ${({ valid }) => valid ? '-117px' : '-119px'};
+font-size: 14px}
 
 /* Responsividade de altura */
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
@@ -1165,7 +1175,7 @@ width: 230px;
 margin-left: 273px}
 
 @media(max-width: 599px) {
-width: 280px;
+width: 276px;
 margin-left: 310px}
 
 @media(max-width: 589px) {
@@ -1228,6 +1238,9 @@ margin-top: -86px}}
 @media (max-width: 599px) {
 height: 85px;
 margin-top: -85px}}
+
+@media (max-height: 625px) {
+@media (max-width: 549px) {margin-top: -84px}}
 
 @media (max-height: 625px) and (min-width: 600px) {
 height: 88px;
@@ -1427,7 +1440,9 @@ background-color: #fff;
 
 @media(max-width: 349px) {margin-left: ${({ valid }) => valid ? '-127px' : '-129px'}}
 
-@media(max-width: 329px) {width: 110px}
+@media(max-width: 329px) {
+margin-left: ${({ valid }) => valid ? '-117px' : '-119px'};
+font-size: 14px}
 
 /* Responsividade de altura */
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
@@ -1474,6 +1489,8 @@ color: #2F4F4F;
 
 @media(max-width: 369px) {font-size: 14px}
 
+@media(max-width: 329px) {font-size: 12.7px}
+
 
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {font-size: 16px}}
@@ -1489,8 +1506,6 @@ color: #2F4F4F;
 @media (max-height: 625px) {@media (max-width: 340px) {font-size: 11px}}
 
 @media (max-height: 580px) {@media (max-width: 329px) {font-size: 10px}}}
-
-@media(max-width: 1559px) {margin: 10px 0 0 40px}
 
 @media(max-width: 630px) {margin-left: 23px}
 
@@ -1641,11 +1656,11 @@ margin: -48px 0 0 390px;
 @media (max-width: 349px) {margin-left: 185px}
 
 /* Responsividade de altura */
-@media(max-height: 625px) {
-@media (max-width: 549px) {margin-left: 325px}}
+@media(max-height: 625px) {@media (max-width: 599px) {margin: -75px 0 0 430px}}
 
-@media(max-height: 625px) {
-@media (max-width: 529px) {margin-left: 305px}}
+@media(max-height: 625px) {@media (max-width: 549px) {margin-left: 355px}}
+
+@media(max-height: 625px) {@media (max-width: 529px) {margin-left: 305px}}
 
 @media(max-height: 625px) {
 @media (max-width: 501px) {margin-left: 285px}}
@@ -1742,13 +1757,13 @@ background-color: #fff;
 @media(max-height: 725px) {
 @media(max-width: 599px) {margin-top: 62px}}
 
-@media (max-height: 674px) {
-@media (max-width: 599px) {margin-top: 62px}}
-
 @media (max-height: 625px) {margin-top: 63px}
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {margin-top: 54px}}
+
+@media (max-height: 600px) {
+@media (max-width: 549px) {margin-top: 59px}}
 
 @media (max-height: 580px) {margin-top: 58px}
 
