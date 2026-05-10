@@ -1233,7 +1233,7 @@ margin: -101.5px 0 0 302px}
 
 @media(max-width: 559px) {
 width: 225px;
-margin-left: 287px}
+margin-left: 286px}
 
 @media(max-width: 529px) {width: 205px}
 
@@ -1293,12 +1293,16 @@ margin-top: -95px}}
 height: 90px;
 margin-top: -90px}}
 
+@media (max-height: 625px) {@media (max-width: 559px) {margin-top: -89px}}
+
 @media (max-height: 625px) {
 @media (max-width: 549px) {margin-top: -84px}}
 
 @media (max-height: 625px) and (min-width: 600px) {
 height: 88px;
 margin-top: -87px}
+
+@media (max-height: 625px) and (min-width: 528px) {margin-top: -88px}
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {
@@ -1541,7 +1545,7 @@ color: #2F4F4F;
 
 @media(max-width: 559px) {font-size: 15.6px}
 
-@media(max-width: 529px) {font-size: 15px}
+@media(max-width: 529px) {font-size: 14.8px}
 
 @media(max-width: 509px) {font-size: 14.6px}
 
@@ -1565,9 +1569,13 @@ color: #2F4F4F;
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {font-size: 16px}}
 
+@media(max-height: 725px) {@media(max-width: 529px) {font-size: 15px}}
+
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14px}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {font-size: 16.5px}}
+
+@media (max-height: 625px) {@media (max-width: 559px) {font-size: 15.5px}}
 
 @media (max-height: 625px) {@media (max-width: 529px) {font-size: 15px}}
 
@@ -1580,6 +1588,8 @@ color: #2F4F4F;
 @media (max-height: 625px) {@media (max-width: 340px) {font-size: 11px}}
 
 @media (max-height: 580px) {@media (max-width: 589px) {font-size: 16.5px}}
+
+@media (max-height: 580px) {@media (max-width: 559px) {font-size: 15.5px}}
 
 @media (max-height: 580px) {@media (max-width: 329px) {font-size: 10px}}}
 
@@ -1647,6 +1657,9 @@ margin: 30px 0px 0 60px;
 @media (max-height: 625px) {
 @media(max-width: 589px) {margin-top: 12px}}
 
+@media (max-height: 625px) {
+@media(max-width: 559px) {margin-top: 6px}}
+
 @media (max-height: 619px) {
 @media (max-width: 519px) {margin-top: 12px}}
 
@@ -1698,6 +1711,9 @@ height: 45px;
 width: 195px;
 span{font-size: 15px}}
 
+@media(max-height: 625px) {
+@media (max-width: 528px) {height: 40px}}
+
 @media (max-height: 625px) {
 @media (max-width: 360px) {
 width: 168px;
@@ -1708,11 +1724,6 @@ span {font-size: 13px}}
 @media (max-width: 340px) {
 width: 155px;
 span {font-size: 12px}}}
-
-@media (max-height: 605px) {
-@media (max-width: 589px) {
-height: 40px;
-span {font-size: 15px}}}
 `;
 
 export const NextButtonContainer = styled.div`
@@ -1732,6 +1743,8 @@ margin: -48px 0 0 390px;
 @media (max-width: 589px) {margin-left: 423px}
 
 @media (max-width: 559px) {margin-left: 385px}
+
+@media (max-width: 529px) {margin-left: 365px}
 
 @media (max-width: 509px) {margin-left: 355px}
 
@@ -1758,9 +1771,11 @@ margin: -48px 0 0 390px;
 
 @media(max-height: 625px) {@media (max-width: 589px) {margin: -48px 0 0 394px}}
 
+@media(max-height: 625px) {@media (max-width: 559px) {margin: -10px 0 0 375px}}
+
 @media(max-height: 625px) {@media (max-width: 549px) {margin: -43px 0 0 355px}}
 
-@media(max-height: 625px) {@media (max-width: 529px) {margin-left: 340px}}
+@media(max-height: 625px) {@media (max-width: 529px) {margin-left: 360px}}
 
 @media(max-height: 625px) {
 @media (max-width: 501px) {margin-left: 285px}}
@@ -1781,11 +1796,7 @@ margin: -48px 0 0 390px;
 @media (max-width: 360px) {margin: 40px 0 0 15px}}
 
 @media (max-height: 605px) {
-@media (max-width: 589px) {margin-top: -40px}}
-
-@media (max-height: 580px) {
-@media (max-width: 580px) {margin-top: -45px}
-}`;
+@media (max-width: 589px) {margin-top: -40px}}}`;
 
 export const NextButton = styled.div`
 display: flex;
@@ -1830,15 +1841,14 @@ width: 90px;
 margin-left: 14px}
 
 /* Responsividade de altura */
-@media (max-height: 640px) {
-@media (max-width: 559px) {
-height: 37px;
-
-span{font-size: 13.2px}}}
-
 @media (max-height: 625px) {
 width: 145px;
 height: 45px}
+
+@media(max-height: 625px) {
+@media (max-width: 528px) {
+width: 130px;
+height: 40px}}
 
 @media(max-height: 625px) {
 @media (max-width: 483px) {width: 120px}}
@@ -1855,6 +1865,10 @@ height: 40px}}
 @media (max-width: 589px) {
 height: 40px;
 span {font-size: 15px}}}
+
+@media (max-height: 605px) {
+@media (max-width: 559px) {
+width: 130px}}
 `;
 
 export const ExclamationIconContainer = styled.img`
@@ -1886,6 +1900,8 @@ background-color: #fff;
 @media (max-height: 625px) {margin-top: 63px}
 
 @media (max-height: 625px) {@media (max-width: 589px) {margin-top: 66px}}
+
+@media (max-height: 625px) {@media (max-width: 559px) {margin-top: 68px}}
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {margin-top: 54px}}
