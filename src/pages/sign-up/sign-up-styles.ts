@@ -231,6 +231,10 @@ margin-top: 10px}}
 
 @media (max-height: 700px) {@media (max-width: 599px) {margin-top: 6px}}
 
+@media (max-height: 674px) {@media (max-width: 469px) {height: 89px}}
+
+@media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
+
 @media (max-height: 625px) {@media (max-width: 589px) {height: 90px}} 
 
 @media (max-height: 625px) and (min-width: 600px) {height: 88px}
@@ -471,6 +475,10 @@ height: 102px}
 @media(max-height: 725px) {@media (max-width: 589px) {height: 96px}}
 
 @media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px}}
+
+@media (max-height: 674px) {@media (max-width: 469px) {height: 89px}}
+
+@media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
 
 @media (max-height: 625px) and (min-width: 600px) {
 height: 88px;
@@ -755,6 +763,10 @@ height: 102px}
 
 @media(max-height: 725px) {@media (max-width: 589px) {height: 96px}}
 
+@media (max-height: 674px) {@media (max-width: 469px) {height: 89px}}
+
+@media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
+
 @media (max-height: 625px) and (min-width: 600px) {height: 88px}
 
 @media (max-height: 625px) {@media (max-width: 589px) {height: 90px}}
@@ -1003,6 +1015,10 @@ height: 102px}
 
 @media(max-height: 725px) {@media (max-width: 589px) {height: 96px}}
 
+@media (max-height: 674px) {@media (max-width: 469px) {height: 89px}}
+
+@media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
+
 @media (max-height: 625px) and (min-width: 600px) {height: 88px}
 
 @media (max-height: 625px) {@media (max-width: 589px) {height: 90px}}
@@ -1042,7 +1058,7 @@ background-color: grey;
 
 @media(max-width: 529px) {width: 201px}
 
-@media(max-width: 509px) {width: 216px}
+@media(max-width: 509px) {width: 217px}
 
 @media(max-width: 489px) {width: 208px}
 
@@ -1099,7 +1115,7 @@ background-color: #fff;
 
 @media(max-width: 529px) {width: 189px}
 
-@media(max-width: 509px) {width: 203px}
+@media(max-width: 509px) {width: 204px}
 
 @media(max-width: 489px) {width: 195px}
 
@@ -1286,7 +1302,17 @@ margin-top: -85px}}
 @media(max-height: 725px) {
 @media (max-width: 589px) {
 height: 96px;
-margin-top: -95px}}
+margin-top: -96px}}
+
+@media (max-height: 674px) {
+@media (max-width: 469px) {
+height: 89px;
+margin-top: -88.5px}}
+
+@media (max-height: 640px) {
+@media (max-width: 489px) {
+height: 90px;
+margin-top: -90px}}
 
 @media (max-height: 625px) {
 @media (max-width: 589px) {
@@ -1303,6 +1329,9 @@ height: 88px;
 margin-top: -87px}
 
 @media (max-height: 625px) and (min-width: 528px) {margin-top: -88px}
+
+@media (max-height: 625px) {
+@media (max-width: 509px) {margin-top: -89.5px}}
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {
@@ -1332,7 +1361,11 @@ margin-top: -74px}}
 height: 83px;
 margin-top: -82px}}
 
-@media (max-height: 580px) { @media (max-width: 549px) {height: 80px}}`;
+@media (max-height: 580px) { @media (max-width: 549px) {height: 80px}}
+
+@media (max-height: 535px) { @media (max-width: 509px) {margin: -80px 0 0 259px}}
+
+`;
 
 export const ComparePasswordUserContainer = styled.div<ComparePasswordFocused>`
 display: flex;
@@ -1343,7 +1376,7 @@ border: solid;
 border-radius: 5px;
 border-width: ${({ comparePasswordFocus }) => comparePasswordFocus ? '2px' : '1px'};
 border-color: ${({ comparePasswordFocus }) => comparePasswordFocus ? '#4169E1' : 'grey'};
-background-color: grey;
+background-color: #fff;
 
 @media(max-width: 630px) {width: 220px}
 
@@ -1355,7 +1388,7 @@ background-color: grey;
 
 @media(max-width: 529px) {width: 201px}
 
-@media(max-width: 509px) {width: 216px}
+@media(max-width: 509px) {width: 217px}
 
 @media(max-width: 489px) {width: 208px}
 
@@ -1416,7 +1449,7 @@ background-color: #fff;
 
 @media(max-width: 529px) {width: 189px}
 
-@media(max-width: 509px) {width: 203px}
+@media(max-width: 509px) {width: 204px}
 
 @media(max-width: 489px) {width: 195px}
 
@@ -1567,11 +1600,13 @@ color: #2F4F4F;
 
 
 /* Responsividade de altura */
-@media(max-height: 725px) {@media(max-width: 599px) {font-size: 16px}}
+@media(max-height: 725px) {@media (max-width: 599px) {font-size: 16px}}
 
-@media(max-height: 725px) {@media(max-width: 529px) {font-size: 15px}}
+@media(max-height: 725px) {@media (max-width: 529px) {font-size: 15px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14px}}
+@media(max-height: 725px) {@media (max-width: 509px) {font-size: 14.5px}}
+
+@media (max-height: 640px) {@media (max-width: 489px) {font-size: 13.5px}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {font-size: 16.5px}}
 
@@ -1587,11 +1622,19 @@ color: #2F4F4F;
 
 @media (max-height: 625px) {@media (max-width: 340px) {font-size: 11px}}
 
+@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14px}}
+
 @media (max-height: 580px) {@media (max-width: 589px) {font-size: 16.5px}}
 
 @media (max-height: 580px) {@media (max-width: 559px) {font-size: 15.5px}}
 
-@media (max-height: 580px) {@media (max-width: 329px) {font-size: 10px}}}
+@media (max-height: 580px) {@media (max-width: 529px) {font-size: 15px}}
+
+@media (max-height: 580px) {@media (max-width: 329px) {font-size: 10px}}
+
+@media (max-height: 535px) {@media (max-width: 509px) {font-size: 14.5px}}
+
+}
 
 @media(max-width: 630px) {margin-left: 23px}
 
@@ -1626,7 +1669,11 @@ cursor: pointer}
 @media(max-width: 630px) {margin-left: 25px}
 
 /* Responsividade de altura */
-@media(max-height: 825px) {margin-top: 10px}`;
+@media(max-height: 825px) {margin-top: 10px}
+
+@media(max-height: 530px) {
+@media(max-width: 509px) {margin-top: 6px}}
+`;
 
 export const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })`
 dispay: flex;
@@ -1724,6 +1771,12 @@ span {font-size: 13px}}
 @media (max-width: 340px) {
 width: 155px;
 span {font-size: 12px}}}
+
+@media (max-height: 535px) {
+@media (max-width: 509px) {
+width: 160px;
+height: 35px;
+span {font-size: 12.5px}}}
 `;
 
 export const NextButtonContainer = styled.div`
@@ -1777,8 +1830,9 @@ margin: -48px 0 0 390px;
 
 @media(max-height: 625px) {@media (max-width: 529px) {margin-left: 360px}}
 
-@media(max-height: 625px) {
-@media (max-width: 501px) {margin-left: 285px}}
+@media(max-height: 625px) {@media (max-width: 501px) {margin-left: 285px}}
+
+@media(max-height: 625px) {@media (max-width: 489px) {margin-left: 328px}}
 
 @media(max-height: 625px) {
 @media (max-width: 463px) {margin-left: 265px}}
@@ -1796,7 +1850,12 @@ margin: -48px 0 0 390px;
 @media (max-width: 360px) {margin: 40px 0 0 15px}}
 
 @media (max-height: 605px) {
-@media (max-width: 589px) {margin-top: -40px}}}`;
+@media (max-width: 589px) {margin-top: -40px}}
+
+@media (max-height: 535px) {
+@media (max-width: 509px) {margin: -35px 0 0 365px}}
+
+`;
 
 export const NextButton = styled.div`
 display: flex;
@@ -1869,6 +1928,12 @@ span {font-size: 15px}}}
 @media (max-height: 605px) {
 @media (max-width: 559px) {
 width: 130px}}
+
+@media (max-height: 535px) {
+@media (max-width: 509px) {
+width: 115px;
+height: 35px;
+span {font-size: 12.5px}}}
 `;
 
 export const ExclamationIconContainer = styled.img`
