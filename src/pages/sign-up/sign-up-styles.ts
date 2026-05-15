@@ -144,6 +144,11 @@ margin: 20px 0 0 26px}
 margin-top: 0px;
 font-size: 23px}}
 
+@media(max-height: 725px) {
+@media(max-width: 329px) {
+margin-top: 0px;
+font-size: 21.5px}}
+
 @media (max-height: 700px) {@media (max-width: 599px) {font-size: 26px}}
 
 @media (max-height: 700px) {@media (max-width: 362px) {font-size: 24px}}
@@ -292,6 +297,10 @@ background-color: grey;
 
 @media(max-width: 369px) {width: 310px}
 
+@media(max-width: 349px) {width: 290px}
+
+@media(max-width: 329px) {width: 270px}
+
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
 
@@ -343,7 +352,7 @@ background-color: #fff;
 
 @media(max-width: 369px) {width: 297px}
 
-@media(max-width: 349px) {width: 279px}
+@media(max-width: 349px) {width: 278px}
 
 @media(max-width: 329px) {width: 259px}
 
@@ -545,6 +554,8 @@ background-color: grey;
 @media(max-width: 369px) {width: 310px}
 
 @media(max-width: 349px) {width: 290px}
+
+@media(max-width: 329px) {width: 270px}
 
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
@@ -826,6 +837,10 @@ background-color: #fff;
 
 @media(max-width: 369px) {width: 310px}
 
+@media(max-width: 349px) {width: 290px}
+
+@media(max-width: 329px) {width: 270px}
+
 /* Responsividade de altura */
 @media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
 
@@ -879,7 +894,7 @@ background-color: #fff;
 
 @media(max-width: 369px) {width: 297px}
 
-@media(max-width: 349px) {width: 279px}
+@media(max-width: 349px) {width: 278px}
 
 @media(max-width: 329px) {width: 259px}
 
@@ -1610,11 +1625,15 @@ color: #2F4F4F;
 
 @media(max-height: 725px) {@media (max-width: 409px) {font-size: 16px}}
 
+@media(max-height: 725px) {@media (max-width: 329px) {font-size: 14.5px}}
+
 @media (max-height: 640px) {@media (max-width: 489px) {font-size: 13.5px}}
 
 @media (max-height: 640px) {@media (max-width: 449px) {font-size: 12.6px}}
 
 @media (max-height: 640px) {@media (max-width: 389px) {font-size: 12px}}
+
+@media (max-height: 640px) {@media (max-width: 349px) {font-size: 13.5px}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {font-size: 16.5px}}
 
@@ -1648,11 +1667,15 @@ color: #2F4F4F;
 
 @media (max-height: 600px) {@media (max-width: 389px) {font-size: 12.3px}}
 
+@media (max-height: 600px) {@media (max-width: 349px) {font-size: 13.8px}}
+
 @media (max-height: 586px) {@media (max-width: 409px) {font-size: 11.7px}}
 
 @media (max-height: 586px) {@media (max-width: 389px) {font-size: 11px}}
 
 @media (max-height: 586px) {@media (max-width: 369px) {font-size: 12px}}
+
+@media (max-height: 586px) {@media (max-width: 349px) {font-size: 11px}}
 
 @media (max-height: 580px) {@media (max-width: 589px) {font-size: 16.5px}}
 
@@ -1812,6 +1835,11 @@ width: 155px;
 height: 36px;
 span {font-size: 12.5px}}}
 
+@media (max-height: 605px) {
+@media (max-width: 329px) { 
+width: 140px;
+span {font-size: 10.5px}}}
+
 @media (max-height: 590px) {@media (max-width: 429px) {
 width: 179px;
 height: 35px;
@@ -1897,8 +1925,6 @@ margin: -48px 0 0 390px;
 
 @media(max-height: 625px) {@media (max-width: 369px) {margin: -40px 0 0 175px}}
 
-@media (max-height: 625px) {@media (max-width: 360px) {margin: 40px 0 0 15px}}
-
 @media (max-height: 624px) {@media (max-width: 389px) {margin-top: -40px}}
 
 @media(max-height: 621px) {@media (max-width: 469px) {margin: -38px 0 0 312px}}
@@ -1922,6 +1948,8 @@ margin: -48px 0 0 390px;
 @media (max-height: 605px) {@media (max-width: 389px) {margin: -37px 0 0 200px}}
 
 @media (max-height: 605px) {@media (max-width: 369px) {margin-left: 180px}}
+
+@media (max-height: 605px) {@media (max-width: 329px) {margin-left: 175px}}
 
 @media (max-height: 590px) {@media (max-width: 429px) {margin: -34px 0 0 295px}}
 
@@ -2018,8 +2046,11 @@ span {font-size: 15px}}}
 @media (max-height: 605px) {@media (max-width: 389px) {
 width: 120px;
 height: 37px;
-
 span{font-size: 13px}}}
+
+@media (max-height: 605px) {@media (max-width: 329px) {
+width: 100px;
+span{font-size: 11px}}}
 
 @media (max-height: 590px) {
 @media (max-width: 429px) {
