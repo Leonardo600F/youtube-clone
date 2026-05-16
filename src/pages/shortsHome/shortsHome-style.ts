@@ -39,7 +39,7 @@ export const ShortsLine = styled.div<OpenShorts>`
 width: ${({ openShorts }) => openShorts ? '100%' : '0'};
 background-color: #989898;
 height: 1px;
-margin-top: 5px`;
+margin-top: 1.5%`;
 
 export const CloseButtonContainer = styled.div<OpenMenu>`
 display: flex;

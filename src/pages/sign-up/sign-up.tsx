@@ -457,12 +457,13 @@ export default function SignUp() {
                 <FirstNameContainer>
                     <FirstNameUserContainer>
                         <FirstNameUserInput
+                        valid={userNameValid}
                             value={form.name}
                             ref={nameRef}
                             placeholder=" "
                             onChange={(e) => updateField('name', e.target.value)}
                         />
-                        <FirstNameLabel>Nome</FirstNameLabel>
+                        <FirstNameLabel valid={userNameValid}>Nome</FirstNameLabel>
                     </FirstNameUserContainer>
 
                     {errors.name && (
@@ -476,12 +477,13 @@ export default function SignUp() {
                 <SurnameContainer>
                     <SurnameUserContainer>
                         <SurnameUserInput
+                            valid={userSurnameValid}
                             value={form.surname}
                             ref={surnameRef}
                             placeholder=" "
                             onChange={(e) => updateField('surname', e.target.value)}
                         />
-                        <SurnameLabel>Sobrenome</SurnameLabel>
+                        <SurnameLabel valid={userSurnameValid}>Sobrenome</SurnameLabel>
                     </SurnameUserContainer>
 
                     {errors.surname && (
@@ -495,16 +497,17 @@ export default function SignUp() {
                 <EmailContainer>
                     <EmailUserContainer>
                         <EmailUserInput
+                        valid={userEmailValid}
                             value={form.email}
                             ref={emailRef}
                             placeholder=" "
                             onChange={(e) => updateField('email', e.target.value)}
                         />
-                        <EmailUserLabel>E-mail</EmailUserLabel>
+                        <EmailUserLabel valid={userEmailValid}>E-mail</EmailUserLabel>
                     </EmailUserContainer>
 
                     {(errors.email || errors.emailFormat) && (
-                        <EmptyContainer>
+                        <EmptyContainer valid={userEmailValid}>
                             <ExclamationIconContainer src={ExclamationIcon} />
                             <EmptyMessage>E-mail inválido</EmptyMessage>
                         </EmptyContainer>
@@ -514,17 +517,18 @@ export default function SignUp() {
                 <PasswordContainer>
                     <PasswordUserContainer>
                         <PasswordUserInput
+                            valid={userPasswordValid}
                             value={form.password}
                             ref={passwordRef}
                             placeholder=" "
                             type={showPassword ? 'text' : 'password'}
                             onChange={(e) => updateField('password', e.target.value)}
                         />
-                        <PasswordUserLabel>Senha</PasswordUserLabel>
+                        <PasswordUserLabel valid={userPasswordValid}>Senha</PasswordUserLabel>
                     </PasswordUserContainer>
 
                     {errors.password && (
-                        <EmptyContainer>
+                        <EmptyContainer valid={userPasswordValid}>
                             <ExclamationIconContainer src={ExclamationIcon} />
                             <EmptyMessage>Senha inválida</EmptyMessage>
                         </EmptyContainer>
@@ -534,6 +538,7 @@ export default function SignUp() {
                 <ComparePasswordContainer>
                     <ComparePasswordUserContainer>
                         <ComparePasswordUserInput
+                            valid={userPasswordValid}
                             value={form.confirmPassword}
                             ref={confirmPasswordRef}
                             placeholder=" "
@@ -542,13 +547,11 @@ export default function SignUp() {
                                 updateField('confirmPassword', e.target.value)
                             }
                         />
-                        <ComparePasswordUserLabel>
-                            Confirmar senha
-                        </ComparePasswordUserLabel>
+                        <ComparePasswordUserLabel valid={userPasswordValid}>Confirmar senha</ComparePasswordUserLabel>
                     </ComparePasswordUserContainer>
 
                     {(errors.confirmPassword || errors.passwordMatch) && (
-                        <EmptyContainer>
+                        <EmptyContainer valid={userPasswordValid}>
                             <ExclamationIconContainer src={ExclamationIcon} />
                             <EmptyMessage>Senhas não coincidem</EmptyMessage>
                         </EmptyContainer>

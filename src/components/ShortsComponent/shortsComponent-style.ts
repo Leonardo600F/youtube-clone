@@ -3,86 +3,13 @@ import styled from "styled-components";
 interface OpenMenu { openMenu: boolean }
 
 export const Container = styled.div<OpenMenu>`
-height: ${({ openMenu }) => openMenu ? '555px' : '600px'};
+height: 100%;
 width: 100%;
-
-@media(max-width: 2526px) {height: ${({ openMenu }) => openMenu ? '535px' : '590px'}}
-
-@media(max-width: 2496px) {height: ${({ openMenu }) => openMenu ? '515px' : '570px'}}
-
-@media(max-width: 2380px) {height: ${({ openMenu }) => openMenu ? '492px' : '560px'}}
-
-@media(max-width: 2223px) {height: ${({ openMenu }) => openMenu ? '482px' : '550px'}}
-
-@media(max-width: 2015px) {height: ${({ openMenu }) => openMenu ? '462px' : '530px'}}
-
-@media(max-width: 1920px) {height: ${({ openMenu }) => openMenu ? '560px' : '585px'}}
-
-@media(max-width: 1705px) {height: ${({ openMenu }) => openMenu ? '540px' : '555px'}}
-
-@media(max-width: 1410px) {height: ${({ openMenu }) => openMenu ? '525px' : '540px'}}
-
-@media(max-width: 1390px) {height: ${({ openMenu }) => openMenu ? '505px' : '525px'}}
-
-@media(max-width: 1380px) {height: ${({ openMenu }) => openMenu ? '485px' : '505px'}}
-
-@media(max-width: 1360px) {height: ${({ openMenu }) => openMenu ? '470px' : '495px'}}
-
-@media(max-width: 1340px) {height: ${({ openMenu }) => openMenu ? '460px' : '485px'}}
-
-@media(max-width: 1312px) {height: 485px}
-
-@media(max-width: 1162px) {height: 455px}
-
-@media(max-width: 1102px) {height: 465px}
-
-@media(max-width: 976px) {height: 490px}
-
-@media(max-width: 872px) {height: 465px}
-
-@media(max-width: 812px) {height: 455px}
-
-@media(max-width: 667px) {height: 430px}
-
-@media(max-width: 620px) {height: 415px}
-
-@media(max-width: 586px) {height: 500px}
-
-@media(max-width: 570px) {height: 490px}
-
-@media(max-width: 563px) {height: 480px}
-
-@media(max-width: 553px) {height: 470px}
-
-@media(max-width: 543px) {height: 460px}
-
-@media(max-width: 533px) {height: 450px}
-
-@media(max-width: 523px) {height: 440px}
-
-@media(max-width: 513px) {height: 430px}
-
-@media(max-width: 503px) {height: 420px}
-
-@media(max-width: 493px) {height: 410px}
-
-@media(max-width: 483px) {height: 400px}
-
-@media(max-width: 473px) {height: 390px}
-
-@media(max-width: 463px) {height: 380px}
-
-@media(max-width: 453px) {height: 370px}
-
-@media(max-width: 423px) {height: 360px}
-
-@media(max-width: 373px) {height: 350px}
-
-@media(max-width: 325px) {height: 300px}`;
+background-color: green;`;
 
 export const BannerContainer = styled.div<OpenMenu>`
-width: ${({ openMenu }) => openMenu ? '246px' : '265px'};
-height: ${({ openMenu }) => openMenu ? '500px' : '550px'};
+width: 99%;
+height: 100%;
 margin-top: 18px;
 border-radius: 15px;
 cursor: pointer;
@@ -90,27 +17,19 @@ background-color: #fff;
 
 &:hover {background-color: #ececec}
 
-@media(max-width: 2526px) {
-width: ${({ openMenu }) => openMenu ? '241px' : '260px'};
-height: ${({ openMenu }) => openMenu ? '500px' : '550px'}}
+@media(max-width: 2526px) {width: ${({ openMenu }) => openMenu ? '241px' : '260px'}}
 
-@media(max-width: 2496px) {
-width: ${({ openMenu }) => openMenu ? '237px' : '255px'};
-height: ${({ openMenu }) => openMenu ? '485px' : '535px'}}
+@media(max-width: 2496px) {width: ${({ openMenu }) => openMenu ? '237px' : '255px'}}
 
 @media(max-width: 2434px) {width: ${({ openMenu }) => openMenu ? '229px' : '249px'}}
 
-@media(max-width: 2380px) {
-width: ${({ openMenu }) => openMenu ? '222px' : '242px'};
-height: ${({ openMenu }) => openMenu ? '460px' : '520px'}}
+@media(max-width: 2380px) {width: ${({ openMenu }) => openMenu ? '222px' : '242px'}}
 
 @media(max-width: 2323px) {width: ${({ openMenu }) => openMenu ? '217px' : '237px'}}
 
 @media(max-width: 2272px) {width: ${({ openMenu }) => openMenu ? '211px' : '231px'}}
 
-@media(max-width: 2223px) {
-width: ${({ openMenu }) => openMenu ? '206px' : '226px'};
-height: ${({ openMenu }) => openMenu ? '450px' : '510px'}}
+@media(max-width: 2223px) {width: ${({ openMenu }) => openMenu ? '206px' : '226px'}}
 
 @media(max-width: 2173px) {width: ${({ openMenu }) => openMenu ? '200px' : '220px'}}
 
@@ -118,17 +37,13 @@ height: ${({ openMenu }) => openMenu ? '450px' : '510px'}}
 
 @media(max-width: 2070px) {width: ${({ openMenu }) => openMenu ? '188px' : '208px'}}
 
-@media(max-width: 2015px) {
-width: ${({ openMenu }) => openMenu ? '184px' : '204px'};
-height: ${({ openMenu }) => openMenu ? '435px' : '495px'}}
+@media(max-width: 2015px) {width: ${({ openMenu }) => openMenu ? '184px' : '204px'}}
 
 @media(max-width: 1980px) {width: ${({ openMenu }) => openMenu ? '180px' : '200px'}}
 
 @media(max-width: 1943px) {width: ${({ openMenu }) => openMenu ? '176px' : '196px'}}
 
-@media(max-width: 1920px) {
-width: ${({ openMenu }) => openMenu ? '264px' : '294px'};
-height: ${({ openMenu }) => openMenu ? '525px' : '550px'}}
+@media(max-width: 1920px) {width: ${({ openMenu }) => openMenu ? '264px' : '294px'}}
 
 @media(max-width: 1905px) {width: ${({ openMenu }) => openMenu ? '261.5px' : '291.5px'}}
 
@@ -158,9 +73,7 @@ height: ${({ openMenu }) => openMenu ? '525px' : '550px'}}
 
 @media(max-width: 1720px) {width: ${({ openMenu }) => openMenu ? '230px' : '260.5px'}}
 
-@media(max-width: 1705px) {
-width: ${({ openMenu }) => openMenu ? '275.4px' : '312px'};
-height: ${({ openMenu }) => openMenu ? '505px' : '520px'}}
+@media(max-width: 1705px) {width: ${({ openMenu }) => openMenu ? '275.4px' : '312px'}}
 
 @media(max-width: 1696px) {width: ${({ openMenu }) => openMenu ? '273.4px' : '310px'}}
 
@@ -210,39 +123,27 @@ border-radius: 10px}
 
 @media(max-width: 1420px) {width: ${({ openMenu }) => openMenu ? '219px' : '255.5px'}}
 
-@media(max-width: 1410px) {
-width: ${({ openMenu }) => openMenu ? '217px' : '253.5px'};
-height: ${({ openMenu }) => openMenu ? '490px' : '505px'}}
+@media(max-width: 1410px) {width: ${({ openMenu }) => openMenu ? '217px' : '253.5px'}}
 
 @media(max-width: 1400px) {width: ${({ openMenu }) => openMenu ? '215.4px' : '251.4px'}}
 
-@media(max-width: 1390px) {
-width: ${({ openMenu }) => openMenu ? '213.4px' : '249.4px'};
-height: ${({ openMenu }) => openMenu ? '475px' : '490px'}}
+@media(max-width: 1390px) {width: ${({ openMenu }) => openMenu ? '213.4px' : '249.4px'}}
 
-@media(max-width: 1380px) {
-width: ${({ openMenu }) => openMenu ? '211.4px' : '247.4px'};
-height: ${({ openMenu }) => openMenu ? '455px' : '470px'}}
+@media(max-width: 1380px) {width: ${({ openMenu }) => openMenu ? '211.4px' : '247.4px'}}
 
 @media(max-width: 1370px) {width: ${({ openMenu }) => openMenu ? '209.4px' : '245.6px'}}
 
-@media(max-width: 1360px) {
-width: ${({ openMenu }) => openMenu ? '207.4px' : '243.6px'};
-height: ${({ openMenu }) => openMenu ? '440px' : '460px'}}
+@media(max-width: 1360px) {width: ${({ openMenu }) => openMenu ? '207.4px' : '243.6px'}}
 
 @media(max-width: 1350px) {width: ${({ openMenu }) => openMenu ? '205.4px' : '241.6px'}}
 
-@media(max-width: 1340px) {
-width: ${({ openMenu }) => openMenu ? '203.4px' : '239.6px'};
-height: ${({ openMenu }) => openMenu ? '430px' : '450px'}}
+@media(max-width: 1340px) {width: ${({ openMenu }) => openMenu ? '203.4px' : '239.6px'}}
 
 @media(max-width: 1330px) {width: ${({ openMenu }) => openMenu ? '201.4px' : '237.6px'}}
 
 @media(max-width: 1320px) {width: ${({ openMenu }) => openMenu ? '199.4px' : '235.6px'}}
 
-@media(max-width: 1312px) {
-width: 235.6px;
-height: 450px}
+@media(max-width: 1312px) {width: 235.6px}
 
 @media(max-width: 1305px) {width: 233.6px}
 
@@ -272,9 +173,7 @@ height: 450px}
 
 @media(max-width: 1172px) {width: 207px}
 
-@media(max-width: 1162px) {
-width: 205px;
-height: 420px}
+@media(max-width: 1162px) {width: 205px}
 
 @media(max-width: 1152px) {width: 203px}
 
@@ -286,9 +185,7 @@ height: 420px}
 
 @media(max-width: 1112px) {width: 195px}
 
-@media(max-width: 1102px) {
-width: 242.4px;
-height: 430px}
+@media(max-width: 1102px) {width: 242.4px}
 
 @media(max-width: 1092px) {width: 240px}
 
@@ -314,9 +211,7 @@ height: 430px}
 
 @media(max-width: 982px) {width: 213px}
 
-@media(max-width: 976px) {
-width: 286px;
-height: 460px}
+@media(max-width: 976px) {width: 286px}
 
 @media(max-width: 966px) {width: 282.3px}
 
@@ -338,9 +233,7 @@ height: 460px}
 
 @media(max-width: 882px) {width: 255px}
 
-@media(max-width: 872px) {
-width: 252px;
-height: 430px}
+@media(max-width: 872px) {width: 252px}
 
 @media(max-width: 862px) {width: 248px}
 
@@ -354,9 +247,7 @@ height: 430px}
 
 @media(max-width: 822px) {width: 235px}
 
-@media(max-width: 812px) {
-width: 232px;
-height: 420px}
+@media(max-width: 812px) {width: 232px}
 
 @media(max-width: 802px) {width: 228px}
 
@@ -388,9 +279,7 @@ height: 420px}
 
 @media(max-width: 675px) {width: 213px}
 
-@media(max-width: 667px) {
-width: 210px;
-height: 405px}
+@media(max-width: 667px) {width: 210px}
 
 @media(max-width: 660px) {width: 207.5px}
 
@@ -402,9 +291,7 @@ height: 405px}
 
 @media(max-width: 627px) {width: 197px}
 
-@media(max-width: 620px) {
-width: 195px;
-height: 390px}
+@media(max-width: 620px) {width: 195px}
 
 @media(max-width: 610px) {width: 192px}
 
@@ -414,72 +301,41 @@ height: 390px}
 
 @media(max-width: 590px) {width: 184.5px}
 
-@media(max-width: 586px) {
-width: 278px;
-height: 475px;
-background-color: white}
+@media(max-width: 586px) {width: 278px}
 
 @media(max-width: 578px) {width: 274px}
 
-@media(max-width: 570px) {
-width: 270px;
-height: 465px}
+@media(max-width: 570px) {width: 270px}
 
-@media(max-width: 563px) {
-width: 262.5px;
-height: 455px}
+@media(max-width: 563px) {width: 262.5px}
 
-@media(max-width: 553px) {
-width: 257px;
-height: 445px;}
+@media(max-width: 553px) {width: 257px}
 
-@media(max-width: 543px) {
-width: 253px;
-height: 435px}
+@media(max-width: 543px) {width: 253px}
 
-@media(max-width: 533px) {
-width: 248px;
-height: 425px}
+@media(max-width: 533px) {width: 248px}
 
-@media(max-width: 523px) {
-width: 242.5px;
-height: 415px}
+@media(max-width: 523px) {width: 242.5px}
 
-@media(max-width: 513px) {
-width: 238px;
-height: 405px}
+@media(max-width: 513px) {width: 238px}
 
-@media(max-width: 503px) {
-width: 233px;
-height: 395px}
+@media(max-width: 503px) {width: 233px}
 
-@media(max-width: 493px) {
-width: 229px;
-height: 385px}
+@media(max-width: 493px) {width: 229px}
 
-@media(max-width: 483px) {
-width: 224px;
-height: 375px}
+@media(max-width: 483px) {width: 224px}
 
-@media(max-width: 473px) {
-width: 218px;
-height: 365px}
+@media(max-width: 473px) {width: 218px}
 
-@media(max-width: 463px) {
-width: 214px;
-height: 355px}
+@media(max-width: 463px) {width: 214px}
 
-@media(max-width: 453px) {
-width: 209px;
-height: 345px}
+@media(max-width: 453px) {width: 209px}
 
 @media(max-width: 443px) {width: 204px}
 
 @media(max-width: 433px) {width: 199px}
 
-@media(max-width: 423px) {
-width: 194px;
-height: 335px}
+@media(max-width: 423px) {width: 194px}
 
 @media(max-width: 413px) {width: 189px}
 
@@ -489,9 +345,7 @@ height: 335px}
 
 @media(max-width: 383px) {width: 174px}
 
-@media(max-width: 373px) {
-width: 169px;
-height: 327px}
+@media(max-width: 373px) {width: 169px}
 
 @media(max-width: 363px) {width: 164px}
 
@@ -501,9 +355,7 @@ height: 327px}
 
 @media(max-width: 335px) {width: 150px}
 
-@media(max-width: 325px) {
-width: 148px;
-height: 278px}`;
+@media(max-width: 325px) {width: 148px}`;
 
 export const ImageBanner = styled.img<OpenMenu>`
 width: ${({ openMenu }) => openMenu ? '225px' : '245px'};

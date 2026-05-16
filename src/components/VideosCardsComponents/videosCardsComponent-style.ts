@@ -13,7 +13,7 @@ background-color: #fff;
 
 @media(max-width: 1920px) {height: ${({ openMenu }) => openMenu ? '430px' : '365px'}}
 
-@media(max-width: 1770px) {height: ${({ openMenu }) => openMenu ? '415px' : '430px'};}
+@media(max-width: 1770px) {height: ${({ openMenu }) => openMenu ? '415px' : '430px'}}
 
 @media(max-width: 1390px) {height: ${({ openMenu }) => openMenu ? '375px' : '390px'}}
 
