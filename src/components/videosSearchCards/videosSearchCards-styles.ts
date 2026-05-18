@@ -393,8 +393,7 @@ overflow: hidden;
 width: 473px;
 margin-top: -15px;
 font-size: 15px;
-font-weight: 600;
-background-color: yellow}
+font-weight: 600;}
 
 @media(max-width: 540px) {
 width: 463px;
