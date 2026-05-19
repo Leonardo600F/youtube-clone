@@ -227,20 +227,23 @@ export default function SignUp() {
                             ref={emailRef}
                             placeholder=' '
                             type='email'
-                            onChange={(e) => {
-                                setUserEmail(e.target.value)
-                            }
-                            }
+                            onChange={(e) => { setUserEmail(e.target.value) }}
                         />
 
                         <EmailUserLabel valid={userEmailValid}>E-mail</EmailUserLabel>
 
                     </EmailUserContainer>
 
-                    <EmptyContainer valid={userEmailValid}>
+                    <EmptyContainer valid={userEmailValid || formatEmailValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <EmptyMessage>Digite um E-mail</EmptyMessage>
+                        <EmptyMessage>
+                            {userEmailValid
+                                ? 'Digite um E-mail'
+                                : 'O formato desse e-mail é inválido. Digite um e-mail válido.'}
+                        </EmptyMessage>
                     </EmptyContainer>
+
+
                 </EmailContainer>
 
                 <PasswordContainer>
@@ -251,7 +254,7 @@ export default function SignUp() {
                             value={userPassword}
                             ref={passwordRef}
                             placeholder=' '
-                            type={showPassword ? 'email' : 'password'}
+                            type={showPassword ? 'text' : 'password'}
                             onChange={(e) => {
                                 setUserPassword(e.target.value)
                             }
@@ -276,7 +279,7 @@ export default function SignUp() {
                             value={comparePassword}
                             ref={comparePasswordRef}
                             placeholder=' '
-                            type={showPassword ? 'email' : 'password'}
+                            type={showPassword ? 'text' : 'password'}
                             onChange={(e) => {
                                 setComparePassword(e.target.value)
                             }

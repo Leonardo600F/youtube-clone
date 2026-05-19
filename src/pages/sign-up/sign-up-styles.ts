@@ -2064,7 +2064,7 @@ border-radius: 50px`;
 
 export const EmptyContainer = styled.div<InputValid>`
 display: ${({ valid }) => valid ? 'none' : 'flex'};
-width: 150px;
+width: fit-content;
 height: 21px;
 margin: 86px 0 0 -98%;
 background-color: #fff;
