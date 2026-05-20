@@ -70,6 +70,7 @@ export default function SignUp() {
     const [userSurnameValid, setUserSurnameValid] = useState(true);
     const [userEmailValid, setUserEmailValid] = useState(true);
     const [userPasswordValid, setUserPasswordValid] = useState(true);
+    const [comparePasswordValid, setComparePasswordValid] = useState(true);
 
     const [formatEmailValid, setFormatEmailValid] = useState(true);
     const [samePassword, setSamePassword] = useState(true);
@@ -98,8 +99,14 @@ export default function SignUp() {
         if (userEmail.trim() !== '') {
             setFormatEmailValid(true)
         }
-        if (userPassword.trim() !== '' && comparePassword.trim()! == '') {
+        if (userPassword.trim() !== '' && userPassword.length >= 8) {
             setUserPasswordValid(true)
+        }
+        if (comparePassword.trim() !== '') {
+            setComparePasswordValid(true)
+        }
+        if (userPassword === comparePassword && userPassword !== '') {
+            setSamePassword(true)
         }
         if (userName.trim() === '' && userEmail.trim() === '' && userPassword.trim() === '') {
             setUserNameValid(false);
@@ -131,7 +138,7 @@ export default function SignUp() {
         }
         else if (!/\S+@\S+\.\S+/.test(userEmail)) {
             setFormatEmailValid(false);
-            setUserEmailValid(false);
+            setUserEmailValid(true);
             if (emailRef.current) {
                 emailRef.current.focus();
             }
@@ -143,13 +150,12 @@ export default function SignUp() {
             }
         }
         else if (comparePassword.trim() === '') {
-            setUserPasswordValid(false)
+            setComparePasswordValid(false)
             if (comparePasswordRef.current) {
                 comparePasswordRef.current.focus();
             }
         }
         else if (userPassword !== comparePassword) {
-            setUserPasswordValid(false)
             setSamePassword(false)
             if (comparePasswordRef.current) {
                 comparePasswordRef.current.focus();
@@ -222,7 +228,7 @@ export default function SignUp() {
                     <EmailUserContainer emailFocus={emailFocus} onFocus={() => setEmailFocus(true)} onBlur={() => setEmailFocus(false)}>
 
                         <EmailUserInput
-                            valid={userEmailValid}
+                            valid={userEmailValid && formatEmailValid}
                             value={userEmail}
                             ref={emailRef}
                             placeholder=' '
@@ -230,16 +236,16 @@ export default function SignUp() {
                             onChange={(e) => { setUserEmail(e.target.value) }}
                         />
 
-                        <EmailUserLabel valid={userEmailValid}>E-mail</EmailUserLabel>
+                        <EmailUserLabel valid={userEmailValid && formatEmailValid}>E-mail</EmailUserLabel>
 
                     </EmailUserContainer>
 
-                    <EmptyContainer valid={userEmailValid || formatEmailValid}>
+                    <EmptyContainer valid={userEmailValid && formatEmailValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
                         <EmptyMessage>
-                            {userEmailValid
-                                ? 'Digite um E-mail'
-                                : 'O formato desse e-mail é inválido. Digite um e-mail válido.'}
+                            {!formatEmailValid
+                                ? 'O formato desse e-mail é inválido. Digite um e-mail válido!'
+                                : 'Digite seu e-mail.'}
                         </EmptyMessage>
                     </EmptyContainer>
 
@@ -275,24 +281,24 @@ export default function SignUp() {
                     <ComparePasswordUserContainer comparePasswordFocus={comparePasswordFocus} onFocus={() => setComparePasswordFocus(true)} onBlur={() => setComparePasswordFocus(false)}>
 
                         <ComparePasswordUserInput
-                            valid={userPasswordValid}
+                            valid={comparePasswordValid && samePassword}
                             value={comparePassword}
                             ref={comparePasswordRef}
                             placeholder=' '
                             type={showPassword ? 'text' : 'password'}
-                            onChange={(e) => {
-                                setComparePassword(e.target.value)
-                            }
-                            }
-                        />
+                            onChange={(e) => { setComparePassword(e.target.value) }} />
 
-                        <ComparePasswordUserLabel valid={userPasswordValid}>Confirmar Senha</ComparePasswordUserLabel>
+                        <ComparePasswordUserLabel valid={comparePasswordValid && samePassword}>Confirmar Senha</ComparePasswordUserLabel>
 
                     </ComparePasswordUserContainer>
 
-                    <EmptyContainer valid={userPasswordValid}>
+                    <EmptyContainer valid={comparePasswordValid && samePassword}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <EmptyMessage>Confirme sua senha</EmptyMessage>
+                        <EmptyMessage>
+                            {!samePassword
+                                ? 'As senhas não coincidem! Tente novamente.'
+                                : 'Confirme sua senha.'}
+                        </EmptyMessage>
                     </EmptyContainer>
                 </ComparePasswordContainer>
 
