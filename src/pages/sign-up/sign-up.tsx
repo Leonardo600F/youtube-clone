@@ -73,6 +73,7 @@ export default function SignUp() {
     const [comparePasswordValid, setComparePasswordValid] = useState(true);
 
     const [formatEmailValid, setFormatEmailValid] = useState(true);
+    const [formatPasswordValid, setFormatPasswordValid] = useState(true);
     const [samePassword, setSamePassword] = useState(true);
 
     const nameRef = useRef<HTMLInputElement>(null);
@@ -99,8 +100,11 @@ export default function SignUp() {
         if (userEmail.trim() !== '') {
             setFormatEmailValid(true)
         }
-        if (userPassword.trim() !== '' && userPassword.length >= 8) {
+        if (userPassword.trim() !== '') {
             setUserPasswordValid(true)
+        }
+        if (userPassword.length >= 8) {
+            setFormatPasswordValid(true)
         }
         if (comparePassword.trim() !== '') {
             setComparePasswordValid(true)
@@ -113,6 +117,7 @@ export default function SignUp() {
             setUserSurnameValid(false);
             setUserEmailValid(false);
             setUserPasswordValid(false);
+            setComparePasswordValid(false);
             if (nameRef.current) {
                 nameRef.current.focus();
             }
@@ -143,8 +148,16 @@ export default function SignUp() {
                 emailRef.current.focus();
             }
         }
-        else if (userPassword.trim() === '' || userPassword.length < 8) {
+        else if (userPassword.trim() === '') {
             setUserPasswordValid(false);
+            setFormatPasswordValid(true);
+            if (passwordRef.current) {
+                passwordRef.current.focus();
+            }
+        }
+        else if (userPassword.length < 8) {
+            setFormatPasswordValid(false);
+            setUserPasswordValid(true);
             if (passwordRef.current) {
                 passwordRef.current.focus();
             }
@@ -256,7 +269,7 @@ export default function SignUp() {
                     <PasswordUserContainer passwordFocus={passwordFocus} onFocus={() => setPasswordFocus(true)} onBlur={() => setPasswordFocus(false)}>
 
                         <PasswordUserInput
-                            valid={userPasswordValid}
+                            valid={userPasswordValid && formatPasswordValid}
                             value={userPassword}
                             ref={passwordRef}
                             placeholder=' '
@@ -267,13 +280,17 @@ export default function SignUp() {
                             }
                         />
 
-                        <PasswordUserLabel valid={userPasswordValid}>Senha</PasswordUserLabel>
+                        <PasswordUserLabel valid={userPasswordValid && formatPasswordValid}>Senha</PasswordUserLabel>
 
                     </PasswordUserContainer>
 
-                    <EmptyContainer valid={userPasswordValid}>
+                    <EmptyContainer valid={userPasswordValid && formatPasswordValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <EmptyMessage>Digite uma senha</EmptyMessage>
+                        <EmptyMessage>
+                            {!formatPasswordValid
+                                ? 'Digite uma senha válida!'
+                                : 'Digite sua senha.'}
+                        </EmptyMessage>
                     </EmptyContainer>
                 </PasswordContainer>
 
@@ -296,7 +313,7 @@ export default function SignUp() {
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
                         <EmptyMessage>
                             {!samePassword
-                                ? 'As senhas não coincidem! Tente novamente.'
+                                ? 'As senhas não coincidem.'
                                 : 'Confirme sua senha.'}
                         </EmptyMessage>
                     </EmptyContainer>
