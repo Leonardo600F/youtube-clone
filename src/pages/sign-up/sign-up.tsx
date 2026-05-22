@@ -43,6 +43,9 @@ import {
 
 } from './sign-up-styles';
 
+const NAME_FORMAT_REGEX = /^[a-zA-ZÀ-ÿ]{3,}$/;
+
+const isNameFormatValid = (name: string) => NAME_FORMAT_REGEX.test(name.trim());
 
 export default function SignUp() {
 
@@ -56,9 +59,7 @@ export default function SignUp() {
     const [passwordFocus, setPasswordFocus] = useState(false);
     const [comparePasswordFocus, setComparePasswordFocus] = useState(false);
 
-    const handleShowPassword = () => {
-        setShowPassword(!setShowPassword);
-    }
+    const handleShowPassword = () => { setShowPassword(!setShowPassword) }
 
     const [userName, setUserName] = useState('');
     const [userSurname, setUserSurname] = useState('');
@@ -72,6 +73,7 @@ export default function SignUp() {
     const [userPasswordValid, setUserPasswordValid] = useState(true);
     const [comparePasswordValid, setComparePasswordValid] = useState(true);
 
+    const [formatNameValid, setFormatNameValid] = useState(true);
     const [formatEmailValid, setFormatEmailValid] = useState(true);
     const [formatPasswordValid, setFormatPasswordValid] = useState(true);
     const [samePassword, setSamePassword] = useState(true);
@@ -93,6 +95,9 @@ export default function SignUp() {
     const createUser = () => {
         if (userName.trim() !== '') {
             setUserNameValid(true)
+        }
+        if (isNameFormatValid(userName)) {
+            setFormatNameValid(true)
         }
         if (userSurname.trim() !== '') {
             setUserSurnameValid(true)
@@ -124,6 +129,14 @@ export default function SignUp() {
         }
         else if (userName.trim() === '') {
             setUserNameValid(false);
+            setFormatNameValid(true);
+            if (nameRef.current) {
+                nameRef.current.focus();
+            }
+        }
+        else if (!isNameFormatValid(userName)) {
+            setFormatNameValid(false);
+            setUserNameValid(true);
             if (nameRef.current) {
                 nameRef.current.focus();
             }
@@ -191,7 +204,7 @@ export default function SignUp() {
                     <FirstNameUserContainer firstNameFocus={firstNameFocus} onFocus={() => setFirstNameFocus(true)} onBlur={() => setFirstNameFocus(false)}>
 
                         <FirstNameUserInput
-                            valid={userNameValid}
+                            valid={userNameValid && formatNameValid}
                             placeholder=' '
                             type='text'
                             value={userName}
@@ -200,14 +213,18 @@ export default function SignUp() {
                                 setUserName(e.target.value)
                             }}
                         />
-                        <FirstNameLabel valid={userNameValid}>Nome</FirstNameLabel>
+                        <FirstNameLabel valid={userNameValid && formatNameValid}>Nome</FirstNameLabel>
 
                     </FirstNameUserContainer>
 
 
-                    <EmptyContainer valid={userNameValid}>
+                    <EmptyContainer valid={userNameValid && formatNameValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <EmptyMessage>Digite um nome</EmptyMessage>
+                        <EmptyMessage>
+                            {!formatNameValid
+                                ? 'Digite um nome válido.'
+                                : 'Digite seu nome.'}
+                        </EmptyMessage>
                     </EmptyContainer>
 
                 </FirstNameContainer>
@@ -216,7 +233,7 @@ export default function SignUp() {
                     <SurnameUserContainer surnameFocus={surnameFocus} onFocus={() => setSurnameFocus(true)} onBlur={() => setSurnameFocus(false)}>
 
                         <SurnameUserInput
-                            valid={userSurnameValid}
+                            valid={userSurnameValid && formatNameValid}
                             value={userSurname}
                             ref={surnameRef}
                             placeholder=' '
@@ -226,13 +243,17 @@ export default function SignUp() {
                             }}
                         />
 
-                        <SurnameLabel valid={userSurnameValid}>Sobrenome</SurnameLabel>
+                        <SurnameLabel valid={userSurnameValid && formatNameValid}>Sobrenome</SurnameLabel>
 
                     </SurnameUserContainer>
 
-                    <EmptyContainer valid={userSurnameValid}>
+                    <EmptyContainer valid={userSurnameValid && formatNameValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <EmptyMessage>Digite um Sobrenome</EmptyMessage>
+                        <EmptyMessage>
+                            {!formatNameValid
+                                ? 'Digite um sobrenome válido.'
+                                : 'Digite seu sobrenome.'}
+                        </EmptyMessage>
                     </EmptyContainer>
 
                 </SurnameContainer>
