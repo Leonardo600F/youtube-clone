@@ -85,111 +85,95 @@ export default function SignUp() {
     const comparePasswordRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
-        if (nameRef.current !== null) {
-            nameRef.current.focus();
-        }
+        if (nameRef.current !== null) { nameRef.current.focus() }
     }, [])
 
     const { handleCreateUser } = useContext(UserContext);
 
     const createUser = () => {
-        if (userName.trim() !== '') {
-            setUserNameValid(true)
-        }
-        if (isNameFormatValid(userName)) {
-            setFormatNameValid(true)
-        }
-        if (userSurname.trim() !== '') {
-            setUserSurnameValid(true)
-        }
-        if (userEmail.trim() !== '') {
-            setFormatEmailValid(true)
-        }
-        if (userPassword.trim() !== '') {
-            setUserPasswordValid(true)
-        }
-        if (userPassword.length >= 8) {
-            setFormatPasswordValid(true)
-        }
-        if (comparePassword.trim() !== '') {
-            setComparePasswordValid(true)
-        }
-        if (userPassword === comparePassword && userPassword !== '') {
-            setSamePassword(true)
-        }
+        if (userName.trim() !== '') { setUserNameValid(true) }
+
+        if (isNameFormatValid(userName)) { setFormatNameValid(true) }
+
+        if (userSurname.trim() !== '') { setUserSurnameValid(true) }
+
+        if (userEmail.trim() !== '') { setFormatEmailValid(true) }
+
+        if (userPassword.trim() !== '') { setUserPasswordValid(true) }
+
+        if (userPassword.length >= 8) { setFormatPasswordValid(true) }
+
+        if (comparePassword.trim() !== '') { setComparePasswordValid(true) }
+
+        if (userPassword === comparePassword && userPassword !== '') { setSamePassword(true) }
+
         if (userName.trim() === '' && userEmail.trim() === '' && userPassword.trim() === '') {
             setUserNameValid(false);
             setUserSurnameValid(false);
             setUserEmailValid(false);
             setUserPasswordValid(false);
             setComparePasswordValid(false);
-            if (nameRef.current) {
-                nameRef.current.focus();
-            }
+
+            if (nameRef.current) { nameRef.current.focus() }
         }
         else if (userName.trim() === '') {
             setUserNameValid(false);
             setFormatNameValid(true);
-            if (nameRef.current) {
-                nameRef.current.focus();
-            }
+            if (nameRef.current) { nameRef.current.focus() }
         }
+
         else if (!isNameFormatValid(userName)) {
             setFormatNameValid(false);
             setUserNameValid(true);
-            if (nameRef.current) {
-                nameRef.current.focus();
-            }
+            if (nameRef.current) { nameRef.current.focus() }
         }
+
         else if (userSurname.trim() === '') {
             setUserSurnameValid(false);
-            if (surnameRef.current) {
-                surnameRef.current.focus();
-            }
+            if (surnameRef.current) { surnameRef.current.focus() }
         }
+
+        else if (!isNameFormatValid(userSurname)) {
+            setFormatNameValid(false);
+            setUserSurnameValid(true);
+            if (surnameRef.current) { surnameRef.current.focus() }
+        }
+
         else if (userEmail.trim() === '') {
             setUserEmailValid(false);
             setFormatEmailValid(true);
-            if (emailRef.current) {
-                emailRef.current.focus();
-            }
+            if (emailRef.current) { emailRef.current.focus() }
         }
+
         else if (!/\S+@\S+\.\S+/.test(userEmail)) {
             setFormatEmailValid(false);
             setUserEmailValid(true);
-            if (emailRef.current) {
-                emailRef.current.focus();
-            }
+            if (emailRef.current) { emailRef.current.focus() }
         }
+
         else if (userPassword.trim() === '') {
             setUserPasswordValid(false);
             setFormatPasswordValid(true);
-            if (passwordRef.current) {
-                passwordRef.current.focus();
-            }
+            if (passwordRef.current) { passwordRef.current.focus() }
         }
+
         else if (userPassword.length < 8) {
             setFormatPasswordValid(false);
             setUserPasswordValid(true);
-            if (passwordRef.current) {
-                passwordRef.current.focus();
-            }
+            if (passwordRef.current) { passwordRef.current.focus() }
         }
+
         else if (comparePassword.trim() === '') {
             setComparePasswordValid(false)
-            if (comparePasswordRef.current) {
-                comparePasswordRef.current.focus();
-            }
+            if (comparePasswordRef.current) { comparePasswordRef.current.focus() }
         }
+
         else if (userPassword !== comparePassword) {
             setSamePassword(false)
-            if (comparePasswordRef.current) {
-                comparePasswordRef.current.focus();
-            }
+            if (comparePasswordRef.current) { comparePasswordRef.current.focus() }
         }
-        else {
-            handleCreateUser(userName, userSurname, userEmail, userPassword)
-        }
+
+        else { handleCreateUser(userName, userSurname, userEmail, userPassword) }
     }
 
     return (
@@ -295,11 +279,7 @@ export default function SignUp() {
                             ref={passwordRef}
                             placeholder=' '
                             type={showPassword ? 'text' : 'password'}
-                            onChange={(e) => {
-                                setUserPassword(e.target.value)
-                            }
-                            }
-                        />
+                            onChange={(e) => { setUserPassword(e.target.value) }} />
 
                         <PasswordUserLabel valid={userPasswordValid && formatPasswordValid}>Senha</PasswordUserLabel>
 
@@ -340,16 +320,13 @@ export default function SignUp() {
                     </EmptyContainer>
                 </ComparePasswordContainer>
 
-                <PasswordMessageContainer>
-                    <span>Use 8 caracteres com uma combinação de letras, números e símbolos.</span>
-                </PasswordMessageContainer>
+                <PasswordMessageContainer><span>Use 8 caracteres com uma combinação de letras, números e símbolos.</span></PasswordMessageContainer>
 
                 <ShowPasswordContainer>
 
                     <StyledCheckbox
                         checked={showPassword}
-                        onChange={() => setShowPassword(!showPassword)}
-                    />
+                        onChange={() => setShowPassword(!showPassword)} />
 
                     <span onClick={() => setShowPassword(!showPassword)}>Mostrar senha</span>
                 </ShowPasswordContainer>

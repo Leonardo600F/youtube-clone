@@ -40,6 +40,7 @@ export default function SignIn() {
     const [formatEmailValid, setFormatEmailValid] = useState(true);
 
     const [validPassword, setValidPassword] = useState(true);
+    const [formatPasswordValid, setFormatPasswordValid] = useState(true);
     const [passwordFocused, setPasswordFocused] = useState(false);
 
     const emailRef = useRef<HTMLInputElement>(null);
@@ -49,33 +50,34 @@ export default function SignIn() {
 
     useEffect(() => {
         if (emailRef.current !== null) {
-            emailRef.current.focus()
+            emailRef.current.focus();
         }
     }, [])
 
     const userLogin = () => {
         if (email.trim() !== '') {
-            setValidEmail(true)
+            setValidEmail(true);
         }
         if (password.trim() !== '') {
-            setValidPassword(true)
+            setValidPassword(true);
         }
         if (email.trim() === '' && password.trim() === '') {
-            setValidEmail(false)
-            setValidPassword(false)
+            setValidEmail(false);
+            setValidPassword(false);
             if (emailRef.current) {
                 emailRef.current.focus()
             }
         }
         else if (email.trim() === '') {
-            setValidEmail(false)
+            setValidEmail(false);
+            setFormatEmailValid(true);
             if (emailRef.current) {
                 emailRef.current.focus()
             }
         }
         else if (!/\S+@\S+\.\S+/.test(email)) {
-            setFormatEmailValid(false)
-            setValidEmail(false)
+            setFormatEmailValid(false);
+            setValidEmail(false);
             if (emailRef.current) {
                 emailRef.current.focus()
             }
@@ -107,7 +109,7 @@ export default function SignIn() {
                     <EmailContainer isFocused={isFocused} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)}>
 
                         <EmailInput
-                            valid={validEmail}
+                            valid={validEmail && formatEmailValid}
                             value={email}
                             ref={emailRef}
                             placeholder=" "
@@ -121,13 +123,15 @@ export default function SignIn() {
                             }}
                         />
 
-                        <EmailLabel valid={validEmail}>E-mail ou telefone</EmailLabel>
+                        <EmailLabel valid={validEmail && formatEmailValid}>E-mail ou telefone</EmailLabel>
 
                     </EmailContainer>
 
-                    <EmailEmptyContainer valid={validEmail}>
+                    <EmailEmptyContainer valid={validEmail && formatEmailValid} >
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <span>Não foi possível encontrar sua Conta do Google.</span>
+                        <span>{!formatEmailValid
+                            ? 'O formato desse e-mail é inválido. Digite um e-mail válido!'
+                            : 'Digite seu e-mail.'}</span>
                     </EmailEmptyContainer>
 
                 </EmailInfoContainer>
@@ -136,7 +140,7 @@ export default function SignIn() {
 
                     <PasswordContainer passwordFocused={passwordFocused} onFocus={() => setPasswordFocused(true)} onBlur={() => setPasswordFocused(false)}>
                         <PasswordInput
-                            valid={validPassword}
+                            valid={validPassword && formatPasswordValid}
                             value={password}
                             ref={passwordRef}
                             maxLength={16}
@@ -156,12 +160,16 @@ export default function SignIn() {
                                 }
                             }}
                         />
-                        <PasswordLabel valid={validPassword}>Digite sua senha</PasswordLabel>
+                        <PasswordLabel valid={validPassword && formatPasswordValid}>Digite sua senha</PasswordLabel>
                     </PasswordContainer>
 
-                    <PasswordEmptyContainer valid={validPassword}>
+                    <PasswordEmptyContainer valid={validPassword && formatPasswordValid}>
                         <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <span>Senha incorreta. Tente novamente.</span>
+                        <span>
+                            {!formatPasswordValid
+                                ? 'Digite uma senha válida!'
+                                : 'Digite sua senha.'}
+                        </span>
                     </PasswordEmptyContainer>
 
                 </PasswordInfoContainer>
@@ -194,96 +202,3 @@ export default function SignIn() {
 
     )
 }
-
-/*  <LoginContainer>
-                <GoogleIconContainer alt="" src={GoogleIcon} />
-
-                <LoginSpanContainer>
-                    <span>Fazer login</span>
-                    <span >Prosseguir no YouTube</span>
-                </LoginSpanContainer>
-
-                <EmailInfoContainer>
-
-                    <EmailContainer isFocused={isFocused} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)}>
-
-                        <EmailInput
-                            valid={validEmail}
-                            value={email}
-                            ref={emailRef}
-                            placeholder=" "
-                            type='email'
-                            onChange={(e) => setEmail(e.target.value)}
-
-                            onKeyDown={(e) => {
-                                if (e.key === 'Enter') {
-                                    userLogin()
-                                }
-                            }}
-                        />
-
-                        <EmailLabel valid={validEmail}>E-mail ou telefone</EmailLabel>
-
-                    </EmailContainer>
-
-                    <EmptyContainer style={{ margin: '180px 0 0 -91%' }} valid={validEmail}>
-                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <EmptyMessage>Não foi possível encontrar sua Conta do Google.</EmptyMessage>
-                    </EmptyContainer>
-
-                </EmailInfoContainer>
-
-
-                <PasswordInfoContainer>
-
-                    <PasswordContainer passwordFocused={passwordFocused} onFocus={() => setPasswordFocused(true)} onBlur={() => setPasswordFocused(false)}>
-                        <PasswordInput
-                            valid={validPassword}
-                            value={password}
-                            ref={passwordRef}
-                            maxLength={16}
-                            placeholder=" "
-                            type={showPassword ? 'text' : 'password'}
-                            onChange={(e) => setPassword(e.target.value)}
-                            onKeyDown={(e) => {
-                                if (e.key === 'Enter') {
-                                    userLogin()
-                                }
-                                if (e.key === " ") {
-                                    e.preventDefault();
-                                }
-                            }}
-                        />
-                        <PasswordLabel valid={validPassword}>Digite sua senha</PasswordLabel>
-                    </PasswordContainer>
-
-                    <EmptyContainer style={{ margin: '74px 0 0 -91%' }} valid={validPassword}>
-                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <EmptyMessage>Senha incorreta. Tente novamente.</EmptyMessage>
-                    </EmptyContainer>
-
-                </PasswordInfoContainer>
-
-                <ShowPasswordContainer>
-
-                    <StyledCheckbox
-                        checked={showPassword}
-                        onChange={() => setShowPassword(!showPassword)}
-                    />
-
-                    <span onClick={() => setShowPassword(!showPassword)}>Mostrar senha</span>
-                </ShowPasswordContainer>
-
-                <ButtonsContainer>
-
-                    <SignUpContainer onClick={() => navigate('/sign-up')}>
-                        <span>Criar conta</span>
-                    </SignUpContainer>
-
-                    <NextButtonContainer>
-                        <span onClick={userLogin} >Próxima</span>
-                    </NextButtonContainer>
-
-                </ButtonsContainer>
-
-            </LoginContainer>*/
