@@ -58,39 +58,48 @@ export default function SignIn() {
         if (email.trim() !== '') {
             setValidEmail(true);
         }
+        if (/\S+@\S+\.\S+/.test(email)) {
+            setFormatEmailValid(true);
+        }
         if (password.trim() !== '') {
             setValidPassword(true);
         }
-        if (email.trim() === '' && password.trim() === '') {
-            setValidEmail(false);
-            setValidPassword(false);
-            if (emailRef.current) {
-                emailRef.current.focus()
-            }
+        if (password.length >= 8) {
+            setFormatPasswordValid(true);
         }
-        else if (email.trim() === '') {
+
+        const emailEmpty = email.trim() === '';
+        const emailFormatInvalid = !emailEmpty && !/\S+@\S+\.\S+/.test(email);
+        const passwordEmpty = password.trim() === '';
+        const passwordFormatInvalid = !passwordEmpty && password.length < 8;
+
+        if (emailEmpty) {
             setValidEmail(false);
             setFormatEmailValid(true);
-            if (emailRef.current) {
-                emailRef.current.focus()
-            }
-        }
-        else if (!/\S+@\S+\.\S+/.test(email)) {
+        } else if (emailFormatInvalid) {
             setFormatEmailValid(false);
-            setValidEmail(false);
-            if (emailRef.current) {
-                emailRef.current.focus()
-            }
+            setValidEmail(true);
         }
-        else if (password.trim() === '' || password.length < 8) {
-            setValidPassword(false)
-            if (passwordRef.current) {
-                passwordRef.current.focus()
-            }
+
+        if (passwordEmpty) {
+            setValidPassword(false);
+            setFormatPasswordValid(true);
+        } else if (passwordFormatInvalid) {
+            setFormatPasswordValid(false);
+            setValidPassword(true);
         }
-        else {
-            handleLogin(email, password)
+
+        if (emailEmpty || emailFormatInvalid) {
+            emailRef.current?.focus();
+            return;
         }
+
+        if (passwordEmpty || passwordFormatInvalid) {
+            passwordRef.current?.focus();
+            return;
+        }
+
+        handleLogin(email, password);
     }
 
 
@@ -136,9 +145,10 @@ export default function SignIn() {
 
                 </EmailInfoContainer>
 
-                <PasswordInfoContainer valid={validPassword}>
+                <PasswordInfoContainer valid={validPassword && formatPasswordValid}>
 
                     <PasswordContainer passwordFocused={passwordFocused} onFocus={() => setPasswordFocused(true)} onBlur={() => setPasswordFocused(false)}>
+
                         <PasswordInput
                             valid={validPassword && formatPasswordValid}
                             value={password}
@@ -148,9 +158,9 @@ export default function SignIn() {
                             type={showPassword ? 'text' : 'password'}
                             onChange={(e) => {
                                 const passwordValue = e.target.value;
-                                setPassword(passwordValue);
-                                setValidPassword(passwordValue.trim() !== '' && passwordValue.length >= 8);
+                                setPassword(passwordValue)
                             }}
+
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter') {
                                     userLogin()
