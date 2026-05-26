@@ -30,6 +30,9 @@ import {
     ComparePasswordUserContainer,
     ComparePasswordUserInput,
     ComparePasswordUserLabel,
+    UserNameContainer,
+    UserNameUserContainer,
+    UserNameInput,
     PasswordMessageContainer,
     ShowPasswordContainer,
     StyledCheckbox,
@@ -40,6 +43,7 @@ import {
     EmptyContainer,
     EmptyMessage,
     ExclamationIconContainer,
+    UserNameLabel,
 
 } from './sign-up-styles';
 
@@ -295,7 +299,7 @@ export default function SignUp() {
                     </EmptyContainer>
                 </PasswordContainer>
 
-                <ComparePasswordContainer >
+                <ComparePasswordContainer>
                     <ComparePasswordUserContainer comparePasswordFocus={comparePasswordFocus} onFocus={() => setComparePasswordFocus(true)} onBlur={() => setComparePasswordFocus(false)}>
 
                         <ComparePasswordUserInput
@@ -319,6 +323,16 @@ export default function SignUp() {
                         </EmptyMessage>
                     </EmptyContainer>
                 </ComparePasswordContainer>
+
+                <UserNameContainer>
+                    <UserNameUserContainer>
+
+                        <UserNameInput />
+
+                        <UserNameLabel>Nome de usuário</UserNameLabel>
+
+                    </UserNameUserContainer>
+                </UserNameContainer>
 
                 <PasswordMessageContainer><span>Use 8 caracteres com uma combinação de letras, números e símbolos.</span></PasswordMessageContainer>
 

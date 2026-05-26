@@ -110,9 +110,7 @@ height: 40px}}
 width: 32px;
 height: 32px}}
 
-@media (max-height: 535px) {@media (max-width: 329px) {margin-top: 1px}}
-
-`;
+@media (max-height: 535px) {@media (max-width: 329px) {margin-top: 1px}}`;
 
 export const Title = styled.h2`
 display: flex;
@@ -180,6 +178,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: 50px 0px 0 60px;
+background-color: green;
 
 @media(max-width: 1559px) {margin: 50px 0px 0 40px}
 
@@ -435,7 +434,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: -99.5px 0 0px 335px;
-background-color: #fff;
+background-color: green;
 
 @media(max-width: 1559px) {margin: -99.7px 0 0 310px}
 
@@ -718,7 +717,7 @@ display: flex;
 height: 100px;
 width: 530px;
 margin: 40px 0 0 60px;
-background-color: #fff;
+background-color: green;
 
 @media(max-width: 1559px) {margin-left: 39px}
 
@@ -942,7 +941,7 @@ export const EmailUserLabel = styled.label<InputValid>`
 display: flex;
 height: 21px;
 width: 50px;
-margin: ${({ valid }) => valid ? '19px 0 0 -503px' : '17px 0 0 -510px'};
+margin: ${({ valid }) => valid ? '19px 0 0 -510px' : '17px 0 0 -515px'};
 font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
@@ -976,7 +975,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: 40px 0 0 60px;
-background-color: #fff;
+background-color: green;
 
 @media(max-width: 1559px) {margin: 40px 0 0 40px}
 
@@ -1246,6 +1245,7 @@ display: flex;
 height: 100px;
 width: 255px;
 margin: -100px 0 0 335px;
+background-color: green;
 
 @media(max-width: 1559px) {margin-left: 310px}
 
@@ -1571,6 +1571,52 @@ font-size: 14px}
 @media (max-width: 599px) {
 margin-top: 14px;
 font-size: 14px}}`;
+
+export const UserNameContainer = styled.div`
+display: flex;
+height: 100px;
+width: 255px;
+margin: 10px 0 0 200px;
+background-color: red;`;
+
+export const UserNameUserContainer = styled.div`
+display: flex;
+height: 55px;
+width: 250px;
+margin-top: 15px;
+border: solid;
+border-radius: 5px;
+border-width: 1px;
+border-color: grey;
+background-color: #fff;`;
+
+export const UserNameInput = styled.input`
+width: 238px;
+height: 53px;
+border-color: red;
+border-radius: 5px;
+padding-left: 10px;
+font-size: 16px;
+outline: none;
+background-color: #fff;
+
+&:focus + label,
+&:not(:placeholder-shown) + label {
+height: 15px;
+width: 100px;
+font-size: 12px;
+transform: translateY(-28px)}`;
+
+export const UserNameLabel = styled.label<InputValid>`
+display: flex;
+height: 21px;
+width: 120px;
+font-size: 16px;
+transition: 0.2s ease all;
+pointer-events: none;
+margin: 19px 0 0 -234px;
+color: #333;
+background-color: #fff;`;
 
 export const PasswordMessageContainer = styled.div`
 display: flex;
