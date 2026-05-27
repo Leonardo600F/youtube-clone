@@ -30,9 +30,10 @@ import {
     ComparePasswordUserContainer,
     ComparePasswordUserInput,
     ComparePasswordUserLabel,
-    UserNameContainer,
-    UserNameUserContainer,
-    UserNameInput,
+    NicknameContainer,
+    NicknameUserContainer,
+    NicknameUserInput,
+    NicknameUserLabel,
     PasswordMessageContainer,
     ShowPasswordContainer,
     StyledCheckbox,
@@ -43,7 +44,6 @@ import {
     EmptyContainer,
     EmptyMessage,
     ExclamationIconContainer,
-    UserNameLabel,
 
 } from './sign-up-styles';
 
@@ -62,6 +62,7 @@ export default function SignUp() {
     const [emailFocus, setEmailFocus] = useState(false);
     const [passwordFocus, setPasswordFocus] = useState(false);
     const [comparePasswordFocus, setComparePasswordFocus] = useState(false);
+    const [NicknameFocus, setNicknameFocus] = useState(false);
 
     const handleShowPassword = () => { setShowPassword(!setShowPassword) }
 
@@ -70,23 +71,28 @@ export default function SignUp() {
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
     const [comparePassword, setComparePassword] = useState('');
+    const [userNickname, setUserNickname] = useState('');
 
     const [userNameValid, setUserNameValid] = useState(true);
     const [userSurnameValid, setUserSurnameValid] = useState(true);
     const [userEmailValid, setUserEmailValid] = useState(true);
     const [userPasswordValid, setUserPasswordValid] = useState(true);
     const [comparePasswordValid, setComparePasswordValid] = useState(true);
+    const [userNicknameValid, setUserNicknameValid] = useState(true);
 
     const [formatNameValid, setFormatNameValid] = useState(true);
     const [formatEmailValid, setFormatEmailValid] = useState(true);
     const [formatPasswordValid, setFormatPasswordValid] = useState(true);
+    const [formatNicknameValid, setFormatNicknameValid] = useState(true);
     const [samePassword, setSamePassword] = useState(true);
+
 
     const nameRef = useRef<HTMLInputElement>(null);
     const surnameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const comparePasswordRef = useRef<HTMLInputElement>(null);
+    const nicknameRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         if (nameRef.current !== null) { nameRef.current.focus() }
@@ -324,15 +330,21 @@ export default function SignUp() {
                     </EmptyContainer>
                 </ComparePasswordContainer>
 
-                <UserNameContainer>
-                    <UserNameUserContainer>
+                <NicknameContainer>
+                    <NicknameUserContainer>
 
-                        <UserNameInput />
+                        <NicknameUserInput
+                            valid={userNicknameValid && formatNicknameValid} />
+                        value={userNickname}
+                        ref={nicknameRef}
+                        placeholder=' '
+                        type={showPassword ? 'text' : 'password'}
+                        onChange={(e) => { setComparePassword(e.target.value) }}
 
-                        <UserNameLabel>Nome de usuário</UserNameLabel>
+                        <NicknameUserLabel>Nome de usuário</NicknameUserLabel>
 
-                    </UserNameUserContainer>
-                </UserNameContainer>
+                    </NicknameUserContainer>
+                </NicknameContainer>
 
                 <PasswordMessageContainer><span>Use 8 caracteres com uma combinação de letras, números e símbolos.</span></PasswordMessageContainer>
 
@@ -363,270 +375,3 @@ export default function SignUp() {
         </MainContainer>
     )
 }
-
-/* import { useState, useContext, useRef, useEffect } from 'react';
-import { UserContext } from '../../context/userContext';
-import { useNavigate } from 'react-router-dom';
-
-import GoogleIcon from '../../assets/icon-google.png';
-import ExclamationIcon from '../../assets/icon-exclamation.png';
-
-import {
-    MainContainer,
-    SignUpContainer,
-    GoogleIconContainer,
-    Title,
-    FirstNameContainer,
-    FirstNameUserContainer,
-    FirstNameUserInput,
-    FirstNameLabel,
-    SurnameContainer,
-    SurnameUserContainer,
-    SurnameUserInput,
-    SurnameLabel,
-    EmailContainer,
-    EmailUserContainer,
-    EmailUserInput,
-    EmailUserLabel,
-    PasswordContainer,
-    PasswordUserContainer,
-    PasswordUserInput,
-    PasswordUserLabel,
-    ComparePasswordContainer,
-    ComparePasswordUserContainer,
-    ComparePasswordUserInput,
-    ComparePasswordUserLabel,
-    PasswordMessageContainer,
-    ShowPasswordContainer,
-    StyledCheckbox,
-    LoginPageContainer,
-    LoginPage,
-    NextButtonContainer,
-    NextButton,
-    EmptyContainer,
-    EmptyMessage,
-    ExclamationIconContainer,
-} from './sign-up-styles';
-
-export default function SignUp() {
-    const navigate = useNavigate();
-
-    const { showPassword, setShowPassword, handleCreateUser } =
-        useContext(UserContext);
-
-    // 🔹 Estado centralizado
-    const [form, setForm] = useState({
-        name: '',
-        surname: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-    });
-
-    const [errors, setErrors] = useState({
-        name: false,
-        surname: false,
-        email: false,
-        password: false,
-        confirmPassword: false,
-        emailFormat: false,
-        passwordMatch: false,
-    });
-
-    // 🔹 Refs
-    const nameRef = useRef<HTMLInputElement>(null);
-    const surnameRef = useRef<HTMLInputElement>(null);
-    const emailRef = useRef<HTMLInputElement>(null);
-    const passwordRef = useRef<HTMLInputElement>(null);
-    const confirmPasswordRef = useRef<HTMLInputElement>(null);
-
-    useEffect(() => {
-        nameRef.current?.focus();
-    }, []);
-
-    // 🔹 Atualizador genérico
-    const updateField = (field: string, value: string) => {
-        setForm((prev) => ({ ...prev, [field]: value }));
-    };
-
-    // 🔹 Validação limpa
-    const validate = () => {
-        const newErrors = {
-            name: form.name.trim() === '',
-            surname: form.surname.trim() === '',
-            email: form.email.trim() === '',
-            password: form.password.length < 8,
-            confirmPassword: form.confirmPassword === '',
-            emailFormat: !/\S+@\S+\.\S+/.test(form.email),
-            passwordMatch: form.password !== form.confirmPassword,
-        };
-
-        setErrors(newErrors);
-
-        // foco inteligente
-        if (newErrors.name) return nameRef.current?.focus();
-        if (newErrors.surname) return surnameRef.current?.focus();
-        if (newErrors.email || newErrors.emailFormat)
-            return emailRef.current?.focus();
-        if (newErrors.password) return passwordRef.current?.focus();
-        if (newErrors.confirmPassword || newErrors.passwordMatch)
-            return confirmPasswordRef.current?.focus();
-
-        return !Object.values(newErrors).includes(true);
-    };
-
-    const createUser = () => {
-        if (!validate()) return;
-
-        handleCreateUser(
-            form.name,
-            form.surname,
-            form.email,
-            form.password
-        );
-    };
-
-    return (
-        <MainContainer>
-            <SignUpContainer>
-                <GoogleIconContainer src={GoogleIcon} />
-                <Title>Criar uma conta no YouTube</Title>
-
-                <FirstNameContainer>
-                    <FirstNameUserContainer>
-                        <FirstNameUserInput
-                        valid={userNameValid}
-                            value={form.name}
-                            ref={nameRef}
-                            placeholder=" "
-                            onChange={(e) => updateField('name', e.target.value)}
-                        />
-                        <FirstNameLabel valid={userNameValid}>Nome</FirstNameLabel>
-                    </FirstNameUserContainer>
-
-                    {errors.name && (
-                        <EmptyContainer>
-                            <ExclamationIconContainer src={ExclamationIcon} />
-                            <EmptyMessage>Digite um nome</EmptyMessage>
-                        </EmptyContainer>
-                    )}
-                </FirstNameContainer>
-
-                <SurnameContainer>
-                    <SurnameUserContainer>
-                        <SurnameUserInput
-                            valid={userSurnameValid}
-                            value={form.surname}
-                            ref={surnameRef}
-                            placeholder=" "
-                            onChange={(e) => updateField('surname', e.target.value)}
-                        />
-                        <SurnameLabel valid={userSurnameValid}>Sobrenome</SurnameLabel>
-                    </SurnameUserContainer>
-
-                    {errors.surname && (
-                        <EmptyContainer>
-                            <ExclamationIconContainer src={ExclamationIcon} />
-                            <EmptyMessage>Digite um sobrenome</EmptyMessage>
-                        </EmptyContainer>
-                    )}
-                </SurnameContainer>
-
-                <EmailContainer>
-                    <EmailUserContainer>
-                        <EmailUserInput
-                        valid={userEmailValid}
-                            value={form.email}
-                            ref={emailRef}
-                            placeholder=" "
-                            onChange={(e) => updateField('email', e.target.value)}
-                        />
-                        <EmailUserLabel valid={userEmailValid}>E-mail</EmailUserLabel>
-                    </EmailUserContainer>
-
-                    {(errors.email || errors.emailFormat) && (
-                        <EmptyContainer valid={userEmailValid}>
-                            <ExclamationIconContainer src={ExclamationIcon} />
-                            <EmptyMessage>E-mail inválido</EmptyMessage>
-                        </EmptyContainer>
-                    )}
-                </EmailContainer>
-
-                <PasswordContainer>
-                    <PasswordUserContainer>
-                        <PasswordUserInput
-                            valid={userPasswordValid}
-                            value={form.password}
-                            ref={passwordRef}
-                            placeholder=" "
-                            type={showPassword ? 'text' : 'password'}
-                            onChange={(e) => updateField('password', e.target.value)}
-                        />
-                        <PasswordUserLabel valid={userPasswordValid}>Senha</PasswordUserLabel>
-                    </PasswordUserContainer>
-
-                    {errors.password && (
-                        <EmptyContainer valid={userPasswordValid}>
-                            <ExclamationIconContainer src={ExclamationIcon} />
-                            <EmptyMessage>Senha inválida</EmptyMessage>
-                        </EmptyContainer>
-                    )}
-                </PasswordContainer>
-
-                <ComparePasswordContainer>
-                    <ComparePasswordUserContainer>
-                        <ComparePasswordUserInput
-                            valid={userPasswordValid}
-                            value={form.confirmPassword}
-                            ref={confirmPasswordRef}
-                            placeholder=" "
-                            type={showPassword ? 'text' : 'password'}
-                            onChange={(e) =>
-                                updateField('confirmPassword', e.target.value)
-                            }
-                        />
-                        <ComparePasswordUserLabel valid={userPasswordValid}>Confirmar senha</ComparePasswordUserLabel>
-                    </ComparePasswordUserContainer>
-
-                    {(errors.confirmPassword || errors.passwordMatch) && (
-                        <EmptyContainer valid={userPasswordValid}>
-                            <ExclamationIconContainer src={ExclamationIcon} />
-                            <EmptyMessage>Senhas não coincidem</EmptyMessage>
-                        </EmptyContainer>
-                    )}
-                </ComparePasswordContainer>
-
-                <PasswordMessageContainer>
-                    <span>
-                        Use 8 caracteres com uma combinação de letras,
-                        números e símbolos.
-                    </span>
-                </PasswordMessageContainer>
-
-                <ShowPasswordContainer>
-                    <StyledCheckbox
-                        checked={showPassword}
-                        onChange={() => setShowPassword((prev) => !prev)}
-                    />
-                    <span onClick={() => setShowPassword((prev) => !prev)}>
-                        Mostrar senha
-                    </span>
-                </ShowPasswordContainer>
-
-                <LoginPageContainer>
-                    <LoginPage>
-                        <span onClick={() => navigate('/sign-in')}>
-                            Faça login em vez disso
-                        </span>
-                    </LoginPage>
-                </LoginPageContainer>
-
-                <NextButtonContainer>
-                    <NextButton onClick={createUser}>
-                        Próxima
-                    </NextButton>
-                </NextButtonContainer>
-            </SignUpContainer>
-        </MainContainer>
-    );
-} */
