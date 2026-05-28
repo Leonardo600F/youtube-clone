@@ -1580,7 +1580,7 @@ width: 255px;
 margin: 10px 0 0 200px;
 background-color: #fff;`;
 
-export const NicknameUserContainer = styled.div`
+export const NicknameUserContainer = styled.div<NicknameFocused>`
 display: flex;
 height: 55px;
 width: 250px;

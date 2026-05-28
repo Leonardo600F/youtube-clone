@@ -331,7 +331,7 @@ export default function SignUp() {
                 </ComparePasswordContainer>
 
                 <NicknameContainer>
-                    <NicknameUserContainer>
+                    <NicknameUserContainer NicknameFocus={NicknameFocus} onFocus={() => setNicknameFocus(true)} onBlur={() => setNicknameFocus(false)}>
 
                         <NicknameUserInput
                             valid={userNicknameValid && formatNicknameValid} />
