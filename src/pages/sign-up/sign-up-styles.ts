@@ -7,7 +7,7 @@ interface SurnameFocused { surnameFocus: boolean }
 interface EmailFocused { emailFocus: boolean }
 interface PasswordFocused { passwordFocus: boolean }
 interface ComparePasswordFocused { comparePasswordFocus: boolean }
-interface NicknameFocused { comparePasswordFocus: boolean }
+interface NicknameFocused { nicknameFocus: boolean }
 
 export const MainContainer = styled.div`
 display: flex;
@@ -1587,8 +1587,8 @@ width: 250px;
 margin-top: 15px;
 border: solid;
 border-radius: 5px;
-border-width: 1px;
-border-color: grey;
+border-width: ${({ nicknameFocus }) => nicknameFocus ? '2px' : '1px'};
+border-color: ${({ nicknameFocus }) => nicknameFocus ? '#4169E1' : 'grey'};
 background-color: #fff;`;
 
 export const NicknameUserInput = styled.input<InputValid>`
@@ -1608,7 +1608,7 @@ width: 100px;
 font-size: 12px;
 transform: translateY(-28px)}`;
 
-export const NicknameUserLabel = styled.label`
+export const NicknameUserLabel = styled.label<InputValid>`
 display: flex;
 height: 21px;
 width: 120px;

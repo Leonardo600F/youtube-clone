@@ -117,6 +117,8 @@ export default function SignUp() {
 
         if (userPassword === comparePassword && userPassword !== '') { setSamePassword(true) }
 
+        if (userNickname.trim() !== '') { setFormatNicknameValid(true) }
+
         if (userName.trim() === '' && userEmail.trim() === '' && userPassword.trim() === '') {
             setUserNameValid(false);
             setUserSurnameValid(false);
@@ -183,7 +185,19 @@ export default function SignUp() {
             if (comparePasswordRef.current) { comparePasswordRef.current.focus() }
         }
 
-        else { handleCreateUser(userName, userSurname, userEmail, userPassword) }
+        else if (userNickname.trim() === '') {
+            setUserNicknameValid(false);
+            setFormatNicknameValid(true);
+            if (nicknameRef.current) { nicknameRef.current.focus() }
+        }
+
+        else if (!/\S+@\S+\.\S+/.test(userNickname)) {
+            setFormatNicknameValid(false);
+            setUserNicknameValid(true);
+            if (nicknameRef.current) { nicknameRef.current.focus() }
+        }
+
+        else { handleCreateUser(userName, userSurname, userEmail, userPassword, userNickname) }
     }
 
     return (
@@ -334,14 +348,14 @@ export default function SignUp() {
                     <NicknameUserContainer NicknameFocus={NicknameFocus} onFocus={() => setNicknameFocus(true)} onBlur={() => setNicknameFocus(false)}>
 
                         <NicknameUserInput
-                            valid={userNicknameValid && formatNicknameValid} />
-                        value={userNickname}
-                        ref={nicknameRef}
-                        placeholder=' '
-                        type={showPassword ? 'text' : 'password'}
-                        onChange={(e) => { setComparePassword(e.target.value) }}
+                            valid={userNicknameValid && formatNicknameValid}
+                            value={userNickname}
+                            ref={nicknameRef}
+                            placeholder=' '
+                            type='text'
+                            onChange={(e) => { setUserNickname(e.target.value) }} />
 
-                        <NicknameUserLabel>Nome de usuário</NicknameUserLabel>
+                        <NicknameUserLabel valid={userNicknameValid && formatNicknameValid}>Nome de usuário</NicknameUserLabel>
 
                     </NicknameUserContainer>
                 </NicknameContainer>
