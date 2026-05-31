@@ -62,7 +62,7 @@ export default function SignUp() {
     const [emailFocus, setEmailFocus] = useState(false);
     const [passwordFocus, setPasswordFocus] = useState(false);
     const [comparePasswordFocus, setComparePasswordFocus] = useState(false);
-    const [NicknameFocus, setNicknameFocus] = useState(false);
+    const [nicknameFocus, setNicknameFocus] = useState(false);
 
     const handleShowPassword = () => { setShowPassword(!setShowPassword) }
 
@@ -345,7 +345,7 @@ export default function SignUp() {
                 </ComparePasswordContainer>
 
                 <NicknameContainer>
-                    <NicknameUserContainer NicknameFocus={NicknameFocus} onFocus={() => setNicknameFocus(true)} onBlur={() => setNicknameFocus(false)}>
+                    <NicknameUserContainer nicknameFocus={nicknameFocus} onFocus={() => setNicknameFocus(true)} onBlur={() => setNicknameFocus(false)}>
 
                         <NicknameUserInput
                             valid={userNicknameValid && formatNicknameValid}
@@ -358,6 +358,15 @@ export default function SignUp() {
                         <NicknameUserLabel valid={userNicknameValid && formatNicknameValid}>Nome de usuário</NicknameUserLabel>
 
                     </NicknameUserContainer>
+
+                    <EmptyContainer valid={userNicknameValid && formatNicknameValid}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <EmptyMessage>
+                            {!formatNicknameValid
+                                ? 'Digite um nome de usuário válido!'
+                                : 'Digite seu nome de usuário.'}
+                        </EmptyMessage>
+                    </EmptyContainer>
                 </NicknameContainer>
 
                 <PasswordMessageContainer><span>Use 8 caracteres com uma combinação de letras, números e símbolos.</span></PasswordMessageContainer>

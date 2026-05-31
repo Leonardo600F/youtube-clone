@@ -67,7 +67,7 @@ border-radius: 0}
 export const GoogleIconContainer = styled.img`
 width: 50px;
 height: 50px;
-margin: 45px 0px 0 300px;
+margin: 35px 0px 0 300px;
 border-radius: 50%;
 
 @media(max-width: 1559px) {
@@ -1576,14 +1576,14 @@ font-size: 14px}}`;
 export const NicknameContainer = styled.div`
 display: flex;
 height: 100px;
-width: 255px;
-margin: 10px 0 0 200px;
-background-color: #fff;`;
+width: 530px;
+margin: 40px 0 0 60px;
+background-color: red;`;
 
 export const NicknameUserContainer = styled.div<NicknameFocused>`
 display: flex;
 height: 55px;
-width: 250px;
+width: 525px;
 margin-top: 15px;
 border: solid;
 border-radius: 5px;
@@ -1593,7 +1593,10 @@ background-color: #fff;`;
 
 export const NicknameUserInput = styled.input<InputValid>`
 width: 238px;
+width: 513px;
 height: 53px;
+margin: ${({ valid }) => valid ? 'none' : '-4px 0 0 -2px'};
+border: ${({ valid }) => valid ? 'none' : 'solid 3px'};
 border-color: red;
 border-radius: 5px;
 padding-left: 10px;
@@ -1606,17 +1609,18 @@ background-color: #fff;
 height: 15px;
 width: 100px;
 font-size: 12px;
-transform: translateY(-28px)}`;
+transform: translateY(-28px);
+color: ${({ valid }) => valid ? '#4169E1' : 'red'}}`;
 
 export const NicknameUserLabel = styled.label<InputValid>`
 display: flex;
 height: 21px;
-width: 120px;
+width: 130px;
+margin: ${({ valid }) => valid ? '19px 0 0 -510px' : '17px 0 0 -515px'};
 font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
-margin: 19px 0 0 -234px;
-color: #333;
+color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;`;
 
 export const PasswordMessageContainer = styled.div`
