@@ -1578,7 +1578,49 @@ display: flex;
 height: 100px;
 width: 530px;
 margin: 40px 0 0 60px;
-background-color: red;`;
+background-color: red;
+
+@media(max-width: 1559px) {margin-left: 39px}
+
+@media(max-width: 1280px) {
+width: 530px;
+margin-top: 10px}
+
+@media(max-width: 630px) {
+width: 482px;
+margin-left: 20px}
+
+@media(max-width: 599px) {
+width: 560px;
+margin: 15px 0 0 26px}
+
+@media(max-width: 589px) {
+width: 520px;
+height: 102px}
+
+@media(max-width: 559px) {width: 485px}
+
+@media(max-width: 529px) {width: 465px}
+
+@media(max-width: 509px) {width: 455px}
+
+@media(max-width: 489px) {width: 435px}
+
+@media(max-width: 469px) {width: 415px}
+
+@media(max-width: 449px) {width: 395px}
+
+@media(max-width: 429px) {width: 375px}
+
+@media(max-width: 409px) {width: 355px}
+
+@media(max-width: 389px) {width: 335px}
+
+@media(max-width: 369px) {width: 315px}
+
+@media(max-width: 349px) {width: 295px}
+
+@media(max-width: 329px) {width: 275px}`;
 
 export const NicknameUserContainer = styled.div<NicknameFocused>`
 display: flex;
@@ -1589,7 +1631,39 @@ border: solid;
 border-radius: 5px;
 border-width: ${({ nicknameFocus }) => nicknameFocus ? '2px' : '1px'};
 border-color: ${({ nicknameFocus }) => nicknameFocus ? '#4169E1' : 'grey'};
-background-color: #fff;`;
+background-color: #fff;
+
+@media(max-width: 1280px) {width: 520px}
+
+@media(max-width: 630px) {width: 477px}
+
+@media(max-width: 599px) {width: 554px}
+
+@media(max-width: 589px) {width: 516px}
+
+@media(max-width: 559px) {width: 480px}
+
+@media(max-width: 529px) {width: 460px}
+
+@media(max-width: 509px) {width: 450px}
+
+@media(max-width: 489px) {width: 430px}
+
+@media(max-width: 469px) {width: 410px}
+
+@media(max-width: 449px) {width: 390px}
+
+@media(max-width: 429px) {width: 370px}
+
+@media(max-width: 409px) {width: 350px}
+
+@media(max-width: 389px) {width: 330px}
+
+@media(max-width: 369px) {width: 310px}
+
+@media(max-width: 349px) {width: 290px}
+
+@media(max-width: 329px) {width: 270px}`;
 
 export const NicknameUserInput = styled.input<InputValid>`
 width: 238px;
@@ -1603,6 +1677,38 @@ padding-left: 10px;
 font-size: 16px;
 outline: none;
 background-color: #fff;
+
+@media(max-width: 1280px) {width: 508px}
+
+@media(max-width: 630px) {width: 465px}
+
+@media(max-width: 599px) {width: 542px}
+
+@media(max-width: 589px) {width: 504px}
+
+@media(max-width: 559px) {width: 468px}
+
+@media(max-width: 529px) {width: 448px}
+
+@media(max-width: 509px) {width: 437px}
+
+@media(max-width: 489px) {width: 417px}
+
+@media(max-width: 469px) {width: 397px}
+
+@media(max-width: 449px) {width: 377px}
+
+@media(max-width: 429px) {width: 357px}
+
+@media(max-width: 409px) {width: 337px}
+
+@media(max-width: 389px) {width: 317px}
+
+@media(max-width: 369px) {width: 297px}
+
+@media(max-width: 349px) {width: 278px}
+
+@media(max-width: 329px) {width: 259px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -1621,7 +1727,19 @@ font-size: 16px;
 transition: 0.2s ease all;
 pointer-events: none;
 color: ${({ valid }) => valid ? '#333' : 'red'};
-background-color: #fff;`;
+background-color: #fff;
+
+@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-463px' : '-473px'}}
+
+@media (max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
+
+@media (max-width: 369px) {margin-left: ${({ valid }) => valid ? '-295px' : '-297px'}}
+
+@media (max-width: 349px) {margin-left: ${({ valid }) => valid ? '-280px' : '-282px'}}
+
+@media (max-width: 329px) {
+margin-left: ${({ valid }) => valid ? '-260px' : '-262px'};
+font-size: 14px}`;
 
 export const PasswordMessageContainer = styled.div`
 display: flex;
