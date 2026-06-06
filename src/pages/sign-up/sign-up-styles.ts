@@ -62,7 +62,9 @@ top: 335px}
 height: 595px;
 top: 315px}
 
-@media (max-height: 625px) {height: 550px}
+@media (max-height: 625px) {
+height: 570px;
+top: 295px}
 
 @media(max-height: 625px) {@media(max-width: 599px) {height: 100vh}}
 
@@ -105,8 +107,9 @@ width: 45px;
 height: 45px}}
 
 @media(max-height: 625px) {
-width: 40px;
-height: 40px}
+width: 38px;
+height: 38px;
+margin-top: 0px}
 
 @media (max-height: 600px) {@media (max-width: 599px) {
 width: 40px;
@@ -163,7 +166,9 @@ font-size: 21.5px}}
 
 @media (max-height: 700px) {@media (max-width: 329px) {font-size: 21px}}
 
-@media (max-height: 625px) {margin: 1px 0 0 113px}
+@media (max-height: 625px) {
+margin: -2px 0 0 201px;
+font-size: 19px}
 
 @media (max-height: 625px) {@media (max-width: 599px) {margin-left: 25px}}
 
@@ -253,6 +258,8 @@ margin-top: 10px}}
 @media (max-height: 660px) {height: 80px}
 
 @media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
+
+@media (max-height: 625px) {margin-top: 11px}
 
 @media (max-height: 625px) {@media (max-width: 589px) {height: 90px}} 
 
@@ -1978,6 +1985,8 @@ color: #2F4F4F;
 
 @media (max-height: 640px) {@media (max-width: 349px) {font-size: 13.5px}}
 
+@media (max-height: 625px) {font-size: 14px}
+
 @media (max-height: 625px) {@media (max-width: 589px) {font-size: 16.5px}}
 
 @media (max-height: 625px) {@media (max-width: 559px) {font-size: 15.5px}}
@@ -2246,7 +2255,7 @@ margin: -48px 0 0 430px;
 
 @media(max-height: 640px) {@media (max-width: 389px) {margin-top: -35px}}
 
-@media (max-height: 625px) {margin-top: 32px}
+@media(max-height: 625px) {margin-top: -43px}
 
 @media(max-height: 625px) {@media (max-width: 599px) {margin: -75px 0 0 430px}}
 
