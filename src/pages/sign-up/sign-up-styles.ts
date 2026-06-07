@@ -1410,6 +1410,10 @@ margin-top: -80px}
 height: 90px;
 margin-top: -90px}}
 
+@media (max-height: 625px) and (min-width: 600px) {
+height: 80px;
+margin-top: -80px}
+
 @media (max-height: 625px) {
 @media (max-width: 589px) {
 height: 90px;
@@ -1417,17 +1421,11 @@ margin-top: -90px}}
 
 @media (max-height: 625px) {@media (max-width: 559px) {margin-top: -89px}}
 
-@media (max-height: 625px) {
-@media (max-width: 549px) {margin-top: -84px}}
+@media (max-height: 625px) {@media (max-width: 549px) {margin-top: -84px}}
 
-@media (max-height: 625px) and (min-width: 600px) {
-height: 88px;
-margin-top: -87px}
+@media (max-height: 625px) and (min-width: 528px) and (max-width: 599px) {margin-top: -88px}
 
-@media (max-height: 625px) and (min-width: 528px) {margin-top: -88px}
-
-@media (max-height: 625px) {
-@media (max-width: 509px) {margin-top: -89.5px}}
+@media (max-height: 625px) {@media (max-width: 509px) {margin-top: -89.5px}}
 
 @media (max-height: 600px) {
 @media (max-width: 599px) {
@@ -2167,10 +2165,12 @@ span{font-size: 13.2px}}}
 height: 36px;
 span{font-size: 12px}}}
 
-@media (max-height: 625px) {
-height: 45px;
-width: 195px;
-span{font-size: 15px}}
+@media (max-height: 625px) {@media (min-width: 600px) {
+height: 36px;
+width: 185px;
+span{
+font-size: 13.5px;
+padding-top: 8.5px}}}
 
 @media(max-height: 625px) {@media (max-width: 528px) {height: 40px}}
 
@@ -2254,8 +2254,6 @@ margin: -48px 0 0 430px;
 @media(max-height: 725px) {margin-top: -39px}
 
 @media(max-height: 640px) {@media (max-width: 389px) {margin-top: -35px}}
-
-@media(max-height: 625px) {margin-top: -43px}
 
 @media(max-height: 625px) {@media (max-width: 599px) {margin: -75px 0 0 430px}}
 
@@ -2377,12 +2375,7 @@ font-size: 14px}}
 @media (max-height: 640px) {
 @media (max-width: 389px) {
 height: 36px;
-
 span{font-size: 12px}}}
-
-@media (max-height: 625px) {
-width: 145px;
-height: 45px}
 
 @media(max-height: 625px) {
 @media (max-width: 528px) {
@@ -2397,6 +2390,13 @@ width: 115px;
 height: 40px}}
 
 @media (max-height: 625px) {@media (max-width: 340px) {width: 110px}}
+
+@media (max-height: 625px) {@media (min-width: 600px) {
+height: 40px;
+width: 135px;
+span{
+font-size: 13.5px;
+padding-top: 1px}}}
 
 @media (max-height: 620px) {
 @media (max-width: 409px) {
