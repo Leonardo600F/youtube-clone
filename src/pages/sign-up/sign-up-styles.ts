@@ -76,6 +76,10 @@ top: 315px}}
 height: 570px;
 top: 295px}}
 
+@media(max-height: 625px) {@media(max-width: 600px) {
+height: 580px;
+top: 300px}}
+
 @media(max-height: 625px) {@media(max-width: 599px) {
 height: 100vh;
 top: 312px}}
@@ -145,6 +149,11 @@ margin-top: 0px}}
 width: 40px;
 height: 40px}}
 
+@media (max-height: 595px) {@media (max-width: 600px) {
+width: 37px;
+height: 37px;
+margin-top: 0px}}
+
 @media (max-height: 580px) {@media (max-width: 599px) {
 width: 32px;
 height: 32px}}
@@ -205,8 +214,14 @@ font-size: 21.5px}}
 
 @media (max-height: 630px) {@media(max-width: 599px) {font-size: 18px}}
 
-@media (max-height: 625px) {@media(min-width: 620px) {
+@media (max-height: 625px) {
+@media(min-width: 620px) {
 margin: -2px 0 0 201px;
+font-size: 19px}}
+
+@media (max-height: 625px) {
+@media (max-width: 600px) {
+margin: -5px 0 0 150px;
 font-size: 19px}}
 
 @media (max-height: 625px) {@media (max-width: 599px) {margin-left: 25px}}
@@ -304,15 +319,19 @@ margin-top: 10px}}
 
 @media (max-height: 625px) {@media (min-width: 620px) {margin-top: 11px}}
 
-@media (max-height: 625px) {@media (max-width: 589px) {height: 90px}} 
-
 @media (max-height: 625px) and (min-width: 600px) {height: 88px}
+
+@media (max-height: 625px) {@media (max-width: 600px) {height: 81px}}
+
+@media (max-height: 625px) {@media (max-width: 589px) {height: 90px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
 @media (max-height: 600px) {@media (max-width: 589px) {height: 84px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 82px}
 
@@ -381,6 +400,8 @@ margin-top: 0px}}
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 50px}
 
@@ -459,6 +480,8 @@ background-color: #fff;
 
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
 
+@media (max-height: 595px) {@media (max-width: 600px) {height: 43px}}
+
 @media (max-height: 580px) {@media (max-width: 599px) {max-height: ${({ valid }) => valid ? '43px' : '100%'}}}
 
 &:focus + label,
@@ -470,6 +493,8 @@ transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 /* Responsividade de altura */
+@media (max-height: 595px) {@media (max-width: 600px) {transform: translateY(-24px)}}}
+
 @media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
 
 export const FirstNameLabel = styled.label<InputValid>`
@@ -506,6 +531,8 @@ font-size: 14px}
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {margin-top: 14px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
@@ -584,9 +611,14 @@ margin-top: -80px}}
 height: 88px;
 margin-top: -88px}
 
+@media (max-height: 625px) {
+@media (max-width: 600px) {
+height: 81px;
+margin-top: -81.5px}}
+
 @media (max-height: 625px) {@media (max-width: 599px) {margin-top: 10px}}
 
-@media (max-height: 625px) {@media (max-width: 589px) {height: 90px}} 
+@media (max-height: 625px) {@media (max-width: 589px) {height: 90px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
@@ -899,8 +931,9 @@ margin-top: 18px}
 height: 88px;
 margin-top: -88px}
 
-@media (max-height: 625px) {@media (max-width: 600px) {
-height: 88px;
+@media (max-height: 625px) {
+@media (max-width: 600px) {
+height: 81px;
 margin-top: 20px}}
 
 @media (max-height: 625px) {@media (max-width: 599px) {height: 78px}}
@@ -1179,7 +1212,9 @@ margin-top: 18px}
 
 @media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
 
-@media (max-height: 625px) {@media (max-width: 600px) {height: 88px}}
+@media (max-height: 625px) {
+@media (max-width: 600px) {
+height: 81px;}
 
 @media (max-height: 625px) {@media (max-width: 599px) {height: 78px}}
 
@@ -1505,7 +1540,10 @@ margin-top: -90px}}
 height: 80px;
 margin-top: 80px}
 
-@media (max-height: 625px) and (max-width: 600px) {margin-top: -40px}
+@media (max-height: 625px) {
+@media (max-width: 600px) {
+height: 81px;
+margin-top: -81px}}
 
 @media (max-height: 625px) and (max-width: 599px) {margin-top: 10px}
 
@@ -1832,7 +1870,7 @@ margin-top: 18px}
 
 @media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
 
-@media (max-height: 625px) {@media (max-width: 600px) {height: 88px}}
+@media (max-height: 625px) {@media (max-width: 600px) {height: 81px}}
 
 @media (max-height: 625px) {@media (max-width: 599px) {
 height: 78px;
@@ -2194,6 +2232,8 @@ cursor: pointer}
 /* Responsividade de altura */
 @media(max-height: 825px) {margin-top: 10px}
 
+@media(max-height: 625px) {@media(max-width: 600px) {margin-left: 19px}}
+
 @media(max-height: 530px) {@media(max-width: 509px) {margin-top: 6px}}`;
 
 export const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })`
@@ -2226,6 +2266,8 @@ margin: 30px 0px 0 60px;
 @media (max-height: 628px) {@media (max-width: 599px) {margin-top: 10px}}
 
 @media (max-height: 625px) {@media (min-width: 620px) {margin-top: 19px}}
+
+@media (max-height: 625px) {@media (max-width: 600px) {margin-left: 12px}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {margin-top: 12px}}
 
@@ -2269,7 +2311,6 @@ height: 35px;
 span {font-size: 12px}}
 
 /* Responsividade de altura */
-
 @media (max-height: 725px) {
 width: 190px;
 height: 40px;
@@ -2298,6 +2339,11 @@ width: 185px;
 span{
 font-size: 13.5px;
 padding-top: 8.5px}}}
+
+@media (max-height: 625px) {
+@media (max-width: 600px) {
+width: 167px;
+span{padding-left: 10px}}}
 
 @media(max-height: 625px) {@media (max-width: 528px) {height: 40px}}
 
@@ -2575,7 +2621,13 @@ span {font-size: 11.5px}}}`;
 export const ExclamationIconContainer = styled.img`
 width: 20px;
 height: 20px;
-border-radius: 50px`;
+border-radius: 50px;
+
+/* Responsividade de altura */
+@media(max-height: 595px) {
+@media(max-width: 600px) {
+width: 18px;
+height: 18px}}`;
 
 export const EmptyContainer = styled.div<InputValid>`
 display: ${({ valid }) => valid ? 'none' : 'flex'};
@@ -2589,7 +2641,6 @@ background-color: #fff;
 @media(max-width: 589px) {margin-top: 79px}
 
 /* Responsividade de altura */
-
 @media(max-height: 825px) {margin-top: 65px}
 
 @media(max-height: 725px) {@media(max-width: 599px) {margin-top: 62px}}
@@ -2612,7 +2663,10 @@ background-color: #fff;
 
 @media (max-height: 600px) {@media (max-width: 589px) {margin-top: 62px}}
 
-@media (max-height: 600px) {@media (max-width: 549px) {margin-top: 62px}}
+@media (max-height: 595px) {
+@media (max-width: 600px) {
+height: 19px;
+margin-top: 52px}}
 
 @media (max-height: 580px) {margin-top: 58px}
 
@@ -2631,4 +2685,10 @@ color: red;
 cursor: default;
 background-color: #fff;
 
-@media(max-width: 329px) {font-size: 12px}`;
+@media(max-width: 329px) {font-size: 12px}
+
+/* Responsividade de altura */
+@media (max-height: 595px) {
+@media (max-width: 600px) {
+height: 19px;
+font-size: 12px}}`;
