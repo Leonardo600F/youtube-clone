@@ -84,6 +84,8 @@ top: 300px}}
 height: 100vh;
 top: 312px}}
 
+@media (max-height: 595px) {@media (max-width: 600px) {height: 540px}}
+
 @media (max-height: 585px) {top: 289px}
 
 @media (max-height: 580px) and (min-width: 600px) {
@@ -493,7 +495,7 @@ transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 /* Responsividade de altura */
-@media (max-height: 595px) {@media (max-width: 600px) {transform: translateY(-24px)}}}
+@media (max-height: 595px) {@media (max-width: 600px) {transform: translateY(-24px)}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
 
@@ -626,13 +628,14 @@ margin-top: -81.5px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
 
+@media (max-height: 595px) {
+@media (max-width: 600px) {
+height: 73px;
+margin-top: -73px}}
+
 @media (max-height: 580px) and (min-width: 600px) {
 height: 82px;
 margin-top: -82px}
-
-@media (max-height: 580px) {@media (max-width: 600px) {
-height: 82px;
-margin-top: -81px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
@@ -699,7 +702,7 @@ margin-top: 0px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
-@media (max-height: 580px) {@media(max-width: 600px) {height: 50px}}
+@media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
@@ -802,6 +805,8 @@ max-height: ${({ valid }) => valid ? '53px' : '100%'}}
 
 @media (max-height: 600px) and (max-width: 329px) {max-width: 259px}
 
+@media (max-height: 595px) and (max-width: 600px) {max-height: 43px}
+
 @media (max-height: 580px) and (max-width: 599px) {max-height: 43px}
 
 
@@ -814,7 +819,9 @@ transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 /* Responsividade de altura */
-@media (max-height: 580px) and (max-width: 599px) {transform: translateY(-25px)}}`;
+@media (max-height: 595px) {@media (max-width: 600px) {transform: translateY(-24px)}}
+
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
 
 export const SurnameLabel = styled.label<InputValid>`
 display: flex;
@@ -849,6 +856,8 @@ font-size: 14px}
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {margin-top: 14px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
@@ -942,11 +951,11 @@ margin-top: 20px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
+@media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
+
 @media (max-height: 600px) {@media (max-width: 589px) {height: 84px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
-
-@media (max-height: 580px) {@media (max-width: 600px) {height: 82px}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 74px}}
 
@@ -1012,7 +1021,7 @@ margin-top: 0px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
-@media (max-height: 580px) {@media (max-width: 600px) {height: 50px}}
+@media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
@@ -1091,6 +1100,8 @@ background-color: #fff;
 
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: 47px}}
 
+@media (max-height: 595px) and (max-width: 600px) {max-height: 43px}
+
 @media (max-height: 580px) {@media (max-width: 599px) {max-height: 43px}}
 
 &:focus + label,
@@ -1103,7 +1114,9 @@ color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 background-color: #fff;
 
 /* Responsividade de altura */
-@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-25px)}}}`;
+@media (max-height: 595px) {@media (max-width: 600px) {transform: translateY(-24px)}}
+
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
 
 export const EmailUserLabel = styled.label<InputValid>`
 display: flex;
@@ -1136,6 +1149,8 @@ font-size: 14px}
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {margin-top: 14px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
@@ -1226,9 +1241,9 @@ height: 81px;}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
 
-@media (max-height: 580px) and (min-width: 600px) {height: 82px}
+@media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
 
-@media (max-height: 580px) {@media (max-width: 600px) {height: 82px}}
+@media (max-height: 580px) and (min-width: 600px) {height: 82px}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 74px}}
 
@@ -1291,6 +1306,8 @@ margin-top: 0px}}
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 50px}
 
@@ -1370,6 +1387,8 @@ background-color: #fff;
 
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: 47px}}
 
+@media (max-height: 595px) and (max-width: 600px) {max-height: 43px}
+
 @media (max-height: 580px) {@media (max-width: 599px) {max-height: 43px}}
 
 &:focus + label,
@@ -1381,7 +1400,9 @@ transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 /* Responsividade de altura */
-@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-25px)}}}`;
+@media (max-height: 595px) {@media (max-width: 600px) {transform: translateY(-24px)}}
+
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
 
 export const PasswordUserLabel = styled.label<InputValid>`
 display: flex;
@@ -1432,6 +1453,8 @@ font-size: 14px}
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {margin-top: 14px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
@@ -1570,9 +1593,15 @@ margin-top: -76px}}
 height: 84px;
 margin-top: -83px}}
 
-@media (max-height: 600px) {@media (max-width: 549px) {
+@media (max-height: 600px) {
+@media (max-width: 549px) {
 height: 85px;
 margin-top: -85px}}
+
+@media (max-height: 595px) {
+@media (max-width: 600px) {
+height: 73px;
+margin-top: -72px}}
 
 @media (max-height: 580px) and (min-width: 600px) {
 height: 82px;
@@ -1649,6 +1678,8 @@ margin-top: 0px}}
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 50px}
 
@@ -1730,6 +1761,8 @@ max-height: 53px;}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: 47px}}
 
+@media (max-height: 595px) and (max-width: 600px) {max-height: 43px}
+
 @media (max-height: 580px) {@media (max-width: 599px) {max-height: 43px}}
 
 &:focus + label,
@@ -1741,7 +1774,9 @@ transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 /* Responsividade de altura */
-@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-25px)}}}`;
+@media (max-height: 595px) {@media (max-width: 600px) {transform: translateY(-24px)}}
+
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
 
 export const ComparePasswordUserLabel = styled.label<InputValid>`
 display: flex;
@@ -1792,6 +1827,8 @@ font-size: 14px}
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {margin-top: 14px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
@@ -1884,7 +1921,7 @@ margin-top: 25px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
 
-@media (max-height: 580px) {@media (max-width: 600px) {height: 82px}}
+@media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 74px}}
 
@@ -1950,7 +1987,7 @@ margin-top: 0px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
-@media (max-height: 580px) {@media (max-width: 600px) {height: 50px}}
+@media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
@@ -2030,6 +2067,8 @@ background-color: #fff;
 
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: 47px}}
 
+@media (max-height: 595px) and (max-width: 600px) {max-height: 43px}
+
 @media (max-height: 580px) {@media (max-width: 599px) {max-height: 43px}}
 
 &:focus + label,
@@ -2038,7 +2077,12 @@ height: 15px;
 width: 100px;
 font-size: 12px;
 transform: translateY(-28px);
-color: ${({ valid }) => valid ? '#4169E1' : 'red'}}`;
+color: ${({ valid }) => valid ? '#4169E1' : 'red'};
+
+/* Responsividade de altura */
+@media (max-height: 595px) {@media (max-width: 600px) {transform: translateY(-24px)}}
+
+@media (max-height: 580px) {@media (max-width: 599px) {transform: translateY(-26px)}}}`;
 
 export const NicknameUserLabel = styled.label<InputValid>`
 display: flex;
@@ -2071,6 +2115,8 @@ font-size: 14px}
 @media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {margin-top: 14px}}
 
 @media (max-height: 580px) {
 @media (max-width: 599px) {
