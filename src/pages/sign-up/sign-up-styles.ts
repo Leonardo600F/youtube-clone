@@ -407,6 +407,8 @@ margin-top: 0px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 50px}
 
+@media (max-height: 580px) {@media (max-width: 600px) {height: 45px}}
+
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
 export const FirstNameUserInput = styled.input<InputValid>`
@@ -951,11 +953,13 @@ margin-top: 20px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
-@media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
-
 @media (max-height: 600px) {@media (max-width: 589px) {height: 84px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
+
+@media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
+
+@media (max-height: 580px) {@media (max-width: 600px) {height: 83px}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 74px}}
 
@@ -1310,6 +1314,8 @@ margin-top: 0px}}
 @media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 50px}
+
+@media (max-height: 580px) {@media (max-width: 600px) {height: 45px}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
 
@@ -1683,7 +1689,7 @@ margin-top: 0px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 50px}
 
-@media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
+@media (max-height: 580px) {@media (max-width: 600px) {height: 45px}}`;
 
 export const ComparePasswordUserInput = styled.input<InputValid>`
 width: 238px;
@@ -1989,7 +1995,7 @@ margin-top: 0px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
-@media (max-height: 580px) {@media (max-width: 599px) {height: 45px}}`;
+@media (max-height: 580px) {@media (max-width: 600px) {height: 45px}}`;
 
 export const NicknameUserInput = styled.input<InputValid>`
 width: 238px;
