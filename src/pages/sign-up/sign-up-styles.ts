@@ -73,8 +73,8 @@ height: 595px;
 top: 315px}}
 
 @media (max-height: 625px) {@media(min-width: 620px) {
-height: 570px;
-top: 295px}}
+height: 580px;
+top: 300px}}
 
 @media(max-height: 625px) {@media(max-width: 600px) {
 height: 580px;
@@ -92,7 +92,13 @@ top: 312px}}
 height: 555px;
 top: 285px}
 
-@media (max-height: 580px) {@media(max-width: 599px) {height: 100vh}}`;
+@media (max-height: 580px) {@media(max-width: 599px) {height: 100vh}}
+
+@media (max-height: 567px) {
+@media(max-width: 600px) {
+height: 530px;
+top: 275px}}
+`;
 
 export const GoogleIconContainer = styled.img`
 width: 50px;
@@ -145,7 +151,7 @@ height: 34px}}
 @media(max-height: 625px) {@media (min-width: 620px) {
 width: 38px;
 height: 38px;
-margin-top: 0px}}
+margin: 0 0 0 305px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {
 width: 40px;
@@ -217,8 +223,8 @@ font-size: 21.5px}}
 @media (max-height: 630px) {@media(max-width: 599px) {font-size: 18px}}
 
 @media (max-height: 625px) {
-@media(min-width: 620px) {
-margin: -2px 0 0 201px;
+@media(min-width: 600px) {
+margin: -2px 0 0 208px;
 font-size: 19px}}
 
 @media (max-height: 625px) {
@@ -321,7 +327,7 @@ margin-top: 10px}}
 
 @media (max-height: 625px) {@media (min-width: 620px) {margin-top: 11px}}
 
-@media (max-height: 625px) and (min-width: 600px) {height: 88px}
+@media (max-height: 625px) and (min-width: 600px) {height: 86px}
 
 @media (max-height: 625px) {@media (max-width: 600px) {height: 81px}}
 
@@ -333,6 +339,8 @@ margin-top: 10px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
 
+@media (max-height: 595px) {@media (min-width: 620px) {height: 79px}}
+
 @media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 82px}
@@ -343,7 +351,7 @@ margin-top: 10px}}
 
 @media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}
 
-`;
+@media (max-height: 567px) {@media (max-width: 600px) {height: 73px}}`;
 
 export const FirstNameUserContainer = styled.div<FirstNameFocused>`
 display: flex;
@@ -402,6 +410,8 @@ margin-top: 0px}}
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
 
 @media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
+
+@media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
 
@@ -483,6 +493,8 @@ background-color: #fff;
 @media (max-height: 600px) {@media (max-width: 599px) {max-height: ${({ valid }) => valid ? '46px' : '100%'}}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
+
+@media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {height: 43px}}
 
@@ -612,8 +624,8 @@ margin-top: -80px}}
 @media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
 
 @media (max-height: 625px) and (min-width: 600px) {
-height: 88px;
-margin-top: -88px}
+height: 86px;
+margin-top: -86px}
 
 @media (max-height: 625px) {
 @media (max-width: 600px) {
@@ -635,6 +647,11 @@ margin-top: -81.5px}}
 height: 73px;
 margin-top: -73px}}
 
+@media (max-height: 595px) {
+@media (min-width: 620px) {
+height: 79px;
+margin-top: -79px}}
+
 @media (max-height: 580px) and (min-width: 600px) {
 height: 82px;
 margin-top: -82px}
@@ -646,7 +663,12 @@ margin-top: 10px}}
 
 @media (max-height: 580px) {@media (max-width: 589px) {height: 83px}}
 
-@media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}`;
+@media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}
+
+@media (max-height: 567px) {
+@media (max-width: 600px) {
+height: 73px;
+margin-top: -73px}}`;
 
 export const SurnameUserContainer = styled.div<SurnameFocused>`
 display: flex;
@@ -939,8 +961,8 @@ margin-top: 18px}
 @media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
 
 @media (max-height: 625px) and (min-width: 600px) {
-height: 88px;
-margin-top: -88px}
+height: 86px;
+margin-top: 20px}
 
 @media (max-height: 625px) {
 @media (max-width: 600px) {
@@ -957,6 +979,8 @@ margin-top: 20px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
 
+@media (max-height: 595px) {@media (min-width: 620px) {height: 79px}}
+
 @media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
 
 @media (max-height: 580px) {@media (max-width: 600px) {height: 83px}}
@@ -965,7 +989,9 @@ margin-top: 20px}}
 
 @media (max-height: 580px) {@media (max-width: 589px) {height: 83px}}
 
-@media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}`;
+@media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}
+
+@media (max-height: 567px) {@media (max-width: 600px) {height: 73px}}`;
 
 export const EmailUserContainer = styled.div<EmailFocused>`
 display: flex;
@@ -1231,6 +1257,8 @@ margin-top: 18px}
 
 @media (max-height: 640px) {@media (max-width: 489px) {height: 90px}}
 
+@media (max-height: 625px) {@media (min-width: 600px) {height: 86px}}
+
 @media (max-height: 625px) {
 @media (max-width: 600px) {
 height: 81px;}
@@ -1245,6 +1273,8 @@ height: 81px;}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
 
+@media (max-height: 595px) {@media (min-width: 620px) {height: 79px}}
+
 @media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
 
 @media (max-height: 580px) and (min-width: 600px) {height: 82px}
@@ -1253,7 +1283,9 @@ height: 81px;}
 
 @media (max-height: 580px) {@media (max-width: 589px) {height: 83px}}
 
-@media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}`;
+@media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}
+
+@media (max-height: 567px) {@media (max-width: 600px) {height: 73px}}`;
 
 export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
@@ -1566,8 +1598,8 @@ height: 90px;
 margin-top: -90px}}
 
 @media (max-height: 625px) and (min-width: 600px) {
-height: 80px;
-margin-top: 80px}
+height: 86px;
+margin-top: -86px}
 
 @media (max-height: 625px) {
 @media (max-width: 600px) {
@@ -1604,6 +1636,8 @@ margin-top: -83px}}
 height: 85px;
 margin-top: -85px}}
 
+@media (max-height: 595px) {@media (min-width: 620px) {height: 79px}}
+
 @media (max-height: 595px) {
 @media (max-width: 600px) {
 height: 73px;
@@ -1624,6 +1658,11 @@ height: 83px;
 margin-top: -82px}}
 
 @media (max-height: 580px) { @media (max-width: 549px) {height: 80px}}
+
+@media (max-height: 567px) {
+@media (max-width: 600px) {
+height: 73px;
+margin-top: -73px}}
 
 @media (max-height: 535px) { @media (max-width: 509px) {margin: -80px 0 0 259px}}
 
@@ -1927,13 +1966,17 @@ margin-top: 25px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
 
+@media (max-height: 595px) {@media (min-width: 620px) {height: 79px}}
+
 @media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
 
 @media (max-height: 580px) {@media (max-width: 599px) {height: 74px}}
 
 @media (max-height: 580px) {@media (max-width: 589px) {height: 83px}}
 
-@media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}`;
+@media (max-height: 580px) {@media (max-width: 549px) {height: 80px}}
+
+@media (max-height: 567px) {@media (max-width: 600px) {height: 73px}}`;
 
 export const NicknameUserContainer = styled.div<NicknameFocused>`
 display: flex;
@@ -2187,7 +2230,7 @@ color: #2F4F4F;
 
 @media (max-height: 640px) {@media (max-width: 349px) {font-size: 13.5px}}
 
-@media (max-height: 625px) {@media(min-width: 620px) {font-size: 14px}}
+@media (max-height: 625px) {@media(min-width: 620px) {font-size: 16.5px}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {margin-top: 60px}}
 
@@ -2317,7 +2360,7 @@ margin: 30px 0px 0 60px;
 
 @media (max-height: 628px) {@media (max-width: 599px) {margin-top: 10px}}
 
-@media (max-height: 625px) {@media (min-width: 620px) {margin-top: 19px}}
+@media (max-height: 625px) {@media (min-width: 620px) {margin-top: 7.5px}}
 
 @media (max-height: 625px) {@media (max-width: 600px) {margin-left: 12px}}
 
@@ -2387,10 +2430,10 @@ font-size: 12.5px}}
 
 @media (max-height: 625px) {@media (min-width: 600px) {
 height: 36px;
-width: 185px;
+width: 175px;
 span{
 font-size: 13.5px;
-padding-top: 8.5px}}}
+padding: 8.5px 0 0 16px}}}
 
 @media (max-height: 625px) {
 @media (max-width: 600px) {
@@ -2720,13 +2763,17 @@ background-color: #fff;
 height: 19px;
 margin-top: 52px}}
 
+@media (max-height: 595px) {@media (min-width: 620px) {margin-top: 56px}}
+
 @media (max-height: 580px) {margin-top: 58px}
 
 @media (max-height: 580px) {@media (max-width: 599px) {margin-top: 52px}}
 
 @media (max-height: 580px) {@media (max-width: 589px) {margin-top: 59px}}
 
-@media (max-height: 580px) {@media (max-width: 549px) {margin-top: 58px}}`;
+@media (max-height: 580px) {@media (max-width: 549px) {margin-top: 58px}}
+
+@media (max-height: 567px) {@media (max-width: 600px) {margin-top: 53px}}`;
 
 export const EmptyMessage = styled.span`
 display: block;
