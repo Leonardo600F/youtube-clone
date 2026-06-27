@@ -290,8 +290,6 @@ export default function SignUp() {
                                 : 'Digite seu e-mail.'}
                         </EmptyMessage>
                     </EmptyContainer>
-
-
                 </EmailContainer>
 
                 <PasswordContainer>
