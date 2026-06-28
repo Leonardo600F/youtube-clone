@@ -83,12 +83,17 @@ top: 300px}}
 height: 100vh;
 top: 312px}}
 
-@media(max-height: 615px) {
-@media(max-width: 599px) {height: 622px}}
+@media(max-height: 615px) {@media(max-width: 599px) {top: 305px}}
 
-@media(max-height: 600px) {@media(max-width: 619px) {
+@media(max-height: 600px) {
+@media(max-width: 619px) {
 height: 560px;
 top: 287px}}
+
+@media(max-height: 600px) {
+@media(max-width: 599px) {
+height: 100vh;
+top: 297px}}
 
 @media (max-height: 595px) {
 @media (min-width: 620px) {
@@ -97,13 +102,18 @@ top: 285px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {height: 540px}}
 
-@media (max-height: 585px) {top: 289px}
+@media (max-height: 595px) {@media (max-width: 599px) {height: 100vh}}
+
+@media (max-height: 585px) {@media (min-width: 620px) {top: 289px}}
 
 @media (max-height: 580px) and (min-width: 600px) {
 height: 555px;
 top: 285px}
 
-@media (max-height: 580px) {@media(max-width: 599px) {height: 100vh}}
+@media (max-height: 580px) {
+@media(max-width: 599px) {
+height: 100vh;
+top: 289px}}
 
 @media (max-height: 570px) {
 @media (min-width: 620px) {
@@ -111,15 +121,19 @@ height: 540px;
 top: 275px}}
 
 @media (max-height: 567px) {
+@media(max-width: 619px) {
+height: 547px;
+top: 280px}}
+
+@media (max-height: 567px) {
 @media(max-width: 600px) {
 height: 530px;
 top: 275px}}
 
 @media (max-height: 567px) {
-@media(max-width: 619px) {
-height: 547px;
-top: 280px}}
-
+@media(max-width: 599px) {
+height: 100vh;
+top: 285px}}
 `;
 
 export const GoogleIconContainer = styled.img`
@@ -189,10 +203,6 @@ margin: 0 0 0 305px}}
 @media (max-height: 625px) {@media(max-width: 630px) {margin-left: 242px}}
 
 @media (max-height: 625px) {@media(max-width: 599px) {margin-left: 19px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {
-width: 40px;
-height: 40px}}
 
 @media (max-height: 600px) {@media (max-width: 619px) {
 width: 36px;
@@ -292,21 +302,23 @@ font-size: 19px}}
 
 @media (max-height: 625px) {@media (max-width: 329px) {font-size: 20.5px}}
 
+@media (max-height: 615px) {@media (max-width: 599px) {margin: -32px 0 0 60px}}
+
 @media(max-height: 600px) {@media(max-width: 619px) {margin-top: -8px}}
 
-@media (max-height: 600px) {
-@media (max-width: 599px) {
-margin-top: 2px;
-font-size: 23px}}
+@media (max-height: 600px) {@media (max-width: 599px) {margin-top: -32px}}
 
 @media (max-height: 600px) {@media (max-width: 329px) {font-size: 21.5px}}
 
-@media (max-height: 570px) {@media (min-width: 620px) {margin-top: -5px}}
-
 @media (max-height: 580px) {
 @media (max-width: 599px) {
-margin: -3px 0 0 26px;
-font-size: 20px}}`;
+margin: -32px 0 0 55px;
+font-size: 20px}}
+
+@media (max-height: 570px) {@media (min-width: 620px) {margin-top: -5px}}
+
+@media (max-height: 567px) {@media (max-width: 599px) {margin-top: -32px}}
+`;
 
 export const FirstNameContainer = styled.div`
 display: flex;
@@ -358,6 +370,8 @@ height: 102px}
 /* Responsividade de altura */
 @media (max-height: 915px) {margin-top: 20px}
 
+@media (max-height: 840px) {@media (max-width: 589px) {margin-top: 10px}}
+
 @media (max-height: 825px) {
 height: 90px;
 margin-top: 25px}
@@ -398,8 +412,6 @@ margin-top: 12px}}
 
 @media(max-height: 600px) {@media(max-width: 619px) {margin-top: 9px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
-
 @media (max-height: 600px) {@media (max-width: 589px) {height: 84px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
@@ -407,6 +419,8 @@ margin-top: 12px}}
 @media (max-height: 595px) {@media (min-width: 620px) {height: 79px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
+
+
 
 @media (max-height: 580px) and (min-width: 600px) {height: 82px}
 
@@ -473,8 +487,6 @@ margin-top: 0px}}
 @media (max-height: 660px) {@media(min-width: 600px) {height: 50px}}
 
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
 
@@ -553,8 +565,6 @@ background-color: #fff;
 
 @media (max-height: 625px) {@media (max-width: 329px) {max-width: ${({ valid }) => valid ? '259px' : '97.5%'}}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {max-height: ${({ valid }) => valid ? '46px' : '100%'}}}
-
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: ${({ valid }) => valid ? '47px' : '100%'}}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
@@ -608,8 +618,6 @@ font-size: 14px}
 @media (max-height: 674px) {@media (max-width: 599px) {margin-top: 14px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {font-size: 13.5px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
@@ -706,8 +714,6 @@ margin-top: 10px}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {height: 90px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
-
 @media (max-height: 600px) {@media (max-width: 589px) {height: 84px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
@@ -721,6 +727,8 @@ margin-top: -73px}}
 @media (min-width: 620px) {
 height: 79px;
 margin-top: -79px}}
+
+@media (max-height: 595px) {@media (max-width: 599px) {margin-top: 10px}}
 
 @media (max-height: 580px) and (min-width: 600px) {
 height: 82px;
@@ -738,7 +746,11 @@ margin-top: 10px}}
 @media (max-height: 567px) {
 @media (max-width: 600px) {
 height: 73px;
-margin-top: -73px}}`;
+margin-top: -73px}}
+
+@media (max-height: 567px) {@media (max-width: 599px) {margin-top: 10px}}
+
+`;
 
 export const SurnameUserContainer = styled.div<SurnameFocused>`
 display: flex;
@@ -793,8 +805,6 @@ margin-top: 0px}}
 @media (max-height: 660px) {@media(min-width: 600px) {height: 48px}}
 
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
 
@@ -953,8 +963,6 @@ font-size: 14px}
 
 @media (max-height: 660px) {@media(min-width: 600px) {font-size: 13.5px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
-
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {margin-top: 14px}}
@@ -1052,8 +1060,6 @@ margin-top: 10px;}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {height: 90px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
-
 @media (max-height: 600px) {@media (max-width: 589px) {height: 84px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {height: 85px}}
@@ -1127,8 +1133,6 @@ margin-top: 0px}}
 @media (max-height: 660px) {@media(min-width: 600px) {height: 50px}}
 
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
 
@@ -1207,8 +1211,6 @@ background-color: #fff;
 
 @media (max-height: 625px) {@media (max-width: 329px) {max-width: 259px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {max-height: 46px}}
-
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: 47px}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {max-height: 44px}}
@@ -1260,8 +1262,6 @@ font-size: 14px}
 @media (max-height: 674px) {@media (max-width: 599px) {margin-top: 14px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {font-size: 13.5px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
@@ -1323,12 +1323,16 @@ height: 102px}
 @media(max-width: 329px) {width: 135px}
 
 /* Responsividade de altura */
+@media (max-height: 840px) {@media (max-width: 589px) {margin-top: 15px}}
+
 @media (max-height: 825px) {
 @media (min-width: 620px) {
 height: 90px;
-margin-top: 18px;}}
+margin-top: 18px}}
 
 @media(max-height: 825px) {@media (max-width: 599px) {margin-top: 10px}}
+
+@media(max-height: 825px) {@media (max-width: 589px) {height: 90px}}
 
 @media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px}}
 
@@ -1353,8 +1357,6 @@ margin-top: 18px;}}
 @media (max-height: 625px) {@media (max-width: 599px) {height: 78px}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {height: 90px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
 @media (max-height: 600px) {@media (max-width: 589px) {height: 84px}}
 
@@ -1428,8 +1430,6 @@ margin-top: 0px}}
 
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
-
 @media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
@@ -1482,7 +1482,6 @@ background-color: #fff;
 
 @media(max-width: 329px) {width: 116px}
 
-
 /* Responsividade de altura */
 @media(max-height: 674px) {height: 43px}
 
@@ -1507,8 +1506,6 @@ background-color: #fff;
 @media (max-height: 625px) {@media (max-width: 349px) {max-width: 126px}}
 
 @media (max-height: 625px) {@media (max-width: 329px) {max-width: 118px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {max-height: 46px}}
 
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: 47px}}
 
@@ -1578,8 +1575,6 @@ font-size: 14px}
 @media (max-height: 674px) {@media (max-width: 599px) {margin-top: 14px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {font-size: 13.5px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
@@ -1661,9 +1656,16 @@ width: 130px;
 margin-left: 170px}
 
 /* Responsividade de altura */
-@media (max-height: 825px) {
+@media(max-height: 840px) and (max-width: 589px) {margin-top: -102px}
+
+@media(max-height: 825px) and (min-width: 620px) {
 height: 90px;
 margin-top: -90px}
+
+@media(max-height: 825px) {
+@media (max-width: 589px) {
+height: 90px;
+margin-top: -91px}}
 
 @media(max-height: 725px) and (max-width: 599px) {
 height: 86px;
@@ -1819,8 +1821,6 @@ margin-top: 0px}}
 
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
-
 @media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {height: 44px}}
@@ -1899,8 +1899,6 @@ max-height: 53px;}}
 
 @media (max-height: 625px) {@media (max-width: 329px) {max-width: 114px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {max-height: 46px}}
-
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: 47px}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
@@ -1970,8 +1968,6 @@ font-size: 14px}
 
 @media (max-height: 660px) {@media(min-width: 600px) {font-size: 13.5px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
-
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {margin-top: 17px}}
@@ -2033,6 +2029,8 @@ height: 102px}
 @media(max-width: 329px) {width: 275px}
 
 /* Responsividade de altura */
+@media (max-height: 840px) {@media (max-width: 589px) {margin-top: 15px}}
+
 @media (max-height: 825px) {
 height: 90px;
 margin-top: 18px}
@@ -2062,8 +2060,6 @@ height: 78px;
 margin-top: 10px}}
 
 @media (max-height: 625px) {@media (max-width: 589px) {height: 90px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {height: 77px}}
 
 @media (max-height: 600px) {@media (max-width: 589px) {height: 84px}}
 
@@ -2136,8 +2132,6 @@ margin-top: 0px}}
 @media (max-height: 660px) {@media(min-width: 600px) {height: 50px}}
 
 @media (max-height: 625px) {@media(min-width: 620px) {margin-top: 3px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {height: 49px}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {height: 44px}}
 
@@ -2217,8 +2211,6 @@ background-color: #fff;
 
 @media (max-height: 625px) {@media (max-width: 329px) {max-width: 259px}}
 
-@media (max-height: 600px) {@media (max-width: 599px) {max-height: 46px}}
-
 @media (max-height: 600px) {@media (max-width: 549px) {max-height: 47px}}
 
 @media (max-height: 595px) {@media (min-width: 620px) {max-height: 44px}}
@@ -2269,8 +2261,6 @@ font-size: 14px}
 @media (max-height: 674px) {@media (max-width: 599px) {margin-top: 14px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {font-size: 13.5px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14.5px}}
 
 @media (max-height: 600px) {@media (max-width: 349px) {margin-top: 16px}}
 
@@ -2323,6 +2313,11 @@ color: #2F4F4F;
 @media(max-width: 329px) {font-size: 12.7px}
 
 /* Responsividade de altura */
+@media(max-height: 840px) {
+@media (max-width: 589px) {
+margin: -14px 0 0 5px;
+font-size: 16px}}
+
 @media(max-height: 725px) {@media (max-width: 599px) {font-size: 17.5px}}
 
 @media(max-height: 725px) {@media (max-width: 529px) {font-size: 15px}}
@@ -2375,8 +2370,6 @@ font-size: 17px}}
 @media (max-height: 613px) {@media (max-width: 389px) {font-size: 11px}}
 
 @media (max-height: 613px) {@media (max-width: 369px) {font-size: 10.5px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {font-size: 14px}}
 
 @media (max-height: 600px) {@media (max-width: 469px) {font-size: 13.3px}}
 
@@ -2443,6 +2436,8 @@ cursor: pointer}
 @media(max-width: 630px) {margin-left: 25px}
 
 /* Responsividade de altura */
+@media(max-height: 840px) {@media (max-width: 589px) {margin-left: 27px}}
+
 @media(max-height: 825px) {margin-top: 10px}
 
 @media(max-height: 625px) {@media(max-width: 600px) {margin-left: 19px}}
@@ -2470,6 +2465,8 @@ margin: 30px 0px 0 60px;
 
 /* Responsividade de altura */
 @media(max-height: 915px) {@media (max-width: 630px) {margin-left: 18px}}
+
+@media(max-height: 840px) {@media (max-width: 589px) {margin-top: 20px}}
 
 @media(max-height: 830px) {@media (max-width: 599px) {margin-top: 11.5px}}
 
@@ -2899,8 +2896,6 @@ background-color: #fff;
 @media (max-height: 625px) {@media (max-width: 589px) {margin-top: 66px}}
 
 @media (max-height: 625px) {@media (max-width: 559px) {margin-top: 68px}}
-
-@media (max-height: 600px) {@media (max-width: 599px) {margin-top: 54px}}
 
 @media (max-height: 600px) {@media (max-width: 589px) {margin-top: 62px}}
 
