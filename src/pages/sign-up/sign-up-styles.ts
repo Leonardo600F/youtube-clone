@@ -255,7 +255,7 @@ font-size: 26px}
 
 @media (max-height: 915px) {@media (max-width: 599px) {margin-left: 27px}}
 
-@media(max-height: 825px) {margin-top: 1px}
+@media(max-height: 825px) {@media (min-width: 620px) {margin-top: 1px}}
 
 @media(max-height: 725px) {
 margin-left: 170px;
@@ -373,8 +373,11 @@ height: 102px}
 @media (max-height: 840px) {@media (max-width: 589px) {margin-top: 10px}}
 
 @media (max-height: 825px) {
+@media (min-width: 620px) {
 height: 90px;
-margin-top: 25px}
+margin-top: 25px}}
+
+@media (max-height: 825px) { @media (max-width: 589px) {height: 90px}}
 
 @media (max-height: 783px) {@media (max-width: 599px) {margin-top: 8px}}
 
@@ -419,8 +422,6 @@ margin-top: 12px}}
 @media (max-height: 595px) {@media (min-width: 620px) {height: 79px}}
 
 @media (max-height: 595px) {@media (max-width: 600px) {height: 73px}}
-
-
 
 @media (max-height: 580px) and (min-width: 600px) {height: 82px}
 
@@ -474,11 +475,11 @@ background-color: #fff;
 @media(max-width: 329px) {width: 270px}
 
 /* Responsividade de altura */
-@media(max-height: 825px) {margin-top: 0px}
+@media(max-height: 825px) {@media (min-width: 620px) {margin-top: 0px}}
 
-@media(max-height: 825px) {@media(max-width: 599px) {margin-top: 3px}}
+@media(max-height: 825px) {@media (max-width: 599px) {margin-top: 3px}}
 
-@media(max-height: 725px) {@media(max-width: 599px) {margin-top: 3px}}
+@media(max-height: 725px) {@media (max-width: 599px) {margin-top: 3px}}
 
 @media (max-height: 674px) {@media (max-width: 599px) {
 height: 45px;
@@ -1665,7 +1666,7 @@ margin-top: -90px}
 @media(max-height: 825px) {
 @media (max-width: 589px) {
 height: 90px;
-margin-top: -91px}}
+margin-top: -89.5px}}
 
 @media(max-height: 725px) and (max-width: 599px) {
 height: 86px;
@@ -2318,6 +2319,8 @@ color: #2F4F4F;
 margin: -14px 0 0 5px;
 font-size: 16px}}
 
+@media(max-height: 825px) {@media (max-width: 589px) {margin-top: 0px}}
+
 @media(max-height: 725px) {@media (max-width: 599px) {font-size: 17.5px}}
 
 @media(max-height: 725px) {@media (max-width: 529px) {font-size: 15px}}
@@ -2658,6 +2661,8 @@ margin: -48px 0 0 430px;
 @media (max-width: 349px) {margin-left: 185px}
 
 /* Responsividade de altura */
+@media(max-height: 825px) {@media (max-width: 589px) {margin-top: -37px}}
+
 @media(max-height: 725px) {margin-top: -39px}
 
 @media(max-height: 725px) {@media (max-width: 599px) {margin-left: 430px}}
