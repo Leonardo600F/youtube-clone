@@ -410,8 +410,6 @@ margin-top: 10px}}
 
 @media(max-height: 685px) {@media (max-width: 589px) {height: 83px}}
 
-@media (max-height: 674px) {@media (max-width: 599px) {height: 78px}}
-
 @media (max-height: 674px) {@media (max-width: 469px) {height: 89px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {height: 80px}}
@@ -501,7 +499,7 @@ background-color: #fff;
 
 @media(max-height: 685px) {@media (max-width: 589px) {height: 49px}}
 
-@media (max-height: 674px) {@media (max-width: 599px) {
+@media (max-height: 674px) {@media (min-width: 620px) {
 height: 45px;
 margin-top: 0px}}
 
@@ -885,7 +883,7 @@ background-color: #fff;
 /* Responsividade de altura */
 @media(max-height: 685px) {@media (max-width: 589px) {height: 47px}}
 
-@media(max-height: 674px) {height: 43px}
+@media(max-height: 674px) {@media (min-width: 620px) {height: 43px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {height: 48px}}
 
@@ -1223,7 +1221,7 @@ background-color: #fff;
 /* Responsividade de altura */
 @media(max-height: 685px) {@media (max-width: 589px) {height: 47px}}
 
-@media(max-height: 674px) {height: 43px}
+@media(max-height: 674px) {@media (min-width: 620px) {height: 43px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {height: 48px}}
 
@@ -1529,7 +1527,7 @@ background-color: #fff;
 /* Responsividade de altura */
 @media(max-height: 685px) {@media (max-width: 589px) {height: 47px}}
 
-@media(max-height: 674px) {height: 43px}
+@media(max-height: 674px) {@media (min-width: 620px) {height: 43px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {height: 48px}}
 
@@ -1928,7 +1926,7 @@ background-color: #fff;
 /* Responsividade de altura */
 @media(max-height: 685px) {@media (max-width: 589px) {height: 47px}}
 
-@media(max-height: 674px) {height: 43px}
+@media(max-height: 674px) {@media (min-width: 620px) {height: 43px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {height: 48px}}
 
@@ -2250,7 +2248,7 @@ background-color: #fff;
 /* Responsividade de altura */
 @media(max-height: 685px) {@media (max-width: 589px) {height: 47px}}
 
-@media(max-height: 674px) {height: 43px}
+@media(max-height: 674px) {@media (max-width: 599px) {height: 43px}}
 
 @media (max-height: 660px) {@media(min-width: 600px) {height: 48px}}
 
