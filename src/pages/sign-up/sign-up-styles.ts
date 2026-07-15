@@ -2475,6 +2475,8 @@ color: #2F4F4F;
 
 @media (max-height: 725px) and (max-width: 409px) {font-size: 11.5px}
 
+@media (max-height: 725px) and (max-width: 389px) {font-size: 11px}
+
 @media (max-height: 725px) and (max-width: 329px) {font-size: 14.5px}
 
 @media (max-height: 640px) and (max-width: 489px) {font-size: 13.5px}
@@ -2714,6 +2716,12 @@ font-size: 14px}}
 width: 166px;
 span {padding-left: 8.5px}}
 
+@media (max-height: 725px) and (max-width: 389px) {
+width: 147px;
+span {
+font-size: 12px;
+padding-left: 8.5px}}
+
 @media (max-height: 640px) and (max-width: 559px) {
 height: 37px;
 span {font-size: 13.2px}}
@@ -2858,6 +2866,8 @@ margin: -48px 0 0 430px;
 @media (max-height: 725px) and (max-width: 429px) {margin-left: 265px}
 
 @media (max-height: 725px) and (max-width: 409px) {margin-left: 220px}
+
+@media (max-height: 725px) and (max-width: 389px) {margin: -37px 0 0 205px}
 
 @media (max-height: 640px) and (max-width: 389px) {margin-top: -35px}
 
