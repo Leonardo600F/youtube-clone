@@ -205,6 +205,8 @@ width: 38px;
 height: 38px;
 margin: 0 0 0 305px}
 
+@media (max-height: 625px) and (max-width: 640px) {margin-left: 280px}
+
 @media (max-height: 625px) and (max-width: 630px) {margin-left: 242px}
 
 @media (max-height: 625px) and (max-width: 599px) {margin-left: 19px}
@@ -266,7 +268,9 @@ font-size: 26px}
 margin-left: 170px;
 font-size: 23px}
 
-@media (max-height: 725px) and (max-width: 630px) {margin: -5px 0 0 121px}
+@media (max-height: 725px) and (max-width: 640px) {margin: -5px 0 0 163px}
+
+@media (max-height: 725px) and (max-width: 630px) {margin-left: 121px}
 
 @media (max-height: 725px) and (max-width: 599px) {
 margin-top: 0px;
@@ -300,6 +304,8 @@ font-size: 19.5px}
 @media (max-height: 625px) and (min-width: 600px) {
 margin: -2px 0 0 208px;
 font-size: 19px}
+
+@media (max-height: 625px) and (max-width: 640px) {margin-left: 187px}
 
 @media (max-height: 625px) and (max-width: 630px) {margin-left: 145px}
 
@@ -383,7 +389,7 @@ height: 102px}
 height: 88px;
 margin-top: 10px}
 
-@media (max-height: 725px) and (max-width: 630px) {margin-top: 15px}
+@media (max-height: 725px) and (max-width: 640px) {margin-top: 15px}
 
 @media (max-height: 725px) and (max-width: 619px) {
 height: 82px;
@@ -423,19 +429,13 @@ margin-top: 10px}
 
 @media (max-height: 599px) and (max-width: 589px) {height: 77px}
 
-@media (max-height: 595px) and (max-width: 600px) {
-height: 73px;
-margin-top: -73px}
+@media (max-height: 595px) and (max-width: 600px) {height: 73px}
 
-@media (max-height: 595px) and (min-width: 620px) {
-height: 79px;
-margin-top: -79px}
+@media (max-height: 595px) and (min-width: 620px) {height: 79px}
 
 @media (max-height: 595px) and (max-width: 599px) {margin-top: 10px}
 
-@media (max-height: 580px) and (min-width: 600px) {
-height: 82px;
-margin-top: -82px}
+@media (max-height: 580px) and (min-width: 600px) {height: 82px}
 
 @media (max-height: 580px) and (max-width: 599px) {
 height: 74px;
@@ -2411,7 +2411,9 @@ cursor: default;
 
 @media(max-width: 1559px) {margin-left: 45px}
 
-@media(max-width: 630px) {margin: 0px}
+@media(max-width: 640px) {margin-top: 0px}
+
+@media(max-width: 630px) {margin-left: 0px}
 
 @media(max-width: 599px) {margin: 5px 0 0 5px}
 
@@ -2447,7 +2449,7 @@ color: #2F4F4F;
 @media(max-width: 329px) {font-size: 12.7px}
 
 /* Height Responsiveness */
-@media (max-height: 825px) and (max-width: 589px) {margin-top: 0px}
+@media (max-height: 725px) and (max-width: 640px) {font-size: 16.5px}
 
 @media (max-height: 725px) and (max-width: 599px) {font-size: 17.5px}
 
@@ -2566,6 +2568,10 @@ font-size: 16px}
 margin-top: 6px;
 margin-left: 1px}
 
+@media(max-height: 825px) and (max-width: 640px) {margin-left: 40px}
+
+@media (max-height: 825px) and (max-width: 589px) {margin-top: 0px}
+
 @media (max-height: 580px) {margin-top: 3px}`;
 
 export const ShowPasswordContainer = styled.div`
@@ -2626,7 +2632,7 @@ margin: 30px 0px 0 60px;
 
 @media (max-height: 725px) {margin: 13px 0 0 48px}
 
-@media (max-height: 725px) and (max-width: 630px) {margin-left: 20px}
+@media (max-height: 725px) and (max-width: 640px) {margin-left: 35px}
 
 @media (max-height: 725px) and (max-width: 599px) {margin-left: 20px}
 
@@ -2683,6 +2689,10 @@ span {
 padding-top: 10px;
 font-size: 14px;}}
 
+@media(max-width: 630px) {
+width: 167px;
+span {padding-left: 8px}}
+
 @media(max-width: 399px) {
 width: 150px;
 height: 35px;
@@ -2698,7 +2708,7 @@ span {
 padding: 12px 0 0 20px;
 font-size: 14px}}
 
-@media (max-height: 725px) and (max-width: 630px) {
+@media (max-height: 725px) and (max-width: 640px) {
 width: 166px;
 span {padding-left: 8.5px}}
 
@@ -2731,6 +2741,10 @@ width: 175px;
 span {
 font-size: 13.5px;
 padding: 8.5px 0 0 16px}}
+
+@media (max-height: 625px) and (max-width: 640px) {
+width: 160px;
+span {padding-left: 9.5px}}
 
 @media (max-height: 625px) and (max-width: 630px) {
 width: 162px;
@@ -2832,6 +2846,8 @@ margin: -48px 0 0 430px;
 
 /* Height Responsiveness */
 @media (max-height: 725px) and (min-width: 620px) {margin-top: -39px}
+
+@media (max-height: 725px) and (max-width: 640px) {margin-left: 415px}
 
 @media (max-height: 725px) and (max-width: 599px) {margin-left: 444px}
 
