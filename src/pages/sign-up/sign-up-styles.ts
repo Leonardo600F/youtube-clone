@@ -458,7 +458,9 @@ border-width: ${({ firstNameFocus }) => firstNameFocus ? '2px' : '1px'};
 border-color: ${({ firstNameFocus }) => firstNameFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {width: 220px}
+@media(max-width: 630px) {
+width: 220px;
+margin-top: 8px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -814,7 +816,9 @@ border-width: ${({ surnameFocus }) => surnameFocus ? '2px' : '1px'};
 border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {width: 220px}
+@media(max-width: 630px) {
+width: 220px;
+margin-top: 8px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -1160,7 +1164,9 @@ background-color: #fff;
 
 @media(max-width: 1280px) {width: 520px}
 
-@media(max-width: 630px) {width: 477px}
+@media(max-width: 630px) {
+width: 477px;
+margin-top: 8px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -1476,7 +1482,9 @@ border-width: ${({ passwordFocus }) => passwordFocus ? '2px' : '1px'};
 border-color: ${({ passwordFocus }) => passwordFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {width: 220px}
+@media(max-width: 630px) {
+width: 220px;
+margin-top: 8px}
 
 @media(max-width: 599px) {width: 269px}
 
@@ -1873,7 +1881,9 @@ border-width: ${({ comparePasswordFocus }) => comparePasswordFocus ? '2px' : '1p
 border-color: ${({ comparePasswordFocus }) => comparePasswordFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {width: 220px}
+@media(max-width: 630px) {
+width: 220px;
+margin-top: 8px}
 
 @media(max-width: 599px) {width: 269px}
 
@@ -2199,7 +2209,9 @@ background-color: #fff;
 
 @media(max-width: 1280px) {width: 520px}
 
-@media(max-width: 630px) {width: 477px}
+@media(max-width: 630px) {
+width: 477px;
+margin-top: 8px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -2451,6 +2463,8 @@ color: #2F4F4F;
 /* Height Responsiveness */
 @media (max-height: 725px) and (max-width: 640px) {font-size: 16.5px}
 
+@media (max-height: 725px) and (max-width: 630px) {font-size: 15px}
+
 @media (max-height: 725px) and (max-width: 599px) {font-size: 17.5px}
 
 @media (max-height: 725px) and (max-width: 589px) {font-size: 16.3px}
@@ -2570,6 +2584,8 @@ margin-left: 1px}
 
 @media(max-height: 825px) and (max-width: 640px) {margin-left: 40px}
 
+@media(max-height: 825px) and (max-width: 630px) {margin-left: 0px}
+
 @media (max-height: 825px) and (max-width: 589px) {margin-top: 0px}
 
 @media (max-height: 580px) {margin-top: 3px}`;
@@ -2589,11 +2605,11 @@ height: fit-content;
 margin: 2px 0 0 10px;
 font-size: 14px;
 font-weight: 600;
-cursor: pointer}
+cursor: pointer;}
 
 @media(max-width: 1559px) {margin-left: 40px}
 
-@media(max-width: 630px) {margin-left: 25px}
+@media(max-width: 630px) {margin-left: 20px}
 
 /* Height Responsiveness */
 @media (max-height: 840px) and (max-width: 589px) {margin-left: 27px}
@@ -2621,7 +2637,7 @@ margin: 30px 0px 0 60px;
 
 @media(max-width: 1559px) {margin-left: 30px}
 
-@media(max-width: 630px) {margin-left: 20px}
+@media(max-width: 630px) {margin-left: 15px}
 
 /* Height Responsiveness */
 @media (max-height: 915px) and (max-width: 630px) {margin-left: 18px}
@@ -2633,6 +2649,8 @@ margin: 30px 0px 0 60px;
 @media (max-height: 725px) {margin: 13px 0 0 48px}
 
 @media (max-height: 725px) and (max-width: 640px) {margin-left: 35px}
+
+@media (max-height: 725px) and (max-width: 630px) {margin-left: 17px}
 
 @media (max-height: 725px) and (max-width: 599px) {margin-left: 20px}
 
@@ -2690,8 +2708,8 @@ padding-top: 10px;
 font-size: 14px;}}
 
 @media(max-width: 630px) {
-width: 167px;
-span {padding-left: 8px}}
+width: 166px;
+span {padding-left: 9px}}
 
 @media(max-width: 399px) {
 width: 150px;
@@ -2847,7 +2865,9 @@ margin: -48px 0 0 430px;
 /* Height Responsiveness */
 @media (max-height: 725px) and (min-width: 620px) {margin-top: -39px}
 
-@media (max-height: 725px) and (max-width: 640px) {margin-left: 415px}
+@media (max-height: 725px) and (max-width: 640px) {margin-left: 70%}
+
+@media (max-height: 725px) and (max-width: 630px) {margin-left: 67%}
 
 @media (max-height: 725px) and (max-width: 599px) {margin-left: 444px}
 
@@ -3143,6 +3163,8 @@ background-color: #fff;
 
 /* Height Responsiveness */
 @media (max-height: 915px) {margin-top: 79px}
+
+@media (max-height: 915px) and (max-width: 630px) {margin-top: 70px}
 
 @media (max-height: 825px) {margin-top: 65px}
 
