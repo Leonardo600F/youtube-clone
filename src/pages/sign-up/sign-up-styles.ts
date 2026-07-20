@@ -173,10 +173,10 @@ margin: 8px 0 0 20px}
 
 @media (max-height: 825px) {margin-top: 0px}
 
-@media (max-height: 725px) and (min-width: 620px) {
+@media (max-height: 725px) and (min-width: 601px) {
 width: 40px;
 height: 40px;
-margin-top: 10px}
+margin: 10px 0 0 305px}
 
 @media (max-height: 705px) and (max-width: 589px) {
 width: 37px;
@@ -231,7 +231,7 @@ export const Title = styled.h2`
 display: flex;
 height: fit-content;
 width: fit-content;
-margin-left: 155px;
+margin-left: 145px;
 font-weight: 500;
 font-size: 30px;
 cursor: default;
@@ -252,8 +252,8 @@ margin: 20px 0 0 26px}
 @media(max-width: 349px) {font-size: 20px}
 
 /* Height Responsiveness */
-@media (max-height: 915px) {
-margin-top: -3px;
+@media (max-height: 915px) and (min-width: 601px) {
+margin: -3px 0 0 168px;
 font-size: 26px}
 
 @media (max-height: 915px) and (max-width: 1559px) {margin-left: 145px}
@@ -264,8 +264,8 @@ font-size: 26px}
 
 @media (max-height: 825px) and (min-width: 620px) {margin-top: 1px}
 
-@media (max-height: 725px) {
-margin-left: 170px;
+@media (max-height: 725px) and (min-width: 601px) {
+margin-left: 187px;
 font-size: 23px}
 
 @media (max-height: 725px) and (max-width: 640px) {margin: -5px 0 0 163px}
@@ -389,6 +389,8 @@ height: 102px}
 height: 88px;
 margin-top: 10px}
 
+@media (max-height: 725px) and (min-width: 601px) {margin-top: 15px}
+
 @media (max-height: 725px) and (max-width: 640px) {margin-top: 15px}
 
 @media (max-height: 725px) and (max-width: 619px) {
@@ -451,16 +453,14 @@ export const FirstNameUserContainer = styled.div<FirstNameFocused>`
 display: flex;
 height: 55px;
 width: 250px;
-margin-top: 15px;
+margin-top: 8px;
 border: solid;
 border-radius: 5px;
 border-width: ${({ firstNameFocus }) => firstNameFocus ? '2px' : '1px'};
 border-color: ${({ firstNameFocus }) => firstNameFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {
-width: 220px;
-margin-top: 8px}
+@media(max-width: 630px) {width: 220px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -809,16 +809,14 @@ export const SurnameUserContainer = styled.div<SurnameFocused>`
 display: flex;
 height: 55px;
 width: 250px;
-margin-top: 15px;
+margin-top: 8px;
 border: solid;
 border-radius: 5px;
 border-width: ${({ surnameFocus }) => surnameFocus ? '2px' : '1px'};
 border-color: ${({ surnameFocus }) => surnameFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {
-width: 220px;
-margin-top: 8px}
+@media(max-width: 630px) {width: 220px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -1095,6 +1093,8 @@ height: 102px}
 @media(max-width: 329px) {width: 275px}
 
 /* Height Responsiveness */
+@media (max-height: 915px) and (min-width: 601px) {margin-top: 25px}
+
 @media (max-height: 825px) {
 height: 90px;
 margin-top: 18px}
@@ -1155,7 +1155,7 @@ export const EmailUserContainer = styled.div<EmailFocused>`
 display: flex;
 height: 55px;
 width: 525px;
-margin-top: 15px;
+margin-top: 8px;
 border: solid;
 border-radius: 5px;
 border-width: ${({ emailFocus }) => emailFocus ? '2px' : '1px'};
@@ -1164,9 +1164,7 @@ background-color: #fff;
 
 @media(max-width: 1280px) {width: 520px}
 
-@media(max-width: 630px) {
-width: 477px;
-margin-top: 8px}
+@media(max-width: 630px) {width: 477px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -1417,6 +1415,8 @@ height: 102px}
 @media(max-width: 329px) {width: 135px}
 
 /* Height Responsiveness */
+@media (max-height: 915px) and (min-width: 601px) {margin-top: 25px}
+
 @media (max-height: 840px) and (max-width: 589px) {margin-top: 15px}
 
 @media (max-height: 825px) and (min-width: 620px) {
@@ -1475,16 +1475,14 @@ export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
 height: 55px;
 width: 250px;
-margin-top: 15px;
+margin-top: 8px;
 border: solid;
 border-radius: 5px;
 border-width: ${({ passwordFocus }) => passwordFocus ? '2px' : '1px'};
 border-color: ${({ passwordFocus }) => passwordFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {
-width: 220px;
-margin-top: 8px}
+@media(max-width: 630px) {width: 220px}
 
 @media(max-width: 599px) {width: 269px}
 
@@ -1874,16 +1872,14 @@ export const ComparePasswordUserContainer = styled.div<ComparePasswordFocused>`
 display: flex;
 height: 55px;
 width: 250px;
-margin-top: 15px;
+margin-top: 8px;
 border: solid;
 border-radius: 5px;
 border-width: ${({ comparePasswordFocus }) => comparePasswordFocus ? '2px' : '1px'};
 border-color: ${({ comparePasswordFocus }) => comparePasswordFocus ? '#4169E1' : 'grey'};
 background-color: #fff;
 
-@media(max-width: 630px) {
-width: 220px;
-margin-top: 8px}
+@media(max-width: 630px) {width: 220px}
 
 @media(max-width: 599px) {width: 269px}
 
@@ -2152,6 +2148,8 @@ height: 102px}
 @media(max-width: 329px) {width: 275px}
 
 /* Height Responsiveness */
+@media (max-height: 915px) and (min-width: 601px) {margin-top: 25px}
+
 @media (max-height: 840px) and (max-width: 589px) {margin-top: 15px}
 
 @media (max-height: 825px) {
@@ -2200,7 +2198,7 @@ export const NicknameUserContainer = styled.div<NicknameFocused>`
 display: flex;
 height: 55px;
 width: 525px;
-margin-top: 15px;
+margin-top: 8px;
 border: solid;
 border-radius: 5px;
 border-width: ${({ nicknameFocus }) => nicknameFocus ? '2px' : '1px'};
@@ -2209,9 +2207,7 @@ background-color: #fff;
 
 @media(max-width: 1280px) {width: 520px}
 
-@media(max-width: 630px) {
-width: 477px;
-margin-top: 8px}
+@media(max-width: 630px) {width: 477px}
 
 @media(max-width: 599px) {width: 554px}
 
@@ -2418,7 +2414,7 @@ font-size: 14px}`;
 export const PasswordMessageContainer = styled.div`
 display: flex;
 width: fit-content;
-margin: 20px 0 0 60px;
+margin: 10px 0 0 60px;
 cursor: default;
 
 @media(max-width: 1559px) {margin-left: 45px}
@@ -2499,7 +2495,7 @@ color: #2F4F4F;
 
 @media (max-height: 640px) and (max-width: 349px) {font-size: 13.5px}
 
-@media (max-height: 625px) and (min-width: 620px) {font-size: 16.5px}
+@media (max-height: 625px) and (min-width: 601px) {font-size: 15.5px}
 
 @media (max-height: 625px) and (max-width: 630px) {font-size: 15px}
 
@@ -2578,15 +2574,13 @@ font-size: 16px}
 @media (max-width: 359px) {margin-top: 5px}}
 
 /* Height Responsiveness */
-@media(max-height: 825px) {
-margin-top: 6px;
-margin-left: 1px}
-
 @media(max-height: 825px) and (max-width: 640px) {margin-left: 40px}
 
 @media(max-height: 825px) and (max-width: 630px) {margin-left: 0px}
 
 @media (max-height: 825px) and (max-width: 589px) {margin-top: 0px}
+
+@media (max-height: 625px) and (min-width: 601px) {margin: 0px 0 0 63px}
 
 @media (max-height: 580px) {margin-top: 3px}`;
 
@@ -2633,9 +2627,7 @@ export const LoginPageContainer = styled.div`
 display: flex;
 height: fit-content;
 width: fit-content;
-margin: 30px 0px 0 60px;
-
-@media(max-width: 1559px) {margin-left: 30px}
+margin: 30px 0px 0 47px;
 
 @media(max-width: 630px) {margin-left: 15px}
 
@@ -2645,8 +2637,6 @@ margin: 30px 0px 0 60px;
 @media (max-height: 840px) and (max-width: 589px) {margin-top: 20px}
 
 @media (max-height: 830px) and (max-width: 599px) {margin-top: 11.5px}
-
-@media (max-height: 725px) {margin: 13px 0 0 48px}
 
 @media (max-height: 725px) and (max-width: 640px) {margin-left: 35px}
 
@@ -2719,11 +2709,11 @@ span {font-size: 12px;}}
 /* Height Responsiveness */
 @media (max-height: 915px) and (max-width: 630px) {span {padding-left: 10px}}
 
-@media (max-height: 725px) {
-width: 190px;
+@media (max-height: 725px)  and (min-width: 601px) {
+width: 177px;
 height: 40px;
 span {
-padding: 12px 0 0 20px;
+padding: 10px 0 0 15px;
 font-size: 14px}}
 
 @media (max-height: 725px) and (max-width: 640px) {
@@ -3154,7 +3144,7 @@ export const EmptyContainer = styled.div<InputValid>`
 display: ${({ valid }) => valid ? 'none' : 'flex'};
 width: fit-content;
 height: 21px;
-margin: 86px 0 0 -98%;
+margin: 75px 0 0 -98%;
 background-color: #fff;
 
 @media(max-width: 630px) {margin: 76px 0 0 -100%}
@@ -3162,9 +3152,6 @@ background-color: #fff;
 @media(max-width: 589px) {margin-top: 79px}
 
 /* Height Responsiveness */
-@media (max-height: 915px) {margin-top: 79px}
-
-@media (max-height: 915px) and (max-width: 630px) {margin-top: 70px}
 
 @media (max-height: 825px) {margin-top: 65px}
 
