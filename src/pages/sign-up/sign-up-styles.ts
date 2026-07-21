@@ -178,6 +178,8 @@ width: 40px;
 height: 40px;
 margin: 10px 0 0 305px}
 
+@media (max-height: 725px) and (max-width: 1559px) {margin: 10px 0 0 284px}
+
 @media (max-height: 705px) and (max-width: 589px) {
 width: 37px;
 height: 37px;
@@ -256,7 +258,7 @@ margin: 20px 0 0 26px}
 margin: -3px 0 0 168px;
 font-size: 26px}
 
-@media (max-height: 915px) and (max-width: 1559px) {margin-left: 145px}
+@media (max-height: 915px) and (max-width: 1559px) {margin-left: 147px}
 
 @media (max-height: 915px) and (max-width: 630px) {margin-left: 103px}
 
@@ -264,9 +266,9 @@ font-size: 26px}
 
 @media (max-height: 825px) and (min-width: 620px) {margin-top: 1px}
 
-@media (max-height: 725px) and (min-width: 601px) {
-margin-left: 187px;
-font-size: 23px}
+@media (max-height: 725px) and (max-width: 1559px) {
+margin-left: 178px;
+font-size: 21px}
 
 @media (max-height: 725px) and (max-width: 640px) {margin: -5px 0 0 163px}
 
@@ -2582,6 +2584,8 @@ font-size: 16px}
 
 @media (max-height: 625px) and (min-width: 601px) {margin: 0px 0 0 63px}
 
+@media (max-height: 625px) and (max-width: 1559px) {margin-left: 45px}
+
 @media (max-height: 580px) {margin-top: 3px}`;
 
 export const ShowPasswordContainer = styled.div`
@@ -2629,6 +2633,8 @@ height: fit-content;
 width: fit-content;
 margin: 30px 0px 0 47px;
 
+@media(max-width: 1559px) {margin-left: 28px}
+
 @media(max-width: 630px) {margin-left: 15px}
 
 /* Height Responsiveness */
@@ -2637,6 +2643,8 @@ margin: 30px 0px 0 47px;
 @media (max-height: 840px) and (max-width: 589px) {margin-top: 20px}
 
 @media (max-height: 830px) and (max-width: 599px) {margin-top: 11.5px}
+
+@media (max-height: 725px) and (max-width: 1559px) {margin-top: 10.5px}
 
 @media (max-height: 725px) and (max-width: 640px) {margin-left: 35px}
 
