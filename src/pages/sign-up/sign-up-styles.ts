@@ -52,8 +52,8 @@ border-radius: 0}
 
 @media (max-height: 825px) and (max-width: 599px) {height: 100vh}
 
-@media (max-height: 725px) {
-height: 630px;
+@media (max-height: 725px) and (min-width: 600px) {
+height: 645px;
 top: 335px}
 
 @media (max-height: 725px) and (max-width: 599px) {
@@ -65,7 +65,7 @@ top: 361px}
 @media (max-height: 700px) and (max-width: 599px) {height: 710px}
 
 @media (max-height: 660px) and (min-width: 600px) {
-height: 595px;
+height: 610px;
 top: 315px}
 
 @media (max-height: 625px) and (max-width: 1280px) {
@@ -80,19 +80,11 @@ top: 300px}
 height: 100vh;
 top: 312px}
 
-@media (max-height: 620px) and (max-width: 619px) {
-height: 570px;
-top: 302px}
-
 @media (max-height: 620px) and (max-width: 599px) {
 height: 620px;
 top: 308px}
 
 @media (max-height: 615px) and (max-width: 599px) {top: 305px}
-
-@media (max-height: 600px) and (max-width: 619px) {
-height: 560px;
-top: 287px}
 
 @media (max-height: 600px) and (max-width: 599px) {
 height: 100vh;
@@ -119,10 +111,6 @@ top: 289px}
 @media (max-height: 570px) and (min-width: 620px) {
 height: 553px;
 top: 285px}
-
-@media (max-height: 567px) and (max-width: 619px) {
-height: 547px;
-top: 280px}
 
 @media (max-height: 567px) and (max-width: 600px) {
 height: 530px;
@@ -155,14 +143,14 @@ width: 50px;
 height: 50px}
 
 /* Height Responsiveness */
-@media (max-height: 915px) and (min-width: 620px) {
+@media (max-height: 915px) and (min-width: 600px) {
 width: 46px;
 height: 46px;
 margin-top: 0px}
 
 @media (max-height: 915px) and (max-width: 1559px) {margin-left: 279px}
 
-@media (max-height: 915px) and (max-width: 630px) {margin-left: 237px}
+@media (max-height: 915px) and (max-width: 630px) {margin-left: 45.5%}
 
 @media (max-height: 915px) and (max-width: 599px) {
 width: 46px;
@@ -171,14 +159,14 @@ margin: 8px 0 0 20px}
 
 @media (max-height: 825px) {margin-top: 0px}
 
-@media (max-height: 725px) and (min-width: 601px) {
+@media (max-height: 725px) and (min-width: 600px) {
 width: 40px;
 height: 40px;
 margin: 10px 0 0 305px}
 
 @media (max-height: 725px) and (max-width: 1559px) {margin: 10px 0 0 284px}
 
-@media (max-height: 725px) and (max-width: 619px) {margin: 10px 0 0 244px}
+@media (max-height: 725px) and (max-width: 630px) {margin-left: 46%}
 
 @media (max-height: 705px) and (max-width: 589px) {
 width: 37px;
@@ -198,6 +186,8 @@ width: 38px;
 height: 38px;
 margin-top: 0px}
 
+@media (max-height: 660px) and (min-width: 600px) {margin-top: 0px}
+
 @media (max-height: 630px) and (max-width: 599px) {
 width: 34px;
 height: 34px}
@@ -207,11 +197,6 @@ height: 34px}
 @media (max-height: 625px) and (max-width: 630px) {margin-left: 242px}
 
 @media (max-height: 625px) and (max-width: 599px) {margin-left: 19px}
-
-@media (max-height: 600px) and (max-width: 619px) {
-width: 36px;
-height: 36px;
-margin-top: 0px}
 
 @media (max-height: 595px) and (max-width: 600px) {
 width: 37px;
@@ -249,13 +234,13 @@ margin: 20px 0 0 26px}
 @media(max-width: 349px) {font-size: 20px}
 
 /* Height Responsiveness */
-@media (max-height: 915px) and (min-width: 601px) {
+@media (max-height: 915px) and (min-width: 600px) {
 margin: -3px 0 0 168px;
 font-size: 26px}
 
 @media (max-height: 915px) and (max-width: 1559px) {margin-left: 147px}
 
-@media (max-height: 915px) and (max-width: 630px) {margin-left: 103px}
+@media (max-height: 915px) and (max-width: 630px) {margin-left: 20%}
 
 @media (max-height: 915px) and (max-width: 599px) {margin-left: 27px}
 
@@ -267,9 +252,9 @@ font-size: 21px}
 
 @media (max-height: 725px) and (max-width: 640px) {margin: -5px 0 0 163px}
 
-@media (max-height: 725px) and (max-width: 630px) {margin-left: 121px}
+@media (max-height: 725px) and (max-width: 630px) {margin-left: 135px}
 
-@media (max-height: 725px) and (max-width: 619px) {margin-left: 135px}
+@media (max-height: 725px) and (max-width: 620px) {margin: -8px 0 0 135px}
 
 @media (max-height: 725px) and (max-width: 599px) {
 margin-top: 0px;
@@ -298,13 +283,11 @@ font-size: 19.5px}
 
 @media (max-height: 630px) and (max-width: 599px) {font-size: 18px}
 
-@media (max-height: 630px) and (max-width: 599px) {font-size: 21px}
-
 @media (max-height: 625px) and (max-width: 1280px) {margin-top: -10px}
 
-@media (max-height: 625px) and (max-width: 640px) {margin-left: 187px}
+@media (max-height: 625px) and (max-width: 640px) {margin-left: 29.5%}
 
-@media (max-height: 625px) and (max-width: 630px) {margin-left: 145px}
+@media (max-height: 625px) and (max-width: 630px) {margin-left: 25.5%}
 
 @media (max-height: 625px) and (max-width: 600px) {
 margin: -5px 0 0 150px;
@@ -317,8 +300,6 @@ font-size: 19px}
 @media (max-height: 625px) and (max-width: 329px) {font-size: 20.5px}
 
 @media (max-height: 615px) and (max-width: 599px) {margin: -32px 0 0 60px}
-
-@media (max-height: 600px) and (max-width: 619px) {margin-top: -8px}
 
 @media (max-height: 600px) and (max-width: 599px) {margin-top: -32px}
 
@@ -1388,7 +1369,7 @@ height: 102px}
 
 @media (max-height: 840px) and (max-width: 589px) {margin-top: 15px}
 
-@media (max-height: 825px) and (min-width: 620px) {
+@media (max-height: 825px) and (min-width: 600px) {
 height: 90px;
 margin-top: 18px}
 
@@ -1664,7 +1645,7 @@ background-color: green;
 @media(max-width: 1559px) {margin-left: 310px}
 
 @media(max-width: 630px) {
-width: 230px;   
+width: 225px;   
 margin-left: 273px}
 
 @media(max-width: 599px) {
@@ -1725,7 +1706,7 @@ margin-left: 170px}
 /* Height Responsiveness */
 @media (max-height: 840px) and (max-width: 589px) {margin-top: -102px}
 
-@media (max-height: 825px) and (min-width: 620px) {
+@media (max-height: 825px) and (min-width: 600px) {
 height: 90px;
 margin-top: -90px}
 
@@ -3114,7 +3095,7 @@ background-color: #fff;
 
 @media (max-height: 825px) {margin-top: 65px}
 
-@media (max-height: 725px) and (max-width: 619px) {margin-top: 59px}
+@media (max-height: 725px) and (max-width: 620px) {margin-top: 67px}
 
 @media (max-height: 725px) and (max-width: 599px) {margin-top: 62px}
 
@@ -3128,7 +3109,7 @@ background-color: #fff;
 
 @media (max-height: 674px) and (max-width: 579px) {margin-top: 57px}
 
-@media (max-height: 660px) and (min-width: 600px) {margin-top: 58px}
+@media (max-height: 660px) and (min-width: 600px) {margin-top: 66px}
 
 @media (max-height: 625px) and (min-width: 620px) {margin-top: 63px}
 
