@@ -13,11 +13,11 @@ import {
     FirstNameContainer,
     FirstNameUserContainer,
     FirstNameUserInput,
-    FirstNameLabel,
+    FirstNameUserLabel,
     SurnameContainer,
     SurnameUserContainer,
     SurnameUserInput,
-    SurnameLabel,
+    SurnameUserLabel,
     EmailContainer,
     EmailUserContainer,
     EmailUserInput,
@@ -221,7 +221,7 @@ export default function SignUp() {
                                 setUserName(e.target.value)
                             }}
                         />
-                        <FirstNameLabel valid={userNameValid && formatNameValid}>Nome</FirstNameLabel>
+                        <FirstNameUserLabel valid={userNameValid && formatNameValid}>Nome</FirstNameUserLabel>
 
                     </FirstNameUserContainer>
 
@@ -251,7 +251,7 @@ export default function SignUp() {
                             }}
                         />
 
-                        <SurnameLabel valid={userSurnameValid && formatNameValid}>Sobrenome</SurnameLabel>
+                        <SurnameUserLabel valid={userSurnameValid && formatNameValid}>Sobrenome</SurnameUserLabel>
 
                     </SurnameUserContainer>
 
