@@ -35,8 +35,8 @@ width: 600px;
 height: 700px}
 
 @media(max-width: 630px) {
-width: 525px;
-height: 745px}
+width: 520px;
+height: 635px}
 
 @media(max-width: 599px) {
 width: 100%;
@@ -62,9 +62,19 @@ border-radius: 0}
 
 @media (max-width: 1280px) and (max-height: 930px) {height: 650px}
 
-@media (max-width: 1280px) and (max-height: 680px) {height: 635px}
+@media (max-width: 1280px) and (max-height: 680px) {height: 585px}
 
-@media (max-width: 1280px) and (max-height: 600px) {height: 595px}
+@media (max-width: 1280px) and (max-height: 600px) {height: 530px}
+
+@media (max-width: 630px) and (max-height: 930px) {height: 615px}
+
+@media (max-width: 630px) and (max-height: 790px) {height: 655px}
+
+@media (max-width: 630px) and (max-height: 680px) {height: 585px}
+
+@media (max-width: 630px) and (max-height: 600px) {height: 535px}
+
+@media (max-width: 599px) and (max-height: 930px) {height: 100vh}
 `;
 
 export const Title = styled.h2`
@@ -80,12 +90,12 @@ cursor: default;
 margin-left: 165px;
 font-size: 23px}
 
-@media(max-width: 630px) {margin-left: 125px}
+@media(max-width: 630px) {margin: -5px 0 0 125px}
 
 @media(max-width: 599px) {
 font-weight: 400;
 font-size: 30px;
-margin: 20px 0 0 26px;}
+margin: 15px 0 0 26px;}
 
 @media(max-width: 409px) {font-size: 25px}
 
@@ -111,6 +121,14 @@ font-size: 19px;}
 @media (max-width: 1559px) and (max-height: 680px) {margin-left: 173px}
 
 @media (max-width: 1559px) and (max-height: 600px) {margin-left: 188px}
+
+@media (max-width: 630px) and (max-height: 790px) {margin-left: 110px}
+
+@media (max-width: 630px) and (max-height: 680px) {margin-left: 130px}
+
+@media (max-width: 630px) and (max-height: 600px) {margin-left: 145px}
+
+@media (max-width: 599px) and (max-height: 790px) {margin-left: 25.5%}
 `;
 
 export const GoogleIconContainer = styled.img`
@@ -125,7 +143,7 @@ height: 40px;}
 
 @media(max-width: 1280px) {margin-left: 285px}
 
-@media(max-width: 630px) {margin-left: 240px}
+@media(max-width: 630px) {margin-left: 245px}
 
 @media(max-width: 599px) {
 width: 55px;
@@ -153,7 +171,11 @@ margin-top: 2px;}
 
 @media (max-width: 1559px) and (max-height: 790px) {margin-left: 47%}
 
-@media (max-width: 1280px) and (max-height: 790px) {margin-left: 280px;}
+@media (max-width: 1280px) and (max-height: 600px) {margin-left: 47.5%}
+
+@media (max-width: 630px) and (max-height: 790px) {margin-left: 46%}
+
+@media (max-width: 630px) and (max-height: 600px) {margin-left: 46.5%}
 `;
 
 export const FirstNameContainer = styled.div`
@@ -165,11 +187,11 @@ background-color: green;
 
 @media(max-width: 1559px) {margin: 30px 0px 0 40px}
 
-@media(max-width: 1280px) {margin-top: 36px}
+@media(max-width: 1280px) {margin-top: 35px}
 
 @media(max-width: 630px) {
 width: 226px;
-margin-left: 20px}
+margin: 25px 0 0 20px;}
 
 @media(max-width: 599px) {
 width: 560px;
@@ -210,7 +232,9 @@ height: 102px}
 height: 77px;
 margin-top: 15px;}
 
-@media (max-width: 2556px) and (max-height: 600px) {height: 68px;}
+@media (max-width: 2556px) and (max-height: 600px) {height: 68px}
+
+@media (max-width: 599px) and (max-height: 750px) {margin-top: 13px}
 
 `;
 
@@ -258,6 +282,8 @@ background-color: #fff;
 @media (max-width: 2556px) and (max-height: 680px) {height: 45px}
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 40px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 40px}
 `;
 
 export const FirstNameUserInput = styled.input<InputValid>`
@@ -307,6 +333,8 @@ outline: none;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
+@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+
 &:focus + label,
 &:not(:placeholder-shown) + label {
 height: 15px;
@@ -349,11 +377,15 @@ font-size: 14px}
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 margin-top: 13.5px;
-font-size: 14.5px}
+font-size: 14.5px;}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 margin-top: 12.5px;
-font-size: 13px}
+font-size: 13px;}
+
+@media (max-width: 599px) and (max-height: 735px) {
+margin-top: 11px;
+font-size: 14px;}
 `;
 
 export const SurnameContainer = styled.div`
@@ -363,11 +395,11 @@ width: 255px;
 margin: -87px 0 0px 335px;
 background-color: green;
 
-@media(max-width: 1559px) {margin: -87px 0 0 310px}
+@media(max-width: 1559px) {margin-left: 310px}
 
 @media(max-width: 630px) {
 width: 226px;
-margin: -100px 0 0 276px}
+margin-left: 276px}
 
 @media(max-width: 599px) {
 width: 560px;
@@ -455,6 +487,8 @@ background-color: #fff;
 @media (max-width: 2556px) and (max-height: 680px) {height: 45px}
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 40px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 40px}
 `;
 
 export const SurnameUserInput = styled.input<InputValid>`
@@ -504,6 +538,8 @@ outline: none;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
+@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+
 &:focus + label,
 &:not(:placeholder-shown) + label {
 height: 15px;
@@ -545,11 +581,15 @@ font-size: 14px}
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 margin-top: 13.5px;
-font-size: 14.5px}
+font-size: 14.5px;}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 margin-top: 12.5px;
-font-size: 13px}
+font-size: 13px;}
+
+@media (max-width: 599px) and (max-height: 735px) {
+margin-top: 11px;
+font-size: 14px;}
 `;
 
 export const EmailContainer = styled.div`
@@ -654,7 +694,9 @@ background-color: #fff;
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {height: 45px}
 
-@media (max-width: 2556px) and (max-height: 600px) {height: 40px}`;
+@media (max-width: 2556px) and (max-height: 600px) {height: 40px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 40px}`;
 
 export const EmailUserInput = styled.input<InputValid>`
 width: 513px;
@@ -705,6 +747,8 @@ background-color: #fff;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
+@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+
 &:focus + label,
 &:not(:placeholder-shown) + label {
 height: 15px;
@@ -745,11 +789,15 @@ font-size: 14px}
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 margin-top: 13.5px;
-font-size: 14.5px}
+font-size: 14.5px;}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 margin-top: 12.5px;
-font-size: 13px}
+font-size: 13px;}
+
+@media (max-width: 599px) and (max-height: 735px) {
+margin-top: 11px;
+font-size: 14px;}
 
 `;
 
@@ -851,7 +899,9 @@ background-color: #fff;
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {height: 45px}
 
-@media (max-width: 2556px) and (max-height: 600px) {height: 40px}`;
+@media (max-width: 2556px) and (max-height: 600px) {height: 40px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 40px}`;
 
 export const PasswordUserInput = styled.input<InputValid>`
 width: 238px;
@@ -901,6 +951,8 @@ outline: none;
 @media (max-width: 2556px) and (max-height: 680px) {height: 43px}
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 33px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -959,11 +1011,15 @@ font-size: 14px}
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 margin-top: 13.5px;
-font-size: 14.5px}
+font-size: 14.5px;}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 margin-top: 12.5px;
-font-size: 13px}`;
+font-size: 13px;}
+
+@media (max-width: 599px) and (max-height: 735px) {
+margin-top: 11px;
+font-size: 14px;}`;
 
 export const ComparePasswordContainer = styled.div`
 display: flex;
@@ -1085,7 +1141,9 @@ background-color: #fff;
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {height: 45px}
 
-@media (max-width: 2556px) and (max-height: 600px) {height: 40px}`;
+@media (max-width: 2556px) and (max-height: 600px) {height: 40px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 40px}`;
 
 export const ComparePasswordUserInput = styled.input<InputValid>`
 width: 238px;
@@ -1135,6 +1193,8 @@ outline: none;
 @media (max-width: 2556px) and (max-height: 680px) {height: 43px}
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 33px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -1193,11 +1253,15 @@ font-size: 14px}
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 margin-top: 13.5px;
-font-size: 14.5px}
+font-size: 14.5px;}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 margin-top: 12.5px;
-font-size: 13px}`;
+font-size: 13px;}
+
+@media (max-width: 599px) and (max-height: 735px) {
+margin-top: 11px;
+font-size: 14px;}`;
 
 export const NicknameContainer = styled.div`
 display: flex;
@@ -1300,7 +1364,9 @@ background-color: #fff;
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {height: 45px}
 
-@media (max-width: 2556px) and (max-height: 600px) {height: 40px}`;
+@media (max-width: 2556px) and (max-height: 600px) {height: 40px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 40px}`;
 
 export const NicknameUserInput = styled.input<InputValid>`
 width: 513px;
@@ -1350,6 +1416,8 @@ background-color: #fff;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
+@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+
 &:focus + label,
 &:not(:placeholder-shown) + label {
 height: 15px;
@@ -1389,11 +1457,15 @@ font-size: 14px}
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 margin-top: 13.5px;
-font-size: 14.5px}
+font-size: 14.5px;}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 margin-top: 12.5px;
-font-size: 13px}`;
+font-size: 13px;}
+
+@media (max-width: 599px) and (max-height: 735px) {
+margin-top: 11px;
+font-size: 14px;}`;
 
 export const PasswordMessageContainer = styled.div`
 display: flex;
@@ -1405,16 +1477,16 @@ cursor: default;
 
 @media(max-width: 640px) {margin-top: 0px}
 
-@media(max-width: 630px) {margin-left: 0px}
+@media(max-width: 630px) {margin-left: 23px}
 
-@media(max-width: 599px) {margin: 5px 0 0 5px}
+@media(max-width: 599px) {margin: 5px 0 0 30px}
 
 span {
 color: #2F4F4F;
 
 @media(max-width: 630px) {font-size: 15.4px}
 
-@media(max-width: 599px) {font-size: 17.5px}
+@media(max-width: 599px) {font-size: 17px}
 
 @media(max-width: 589px) {font-size: 16.6px}
 
@@ -1451,6 +1523,7 @@ color: #2F4F4F;
 
 @media (max-width: 1280px) and (max-height: 790px) {margin-top: 2px}
 
+@media (max-width: 630px) and (max-height: 680px) {margin-left: 24px}
 `;
 
 export const ShowPasswordContainer = styled.div`
@@ -1474,6 +1547,8 @@ cursor: pointer;}
 
 @media(max-width: 630px) {margin-left: 20px}
 
+@media(max-width: 599px) {margin-left: 25px}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {margin-top: 10px}
 `;
@@ -1493,7 +1568,9 @@ margin: 30px 0px 0 47px;
 
 @media(max-width: 1559px) {margin-left: 28px}
 
-@media(max-width: 630px) {margin-left: 15px}
+@media(max-width: 630px) {margin: 15px 0 0 13px}
+
+@media(max-width: 599px) {margin-left: 18px}
 
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 790px) {margin-top: 14px}
@@ -1526,7 +1603,7 @@ width: 177px;
 height: 40px;
 span {font-size: 14px;}}
 
-@media(max-width: 630px) {width: 166px}
+@media(max-width: 630px) {span{padding-left: 12px}}
 
 @media(max-width: 399px) {
 width: 150px;
@@ -1544,6 +1621,12 @@ width: 171px;
 height: 38px;
 span {font-size: 13px}}
 
+@media (max-width: 630px) and (max-height: 680px) {width: 174px}
+
+@media (max-width: 630px) and (max-height: 600px) {
+width: 164px;
+span{padding-top: -5px}}
+
 `;
 
 export const NextButtonContainer = styled.div`
@@ -1556,7 +1639,7 @@ margin: -48px 0 0 430px;
 
 @media (max-width: 630px) {margin-left: 355px}
 
-@media (max-width: 599px) {margin-left: 458px}
+@media (max-width: 599px) {margin-left: 430px}
 
 @media (max-width: 589px) {margin-left: 423px}
 
@@ -1588,6 +1671,8 @@ margin: -48px 0 0 430px;
 @media (max-width: 2556px) and (max-height: 600px) {margin-top: -39px}
 
 @media (max-width: 1559px) and (max-height: 680px) {margin-left: 68%}
+
+@media (max-width: 630px) and (max-height: 600px) {margin-top: -38px}
 
 `;
 
@@ -1639,7 +1724,13 @@ span {font-size: 14px;}}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 height: 38px;
-span {font-size: 13px;}}`;
+span {font-size: 13px;}}
+
+@media (max-width: 630px) and (max-height: 680px) {width: 135px}
+
+@media (max-width: 630px) and (max-height: 600px) {span {padding: -3px 0 0 5px}}
+
+`;
 
 export const ExclamationIconContainer = styled.img`
 width: 20px;
@@ -1658,7 +1749,7 @@ height: 21px;
 margin: 65px 0 0 -98%;
 background-color: #fff;
 
-@media(max-width: 630px) {margin: 76px 0 0 -100%}
+@media(max-width: 630px) {margin: 65px 0 0 -99%}
 
 @media(max-width: 589px) {margin-top: 79px}
 
