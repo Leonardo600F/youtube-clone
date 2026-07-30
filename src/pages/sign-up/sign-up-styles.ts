@@ -129,6 +129,12 @@ font-size: 19px;}
 @media (max-width: 630px) and (max-height: 600px) {margin-left: 145px}
 
 @media (max-width: 599px) and (max-height: 790px) {margin-left: 25.5%}
+
+@media (max-width: 599px) and (max-height: 680px) {margin-left: 28%}
+
+@media (max-width: 599px) and (max-height: 635px) {
+margin-left: 29%;
+font-size: 20px}
 `;
 
 export const GoogleIconContainer = styled.img`
@@ -176,6 +182,14 @@ margin-top: 2px;}
 @media (max-width: 630px) and (max-height: 790px) {margin-left: 46%}
 
 @media (max-width: 630px) and (max-height: 600px) {margin-left: 46.5%}
+
+@media (max-width: 599px) and (max-height: 790px) {
+align-items: center;
+justify-content: center;}
+
+@media (max-width: 599px) and (max-height: 635px) {
+width: 32px;
+height: 32px;}
 `;
 
 export const FirstNameContainer = styled.div`
@@ -195,11 +209,9 @@ margin: 25px 0 0 20px;}
 
 @media(max-width: 599px) {
 width: 560px;
-margin: 0 0 0 26px}
+margin: 10px 0 0 26px}
 
-@media(max-width: 589px) {
-width: 520px;
-height: 102px}
+@media(max-width: 589px) {width: 520px}
 
 @media(max-width: 559px) {width: 485px}
 
@@ -235,6 +247,10 @@ margin-top: 15px;}
 @media (max-width: 2556px) and (max-height: 600px) {height: 68px}
 
 @media (max-width: 599px) and (max-height: 750px) {margin-top: 13px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 70px}
+
+@media (max-width: 599px) and (max-height: 635px) {margin-top: 8px}
 
 `;
 
@@ -333,7 +349,7 @@ outline: none;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
-@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+@media (max-width: 599px) and (max-height: 735px) {height: 37px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -343,10 +359,14 @@ font-size: 12px;
 transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
+@media(max-width: 599px) {transform: translateY(-30px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
 @media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}
+
+@media (max-width: 599px) and (max-height: 735px) {transform: translateY(-25px)}
 `;
 
 export const FirstNameUserLabel = styled.label<InputValid>`
@@ -405,9 +425,7 @@ margin-left: 276px}
 width: 560px;
 margin: 15px 0 0 26px}
 
-@media(max-width: 589px) {
-width: 520px;
-height: 102px}
+@media(max-width: 589px) {width: 520px}
 
 @media(max-width: 559px) {width: 485px}
 
@@ -436,11 +454,17 @@ height: 102px}
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 height: 77px;
-margin-top: -77px}
+margin-top: -77px;}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 height: 68px;
-margin-top: -68px}
+margin-top: -68px;}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 70px}
+
+@media (max-width: 599px) and (max-height: 680px) {margin-top: 20px}
+
+@media (max-width: 599px) and (max-height: 635px) {margin-top: 13px}
 `;
 
 export const SurnameUserContainer = styled.div<SurnameFocused>`
@@ -538,7 +562,7 @@ outline: none;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
-@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+@media (max-width: 599px) and (max-height: 735px) {height: 37px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -548,10 +572,14 @@ font-size: 12px;
 transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
+@media(max-width: 599px) {transform: translateY(-30px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
-@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}`;
+@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}
+
+@media (max-width: 599px) and (max-height: 735px) {transform: translateY(-25px)}`;
 
 export const SurnameUserLabel = styled.label<InputValid>`
 display: flex;
@@ -613,9 +641,7 @@ margin-left: 20px}
 width: 560px;
 margin: 15px 0 0 26px}
 
-@media(max-width: 589px) {
-width: 520px;
-height: 102px}
+@media(max-width: 589px) {width: 520px}
 
 @media(max-width: 559px) {width: 485px}
 
@@ -647,6 +673,10 @@ height: 102px}
 @media (max-width: 2556px) and (max-height: 680px) {height: 77px}
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 68px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 70px}
+
+@media (max-width: 599px) and (max-height: 635px) {margin-top: 8px}
 `;
 
 export const EmailUserContainer = styled.div<EmailFocused>`
@@ -747,7 +777,7 @@ background-color: #fff;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
-@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+@media (max-width: 599px) and (max-height: 735px) {height: 37px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -758,10 +788,14 @@ transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 background-color: #fff;
 
+@media(max-width: 599px) {transform: translateY(-30px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
-@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}`;
+@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}
+
+@media (max-width: 599px) and (max-height: 735px) {transform: translateY(-25px)}`;
 
 export const EmailUserLabel = styled.label<InputValid>`
 display: flex;
@@ -821,9 +855,7 @@ width: 275px;
 margin-top: 18px;
 margin-left: 26px}
 
-@media(max-width: 589px) {
-width: 245px;
-height: 102px}
+@media(max-width: 589px) {width: 245px}
 
 @media(max-width: 559px) {width: 225px}
 
@@ -854,7 +886,11 @@ height: 102px}
 
 @media (max-width: 2556px) and (max-height: 680px) {height: 77px}
 
-@media (max-width: 2556px) and (max-height: 600px) {height: 68px}`;
+@media (max-width: 2556px) and (max-height: 600px) {height: 68px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 70px}
+
+@media (max-width: 599px) and (max-height: 635px) {margin-top: 8px}`;
 
 export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
@@ -952,7 +988,7 @@ outline: none;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
-@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+@media (max-width: 599px) and (max-height: 735px) {height: 37px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -962,10 +998,14 @@ font-size: 12px;
 transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
+@media(max-width: 599px) {transform: translateY(-30px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
-@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}`;
+@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}
+
+@media (max-width: 599px) and (max-height: 735px) {transform: translateY(-25px)}`;
 
 export const PasswordUserLabel = styled.label<InputValid>`
 display: flex;
@@ -980,7 +1020,9 @@ background-color: #fff;
 
 @media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'}}
 
-@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'}}
+@media(max-width: 599px) {
+margin-top: 18px;
+margin-left: ${({ valid }) => valid ? '-95%' : '-96%'};}
 
 @media(max-width: 559px) {margin-left: ${({ valid }) => valid ? '-206px' : '-210px'}}
 
@@ -1032,71 +1074,74 @@ background-color: green;
 
 @media(max-width: 630px) {
 width: 225px;   
-margin-left: 273px}
+margin-left: 273px;}
 
 @media(max-width: 599px) {
 width: 276px;
-margin-left: 310px}
+margin-left: 310px;}
 
 @media(max-width: 589px) {
 width: 244px;
-height: 102px;
-margin: -101.5px 0 0 302px} 
+margin-left: 302px;} 
 
 @media(max-width: 559px) {
 width: 225px;
-margin-left: 286px}
+margin-left: 286px;}
 
 @media(max-width: 529px) {width: 205px}
 
 @media(max-width: 509px) {
 width: 222px;
-margin-left: 260px}
+margin-left: 260px;}
 
 @media(max-width: 489px) {
 width: 212px;
-margin-left: 250px}
+margin-left: 250px;}
 
 @media(max-width: 469px) {
 width: 202px;
-margin-left: 238px}
+margin-left: 238px;}
 
 @media(max-width: 449px) {
 width: 192px;
-margin-left: 228px}
+margin-left: 228px;}
 
 @media(max-width: 429px) {
 width: 182px;
-margin-left: 218px}
+margin-left: 218px;}
 
 @media(max-width: 409px) {
 width: 172px;
-margin-left: 210px}
+margin-left: 210px;}
 
 @media(max-width: 389px) {
 width: 162px;
-margin-left: 200px}
+margin-left: 200px;}
 
 @media(max-width: 369px) {
 width: 152px;
-margin-left: 188px}
+margin-left: 188px;}
 
 @media(max-width: 349px) {
 width: 142px;
-margin-left: 178px}
+margin-left: 178px;}
 
 @media(max-width: 329px) {
 width: 130px;
-margin-left: 170px}
+margin-left: 170px;}
 
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 height: 77px; 
-margin-top: -77px}
+margin-top: -77px;}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 height: 68px;
-margin-top: -68px}`;
+margin-top: -68px;}
+
+@media (max-width: 599px) and (max-height: 735px) {
+height: 70px;
+margin-top: -70px;}`;
 
 export const ComparePasswordUserContainer = styled.div<ComparePasswordFocused>`
 display: flex;
@@ -1194,7 +1239,7 @@ outline: none;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
-@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+@media (max-width: 599px) and (max-height: 735px) {height: 37px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -1204,10 +1249,14 @@ font-size: 12px;
 transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
+@media(max-width: 599px) {transform: translateY(-30px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
-@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}`;
+@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}
+
+@media (max-width: 599px) and (max-height: 735px) {transform: translateY(-25px)}`;
 
 export const ComparePasswordUserLabel = styled.label<InputValid>`
 display: flex;
@@ -1222,7 +1271,9 @@ background-color: #fff;
 
 @media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-207px' : '-210px'}}
 
-@media(max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'}}
+@media(max-width: 599px) {
+margin-top: 18px;
+margin-left: ${({ valid }) => valid ? '-95%' : '-96%'};}
 
 @media(max-width: 559px) {margin-left: ${({ valid }) => valid ? '-206px' : '-210px'}}
 
@@ -1284,9 +1335,7 @@ margin-left: 20px}
 width: 560px;
 margin: 15px 0 0 26px}
 
-@media(max-width: 589px) {
-width: 520px;
-height: 102px}
+@media(max-width: 589px) {width: 520px}
 
 @media(max-width: 559px) {width: 485px}
 
@@ -1317,7 +1366,11 @@ height: 102px}
 
 @media (max-width: 2556px) and (max-height: 680px) {height: 77px}
 
-@media (max-width: 2556px) and (max-height: 600px) {height: 68px}`;
+@media (max-width: 2556px) and (max-height: 600px) {height: 68px}
+
+@media (max-width: 599px) and (max-height: 735px) {height: 70px}
+
+@media (max-width: 599px) and (max-height: 635px) {margin-top: 8px}`;
 
 export const NicknameUserContainer = styled.div<NicknameFocused>`
 display: flex;
@@ -1416,7 +1469,7 @@ background-color: #fff;
 
 @media (max-width: 2556px) and (max-height: 600px) {height: 38px}
 
-@media (max-width: 599px) and (max-height: 735px) {height: 33px}
+@media (max-width: 599px) and (max-height: 735px) {height: 37px}
 
 &:focus + label,
 &:not(:placeholder-shown) + label {
@@ -1426,10 +1479,14 @@ font-size: 12px;
 transform: translateY(-28px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
+@media(max-width: 599px) {transform: translateY(-30px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
-@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}`;
+@media (max-width: 2556px) and (max-height: 600px) {transform: translateY(-24px)}
+
+@media (max-width: 599px) and (max-height: 735px) {transform: translateY(-25px)}`;
 
 export const NicknameUserLabel = styled.label<InputValid>`
 display: flex;
@@ -1444,7 +1501,9 @@ background-color: #fff;
 
 @media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-463px' : '-473px'}}
 
-@media (max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
+@media(max-width: 599px) {
+margin-top: 18px;
+margin-left: ${({ valid }) => valid ? '-96.5%' : '-97%'}}
 
 @media (max-width: 369px) {margin-left: ${({ valid }) => valid ? '-295px' : '-297px'}}
 
@@ -1751,14 +1810,16 @@ background-color: #fff;
 
 @media(max-width: 630px) {margin: 65px 0 0 -99%}
 
-@media(max-width: 589px) {margin-top: 79px}
-
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {margin-top: 55px}
 
 @media (max-width: 2556px) and (max-height: 600px) {
 height: 18px;
-margin-top: 49px}`;
+margin-top: 49px}
+
+@media (max-width: 599px) and (max-height: 735px) {margin-top: 48px}
+
+`;
 
 export const EmptyMessage = styled.span`
 display: block;
