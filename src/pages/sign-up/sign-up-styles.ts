@@ -130,19 +130,29 @@ font-size: 19px;}
 
 @media (max-width: 599px) and (max-height: 790px) {margin-left: 150px}
 
-@media (max-width: 599px) and (max-height: 680px) {margin-left: 167px}
+@media (max-width: 599px) and (max-height: 680px) {margin-left: 168px}
 
 @media (max-width: 599px) and (max-height: 635px) {
 margin-left: 174px;
 font-size: 20px;}
 
-@media (max-width: 599px) and (max-height: 600px) {margin-left: 177px}
+@media (max-width: 599px) and (max-height: 600px) {margin-left: 29.5%}
 
-@media (max-width: 589px) and (max-height: 790px) {margin-left: 180px}
+@media (max-width: 589px) and (max-height: 790px) {margin-left: 24.5%}
+
+@media (max-width: 589px) and (max-height: 680px) {margin-left: 27.5%}
+
+@media (max-width: 589px) and (max-height: 635px) {margin-left: 28.7%}
 
 @media (max-width: 579px) and (max-height: 680px) {margin-left: 28%}
 
 @media (max-width: 579px) and (max-height: 635px) {margin-left: 28.5%}
+
+@media (max-width: 569px) and (max-height: 680px) {margin-left: 27%}
+
+@media (max-width: 569px) and (max-height: 635px) {margin-left: 28%}
+
+@media (max-width: 569px) and (max-height: 600px) {margin-left: 28.5%}
 
 @media (max-width: 559px) and (max-height: 790px) {margin-left: 24%}
 
@@ -156,7 +166,37 @@ font-size: 20px;}
 
 @media (max-width: 549px) and (max-height: 635px) {margin-left: 27.5%}
 
-@media (max-width: 549px) and (max-height: 600px) {margin-left: 28.5%}
+@media (max-width: 549px) and (max-height: 600px) {margin-left: 28%}
+
+@media (max-width: 539px) and (max-height: 635px) {margin-left: 146px}
+
+@media (max-width: 539px) and (max-height: 600px) {margin-left: 149px}
+
+@media (max-width: 529px) and (max-height: 790px) {margin-left: 120px}
+
+@media (max-width: 529px) and (max-height: 680px) {margin-left: 135px}
+
+@media (max-width: 529px) and (max-height: 635px) {margin-left: 141px}
+
+@media (max-width: 529px) and (max-height: 600px) {margin-left: 144px}
+
+@media (max-width: 519px) and (max-height: 790px) {margin-left: 114px}
+
+@media (max-width: 519px) and (max-height: 680px) {margin-left: 132px}
+
+@media (max-width: 519px) and (max-height: 635px) {margin-left: 136px}
+
+@media (max-width: 519px) and (max-height: 600px) {margin-left: 140px}
+
+@media (max-width: 509px) and (max-height: 790px) {margin-left: 109px}
+
+@media (max-width: 509px) and (max-height: 680px) {margin-left: 127px}
+
+@media (max-width: 509px) and (max-height: 635px) {margin-left: 132px}
+
+@media (max-width: 499px) and (max-height: 790px) {margin-left: 104px}
+
+@media (max-width: 499px) and (max-height: 680px) {margin-left: 120px}
 `;
 
 export const GoogleIconContainer = styled.img`
@@ -1181,6 +1221,10 @@ margin-top: -68px;}
 height: 70px;
 margin-top: -70px;}
 
+@media (max-width: 599px) and (max-height: 600px) {
+height: 67px;
+margin-top: -67px;}
+
 @media (max-width: 589px) and (max-height: 600px) {
 height: 67px;
 margin-top: -67px}`;
@@ -1549,9 +1593,7 @@ background-color: #fff;
 
 @media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-463px' : '-473px'}}
 
-@media(max-width: 599px) {
-margin-top: 18px;
-margin-left: ${({ valid }) => valid ? '-96.5%' : '-97%'}}
+@media (max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
 
 @media (max-width: 369px) {margin-left: ${({ valid }) => valid ? '-295px' : '-297px'}}
 
@@ -1599,9 +1641,7 @@ color: #2F4F4F;
 
 @media(max-width: 559px) {font-size: 15px}
 
-@media(max-width: 529px) {font-size: 14.8px}
-
-@media(max-width: 509px) {font-size: 14.6px}
+@media(max-width: 529px) {font-size: 14.2px}
 
 @media(max-width: 489px) {font-size: 14px}
 
@@ -1621,6 +1661,8 @@ color: #2F4F4F;
 
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {font-size: 16.5px}
+
+@media (max-width: 630px) and (max-height: 680px) {font-size: 14.5px}
 
 @media (max-width: 589px) and (max-height: 600px) {font-size: 15.5px}
 
@@ -1758,11 +1800,9 @@ margin: -48px 0 0 430px;
 
 @media (max-width: 559px) {margin-left: 370px}
 
-@media (max-width: 529px) {margin-left: 365px}
+@media (max-width: 529px) {margin-left: 340px}
 
-@media (max-width: 509px) {margin-left: 355px}
-
-@media (max-width: 489px) {margin-left: 335px}
+@media (max-width: 499px) {margin-left: 325px}
 
 @media (max-width: 469px) {margin-left: 305px}
 
