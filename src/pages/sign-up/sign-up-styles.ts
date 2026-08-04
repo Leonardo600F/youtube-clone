@@ -196,7 +196,47 @@ font-size: 20px;}
 
 @media (max-width: 499px) and (max-height: 790px) {margin-left: 104px}
 
-@media (max-width: 499px) and (max-height: 680px) {margin-left: 120px}
+@media (max-width: 499px) and (max-height: 680px) {margin-left: 121px}
+
+@media (max-width: 499px) and (max-height: 635px) {margin-left: 127px}
+
+@media (max-width: 499px) and (max-height: 600px) {margin-left: 130px}
+
+@media (max-width: 489px) and (max-height: 790px) {margin-left: 21%}
+
+@media (max-width: 489px) and (max-height: 680px) {margin-left: 24%}
+
+@media (max-width: 489px) and (max-height: 635px) {margin-left: 25%}
+
+@media (max-width: 489px) and (max-height: 600px) {margin-left: 26%}
+
+@media (max-width: 479px) and (max-height: 790px) {margin-left: 20%}
+
+@media (max-width: 479px) and (max-height: 600px) {margin-left: 25%}
+
+@media (max-width: 469px) and (max-height: 680px) {margin-left: 23.5%}
+
+@media (max-width: 469px) and (max-height: 635px) {margin-left: 24.5%}
+
+@media (max-width: 469px) and (max-height: 600px) {margin-left: 25%}
+
+@media (max-width: 459px) and (max-height: 790px) {margin-left: 19%}
+
+@media (max-width: 459px) and (max-height: 680px) {margin-left: 23%}
+
+@media (max-width: 459px) and (max-height: 635px) {margin-left: 24%}
+
+@media (max-width: 459px) and (max-height: 600px) {margin-left: 24.5%}
+
+@media (max-width: 449px) and (max-height: 790px) {margin-left: 18%}
+
+@media (max-width: 449px) and (max-height: 680px) {margin-left: 22%}
+
+@media (max-width: 449px) and (max-height: 635px) {margin-left: 23%}
+
+@media (max-width: 449px) and (max-height: 600px) {margin-left: 23.5%}
+
+
 `;
 
 export const GoogleIconContainer = styled.img`
@@ -1643,7 +1683,7 @@ color: #2F4F4F;
 
 @media(max-width: 529px) {font-size: 14.2px}
 
-@media(max-width: 489px) {font-size: 14px}
+@media(max-width: 499px) {font-size: 13.6px}
 
 @media(max-width: 469px) {font-size: 13px}
 
@@ -1667,6 +1707,12 @@ color: #2F4F4F;
 @media (max-width: 589px) and (max-height: 600px) {font-size: 15.5px}
 
 @media (max-width: 559px) and (max-height: 680px) {font-size: 14.5px}
+
+@media(max-width: 499px) and (max-height: 680px) {font-size: 13.5px}
+
+@media(max-width: 469px) and (max-height: 680px) {font-size: 12.7px}
+
+@media(max-width: 449px) and (max-height: 680px) {font-size: 12px}
 }
 
 /* Height Responsiveness */
@@ -1782,6 +1828,13 @@ span {font-size: 13px;}}
 width: 164px;
 span{padding-top: -5px;}}
 
+@media (max-width: 449px) and (max-height: 680px) {
+width: 157px;
+height: 35px;
+span {
+padding-top: -5px;
+font-size: 12.5px;}}
+
 `;
 
 export const NextButtonContainer = styled.div`
@@ -1806,7 +1859,7 @@ margin: -48px 0 0 430px;
 
 @media (max-width: 469px) {margin-left: 305px}
 
-@media (max-width: 449px) {margin-left: 295px}
+@media (max-width: 449px) {margin-left: 280px}
 
 @media (max-width: 429px) {margin-left: 270px}
 
@@ -1829,6 +1882,10 @@ margin: -48px 0 0 430px;
 
 @media (max-width: 559px) and (max-height: 680px) {margin-left: 64%}
 
+@media (max-width: 489px) and (max-height: 790px) {margin-left: 62%}
+
+@media (max-width: 449px) and (max-height: 680px) {margin-top: -33px}
+
 `;
 
 export const NextButton = styled.div`
@@ -1843,21 +1900,29 @@ background-color: #1E90FF;
 
 span {
 display: flex;
-width: 150px;
+width: fit-content;
 align-items: center;
 justify-content: center;
+padding-left: 45px;
 font-size: 16px;
 font-weight: 500;
 border-radius: 50px;
 color: #fff;
 
-@media(max-width: 1559px) {font-size: 15px}
+@media(max-width: 630px) {padding-left: 38px}
 
 @media(max-width: 559px) {font-size: 14px}}
 
 @media(max-width: 1559px) {
 height: 40px;
-width: 130px;}
+width: 130px;
+span {
+padding-left: 40px;
+font-size: 15px;}}
+
+@media(max-width: 449px) {width: 120px;}
+
+@media(max-width: 439px) {span {padding-left: 33px}}
 
 @media(max-width: 409px) {margin-left: 34px}
 
@@ -1881,9 +1946,22 @@ span {font-size: 14px;}}
 height: 38px;
 span {font-size: 13px;}}
 
-@media (max-width: 630px) and (max-height: 680px) {width: 135px}
+@media (max-width: 1559px) and (max-height: 680px) {span {padding: 3px 0 0 45px}}
+
+@media (max-width: 1559px) and (max-height: 600px) {span {padding: 0px 0 0 48px}}
+
+@media (max-width: 630px) and (max-height: 680px) {
+width: 135px;
+span {padding: 1px 0 0 43px};}
 
 @media (max-width: 630px) and (max-height: 600px) {span {padding: -3px 0 0 5px}}
+
+@media (max-width: 449px) and (max-height: 680px) {
+width: 120px;
+height: 35px;
+span {
+padding-left: 37px;
+font-size: 12.5px;}}
 
 `;
 
