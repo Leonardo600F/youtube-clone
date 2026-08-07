@@ -264,6 +264,8 @@ font-size: 20px;}
 
 @media (max-width: 389px) and (max-height: 600px) {margin-left: 20%}
 
+@media (max-width: 369px) and (max-height: 790px) {margin-left: 18%}
+
 
 `;
 
@@ -563,6 +565,8 @@ margin: 8px 0 0 -335px;
 font-size: 13px;}
 
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}
+
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}
 `;
 
 export const SurnameContainer = styled.div`
@@ -627,7 +631,11 @@ margin-top: -68px;}
 
 @media (max-width: 409px) and (max-height: 790px) {
 height: 67px;
-margin-top: 12px;}
+margin-top: 23px;}
+
+@media (max-width: 409px) and (max-height: 680px) {
+height: 67px;
+margin-top: 18px;}
 `;
 
 export const SurnameUserContainer = styled.div<SurnameFocused>`
@@ -794,6 +802,8 @@ margin: 8px 0 0 -335px;
 font-size: 13px;}
 
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}
+
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}
 `;
 
 export const EmailContainer = styled.div`
@@ -866,7 +876,7 @@ margin-top: 23px;}
 
 @media (max-width: 409px) and (max-height: 680px) {
 height: 67px;
-margin-top: 12px;}
+margin-top: 18px;}
 `;
 
 export const EmailUserContainer = styled.div<EmailFocused>`
@@ -1036,6 +1046,8 @@ font-size: 13px;}
 
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}
 
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}
+
 `;
 
 export const PasswordContainer = styled.div`
@@ -1107,7 +1119,7 @@ margin-top: 23px;}
 
 @media (max-width: 409px) and (max-height: 680px) {
 height: 67px;
-margin-top: 12px;}`;
+margin-top: 18px;}`;
 
 export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
@@ -1291,7 +1303,9 @@ height: 17px;
 margin: 8px 0 0 -153px;
 font-size: 13px;}
 
-@media (max-width: 389px) and (max-height: 790px) {margin-left: -145px}`;
+@media (max-width: 389px) and (max-height: 790px) {margin-left: -145px}
+
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-132px' : '-137px'}}`;
 
 export const ComparePasswordContainer = styled.div`
 display: flex;
@@ -1567,7 +1581,9 @@ height: 17px;
 margin: 8px 0 0 -153px;
 font-size: 13px;}
 
-@media (max-width: 389px) and (max-height: 790px) {margin-left: -145px}`;
+@media (max-width: 389px) and (max-height: 790px) {margin-left: -145px}
+
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-132px' : '-137px'}}`;
 
 export const NicknameContainer = styled.div`
 display: flex;
@@ -1639,7 +1655,7 @@ margin-top: 23px;}
 
 @media (max-width: 409px) and (max-height: 680px) {
 height: 67px;
-margin-top: 12px;}
+margin-top: 18px;}
 `;
 
 export const NicknameUserContainer = styled.div<NicknameFocused>`
@@ -1805,7 +1821,9 @@ height: 17px;
 margin: 8px 0 0 -335px;
 font-size: 13px;}
 
-@media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}`;
+@media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}
+
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}`;
 
 export const PasswordMessageContainer = styled.div`
 display: flex;
@@ -1868,6 +1886,10 @@ color: #2F4F4F;
 @media(max-width: 409px) and (max-height: 680px) {font-size: 15.6px}
 
 @media(max-width: 409px) and (max-height: 600px) {font-size: 11px}
+
+@media(max-width: 389px) and (max-height: 600px) {font-size: 14.5px}
+
+@media(max-width: 379px) and (max-height: 680px) {font-size: 12px}
 }
 
 /* Height Responsiveness */
@@ -1933,7 +1955,7 @@ margin: 30px 0px 0 47px;
 
 @media (max-width: 1280px) and (max-height: 680px) {margin-top: 10px}
 
-@media (max-width: 409px) and (max-height: 790px) {margin-top: 24px}
+@media (max-width: 409px) and (max-height: 790px) {margin-top: 18px}
 
 @media (max-width: 409px) and (max-height: 600px) {margin-top: 10px}
 `;
