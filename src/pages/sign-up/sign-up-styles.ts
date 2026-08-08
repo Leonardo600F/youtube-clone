@@ -266,6 +266,8 @@ font-size: 20px;}
 
 @media (max-width: 369px) and (max-height: 790px) {margin-left: 18%}
 
+@media (max-width: 359px) and (max-height: 680px) {margin-left: 17.5%}
+
 
 `;
 
@@ -345,7 +347,7 @@ margin: 25px 0 0 20px;}
 
 @media(max-width: 599px) {
 width: 560px;
-margin: 10px 0 0 26px}
+margin: 10px 0 0 26px;}
 
 @media(max-width: 589px) {width: 520px}
 
@@ -397,6 +399,8 @@ margin-top: 23px;}
 @media (max-width: 409px) and (max-height: 680px) {
 height: 67px;
 margin-top: 12px;}
+
+@media (max-width: 389px) and (max-height: 600px) {height: 64px}
 
 `;
 
@@ -567,6 +571,8 @@ font-size: 13px;}
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}
 
 @media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}
+
+@media (max-width: 349px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-280px'}}
 `;
 
 export const SurnameContainer = styled.div`
@@ -635,7 +641,11 @@ margin-top: 23px;}
 
 @media (max-width: 409px) and (max-height: 680px) {
 height: 67px;
-margin-top: 18px;}
+margin-top: 15px;}
+
+@media (max-width: 389px) and (max-height: 600px) {height: 64px}
+
+
 `;
 
 export const SurnameUserContainer = styled.div<SurnameFocused>`
@@ -876,7 +886,9 @@ margin-top: 23px;}
 
 @media (max-width: 409px) and (max-height: 680px) {
 height: 67px;
-margin-top: 18px;}
+margin-top: 15px;}
+
+@media (max-width: 389px) and (max-height: 600px) {height: 64px}
 `;
 
 export const EmailUserContainer = styled.div<EmailFocused>`
@@ -1119,7 +1131,9 @@ margin-top: 23px;}
 
 @media (max-width: 409px) and (max-height: 680px) {
 height: 67px;
-margin-top: 18px;}`;
+margin-top: 15px;}
+
+@media (max-width: 389px) and (max-height: 600px) {height: 64px}`;
 
 export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
@@ -1397,7 +1411,11 @@ margin-top: -67px;}
 
 @media (max-width: 409px) and (max-height: 790px) {
 height: 67px;
-margin-top: -67px;}`;
+margin-top: -67px;}
+
+@media (max-width: 389px) and (max-height: 600px) {
+height: 64px;
+margin-top: -64px}`;
 
 export const ComparePasswordUserContainer = styled.div<ComparePasswordFocused>`
 display: flex;
@@ -1655,7 +1673,9 @@ margin-top: 23px;}
 
 @media (max-width: 409px) and (max-height: 680px) {
 height: 67px;
-margin-top: 18px;}
+margin-top: 15px;}
+
+@media (max-width: 389px) and (max-height: 600px) {height: 64px}
 `;
 
 export const NicknameUserContainer = styled.div<NicknameFocused>`
@@ -1887,9 +1907,11 @@ color: #2F4F4F;
 
 @media(max-width: 409px) and (max-height: 600px) {font-size: 11px}
 
-@media(max-width: 389px) and (max-height: 600px) {font-size: 14.5px}
+@media(max-width: 389px) and (max-height: 680px) {font-size: 12px}
 
 @media(max-width: 379px) and (max-height: 680px) {font-size: 12px}
+
+@media(max-width: 369px) and (max-height: 680px) {font-size: 14px}
 }
 
 /* Height Responsiveness */
@@ -1957,6 +1979,8 @@ margin: 30px 0px 0 47px;
 
 @media (max-width: 409px) and (max-height: 790px) {margin-top: 18px}
 
+@media (max-width: 409px) and (max-height: 680px) {margin-top: 13px}
+
 @media (max-width: 409px) and (max-height: 600px) {margin-top: 10px}
 `;
 
@@ -2021,6 +2045,12 @@ height: 35px;
 width: 145px;
 span {font-size: 11.5px;}}
 
+@media (max-width: 369px) and (max-height: 790px) {
+width: 134px;
+span {font-size: 10.5px;}}
+
+@media (max-width: 369px) and (max-height: 600px) {height: 30px}
+
 `;
 
 export const NextButtonContainer = styled.div`
@@ -2074,7 +2104,13 @@ margin: -48px 0 0 430px;
 
 @media (max-width: 409px) and (max-height: 790px) {margin: -34px 0 0 53%}
 
-@media (max-width: 389px) and (max-height: 600px) {margin-left: 50%}
+@media (max-width: 389px) and (max-height: 680px) {margin-left: 50%}
+
+@media (max-width: 379px) and (max-height: 680px) {margin-left: 54%}
+
+@media (max-width: 369px) and (max-height: 790px) {margin-left: 50%}
+
+@media (max-width: 369px) and (max-height: 600px) {margin-top: -30px}
 
 `;
 
@@ -2159,6 +2195,12 @@ height: 35px;
 span {
 padding-left: 33px;
 font-size: 11.5px;}}
+
+@media (max-width: 389px) and (max-height: 790px) {
+width: 100px;
+span {padding-left: 30px;}}
+
+@media (max-width: 369px) and (max-height: 600px) {height: 30px}
 
 `;
 
