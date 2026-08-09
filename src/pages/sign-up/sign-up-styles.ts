@@ -228,13 +228,15 @@ font-size: 20px;}
 
 @media (max-width: 459px) and (max-height: 600px) {margin-left: 24.5%}
 
-@media (max-width: 449px) and (max-height: 790px) {margin-left: 18%}
-
-@media (max-width: 449px) and (max-height: 680px) {margin-left: 22%}
+@media (max-width: 449px) and (max-height: 790px) {
+margin: -11px 0 0 23.5%;
+font-size: 20px;}
 
 @media (max-width: 449px) and (max-height: 635px) {margin-left: 23%}
 
-@media (max-width: 449px) and (max-height: 600px) {margin-left: 23.5%}
+@media (max-width: 449px) and (max-height: 600px) {
+margin-left: 25.5%;
+font-size: 18px;}
 
 @media (max-width: 429px) and (max-height: 790px) {margin-left: 17%}
 
@@ -267,6 +269,24 @@ font-size: 20px;}
 @media (max-width: 369px) and (max-height: 790px) {margin-left: 18%}
 
 @media (max-width: 359px) and (max-height: 680px) {margin-left: 17.5%}
+
+@media (max-width: 349px) and (max-height: 790px) {
+margin-left: 18.5%;
+font-size: 18.5px;}
+
+@media (max-width: 349px) and (max-height: 680px) {margin-left: 19%}
+
+@media (max-width: 339px) and (max-height: 790px) {margin-left: 18%}
+
+@media (max-width: 339px) and (max-height: 600px) {margin-left: 18.5%}
+
+@media (max-width: 329px) and (max-height: 790px) {
+margin-left: 20%;
+font-size: 17px;}
+
+@media (max-width: 320px) and (max-height: 790px) {margin-left: 19.5%}
+
+@media (max-width: 320px) and (max-height: 600px) {margin-left: 20%}
 
 
 `;
@@ -324,6 +344,15 @@ justify-content: center;}
 @media (max-width: 599px) and (max-height: 635px) {
 width: 32px;
 height: 32px;}
+
+@media (max-width: 449px) and (max-height: 790px) {
+width: 35px;
+height: 35px;}
+
+@media (max-width: 449px) and (max-height: 600px) {
+width: 30px;
+height: 30px;
+margin-top: 0;}
 
 @media (max-width: 409px) and (max-height: 790px) {
 width: 29px;
@@ -391,6 +420,8 @@ margin-top: 15px;}
 @media (max-width: 599px) and (max-height: 635px) {margin-top: 8px}
 
 @media (max-width: 599px) and (max-height: 600px) {height: 67px}
+
+@media (max-width: 449px) and (max-height: 790px) {margin-top: 10px;}
 
 @media (max-width: 409px) and (max-height: 790px) {
 height: 67px;
@@ -572,7 +603,9 @@ font-size: 13px;}
 
 @media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}
 
-@media (max-width: 349px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-280px'}}
+@media (max-width: 349px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-275px' : '-278px'}}
+
+@media (max-width: 329px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-257px' : '-260px'}}
 `;
 
 export const SurnameContainer = styled.div`
@@ -814,6 +847,10 @@ font-size: 13px;}
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}
 
 @media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}
+
+@media (max-width: 349px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-275px' : '-278px'}}
+
+@media (max-width: 329px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-257px' : '-260px'}}
 `;
 
 export const EmailContainer = styled.div`
@@ -1059,6 +1096,10 @@ font-size: 13px;}
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}
 
 @media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}
+
+@media (max-width: 349px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-275px' : '-278px'}}
+
+@media (max-width: 329px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-257px' : '-260px'}}
 
 `;
 
@@ -1319,7 +1360,12 @@ font-size: 13px;}
 
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -145px}
 
-@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-132px' : '-137px'}}`;
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-132px' : '-137px'}}
+
+@media (max-width: 349px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-122px' : '-127px'}}
+
+@media (max-width: 329px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-114px' : '-118px'}}
+`;
 
 export const ComparePasswordContainer = styled.div`
 display: flex;
@@ -1601,7 +1647,11 @@ font-size: 13px;}
 
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -145px}
 
-@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-132px' : '-137px'}}`;
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-132px' : '-137px'}}
+
+@media (max-width: 349px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-122px' : '-127px'}}
+
+@media (max-width: 329px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-114px' : '-118px'}}`;
 
 export const NicknameContainer = styled.div`
 display: flex;
@@ -1843,7 +1893,11 @@ font-size: 13px;}
 
 @media (max-width: 389px) and (max-height: 790px) {margin-left: -318px}
 
-@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}`;
+@media (max-width: 369px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-295px' : '-300px'}}
+
+@media (max-width: 349px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-275px' : '-278px'}}
+
+@media (max-width: 329px) and (max-height: 790px) {margin-left: ${({ valid }) => valid ? '-257px' : '-260px'}}`;
 
 export const PasswordMessageContainer = styled.div`
 display: flex;
@@ -1876,7 +1930,7 @@ color: #2F4F4F;
 
 @media(max-width: 469px) {font-size: 13px}
 
-@media(max-width: 449px) {font-size: 12.5px}
+@media(max-width: 449px) {font-size: 14.4px}
 
 @media(max-width: 429px) {font-size: 12px}
 
@@ -1901,7 +1955,7 @@ color: #2F4F4F;
 
 @media(max-width: 469px) and (max-height: 680px) {font-size: 12.7px}
 
-@media(max-width: 449px) and (max-height: 680px) {font-size: 12px}
+@media(max-width: 449px) and (max-height: 680px) {font-size: 14.3px}
 
 @media(max-width: 409px) and (max-height: 680px) {font-size: 15.6px}
 
@@ -1912,6 +1966,10 @@ color: #2F4F4F;
 @media(max-width: 379px) and (max-height: 680px) {font-size: 12px}
 
 @media(max-width: 369px) and (max-height: 680px) {font-size: 14px}
+
+@media(max-width: 349px) and (max-height: 790px) {font-size: 13px}
+
+@media(max-width: 329px) and (max-height: 790px) {font-size: 14px}
 }
 
 /* Height Responsiveness */
@@ -1977,6 +2035,8 @@ margin: 30px 0px 0 47px;
 
 @media (max-width: 1280px) and (max-height: 680px) {margin-top: 10px}
 
+@media (max-width: 449px) and (max-height: 790px) {margin-top: 8px}
+
 @media (max-width: 409px) and (max-height: 790px) {margin-top: 18px}
 
 @media (max-width: 409px) and (max-height: 680px) {margin-top: 13px}
@@ -2010,6 +2070,10 @@ height: 40px;
 span {font-size: 14px;}}
 
 @media(max-width: 630px) {span{padding-left: 12px}}
+
+@media(max-width: 429px) {
+width: 155px;
+span {font-size: 12.3px};}
 
 @media(max-width: 399px) {
 width: 150px;
@@ -2077,7 +2141,7 @@ margin: -48px 0 0 430px;
 
 @media (max-width: 449px) {margin-left: 280px}
 
-@media (max-width: 429px) {margin-left: 270px}
+@media (max-width: 429px) {margin-left: 265px}
 
 @media (max-width: 409px) {margin-left: 225px}
 
@@ -2111,6 +2175,8 @@ margin: -48px 0 0 430px;
 @media (max-width: 369px) and (max-height: 790px) {margin-left: 50%}
 
 @media (max-width: 369px) and (max-height: 600px) {margin-top: -30px}
+
+@media (max-width: 349px) and (max-height: 790px) {margin-left: 48%}
 
 `;
 
@@ -2146,9 +2212,15 @@ span {
 padding-left: 40px;
 font-size: 15px;}}
 
-@media(max-width: 449px) {width: 120px;}
+@media(max-width: 449px) {
+width: 120px;
+span {padding-left: 34px};}
 
-@media(max-width: 439px) {span {padding-left: 33px}}
+@media(max-width: 439px) {span {padding-left: 33px} }
+
+@media(max-width: 429px) {
+width: 105px;
+span {font-size: 12.3px};}
 
 @media(max-width: 409px) {margin-left: 34px}
 
@@ -2223,6 +2295,8 @@ background-color: #fff;
 
 @media(max-width: 630px) {margin: 65px 0 0 -99%}
 
+@media(max-width: 329px) {margin-left: -98%}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {margin-top: 55px}
 
@@ -2233,7 +2307,6 @@ margin-top: 49px}
 @media (max-width: 599px) and (max-height: 735px) {margin-top: 48px}
 
 @media (max-width: 409px) and (max-height: 790px) {margin-top: 45px}
-
 `;
 
 export const EmptyMessage = styled.span`
