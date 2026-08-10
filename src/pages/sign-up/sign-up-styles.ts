@@ -235,38 +235,36 @@ font-size: 20px;}
 @media (max-width: 449px) and (max-height: 635px) {margin-left: 23%}
 
 @media (max-width: 449px) and (max-height: 600px) {
-margin-left: 25.5%;
+margin-left: 26%;
 font-size: 18px;}
 
-@media (max-width: 429px) and (max-height: 790px) {margin-left: 17%}
-
-@media (max-width: 429px) and (max-height: 680px) {margin-left: 21%}
+@media (max-width: 429px) and (max-height: 790px) {margin-left: 22.5%}
 
 @media (max-width: 429px) and (max-height: 635px) {margin-left: 22.5%}
 
-@media (max-width: 419px) and (max-height: 790px) {margin-left: 16.5%}
+@media (max-width: 429px) and (max-height: 600px) {margin-left: 25%}
 
-@media (max-width: 419px) and (max-height: 680px) {margin-left: 20.5%}
+@media (max-width: 419px) and (max-height: 790px) {margin-left: 22%}
 
-@media (max-width: 419px) and (max-height: 635px) {margin-left: 21.5%}
-
-@media (max-width: 419px) and (max-height: 600px) {margin-left: 22%}
+@media (max-width: 419px) and (max-height: 600px) {margin-left: 24.5%}
 
 @media (max-width: 409px) and (max-height: 790px) {
 margin: -5px 0 0 21%;
 font-size: 20px;}
 
-@media (max-width: 409px) and (max-height: 680px) {margin-top: -12px}
+@media (max-width: 409px) and (max-height: 600px) {margin-top: -10px}
 
 @media (max-width: 399px) and (max-height: 790px) {margin-left: 20%}
 
 @media (max-width: 399px) and (max-height: 600px) {margin-left: 21%}
 
-@media (max-width: 399px) and (max-height: 790px) {margin-left: 19%}
+@media (max-width: 389px) and (max-height: 790px) {margin-left: 19.5%}
 
 @media (max-width: 389px) and (max-height: 600px) {margin-left: 20%}
 
 @media (max-width: 369px) and (max-height: 790px) {margin-left: 18%}
+
+@media (max-width: 369px) and (max-height: 600px) {margin-left: 18.5%}
 
 @media (max-width: 359px) and (max-height: 680px) {margin-left: 17.5%}
 
@@ -431,8 +429,7 @@ margin-top: 23px;}
 height: 67px;
 margin-top: 12px;}
 
-@media (max-width: 389px) and (max-height: 600px) {height: 64px}
-
+@media (max-width: 409px) and (max-height: 600px) {height: 64px}
 `;
 
 export const FirstNameUserContainer = styled.div<FirstNameFocused>`
@@ -676,7 +673,7 @@ margin-top: 23px;}
 height: 67px;
 margin-top: 15px;}
 
-@media (max-width: 389px) and (max-height: 600px) {height: 64px}
+@media (max-width: 409px) and (max-height: 600px) {height: 64px}
 
 
 `;
@@ -925,7 +922,7 @@ margin-top: 23px;}
 height: 67px;
 margin-top: 15px;}
 
-@media (max-width: 389px) and (max-height: 600px) {height: 64px}
+@media (max-width: 409px) and (max-height: 600px) {height: 64px}
 `;
 
 export const EmailUserContainer = styled.div<EmailFocused>`
@@ -1174,7 +1171,7 @@ margin-top: 23px;}
 height: 67px;
 margin-top: 15px;}
 
-@media (max-width: 389px) and (max-height: 600px) {height: 64px}`;
+@media (max-width: 409px) and (max-height: 600px) {height: 64px}`;
 
 export const PasswordUserContainer = styled.div<PasswordFocused>`
 display: flex;
@@ -1459,7 +1456,7 @@ margin-top: -67px;}
 height: 67px;
 margin-top: -67px;}
 
-@media (max-width: 389px) and (max-height: 600px) {
+@media (max-width: 409px) and (max-height: 600px) {
 height: 64px;
 margin-top: -64px}`;
 
@@ -1725,7 +1722,7 @@ margin-top: 23px;}
 height: 67px;
 margin-top: 15px;}
 
-@media (max-width: 389px) and (max-height: 600px) {height: 64px}
+@media (max-width: 409px) and (max-height: 600px) {height: 64px}
 `;
 
 export const NicknameUserContainer = styled.div<NicknameFocused>`
@@ -1940,12 +1937,18 @@ color: #2F4F4F;
 
 @media(max-width: 369px) {font-size: 14px}
 
-@media(max-width: 329px) {font-size: 12.7px}
+@media(max-width: 339px) {font-size: 12.7px}
+
+@media(max-width: 329px) {font-size: 12px}
 
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {font-size: 16.5px}
 
 @media (max-width: 630px) and (max-height: 680px) {font-size: 14.5px}
+
+@media (max-width: 599px) and (max-height: 680px) {font-size: 17.5px}
+
+@media (max-width: 589px) and (max-height: 680px) {font-size: 16px}
 
 @media (max-width: 589px) and (max-height: 600px) {font-size: 15.5px}
 
@@ -1957,9 +1960,11 @@ color: #2F4F4F;
 
 @media(max-width: 449px) and (max-height: 680px) {font-size: 14.3px}
 
+@media(max-width: 429px) and (max-height: 680px) {font-size: 13.5px}
+
 @media(max-width: 409px) and (max-height: 680px) {font-size: 15.6px}
 
-@media(max-width: 409px) and (max-height: 600px) {font-size: 11px}
+@media(max-width: 409px) and (max-height: 600px) {font-size: 13px}
 
 @media(max-width: 389px) and (max-height: 680px) {font-size: 12px}
 
@@ -1999,7 +2004,9 @@ height: fit-content;
 margin: 2px 0 0 10px;
 font-size: 14px;
 font-weight: 600;
-cursor: pointer;}
+cursor: pointer;
+
+@media(max-width: 449px) and (max-height: 600px) {font-size: 12px}}
 
 @media(max-width: 1559px) {margin-left: 40px}
 
@@ -2016,7 +2023,13 @@ dispay: flex;
 width: 18px;
 height: 18px;
 background-color: #9400D3;
-cursor: pointer;`;
+cursor: pointer;
+
+/* Height Responsiveness */
+@media (max-width: 449px) and (max-height: 600px) {
+width: 15px;
+height: 15px;}
+`;
 
 export const LoginPageContainer = styled.div`
 display: flex;
@@ -2080,6 +2093,14 @@ width: 150px;
 height: 35px;
 span {font-size: 12px;}}
 
+@media(max-width: 379px) {
+width: 140px;
+span {font-size: 11px;}}
+
+@media(max-width: 339px) {
+width: 125px;
+span {font-size: 9.5px;}}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
 width: 180px;
@@ -2103,6 +2124,11 @@ height: 35px;
 span {
 padding-top: -5px;
 font-size: 12.5px;}}
+
+@media (max-width: 449px) and (max-height: 600px) {
+width: 140px;
+height: 32px;
+span {font-size: 11px}}
 
 @media (max-width: 409px) and (max-height: 790px) {
 height: 35px;
@@ -2147,9 +2173,13 @@ margin: -48px 0 0 430px;
 
 @media (max-width: 399px) {margin: -34px 0 0 205px}
 
-@media (max-width: 369px) {margin-left: 200px}
+@media (max-width: 379px) {margin-left: 200px}
 
-@media (max-width: 349px) {margin-left: 185px}
+@media (max-width: 369px) {margin-left: 185px}
+
+@media (max-width: 339px) {margin-left: 175px}
+
+@media (max-width: 319px) {margin-left: 160px}
 
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {margin-top: -42px}
@@ -2220,19 +2250,24 @@ span {padding-left: 34px};}
 
 @media(max-width: 429px) {
 width: 105px;
-span {font-size: 12.3px};}
+span {
+padding-left: 30px;
+font-size: 12.3px}}
 
 @media(max-width: 409px) {margin-left: 34px}
 
 @media(max-width: 399px) {
 height: 35px;
-width: 110px;}
+width: 110px;
+span {padding-left: 34px}}
 
-@media(max-width: 369px) {width: 100px}
+@media(max-width: 369px) {
+width: 100px;
+span {padding-left: 28px}}
 
-@media(max-width: 329px) {
+@media(max-width: 339px) {
 width: 90px;
-margin-left: 14px;}
+span {font-size: 9.5px}}
 
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {
@@ -2260,6 +2295,13 @@ height: 35px;
 span {
 padding-left: 37px;
 font-size: 12.5px;}}
+
+@media (max-width: 449px) and (max-height: 600px) {
+width: 105px;
+height: 32px;
+span {
+padding-left: 33px;
+font-size: 11px;}}
 
 @media (max-width: 409px) and (max-height: 790px) {
 width: 110px;
