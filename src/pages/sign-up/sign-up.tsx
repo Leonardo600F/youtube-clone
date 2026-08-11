@@ -22,6 +22,10 @@ import {
     EmailUserContainer,
     EmailUserInput,
     EmailUserLabel,
+    NicknameContainer,
+    NicknameUserContainer,
+    NicknameUserInput,
+    NicknameUserLabel,
     PasswordContainer,
     PasswordUserContainer,
     PasswordUserInput,
@@ -30,10 +34,6 @@ import {
     ComparePasswordUserContainer,
     ComparePasswordUserInput,
     ComparePasswordUserLabel,
-    NicknameContainer,
-    NicknameUserContainer,
-    NicknameUserInput,
-    NicknameUserLabel,
     PasswordMessageContainer,
     ShowPasswordContainer,
     StyledCheckbox,
@@ -292,6 +292,31 @@ export default function SignUp() {
                     </EmptyContainer>
                 </EmailContainer>
 
+                <NicknameContainer>
+                    <NicknameUserContainer nicknameFocus={nicknameFocus} onFocus={() => setNicknameFocus(true)} onBlur={() => setNicknameFocus(false)}>
+
+                        <NicknameUserInput
+                            valid={userNicknameValid && formatNicknameValid}
+                            value={userNickname}
+                            ref={nicknameRef}
+                            placeholder=' '
+                            type='text'
+                            onChange={(e) => { setUserNickname(e.target.value) }} />
+
+                        <NicknameUserLabel valid={userNicknameValid && formatNicknameValid}>Nome de usuário</NicknameUserLabel>
+
+                    </NicknameUserContainer>
+
+                    <EmptyContainer valid={userNicknameValid && formatNicknameValid}>
+                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
+                        <EmptyMessage>
+                            {!formatNicknameValid
+                                ? 'Digite um nome de usuário válido!'
+                                : 'Digite seu nome de usuário.'}
+                        </EmptyMessage>
+                    </EmptyContainer>
+                </NicknameContainer>
+
                 <PasswordContainer>
                     <PasswordUserContainer passwordFocus={passwordFocus} onFocus={() => setPasswordFocus(true)} onBlur={() => setPasswordFocus(false)}>
 
@@ -341,31 +366,6 @@ export default function SignUp() {
                         </EmptyMessage>
                     </EmptyContainer>
                 </ComparePasswordContainer>
-
-                <NicknameContainer>
-                    <NicknameUserContainer nicknameFocus={nicknameFocus} onFocus={() => setNicknameFocus(true)} onBlur={() => setNicknameFocus(false)}>
-
-                        <NicknameUserInput
-                            valid={userNicknameValid && formatNicknameValid}
-                            value={userNickname}
-                            ref={nicknameRef}
-                            placeholder=' '
-                            type='text'
-                            onChange={(e) => { setUserNickname(e.target.value) }} />
-
-                        <NicknameUserLabel valid={userNicknameValid && formatNicknameValid}>Nome de usuário</NicknameUserLabel>
-
-                    </NicknameUserContainer>
-
-                    <EmptyContainer valid={userNicknameValid && formatNicknameValid}>
-                        <ExclamationIconContainer alt="" src={ExclamationIcon} />
-                        <EmptyMessage>
-                            {!formatNicknameValid
-                                ? 'Digite um nome de usuário válido!'
-                                : 'Digite seu nome de usuário.'}
-                        </EmptyMessage>
-                    </EmptyContainer>
-                </NicknameContainer>
 
                 <PasswordMessageContainer><span>Use 8 caracteres com uma combinação de letras, números e símbolos.</span></PasswordMessageContainer>
 
