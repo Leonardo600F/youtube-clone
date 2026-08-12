@@ -261,6 +261,8 @@ font-size: 20px;}
 
 @media (max-width: 389px) and (max-height: 600px) {margin-left: 20%}
 
+@media (max-width: 379px) and (max-height: 790px) {margin-left: 19%}
+
 @media (max-width: 369px) and (max-height: 790px) {margin-left: 18%}
 
 @media (max-width: 369px) and (max-height: 600px) {margin-left: 18.5%}
@@ -268,10 +270,8 @@ font-size: 20px;}
 @media (max-width: 359px) and (max-height: 680px) {margin-left: 17.5%}
 
 @media (max-width: 349px) and (max-height: 790px) {
-margin-left: 18.5%;
+margin-left: 19%;
 font-size: 18.5px;}
-
-@media (max-width: 349px) and (max-height: 680px) {margin-left: 19%}
 
 @media (max-width: 339px) and (max-height: 790px) {margin-left: 18%}
 
@@ -357,7 +357,6 @@ display: flex;
 height: 87px;
 width: 255px;
 margin: 45px 0px 0 60px;
-background-color: green;
 
 @media(max-width: 1559px) {margin: 30px 0px 0 40px}
 
@@ -536,6 +535,8 @@ color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
 
+@media(max-width: 449px) {transform: translateY(-33px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
@@ -565,6 +566,8 @@ margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'};}
 @media(max-width: 449px) {
 font-size: 14px;
 margin-top: 20px;}
+
+@media (max-width: 389px) {font-size: 13px}
 
 @media (max-width: 369px) {margin-left: ${({ valid }) => valid ? '-295px' : '-297px'}}
 
@@ -605,7 +608,6 @@ display: flex;
 height: 87px;
 width: 255px;
 margin: -87px 0 0px 335px;
-background-color: green;
 
 @media(max-width: 1559px) {margin-left: 310px}
 
@@ -780,6 +782,8 @@ color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
 
+@media(max-width: 449px) {transform: translateY(-33px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
@@ -809,6 +813,8 @@ margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'};}
 @media(max-width: 449px) {
 font-size: 14px;
 margin-top: 20px;}
+
+@media (max-width: 389px) {font-size: 13px}
 
 @media (max-width: 369px) {margin-left: ${({ valid }) => valid ? '-295px' : '-297px'}}
 
@@ -849,7 +855,6 @@ display: flex;
 height: 87px;
 width: 536px;
 margin: 40px 0 0 60px;
-background-color: green;
 
 @media(max-width: 1559px) {margin-left: 39px}
 
@@ -1033,6 +1038,8 @@ background-color: #fff;
 
 @media(max-width: 599px) {transform: translateY(-30px)}
 
+@media(max-width: 449px) {transform: translateY(-33px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
@@ -1060,6 +1067,8 @@ background-color: #fff;
 @media(max-width: 449px) {
 font-size: 14px;
 margin-top: 20px;}
+
+@media (max-width: 389px) {font-size: 13px}
 
 @media (max-width: 369px) {margin-left: ${({ valid }) => valid ? '-295px' : '-297px'}}
 
@@ -1100,7 +1109,6 @@ display: flex;
 height: 87px;
 width: 536px;
 margin: 40px 0 0 60px;
-background-color: red;
 
 @media(max-width: 1559px) {margin-left: 39px}
 
@@ -1221,7 +1229,7 @@ background-color: #fff;
 @media (max-width: 409px) and (max-height: 790px) {height: 34px}`;
 
 export const NicknameUserInput = styled.input<InputValid>`
-width: 238px;
+width: 513px;
 height: 53px;
 padding-left: 10px;
 font-size: 16px;
@@ -1283,6 +1291,8 @@ color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
 
+@media(max-width: 449px) {transform: translateY(-33px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
@@ -1310,6 +1320,8 @@ background-color: #fff;
 @media(max-width: 449px) {
 font-size: 14px;
 margin-top: 20px;}
+
+@media (max-width: 389px) {font-size: 13px}
 
 @media (max-width: 369px) {margin-left: ${({ valid }) => valid ? '-295px' : '-297px'}}
 
@@ -1434,14 +1446,16 @@ color: #2F4F4F;
 
 @media (max-width: 630px) and (max-height: 680px) {margin-left: 24px}
 
-@media (max-width: 599px) and (max-height: 680px) {margin-left: 30px}`;
+@media (max-width: 599px) and (max-height: 680px) {margin-left: 30px}
+
+@media (max-width: 399px) and (max-height: 790px) {margin-top: 8px}
+`;
 
 export const PasswordContainer = styled.div`
 display: flex;
 height: 87px;
 width: 255px;
 margin: 40px 0 0 60px;
-background-color: green;
 
 @media(max-width: 1559px) {margin-left: 40px}
 
@@ -1621,6 +1635,8 @@ color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
 
+@media(max-width: 449px) {transform: translateY(-33px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
@@ -1666,7 +1682,9 @@ margin-left: ${({ valid }) => valid ? '-177px' : '-179px'};}
 
 @media(max-width: 409px) {margin-left: ${({ valid }) => valid ? '-158px' : '-160px'}}
 
-@media(max-width: 389px) {margin-left: ${({ valid }) => valid ? '-150px' : '-152px'}}
+@media(max-width: 389px) {
+font-size: 13px;
+margin-left: ${({ valid }) => valid ? '-150px' : '-152px'};}
 
 @media(max-width: 369px) {margin-left: ${({ valid }) => valid ? '-133px' : '-135px'}}
 
@@ -1707,7 +1725,6 @@ display: flex;
 height: 87px;
 width: 255px;
 margin: -87px 0 0 335px;
-background-color: green;
 
 @media(max-width: 1559px) {margin-left: 310px}
 
@@ -1910,6 +1927,8 @@ color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
 
+@media(max-width: 449px) {transform: translateY(-33px)}
+
 /* Height Responsiveness */
 @media (max-width: 2556px) and (max-height: 680px) {transform: translateY(-26px)}
 
@@ -1955,7 +1974,9 @@ margin-left: ${({ valid }) => valid ? '-177px' : '-179px'};}
 
 @media(max-width: 409px) {margin-left: ${({ valid }) => valid ? '-158px' : '-160px'}}
 
-@media(max-width: 389px) {margin-left: ${({ valid }) => valid ? '-150px' : '-152px'}}
+@media(max-width: 389px) {
+font-size: 13px;
+margin-left: ${({ valid }) => valid ? '-150px' : '-152px'};}
 
 @media(max-width: 369px) {margin-left: ${({ valid }) => valid ? '-133px' : '-135px'}}
 
@@ -2144,7 +2165,7 @@ export const NextButtonContainer = styled.div`
 display: flex;
 height: fit-content;
 width: fit-content;
-margin: -48px 0 0 430px;
+margin: -48px 0 0 420px;
 
 @media (max-width: 1559px) {margin: -39px 0 0 423px}
 

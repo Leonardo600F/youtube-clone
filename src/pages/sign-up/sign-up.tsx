@@ -51,6 +51,8 @@ const NAME_FORMAT_REGEX = /^[a-zA-ZÀ-ÿ]{3,}$/;
 
 const isNameFormatValid = (name: string) => NAME_FORMAT_REGEX.test(name.trim());
 
+const isNicknameFormatValid = (nickname: string) => NAME_FORMAT_REGEX.test(nickname.trim());
+
 export default function SignUp() {
 
     const navigate = useNavigate();
@@ -60,39 +62,39 @@ export default function SignUp() {
     const [firstNameFocus, setFirstNameFocus] = useState(false);
     const [surnameFocus, setSurnameFocus] = useState(false);
     const [emailFocus, setEmailFocus] = useState(false);
+    const [nicknameFocus, setNicknameFocus] = useState(false);
     const [passwordFocus, setPasswordFocus] = useState(false);
     const [comparePasswordFocus, setComparePasswordFocus] = useState(false);
-    const [nicknameFocus, setNicknameFocus] = useState(false);
 
     const handleShowPassword = () => { setShowPassword(!setShowPassword) }
 
     const [userName, setUserName] = useState('');
     const [userSurname, setUserSurname] = useState('');
     const [userEmail, setUserEmail] = useState('');
+    const [userNickname, setUserNickname] = useState('');
     const [userPassword, setUserPassword] = useState('');
     const [comparePassword, setComparePassword] = useState('');
-    const [userNickname, setUserNickname] = useState('');
 
     const [userNameValid, setUserNameValid] = useState(true);
     const [userSurnameValid, setUserSurnameValid] = useState(true);
     const [userEmailValid, setUserEmailValid] = useState(true);
+    const [userNicknameValid, setUserNicknameValid] = useState(true);
     const [userPasswordValid, setUserPasswordValid] = useState(true);
     const [comparePasswordValid, setComparePasswordValid] = useState(true);
-    const [userNicknameValid, setUserNicknameValid] = useState(true);
 
     const [formatNameValid, setFormatNameValid] = useState(true);
     const [formatEmailValid, setFormatEmailValid] = useState(true);
-    const [formatPasswordValid, setFormatPasswordValid] = useState(true);
     const [formatNicknameValid, setFormatNicknameValid] = useState(true);
+    const [formatPasswordValid, setFormatPasswordValid] = useState(true);
     const [samePassword, setSamePassword] = useState(true);
 
 
     const nameRef = useRef<HTMLInputElement>(null);
     const surnameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
+    const nicknameRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const comparePasswordRef = useRef<HTMLInputElement>(null);
-    const nicknameRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         if (nameRef.current !== null) { nameRef.current.focus() }
@@ -109,6 +111,10 @@ export default function SignUp() {
 
         if (userEmail.trim() !== '') { setFormatEmailValid(true) }
 
+        if (userNickname.trim() !== '' && userNickname.length <= 8) { setFormatNicknameValid(true) }
+
+        if (isNicknameFormatValid(userNickname)) { setFormatNicknameValid(true) }
+
         if (userPassword.trim() !== '') { setUserPasswordValid(true) }
 
         if (userPassword.length >= 8) { setFormatPasswordValid(true) }
@@ -117,12 +123,11 @@ export default function SignUp() {
 
         if (userPassword === comparePassword && userPassword !== '') { setSamePassword(true) }
 
-        if (userNickname.trim() !== '') { setFormatNicknameValid(true) }
-
         if (userName.trim() === '' && userEmail.trim() === '' && userPassword.trim() === '') {
             setUserNameValid(false);
             setUserSurnameValid(false);
             setUserEmailValid(false);
+            setUserNicknameValid(false);
             setUserPasswordValid(false);
             setComparePasswordValid(false);
 
@@ -191,7 +196,7 @@ export default function SignUp() {
             if (nicknameRef.current) { nicknameRef.current.focus() }
         }
 
-        else if (!/\S+@\S+\.\S+/.test(userNickname)) {
+        else if (!isNicknameFormatValid(userNickname)) {
             setFormatNicknameValid(false);
             setUserNicknameValid(true);
             if (nicknameRef.current) { nicknameRef.current.focus() }
