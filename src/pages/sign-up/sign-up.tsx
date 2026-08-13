@@ -202,7 +202,7 @@ export default function SignUp() {
             if (nicknameRef.current) { nicknameRef.current.focus() }
         }
 
-        else { handleCreateUser(userName, userSurname, userEmail, userPassword, userNickname) }
+        else { handleCreateUser(userName, userSurname, userEmail, userNickname, userPassword) }
     }
 
     return (
