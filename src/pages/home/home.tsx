@@ -43,16 +43,15 @@ export default function Home() {
         load()
     }, [categoryId])
 
-    const API_KEY = 'AIzaSyBxEcjsvy6W7j5rt6WaR0Ixix-gC4yQJJE';
-
-    const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&hl=pt_BR&maxResults=45&regionCode=br&videoCategoryId=${categoryId}&key=${API_KEY}`;
-
     async function load() {
         try {
-            const resposta = await axios.get(url)
-            setVideos(resposta.data.items)
+            const resposta = await axios.get(
+                `http://localhost:4000/youtube/videos?categoryId=${categoryId}`
+            );
+
+            setVideos(resposta.data);
         } catch (erro) {
-            console.log(erro)
+            console.log(erro);
         }
     }
 
@@ -149,3 +148,12 @@ export default function Home() {
         </>
     )
 }
+
+/*     
+const API_KEY = 'AIzaSyBxEcjsvy6W7j5rt6WaR0Ixix-gC4yQJJE';
+
+const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&hl=pt_BR&maxResults=45&regionCode=br&videoCategoryId=${categoryId}&key=${API_KEY}`; 
+    
+Este trecho é do return: 
+thumbnail={video.snippet.thumbnails.maxres?.url || video.snippet.thumbnails.high?.url}
+*/
