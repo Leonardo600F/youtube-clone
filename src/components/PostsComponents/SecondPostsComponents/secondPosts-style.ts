@@ -756,7 +756,7 @@ border-radius: 15px;
 width: 125px;
 height: 120px;
 margin-top: -127px;
-margin-left: ${({ openMenu }) => openMenu ? '210px' : ' 235px'}
+margin-left: ${({ openMenu }) => openMenu ? '210px' : '235px'};
 
 @media(max-width: 2480px) {
 margin-left: ${({ openMenu }) => openMenu ? '200px' : ' 220px'};

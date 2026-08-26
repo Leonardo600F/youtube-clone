@@ -12,6 +12,7 @@ import {
     UserContainer,
     UserProfile,
     UserName,
+    UserNickname,
     Modal,
     ModalContent,
     ModalTitle,
@@ -198,6 +199,7 @@ export default function YourVideos() {
                     <UserContainer>
                         <UserProfile>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</UserProfile>
                         <UserName>{user && user.name ? user.name : ''}</UserName>
+                        <UserNickname>{user && user.nickname ? user.nickname : ''}</UserNickname>
                         <AddVideoButton onClick={() => setHideModal(false)}>Cadastrar vídeo</AddVideoButton>
 
                         <Modal hideModal={hideModal}>
@@ -262,8 +264,8 @@ export default function YourVideos() {
                                 videoId={video.video_id || video.id || ''}
                                 title={video.title}
                                 thumbnail={video.thumbnail}
-                                channelImage={user && user.name ? user.name.charAt(0).toUpperCase() : ''}
-                                channelName={user && user.name ? user.name : ''}
+                                channelImage={user && user.nickname ? user.nickname.charAt(0).toUpperCase() : ''}
+                                channelName={user && user.nickname ? user.nickname : ''}
                                 details={video.description}
                                 publishedAt={getTimeDifference(video.publishedAt)}
                                 key={video.video_id || video.id}

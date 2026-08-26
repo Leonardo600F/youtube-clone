@@ -35,7 +35,8 @@ import {
     LoginButtonIcon,
     DropDownMenuContent,
     UserInfoContainer,
-    UserName
+    UserName,
+    UserNickname
 } from "./header-style";
 
 import { ComponentContext } from "../../context/componentContext";
@@ -103,7 +104,7 @@ export default function Header() {
     useEffect(() => {
 
         const handleClickOutside = (event: MouseEvent) => {
-            // Verifica se o clique foi no dropdown menu
+            // Verifica se o clique foi no Dropdown Menu
             const dropdownElement = document.querySelector('[data-dropdown-menu]');
 
             // Se clicou no dropdown ou dentro dele, não fecha o menu
@@ -111,7 +112,7 @@ export default function Header() {
                 return;
             }
 
-            // Se clicou fora do dropdown, fecha o menu
+            // Se clicou fora do Dropdown, fecha o menu
             setOpenDropDownMenu(false);
         };
 
@@ -134,9 +135,7 @@ export default function Header() {
         }
     }
 
-    const handleDropDownMenu = () => {
-        setOpenDropDownMenu(!openDropDownMenu);
-    }
+    const handleDropDownMenu = () => { setOpenDropDownMenu(!openDropDownMenu); }
 
     const goOut = () => {
         logOut()
@@ -319,13 +318,13 @@ export default function Header() {
                         <DropDownMenuPortal openDropDownMenu={openDropDownMenu}>
 
                             <UserInfoContainer>
-                                <DropDownMenuProfileImageContainer
-                                    onClick={handleDropDownMenu}
-                                >
+                                <DropDownMenuProfileImageContainer onClick={handleDropDownMenu}>
                                     <span>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</span>
                                 </DropDownMenuProfileImageContainer>
 
                                 <UserName>{user && user.name ? user.name : ''}</UserName>
+
+                                <UserNickname>{user && user.nickname ? user.nickname : ''}</UserNickname>
                             </UserInfoContainer>
 
                             <DropDownMenuContent onClick={goToYourVideos}>

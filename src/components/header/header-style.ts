@@ -898,7 +898,19 @@ border-radius: 10px;
 
 export const UserName = styled.span`
 width: fit-content;
+height: fit-content;
+margin-top: -25px;
 margin-left: 12px;
-font-size: 19px;
+font-size: 20px;
 font-weight: 500;
 cursor: default;`;
+
+export const UserNickname = styled.span`
+width: fit-content;
+height: fit-content;
+margin-top: 20px;
+margin-left: -48px;
+font-size: 16px;
+font-weight: 500;
+cursor: default;
+`;

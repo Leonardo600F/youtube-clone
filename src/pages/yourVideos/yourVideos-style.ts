@@ -86,7 +86,7 @@ max-height: 44px;
 font-size: 26px}`;
 
 export const UserName = styled.h1`
-margin-top: 4px;
+margin-top: -5px;
 margin-left: 20px;
 cursor: default;
 
@@ -110,6 +110,33 @@ margin-left: 10px}
 @media(max-width: 339px) {font-size: 24px}
 
 @media(max-width: 320px) {font-size: 22.5px}`;
+
+export const UserNickname = styled.h2`
+margin-top: 35px;
+margin-left: -135px;
+cursor: default;
+
+@media(max-width: 1009px) {margin-left: 15px}
+
+@media(max-width: 590px) {font-size: 28px}
+
+@media(max-width: 523px) {font-size: 25.5px}
+
+@media(max-width: 458px) {
+font-size: 24px;
+margin-top: 6px;
+margin-left: 10px}
+
+@media(max-width: 423px) {font-size: 30px}
+
+@media(max-width: 379px) {font-size: 28px}
+
+@media(max-width: 359px) {font-size: 26px}
+
+@media(max-width: 339px) {font-size: 24px}
+
+@media(max-width: 320px) {font-size: 22.5px}
+`;
 
 export const Modal = styled.div<ContainerProps>`
 display: ${({ hideModal }) => hideModal ? 'none' : 'flex'};
@@ -349,7 +376,7 @@ height: 45px;
 border: none;
 border-radius: 5px;
 margin-top: 5px;
-margin-left: 40px;
+margin-left: 110px;
 font-weight: 600;
 font-size: 0.8rem;
 transition: .5s;
