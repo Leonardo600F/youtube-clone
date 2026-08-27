@@ -15,6 +15,7 @@ width: 100%;
 padding: ${({ openMenu }) => openMenu ? '70px 50px 0 330px' : '70px 10px 0 100px'};
 column-gap: 25px;
 row-gap: 20px;
+background-color: red;
 
 @media(max-width: 1312px) {padding: 70px 0px 0 100px}
 
@@ -31,9 +32,9 @@ padding: 60px 0px 0 90px}
 export const YourVideosContainer = styled.div`width: 100%`;
 
 export const UserContainer = styled.div`
-display: flex;
 width: 100%;
-height: 90px`;
+height: 90px;
+background-color: green;`;
 
 export const UserProfile = styled.div`
 display: flex;
@@ -41,11 +42,11 @@ align-items: center;
 justify-content: center;
 border-radius: 50%;
 margin-left: 30px;
-min-width: 50px;
-max-width: 50px;
-min-height: 50px;
-max-height: 50px;
-font-size: 30px;
+min-width: 65px;
+max-width: 65px;
+min-height: 65px;
+max-height: 65px;
+font-size: 35px;
 cursor: pointer;
 background-color: beige;
 
@@ -86,8 +87,9 @@ max-height: 44px;
 font-size: 26px}`;
 
 export const UserName = styled.h1`
-margin-top: -5px;
-margin-left: 20px;
+display: flex;
+margin-top: -3%;
+margin-left: 100px;
 cursor: default;
 
 @media(max-width: 1009px) {margin-left: 15px}
@@ -112,8 +114,8 @@ margin-left: 10px}
 @media(max-width: 320px) {font-size: 22.5px}`;
 
 export const UserNickname = styled.h2`
-margin-top: 35px;
-margin-left: -135px;
+margin-top: 33px;
+margin-left: 100px;
 cursor: default;
 
 @media(max-width: 1009px) {margin-left: 15px}
@@ -376,7 +378,7 @@ height: 45px;
 border: none;
 border-radius: 5px;
 margin-top: 5px;
-margin-left: 110px;
+margin-left: 240px;
 font-weight: 600;
 font-size: 0.8rem;
 transition: .5s;

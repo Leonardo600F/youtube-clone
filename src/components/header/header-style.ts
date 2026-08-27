@@ -888,8 +888,6 @@ font-weight: 500}
 &:hover {background-color: #e5e5e5}`;
 
 export const UserInfoContainer = styled.div`
-display: flex;
-align-items: center;
 width: 100%;
 height: fit-content;
 border-radius: 10px;
@@ -897,19 +895,21 @@ border-radius: 10px;
 @media(max-width: 1128px) {margin-top: 15px}`;
 
 export const UserName = styled.span`
+display: flex;
 width: fit-content;
 height: fit-content;
-margin-top: -25px;
-margin-left: 12px;
+margin-top: -43px;
+margin-left: 65px;
 font-size: 20px;
 font-weight: 500;
 cursor: default;`;
 
 export const UserNickname = styled.span`
+display: flex;
 width: fit-content;
 height: fit-content;
-margin-top: 20px;
-margin-left: -48px;
+margin-top: -3px;
+margin-left: 67px;
 font-size: 16px;
 font-weight: 500;
 cursor: default;
