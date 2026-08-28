@@ -12,6 +12,7 @@ import {
     UserContainer,
     UserProfile,
     UserName,
+    UserSurname,
     UserNickname,
     Modal,
     ModalContent,
@@ -199,7 +200,7 @@ export default function YourVideos() {
                     <UserContainer>
                         <UserProfile>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</UserProfile>
                         <UserName>{user && user.name ? user.name : ''}</UserName>
-                        <UserName style={{ marginLeft: '10.5%' }}>{user && user.surname ? user.surname : ''}</UserName>
+                        <UserSurname>{user && user.surname ? user.surname : ''}</UserSurname>
                         <UserNickname>{user && user.nickname ? user.nickname : ''}</UserNickname>
                         <AddVideoButton onClick={() => setHideModal(false)}>Cadastrar vídeo</AddVideoButton>
 

@@ -15,7 +15,6 @@ width: 100%;
 padding: ${({ openMenu }) => openMenu ? '70px 50px 0 330px' : '70px 10px 0 100px'};
 column-gap: 25px;
 row-gap: 20px;
-background-color: red;
 
 @media(max-width: 1312px) {padding: 70px 0px 0 100px}
 
@@ -34,7 +33,12 @@ export const YourVideosContainer = styled.div`width: 100%`;
 export const UserContainer = styled.div`
 width: 100%;
 height: 90px;
-background-color: green;`;
+background-color: #fff;
+
+@media(max-width: 791px) {margin-left: -65px}
+
+@media(max-width: 700px) {margin-left: -85px}
+`;
 
 export const UserProfile = styled.div`
 display: flex;
@@ -51,10 +55,6 @@ cursor: pointer;
 background-color: beige;
 
 @media(max-width: 963px) {margin-left: 20px}
-
-@media(max-width: 791px) {margin-left: -50px}
-
-@media(max-width: 700px) {margin-left: -75px}
 
 @media(max-width: 590px) {
 min-width: 45px;
@@ -88,11 +88,41 @@ font-size: 26px}`;
 
 export const UserName = styled.h1`
 display: flex;
-margin-top: -3%;
-margin-left: 100px;
+margin-top: -65px;
+margin-left: 110px;
 cursor: default;
 
-@media(max-width: 1009px) {margin-left: 15px}
+@media(max-width: 630px) {font-size: 25px}
+
+@media(max-width: 590px) {font-size: 28px}
+
+@media(max-width: 523px) {font-size: 25.5px}
+
+@media(max-width: 458px) {
+font-size: 24px;
+margin-top: 6px;
+margin-left: 10px}
+
+@media(max-width: 423px) {font-size: 30px}
+
+@media(max-width: 379px) {font-size: 28px}
+
+@media(max-width: 359px) {font-size: 26px}
+
+@media(max-width: 339px) {font-size: 24px}
+
+@media(max-width: 320px) {font-size: 22.5px}`;
+
+export const UserSurname = styled.h1`
+display: flex;
+margin-top: -63px;
+margin-left: 265px;
+cursor: default;
+
+@media(max-width: 630px) {
+margin-top: -50px;
+margin-left: 235px;
+font-size: 25px}
 
 @media(max-width: 590px) {font-size: 28px}
 
@@ -114,11 +144,13 @@ margin-left: 10px}
 @media(max-width: 320px) {font-size: 22.5px}`;
 
 export const UserNickname = styled.h2`
-margin-top: 33px;
-margin-left: 100px;
+margin-top: -30px;
+margin-left: 112px;
 cursor: default;
 
-@media(max-width: 1009px) {margin-left: 15px}
+@media(max-width: 630px) {
+font-size: 20px;
+margin-top: -20px;}
 
 @media(max-width: 590px) {font-size: 28px}
 
@@ -373,12 +405,15 @@ border-width: 2px;
 outline: none}`;
 
 export const AddVideoButton = styled.button`
+display: flex;
 width: 130px;
 height: 45px;
 border: none;
 border-radius: 5px;
-margin-top: 5px;
-margin-left: 240px;
+margin-top: -87px;
+margin-left: 480px;
+padding-top: 16px;
+padding-left: 15px;
 font-weight: 600;
 font-size: 0.8rem;
 transition: .5s;
