@@ -564,7 +564,7 @@ height: 173px}
 
 @media(max-width: 493px) {width: 462px}
 
-@media(max-width: 482px) {margin-left: -85px}
+@media(max-width: 485px) {margin-left: -85px}
 
 @media(max-width: 472px) {
 width: 448px;

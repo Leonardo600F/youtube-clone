@@ -33,11 +33,22 @@ export const YourVideosContainer = styled.div`width: 100%`;
 export const UserContainer = styled.div`
 width: 100%;
 height: 90px;
-background-color: #fff;
+background-color: purple;
 
-@media(max-width: 791px) {margin-left: -65px}
+@media(max-width: 791px) {margin-left: -65px;}
 
-@media(max-width: 700px) {margin-left: -85px}
+@media(max-width: 700px) {
+width: 613px;
+margin-left: -85px;}
+
+@media(max-width: 620px) {width: 510px;}
+
+@media(max-width: 590px) {height: 50px;}
+
+@media(max-width: 520px) {width: 475px;}
+
+@media(max-width: 485px) {width: 417px;}
+
 `;
 
 export const UserProfile = styled.div`
@@ -61,30 +72,30 @@ min-width: 45px;
 max-width: 45px;
 min-height: 45px;
 max-height: 45px;
-font-size: 25px}
+font-size: 25px;}
 
-@media(max-width: 482px) {margin-left: -85px}
+@media(max-width: 485px) {margin-left: 6px;}
 
-@media(max-width: 423px) {
-min-width: 52px;
-max-width: 52px;
-min-height: 52px;
-max-height: 52px;
-font-size: 30px}
+@media(max-width: 425px) {
+min-width: 40px;
+max-width: 40px;
+min-height: 40px;
+max-height: 40px;
+font-size: 20px;}
 
 @media(max-width: 339px) {
 min-width: 48px;
 max-width: 48px;
 min-height: 48px;
 max-height: 48px;
-font-size: 28px}
+font-size: 28px;}
 
 @media(max-width: 320px) {
 min-width: 44px;
 max-width: 44px;
 min-height: 44px;
 max-height: 44px;
-font-size: 26px}`;
+font-size: 26px;}`;
 
 export const UserName = styled.h1`
 display: flex;
@@ -94,16 +105,16 @@ cursor: default;
 
 @media(max-width: 630px) {font-size: 25px}
 
-@media(max-width: 590px) {font-size: 28px}
+@media(max-width: 590px) {
+margin-top: -45px;
+margin-left: 80px;
+font-size: 20px;}
 
-@media(max-width: 523px) {font-size: 25.5px}
+@media(max-width: 485px) {margin-left: 60px;}
 
-@media(max-width: 458px) {
-font-size: 24px;
-margin-top: 6px;
-margin-left: 10px}
-
-@media(max-width: 423px) {font-size: 30px}
+@media(max-width: 452px) {
+margin-top: -40px;
+margin-left: 55px;}
 
 @media(max-width: 379px) {font-size: 28px}
 
@@ -121,19 +132,17 @@ cursor: default;
 
 @media(max-width: 630px) {
 margin-top: -50px;
-margin-left: 235px;
-font-size: 25px}
+margin-left: 233px;
+font-size: 25px;}
 
-@media(max-width: 590px) {font-size: 28px}
+@media(max-width: 590px) {
+margin-top: -40px;
+margin-left: 175px;
+font-size: 20px;}
 
-@media(max-width: 523px) {font-size: 25.5px}
+@media(max-width: 485px) {margin-left: 155px;}
 
-@media(max-width: 458px) {
-font-size: 24px;
-margin-top: 6px;
-margin-left: 10px}
-
-@media(max-width: 423px) {font-size: 30px}
+@media(max-width: 425px) {margin-left: 150px;}
 
 @media(max-width: 379px) {font-size: 28px}
 
@@ -152,16 +161,14 @@ cursor: default;
 font-size: 20px;
 margin-top: -20px;}
 
-@media(max-width: 590px) {font-size: 28px}
+@media(max-width: 590px) {
+margin-top: -17px;
+margin-left: 83px;
+font-size: 16px;}
 
-@media(max-width: 523px) {font-size: 25.5px}
+@media(max-width: 485px) {margin-left: 62px;}
 
-@media(max-width: 458px) {
-font-size: 24px;
-margin-top: 6px;
-margin-left: 10px}
-
-@media(max-width: 423px) {font-size: 30px}
+@media(max-width: 425px) {margin-left: 58px;}
 
 @media(max-width: 379px) {font-size: 28px}
 
@@ -423,48 +430,47 @@ background-color: #1a75ff;
 
 &:hover {background-color: #005ce6}
 
-@media(max-width: 590px) {
+@media(max-width: 630px) {
 width: 115px;
 height: 37px;
-margin-left: 23px}
+margin-top: -72px;
+margin-left: 390px;
+padding-top: 14px;
+font-size: 0.7rem;}
 
-@media(max-width: 523px) {
-width: 105px;
-font-size: 0.7rem}
+@media(max-width: 590px) {
+margin-top: -57px;
+margin-left: 380px;}
 
-@media(max-width: 493px) {margin-left: 16px}
+@media(max-width: 520px) {margin-left: 355px;}
 
-@media(max-width: 458px) {
-width: 98px;
-margin-left: 13px}
+@media(max-width: 485px) {margin-left: 300px;}
 
-@media(max-width: 423px) {
-width: 295px;
-margin-top: 60px;
-font-size: 1rem;
-margin-left: -295px}
+@media(max-width: 425px) {
+width: 100px;
+margin-left: 300px;
+padding-left: 15px;
+font-size: 0.6rem;}
 
 @media(max-width: 379px) {
 width: 275px;
-margin-left: -275px}
+margin-left: -275px;}
 
 @media(max-width: 359px) {
 width: 253px;
-margin-left: -255px}
+margin-left: -255px;}
 
 @media(max-width: 339px) {
 width: 235px;
 margin-top: 50px;
 font-size: 0.9rem;
-margin-left: -235px}
+margin-left: -235px;}
 
 @media(max-width: 320px) {
 width: 220px;
 margin-top: 45px;
 font-size: 0.8rem;
-margin-left: -220px}
-
-
+margin-left: -220px;}
 `;
 
 export const ModalAddVideoButton = styled.button`
