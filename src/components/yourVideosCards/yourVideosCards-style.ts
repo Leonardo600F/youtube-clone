@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-interface Modal {
-    isDeleteModalOpen: boolean
-}
+interface Modal { isDeleteModalOpen: boolean; }
 
 export const DeleteVideoButton = styled.div`
 display: none;
@@ -16,111 +14,113 @@ margin-top: 13px;
 margin-left: 285px;
 background-color: #ececec;
 
-@media(max-width: 1230px) {margin-left: 270px}
+@media(max-width: 1230px) {margin-left: 270px;}
 
-@media(max-width: 1200px) {margin-left: 260px}
+@media(max-width: 1200px) {margin-left: 260px;}
 
-@media(max-width: 1143px) {margin-left: 250px}
+@media(max-width: 1143px) {margin-left: 250px;}
 
-@media(max-width: 1114px) {margin-left: 237px}
+@media(max-width: 1114px) {margin-left: 237px;}
 
-@media(max-width: 1018px) {margin-left: 230px}
+@media(max-width: 1018px) {margin-left: 230px;}
 
-@media(max-width: 980px) {margin-left: 215px}
+@media(max-width: 980px) {margin-left: 215px;}
 
 @media(max-width: 963px) {
 width: 45px;
 height: 45px;
 margin-top: 5px;
 margin-left: 80%;
-background-color: #fff}
+background-color: #fff;}
 
 @media(max-width: 875px) {
 width: 40px;
 height: 40px;
 margin-left: 78%;
-background-color: #fff}
+background-color: #fff;}
 
-@media(max-width: 791px) {margin-left: 87%}
+@media(max-width: 791px) {margin-left: 87%;}
 
-@media(max-width: 765px) {margin-left: 84%}
+@media(max-width: 765px) {margin-left: 84%;}
 
-@media(max-width: 719px) {margin-left: 620px}
+@media(max-width: 719px) {margin-left: 620px;}
 
-@media(max-width: 710px) {margin-left: 605px}
+@media(max-width: 710px) {margin-left: 605px;}
 
-@media(max-width: 680px) {margin-left: 590px}
+@media(max-width: 680px) {margin-left: 590px;}
 
-@media(max-width: 660px) {margin-left: 575px}
+@media(max-width: 660px) {margin-left: 575px;}
 
-@media(max-width: 650px) {margin-left: 560px}
+@media(max-width: 650px) {margin-left: 560px;}
 
-@media(max-width: 635px) {margin-left: 545px}
+@media(max-width: 635px) {margin-left: 545px;}
 
-@media(max-width: 622px) {margin-left: 530px}
+@media(max-width: 622px) {margin-left: 530px;}
 
-@media(max-width: 608px) {margin-left: 515px}
+@media(max-width: 608px) {margin-left: 515px;}
 
-@media(max-width: 590px) {margin-left: 500px}
+@media(max-width: 590px) {margin-left: 500px;}
 
-@media(max-width: 575px) {margin-left: 485px}
+@media(max-width: 575px) {margin-left: 485px;}
 
 @media(max-width: 555px) {
 width: 35px;
 height: 35px;
-margin-left: 475px}
+margin-left: 475px;}
 
 @media(max-width: 536px) {
 margin-top: 145px;
-margin-left: 460px}
+margin-left: 460px;}
 
 @media(max-width: 523px) {
 margin-top: 140px;
-margin-left: 445px}
+margin-left: 445px;}
 
-@media(max-width: 513px) {margin-left: 430px}
+@media(max-width: 513px) {margin-left: 430px;}
 
 @media(max-width: 503px) {
 margin-top: 130px;
-margin-left: 415px}
+margin-left: 415px;}
 
-@media(max-width: 472px) {margin-left: 400px}
+@media(max-width: 472px) {margin-left: 400px;}
 
-@media(max-width: 458px) {margin-left: 385px}
+@media(max-width: 458px) {margin-left: 385px;}
 
 @media(max-width: 438px) {
 margin-top: 120px;
-margin-left: 370px}
+margin-left: 370px;}
 
-@media(max-width: 423px) {margin-left: 355px}
+@media(max-width: 423px) {margin-left: 355px;}
 
 @media(max-width: 410px) {
 margin-top: 115px;
-margin-left: 340px}
+margin-left: 340px;}
 
 @media(max-width: 390px) {
 width: 30px;
 height: 30px;
 margin-top: 105px;
-margin-left: 330px}
+margin-left: 330px;}
 
-@media(max-width: 379px) {margin-left: 320px}
+@media(max-width: 379px) {margin-left: 320px;}
 
 @media(max-width: 369px) {
 margin-top: 100px;
-margin-left: 310px}
+margin-left: 310px;}
 
-@media(max-width: 359px) {margin-left: 300px}
+@media(max-width: 359px) {margin-left: 300px;}
 
 @media(max-width: 349px) {
 margin-top: 95px;
-margin-left: 290px}
+margin-left: 290px;}
 
-@media(max-width: 339px) {margin-left: 280px}
+@media(max-width: 339px) {margin-left: 280px;}
 
 @media(max-width: 329px) {
 margin-top: 90px;
-margin-left: 270px}`;
+margin-left: 270px;}
+
+@media(max-width: 329px) {margin-top: 100px;}`;
 
 export const DeleteVideoButtonIcon = styled.img`
 display: flex;
@@ -129,19 +129,19 @@ height: 20px;
 
 @media(max-width: 963px) {
 width: 25px;
-height: 25px}
+height: 25px;}
 
 @media(max-width: 875px) {
 width: 23px;
-height: 23px}
+height: 23px;}
 
 @media(max-width: 555px) {
 width: 20px;
-height: 20px}
+height: 20px;}
 
 @media(max-width: 390px) {
 width: 15px;
-height: 15px}`;
+height: 15px;}`;
 
 export const Modal = styled.div<Modal>`
 display: ${({ isDeleteModalOpen }) => isDeleteModalOpen ? 'flex' : 'none'};
@@ -155,7 +155,7 @@ right: 0;
 left: 0;
 bottom: 0;
 z-index: 5;
-background-color: rgba(0,0,0,0.5)`;
+background-color: rgba(0,0,0,0.5);`;
 
 export const DeleteVideoModal = styled.div<Modal>`
 display: ${({ isDeleteModalOpen }) => isDeleteModalOpen ? 'flex' : 'none'};
@@ -174,82 +174,82 @@ cursor: default;
 
 @media(max-width: 600px) {
 font-size: 23px;
-margin-left: 105px}
+margin-left: 105px;}
 
-@media(max-width: 536px) {margin-left: 90px}
+@media(max-width: 536px) {margin-left: 90px;}
 
 @media(max-width: 516px) {
 margin-left: 85px;
-font-size: 21px}
+font-size: 21px;}
 
-@media(max-width: 490px) {margin-left: 80px}
+@media(max-width: 490px) {margin-left: 80px;}
 
 @media(max-width: 437px) {
 font-size: 19px;
-margin-left: 75px}
+margin-left: 75px;}
 
-@media(max-width: 418px) {margin-left: 65px}
+@media(max-width: 418px) {margin-left: 65px;}
 
-@media(max-width: 400px) {margin-left: 52px}
+@media(max-width: 400px) {margin-left: 52px;}
 
 @media(max-width: 380px) {
 font-size: 18px;
-margin-left: 50px}
+margin-left: 50px;}
 
-@media(max-width: 360px) {margin-left: 42px}
+@media(max-width: 360px) {margin-left: 42px;}
 
-@media(max-width: 340px) {margin-left: 30px}
+@media(max-width: 340px) {margin-left: 30px;}
 
 @media(max-width: 320px) {
 font-size: 17.5px;
-margin-left: 26px}}
+margin-left: 26px;}}
 
 
 @media(max-width: 650px) {
 width: 580px;
-height: 285px}
+height: 285px;}
 
-@media(max-width: 600px) {width: 540px}
+@media(max-width: 600px) {width: 540px;}
 
 @media(max-width: 560px) {
 width: 520px;
-height: 280px}
+height: 280px;}
 
-@media(max-width: 536px) {width: 500px}
+@media(max-width: 536px) {width: 500px;}
 
-@media(max-width: 516px) {width: 470px}
+@media(max-width: 516px) {width: 470px;}
 
 @media(max-width: 490px) {
 width: 450px;
-height: 260px}
+height: 260px;}
 
 @media(max-width: 470px) {
 width: 425px;
-height: 255px}
+height: 255px;}
 
 @media(max-width: 437px) {
 width: 405px;
-height: 250px}
+height: 250px;}
 
 @media(max-width: 418px) {
 width: 385px;
-height: 245px}
+height: 245px;}
 
-@media(max-width: 400px) {width: 365px}
+@media(max-width: 400px) {width: 365px;}
 
 @media(max-width: 380px) {
 width: 345px;
-height: 240px}
+height: 240px;}
 
 @media(max-width: 360px) {
 width: 325px;
-height: 235px}
+height: 235px;}
 
 @media(max-width: 340px) {
 width: 305px;
-height: 230px}
+height: 230px;}
 
-@media(max-width: 320px) {width: 295px}`;
+@media(max-width: 320px) {width: 295px;}`;
 
 export const DeleteButton = styled.div`
 display: flex;
@@ -262,7 +262,7 @@ cursor: pointer;
 transition: 0.6s;
 background-color: #E5E4E2;
 
-&:hover {background-color: #87CEFA}
+&:hover {background-color: #87CEFA;}
 
 span {
 display: flex;
@@ -274,62 +274,62 @@ cursor: pointer;
 
 @media(max-width: 600px) {
 margin-top: 13px;
-margin-left: 26px}
+margin-left: 26px;}
 
 @media(max-width: 536px) {
 margin-left: 23px;
-font-size: 14.5px}
+font-size: 14.5px;}
 
 @media(max-width: 516px) {
 margin-left: 22px;
-font-size: 14px}
+font-size: 14px;}
 
 @media(max-width: 437px) {
 margin-top: 11.5px;
 margin-left: 20px;
-font-size: 13px}
+font-size: 13px;}
 
 @media(max-width: 380px) {
 margin-top: 11.5px;
 margin-left: 18px;
-font-size: 12px}}
+font-size: 12px;}}
 
 @media(max-width: 600px) {
 width: 125px;
-height: 45px}
+height: 45px;}
 
 @media(max-width: 536px) {
 width: 120px;
-margin-left: 95px}
+margin-left: 95px;}
 
 @media(max-width: 516px) {
 width: 115px;
 height: 42px;
-margin-left: 85px}
+margin-left: 85px;}
 
 @media(max-width: 490px) {
 margin-top: 185px;
-margin-left: 80px}
+margin-left: 80px;}
 
 @media(max-width: 437px) {
 width: 105px;
 height: 39px;
-margin-left: 75px}
+margin-left: 75px;}
 
-@media(max-width: 418px) {margin-left: 62px}
+@media(max-width: 418px) {margin-left: 62px;}
 
-@media(max-width: 400px) {margin-left: 48px}
+@media(max-width: 400px) {margin-left: 48px;}
 
 @media(max-width: 380px) {
 width: 95px;
 margin-top: 175px;
-margin-left: 46px}
+margin-left: 46px;}
 
 @media(max-width: 360px) {
 margin-top: 165px;
-margin-left: 40px}
+margin-left: 40px;}
 
-@media(max-width: 340px) {margin-left: 28px}`;
+@media(max-width: 340px) {margin-left: 28px;}`;
 
 export const BackButton = styled.div`
 display: flex;
@@ -342,7 +342,7 @@ cursor: pointer;
 transition: 0.6s;
 background-color: #E5E4E2;
 
-&:hover {background-color: #E62020}
+&:hover {background-color: #E62020;}
 
 span {
 display: flex;
@@ -354,60 +354,60 @@ cursor: pointer;
 
 @media(max-width: 600px) {
 margin-top: 13px;
-margin-left: 26px}
+margin-left: 26px;}
 
 @media(max-width: 536px) {
 margin-left: 23px;
-font-size: 14.5px}
+font-size: 14.5px;}
 
 @media(max-width: 516px) {
 margin-left: 22px;
-font-size: 14px}
+font-size: 14px;}
 
 @media(max-width: 437px) {
 margin-top: 11.5px;
 margin-left: 20px;
-font-size: 13px}
+font-size: 13px;}
 
 @media(max-width: 380px) {
 margin-top: 11.5px;
 margin-left: 18px;
-font-size: 12px}}
+font-size: 12px;}}
 
 @media(max-width: 600px) {
 width: 125px;
 height: 45px;
-margin-left: 60px}
+margin-left: 60px;}
 
-@media(max-width: 536px) {width: 120px}
+@media(max-width: 536px) {width: 120px;}
 
 @media(max-width: 516px) {
 width: 115px;
-height: 42px}
+height: 42px;}
 
 @media(max-width: 490px) {
 margin-top: 185px;
-margin-left: 55px}
+margin-left: 55px;}
 
 @media(max-width: 437px) {
 width: 105px;
 height: 39px;
-margin-left: 52px}
+margin-left: 52px;}
 
-@media(max-width: 400px) {margin-left: 45px}
+@media(max-width: 400px) {margin-left: 45px;}
 
 @media(max-width: 380px) {
 width: 95px;
 margin-top: 175px;
-margin-left: 54px}
+margin-left: 54px;}
 
 @media(max-width: 360px) {
 margin-top: 165px;
-margin-left: 50px}
+margin-left: 50px;}
 
-@media(max-width: 340px) {margin-left: 57px}
+@media(max-width: 340px) {margin-left: 57px;}
 
-@media(max-width: 320px) {margin-left: 47px}`;
+@media(max-width: 320px) {margin-left: 47px;}`;
 
 export const Container = styled.div`
 width: 340px;
@@ -417,83 +417,83 @@ margin-left: 20px;
 cursor: pointer;
 background-color: #fff;
 
-&:hover {background-color: #ececec}
+&:hover {background-color: #ececec;}
 
-&:hover ${DeleteVideoButton} {display: flex}
+&:hover ${DeleteVideoButton} {display: flex;}
 
 @media(max-width: 1230px) {
 width: 330px;
-height: 330px}
+height: 330px;}
 
 @media(max-width: 1207px) {
 width: 320px;
-height: 320px}
+height: 320px;}
 
 @media(max-width: 1177px) {
 width: 310px;
-height: 310px}
+height: 310px;}
 
 @media(max-width: 1143px) {
 width: 300px;
-height: 300px}
+height: 300px;}
 
 @media(max-width: 1114px) {
 width: 290px;
-height: 290px}
+height: 290px;}
 
 @media(max-width: 1086px) {
 width: 285px;
-height: 285px}
+height: 285px;}
 
 @media(max-width: 1070px) {
 width: 300px;
-height: 300px}
+height: 300px;}
 
 @media(max-width: 1057px) {
 width: 295px;
-height: 295px}
+height: 295px;}
 
 @media(max-width: 1039px) {
 width: 290px;
-height: 290px}
+height: 290px;}
 
 @media(max-width: 1025px) {
 width: 285px;
-height: 285px}
+height: 285px;}
 
 @media(max-width: 1009px) {
 width: 280px;
 height: 280px;
-margin-left: 15px}
+margin-left: 15px;}
 
 @media(max-width: 980px) {
 width: 275px;
-height: 275px}
+height: 275px;}
 
 @media(max-width: 963px) {
 width: 830px;
 height: 280px;
-margin-left: 10px}
+margin-left: 10px;}
 
 @media(max-width: 935px) {
 width: 810px;
-height: 260px}
+height: 260px;}
 
 @media(max-width: 915px) {
 width: 788px;
-height: 250px}
+height: 250px;}
 
 @media(max-width: 895px) {
 width: 768px;
-height: 240px}
+height: 240px;}
 
 @media(max-width: 875px) {
 width: 740px;
-height: 230px}
+height: 230px;}
 
 @media(max-width: 845px) {
 width: 710px;
-height: 220px}
+height: 220px;}
 
 @media(max-width: 815px) {
 width: 680px;
@@ -604,7 +604,9 @@ height: 128px}
 
 @media(max-width: 339px) {width: 320px}
 
-@media(max-width: 329px) {width: 307px}`;
+@media(max-width: 329px) {
+width: 307px;
+height: 138px;}`;
 
 export const Banner = styled.img`
 width: 95%;
@@ -758,7 +760,9 @@ height: 115px}
 
 @media(max-width: 339px) {width: 155px}
 
-@media(max-width: 329px) {width: 150px}
+@media(max-width: 329px) {
+width: 150px;
+height: 125px;}
 
 `;
 
@@ -1224,29 +1228,29 @@ display: none;
 display: flex;
 width: fit-content;
 margin-top: 7px;
-margin-left: 70px}
+margin-left: 70px;}
 
 @media(max-width: 875px) {
 margin-top: 0px;
-margin-left: 60px}
+margin-left: 60px;}
 
-@media(max-width: 575px) {margin-left: 50px}
+@media(max-width: 575px) {margin-left: 50px;}
 
-@media(max-width: 438px) {margin-left: 45px}
+@media(max-width: 438px) {margin-left: 45px;}
 
-@media(max-width: 390px) {margin-top: -25px}
+@media(max-width: 390px) {margin-top: -25px;}
 
 span {
 font-size: 15px;
 font-weight: 600;
 color: #0f0f0f;
 
-@media(max-width: 875px) {font-size: 13px}
+@media(max-width: 875px) {font-size: 13px;}
 
-@media(max-width: 575px) {font-size: 12.5px}
+@media(max-width: 575px) {font-size: 12.5px;}
 
-@media(max-width: 493px) {font-size: 12px}
+@media(max-width: 493px) {font-size: 12px;}
 
-@media(max-width: 438px) {font-size: 11px}
+@media(max-width: 438px) {font-size: 11px;}
 
-@media(max-width: 390px) {font-size: 14px}}`;
+@media(max-width: 390px) {font-size: 14px;}}`;
