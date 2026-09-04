@@ -47,11 +47,13 @@ import {
 
 } from './sign-up-styles';
 
-const NAME_FORMAT_REGEX = /^[a-zA-ZÀ-ÿ]{3,}$/;
+const NAME_FORMAT_REGEX = /^[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)*$/;
+
+const NICKNAME_FORMAT_REGEX = /^[a-zA-Z0-9]{3,}$/;
 
 const isNameFormatValid = (name: string) => NAME_FORMAT_REGEX.test(name.trim());
 
-const isNicknameFormatValid = (nickname: string) => NAME_FORMAT_REGEX.test(nickname.trim());
+const isNicknameFormatValid = (nickname: string) => NICKNAME_FORMAT_REGEX.test(nickname.trim());
 
 export default function SignUp() {
 

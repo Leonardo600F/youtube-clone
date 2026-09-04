@@ -530,7 +530,7 @@ outline: none;
 height: 15px;
 width: 50px;
 font-size: 12px;
-transform: translateY(-30px);
+transform: translateY(-32px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
@@ -561,7 +561,7 @@ background-color: #fff;
 
 @media(max-width: 599px) {
 margin-top: 18px;
-margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'};}
+margin-left: ${({ valid }) => valid ? '-97%' : '-98%'};}
 
 @media(max-width: 449px) {
 font-size: 14px;
@@ -777,7 +777,7 @@ outline: none;
 height: 15px;
 width: 80px;
 font-size: 12px;
-transform: translateY(-30px);
+transform: translateY(-32px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
@@ -808,7 +808,7 @@ background-color: #fff;
 
 @media(max-width: 599px) {
 margin-top: 18px;
-margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'};}
+margin-left: ${({ valid }) => valid ? '-97%' : '-98%'};}
 
 @media(max-width: 449px) {
 font-size: 14px;
@@ -1032,7 +1032,7 @@ background-color: #fff;
 height: 15px;
 width: 53px;
 font-size: 12px;
-transform: translateY(-30px);
+transform: translateY(-32px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 background-color: #fff;
 
@@ -1060,9 +1060,9 @@ margin: ${({ valid }) => valid ? '19px 0 0 -510px' : '17px 0 0 -515px'};
 color: ${({ valid }) => valid ? '#333' : 'red'};
 background-color: #fff;
 
-@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-463px' : '-467px'}}
+@media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-463px' : '-467px'};}
 
-@media (max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
+@media (max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'};}
 
 @media(max-width: 449px) {
 font-size: 14px;
@@ -1286,7 +1286,7 @@ outline: none;
 height: 15px;
 width: 100px;
 font-size: 12px;
-transform: translateY(-30px);
+transform: translateY(-32px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
@@ -1315,7 +1315,7 @@ background-color: #fff;
 
 @media (max-width: 630px) {margin-left: ${({ valid }) => valid ? '-463px' : '-473px'}}
 
-@media (max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97.5%' : '-98%'}}
+@media (max-width: 599px) {margin-left: ${({ valid }) => valid ? '-97%' : '-98%'};}
 
 @media(max-width: 449px) {
 font-size: 14px;
@@ -1630,7 +1630,7 @@ outline: none;
 height: 15px;
 width: 53px;
 font-size: 12px;
-transform: translateY(-30px);
+transform: translateY(-32px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}
@@ -1922,7 +1922,7 @@ outline: none;
 height: 15px;
 width: 100px;
 font-size: 12px;
-transform: translateY(-30px);
+transform: translateY(-32px);
 color: ${({ valid }) => valid ? '#4169E1' : 'red'};
 
 @media(max-width: 599px) {transform: translateY(-30px)}

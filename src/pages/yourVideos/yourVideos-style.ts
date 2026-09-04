@@ -31,33 +31,11 @@ padding: 60px 0px 0 90px;}
 export const YourVideosContainer = styled.div`width: 100%`;
 
 export const UserContainer = styled.div`
-width: 100%;
-height: 90px;
+width: fit-content;
+height: 80px;
 background-color: purple;
 
-@media(max-width: 791px) {margin-left: -65px;}
-
-@media(max-width: 700px) {
-width: 613px;
-margin-left: -85px;}
-
-@media(max-width: 620px) {width: 510px;}
-
-@media(max-width: 590px) {height: 50px;}
-
-@media(max-width: 520px) {width: 475px;}
-
-@media(max-width: 485px) {width: 417px;}
-
-@media(max-width: 425px) {width: 387px;}
-
-@media(max-width: 395px) {width: 352px;}
-
-@media(max-width: 360px) {width: 326px;}
-
-@media(max-width: 330px) {width: 306px;}
-
-`;
+@media(max-width: 791px) {margin-left: -65px;}`;
 
 export const UserProfile = styled.div`
 display: flex;
@@ -75,14 +53,22 @@ background-color: beige;
 
 @media(max-width: 963px) {margin-left: 20px}
 
+@media(max-width: 640px) {
+min-width: 60px;
+max-width: 60px;
+min-height: 60px;
+max-height: 60px;
+font-size: 30px;
+margin-left: 10px;}
+
+@media(max-width: 550px) {margin-left: 0px}
+
 @media(max-width: 590px) {
 min-width: 45px;
 max-width: 45px;
 min-height: 45px;
 max-height: 45px;
 font-size: 25px;}
-
-@media(max-width: 485px) {margin-left: 6px;}
 
 @media(max-width: 425px) {
 min-width: 40px;
@@ -100,16 +86,21 @@ font-size: 15px;}`;
 
 export const UserName = styled.h1`
 display: flex;
-margin-top: -65px;
+margin-top: -70px;
 margin-left: 110px;
 cursor: default;
 
-@media(max-width: 630px) {font-size: 25px}
+@media(max-width: 640px) {
+margin-top: -60px;
+margin-left: 80px;
+font-size: 23px;}
 
 @media(max-width: 590px) {
-margin-top: -45px;
+margin-top: -47px;
 margin-left: 80px;
 font-size: 20px;}
+
+@media(max-width: 550px) {margin-left: 55px;}
 
 @media(max-width: 485px) {margin-left: 60px;}
 
@@ -125,17 +116,22 @@ margin-left: 50px;
 font-size: 15px;}`;
 
 export const UserNickname = styled.h2`
-margin-top: -30px;
+margin-top: -20px;
 margin-left: 112px;
 cursor: default;
 
-@media(max-width: 630px) {
-font-size: 20px;
-margin-top: -20px;}
+@media(max-width: 640px) {
+margin-top: -15px;
+margin-left: 80px;
+font-size: 18px;}
 
 @media(max-width: 590px) {
-margin-top: -17px;
+margin-top: -12px;
 margin-left: 83px;
+font-size: 16px;}
+
+@media(max-width: 550px) {
+margin-left: 57px;
 font-size: 16px;}
 
 @media(max-width: 485px) {margin-left: 62px;}
@@ -412,7 +408,7 @@ font-size: 0.7rem;}
 margin-top: -57px;
 margin-left: 380px;}
 
-@media(max-width: 520px) {margin-left: 355px;}
+@media(max-width: 550px) {margin-left: 340px;}
 
 @media(max-width: 485px) {margin-left: 300px;}
 
