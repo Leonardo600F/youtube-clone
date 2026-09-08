@@ -171,6 +171,41 @@ export const UserStorage = ({ children }: any) => {
             })
     }
 
+    const [dropDownPosition, setDropDownPosition] = useState({
+        top: 60,
+        right: 45
+    });
+
+    const updateDropDownPosition = () => {
+        const profileButton = document.querySelector(
+            '[data-profile-button]'
+        ) as HTMLElement;
+
+        if (!profileButton) return;
+
+        const rect = profileButton.getBoundingClientRect();
+        const scrollY = window.scrollY;
+
+        const top = rect.bottom + scrollY + 5;
+        const right = window.innerWidth - rect.right;
+
+        setDropDownPosition({ top, right });
+    };
+
+    useEffect(() => {
+        if (!openDropDownMenu) return;
+
+        updateDropDownPosition();
+
+        window.addEventListener('scroll', updateDropDownPosition);
+        window.addEventListener('resize', updateDropDownPosition);
+
+        return () => {
+            window.removeEventListener('scroll', updateDropDownPosition);
+            window.removeEventListener('resize', updateDropDownPosition);
+        };
+    }, [openDropDownMenu]);
+
     return (
         <UserContext.Provider value={{
             login,
@@ -187,7 +222,8 @@ export const UserStorage = ({ children }: any) => {
             handleCreateUser,
             logOut,
             openDropDownMenu,
-            setOpenDropDownMenu
+            setOpenDropDownMenu,
+            dropDownPosition
         }}>
             {children}
         </UserContext.Provider>

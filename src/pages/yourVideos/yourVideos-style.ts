@@ -35,7 +35,12 @@ width: fit-content;
 height: 80px;
 background-color: purple;
 
-@media(max-width: 791px) {margin-left: -65px;}`;
+@media(max-width: 791px) {margin-left: -65px;}
+
+@media(max-width: 550px) {height: 65px;}
+
+@media(max-width: 435px) {height: 50px;}
+`;
 
 export const UserProfile = styled.div`
 display: flex;
@@ -63,14 +68,7 @@ margin-left: 10px;}
 
 @media(max-width: 550px) {margin-left: 0px}
 
-@media(max-width: 590px) {
-min-width: 45px;
-max-width: 45px;
-min-height: 45px;
-max-height: 45px;
-font-size: 25px;}
-
-@media(max-width: 425px) {
+@media(max-width: 435px) {
 min-width: 40px;
 max-width: 40px;
 min-height: 40px;
@@ -95,24 +93,16 @@ margin-top: -60px;
 margin-left: 80px;
 font-size: 23px;}
 
-@media(max-width: 590px) {
-margin-top: -47px;
-margin-left: 80px;
-font-size: 20px;}
+@media(max-width: 550px) {margin-left: 70px;}
 
-@media(max-width: 550px) {margin-left: 55px;}
-
-@media(max-width: 485px) {margin-left: 60px;}
-
-@media(max-width: 452px) {
+@media(max-width: 435px) {
 margin-top: -40px;
-margin-left: 55px;}
-
-@media(max-width: 425px) {font-size: 17px;}
+margin-left: 50px;
+font-size: 17px;}
 
 @media(max-width: 395px) {
 margin-top: -35px;
-margin-left: 50px;
+margin-left: 45px;
 font-size: 15px;}`;
 
 export const UserNickname = styled.h2`
@@ -125,24 +115,17 @@ margin-top: -15px;
 margin-left: 80px;
 font-size: 18px;}
 
-@media(max-width: 590px) {
-margin-top: -12px;
-margin-left: 83px;
-font-size: 16px;}
-
 @media(max-width: 550px) {
-margin-left: 57px;
+margin-left: 72px;
 font-size: 16px;}
 
-@media(max-width: 485px) {margin-left: 62px;}
-
-@media(max-width: 425px) {
+@media(max-width: 435px) {
 margin-top: -10px;
-margin-left: 58px;}
+margin-left: 52px;}
 
 @media(max-width: 395px) {
 margin-top: -8px;
-margin-left: 52px;
+margin-left: 47px;
 font-size: 13px;}`;
 
 export const Modal = styled.div<ContainerProps>`
@@ -396,46 +379,34 @@ background-color: #1a75ff;
 
 &:hover {background-color: #005ce6;}
 
-@media(max-width: 630px) {
+@media(max-width: 640px) {
 width: 115px;
 height: 37px;
-margin-top: -72px;
+margin-top: -67px;
 margin-left: 390px;
 padding-top: 14px;
 font-size: 0.7rem;}
 
-@media(max-width: 590px) {
-margin-top: -57px;
-margin-left: 380px;}
+@media(max-width: 550px) {
+margin-top: -62px;
+margin-left: 330px;}
 
-@media(max-width: 550px) {margin-left: 340px;}
+@media(max-width: 475px) {margin-left: 290px;}
 
-@media(max-width: 485px) {margin-left: 300px;}
-
-@media(max-width: 425px) {
+@media(max-width: 435px) {
 width: 95px;
-margin-left: 290px;
+margin-left: 255px;
 margin-top: -57px;
 padding-left: 12px;
 font-size: 0.6rem;}
 
 @media(max-width: 395px) {
 height: 30px;
-margin-left: 255px;
 margin-top: -48px;
+margin-left: 205px;
 padding-top: 10px;}
 
-@media(max-width: 360px) {
-width: 85px;
-margin-left: 240px;
-padding-left: 6px;}
-
-@media(max-width: 330px) {
-width: 75px;
-margin-left: 230px;
-padding-top: 12px;
-padding-left: 7px;
-font-size: 0.5rem;}`;
+@media(max-width: 330px) {margin-left: 185px;}`;
 
 export const ModalAddVideoButton = styled.button`
 width: 140px;

@@ -38,13 +38,11 @@ export default function SearchPage() {
     }, [search]);
 
     const [videosApi, setVideosApi] = useState<Videos[]>([]);
-    const API_KEY = 'AIzaSyBxEcjsvy6W7j5rt6WaR0Ixix-gC4yQJJE';
-    const URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${search}&maxResults=48&&key=${API_KEY}`
 
     async function load() {
         if (search !== '') {
             try {
-                const resposta = await axios.get(URL);
+                const resposta = await axios.get(`http://localhost:4000/youtube/search?search=${encodeURIComponent(search)}`);
                 setVideosApi(resposta.data.items);
             }
 
