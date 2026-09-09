@@ -214,7 +214,7 @@ width: 20px;
 export const DropDownMenuButtonIcon = styled.img`
 width: 24px;
 height: 24px;
-margin-left: 6px`;
+margin-left: 6px;`;
 
 export const HiddenIcon = styled.img<OpenBar>`
 display: ${({ openBar }) => openBar ? 'flex' : 'none'};
@@ -861,33 +861,33 @@ border-radius: 10px;
 box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
 background-color: #f8f8f8;
 transition: 0.5s;
+z-index: 1000;
 
 @media(max-width: 1128px) {
 margin-top: -50px;
-margin-right: 50px}
+margin-right: 50px;}
   
 @media(max-width: 375px) {width: 250px}`;
-
 
 export const DropDownMenuContent = styled.div`
 display: flex;
 align-items: center;
-box-sizing: border-box;
 width: 100%;
 height: 40px;
 border-radius: 10px;
-margin-top: 15px;
+margin-top: 5px;
 padding: 0 10px;
 cursor: pointer;
 
 span {
 margin-left: 23px;
 font-size: 16px;
-font-weight: 500}
+font-weight: 500;}
 
-&:hover {background-color: #e5e5e5}`;
+&:hover {background-color: #e5e5e5;}`;
 
 export const UserInfoContainer = styled.div`
+display: flex;
 width: 100%;
 height: fit-content;
 border-radius: 10px;
@@ -898,8 +898,7 @@ export const UserName = styled.span`
 display: flex;
 width: fit-content;
 height: fit-content;
-margin-top: -43px;
-margin-left: 65px;
+margin-left: 10px;
 font-size: 20px;
 font-weight: 500;
 cursor: default;`;
@@ -908,9 +907,8 @@ export const UserNickname = styled.span`
 display: flex;
 width: fit-content;
 height: fit-content;
-margin-top: -3px;
-margin-left: 67px;
+margin-top: 20px;
+margin-left: -83px;
 font-size: 16px;
 font-weight: 500;
-cursor: default;
-`;
+cursor: default;`;

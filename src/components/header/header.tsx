@@ -1,5 +1,7 @@
 import { useContext, useRef, useState, useEffect } from "react";
 
+import ReactDOM from "react-dom";
+
 import {
     Container,
     LogoContainer,
@@ -33,6 +35,7 @@ import {
     LoginContainer,
     SpanButton,
     LoginButtonIcon,
+    DropDownMenu,
     DropDownMenuContent,
     UserInfoContainer,
     UserName,
@@ -59,12 +62,11 @@ import LoginIcon from "../../assets/icon-login.png";
 import KeyboardIcon from "../../assets/icon-keyboard.png";
 import LogoutIcon from "../../assets/icon-logout.png";
 import YourVideosIcon from "../../assets/icon-your-videos.png";
-import DropDownMenuPortal from "./DropDownMenuPortal";
 
 
 export default function Header() {
 
-    const { login, logOut, user, openDropDownMenu, setOpenDropDownMenu } = useContext(UserContext);
+    const { login, logOut, user, openDropDownMenu, setOpenDropDownMenu, dropDownPosition } = useContext(UserContext);
 
     const { openMenu, setOpenMenu, openBar, setOpenBar } = useContext(ComponentContext);
 
@@ -108,9 +110,7 @@ export default function Header() {
             const dropdownElement = document.querySelector('[data-dropdown-menu]');
 
             // Se clicou no dropdown ou dentro dele, não fecha o menu
-            if (dropdownElement && dropdownElement.contains(event.target as Node)) {
-                return;
-            }
+            if (dropdownElement && dropdownElement.contains(event.target as Node)) { return; }
 
             // Se clicou fora do Dropdown, fecha o menu
             setOpenDropDownMenu(false);
@@ -118,35 +118,25 @@ export default function Header() {
 
         document.addEventListener('mousedown', handleClickOutside);
 
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
+        return () => { document.removeEventListener('mousedown', handleClickOutside); };
 
     }, []);
 
-    const handleOverlayClick = () => {
-        setOpenMenu(false);
-    };
+    const handleOverlayClick = () => { setOpenMenu(false) };
 
     const search = () => {
         setOpenSearch(true);
-        if (inputRef.current) {
-            inputRef.current.focus()
-        }
+        if (inputRef.current) { inputRef.current.focus(); }
     }
 
-    const handleDropDownMenu = () => { setOpenDropDownMenu(!openDropDownMenu); }
+    const handleDropDownMenu = () => { setOpenDropDownMenu((prev: boolean) => !prev) };
 
-    const goOut = () => {
-        logOut()
-        handleDropDownMenu()
-        navigate('/')
-    }
+    const goOut = () => { logOut(); };
 
     const goToYourVideos = () => {
-        navigate('/yourvideos')
-        handleDropDownMenu()
-    }
+        navigate('/yourvideos');
+        setOpenDropDownMenu(false);
+    };
 
     const [inputValue, setInputValue] = useState('');
 
@@ -154,17 +144,13 @@ export default function Header() {
         setInputValue(inputValue);
         if (inputValue === '') {
             setClearButton(false);
-        } else {
-            setClearButton(true);
-        }
+        } else { setClearButton(true); }
     }
 
     const clearInput = () => {
         setInputValue('');
         setClearButton(false);
-        if (inputRef.current) {
-            inputRef.current.focus();
-        }
+        if (inputRef.current) { inputRef.current.focus(); }
     }
 
     return (
@@ -257,17 +243,14 @@ export default function Header() {
                         ref={inputRef}
                         value={inputValue}
                         placeholder="Pesquisar"
-                        onChange={(e) => {
-                            handleInput(e.target.value)
-                        }}
+                        onChange={(e) => { handleInput(e.target.value); }}
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') {
-                                setSearch(inputValue)
-                                navigate('/search')
-                                setOpenSearch(false)
+                                setSearch(inputValue);
+                                navigate('/search');
+                                setOpenSearch(false);
                             }
-                        }}
-                    />
+                        }} />
 
                     <KeyboardContainer alt="Teclado digital" src={KeyboardIcon} />
 
@@ -286,7 +269,7 @@ export default function Header() {
                         return;
                     }
                     setSearch(inputValue)
-                    navigate('/search')
+                    navigate('/search');
                 }}>
                     <ButtonIcon alt="" src={ResponsiveSearchIcon} />
                 </SearchButton>
@@ -315,29 +298,37 @@ export default function Header() {
                             <span>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</span>
                         </ProfileImageContainer>
 
-                        <DropDownMenuPortal openDropDownMenu={openDropDownMenu}>
+                        {ReactDOM.createPortal(
+                            <DropDownMenu
+                                openDropDownMenu={openDropDownMenu}
+                                data-dropdown-menu
+                                style={{
+                                    top: `${dropDownPosition.top}px`,
+                                    right: `${dropDownPosition.right}px`
+                                }}>
 
-                            <UserInfoContainer>
-                                <DropDownMenuProfileImageContainer onClick={handleDropDownMenu}>
-                                    <span>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</span>
-                                </DropDownMenuProfileImageContainer>
+                                <UserInfoContainer>
+                                    <DropDownMenuProfileImageContainer onClick={handleDropDownMenu}>
+                                        <span>{user && user.name ? user.name.charAt(0).toUpperCase() : ''}</span>
+                                    </DropDownMenuProfileImageContainer>
 
-                                <UserName>{user && user.name ? user.name : ''}</UserName>
+                                    <UserName>{user && user.name ? user.name : ''}</UserName>
 
-                                <UserNickname>{user && user.nickname ? user.nickname : ''}</UserNickname>
-                            </UserInfoContainer>
+                                    <UserNickname>{user && user.nickname ? user.nickname : ''}</UserNickname>
+                                </UserInfoContainer>
 
-                            <DropDownMenuContent onClick={goToYourVideos}>
-                                <DropDownMenuButtonIcon alt="ícone logout" src={LogoutIcon} />
-                                <span>Seus vídeos</span>
-                            </DropDownMenuContent>
+                                <DropDownMenuContent onClick={goToYourVideos}>
+                                    <DropDownMenuButtonIcon alt="ícone logout" src={LogoutIcon} />
+                                    <span>Seus vídeos</span>
+                                </DropDownMenuContent>
 
-                            <DropDownMenuContent onClick={goOut} style={{ marginBottom: '15px' }}>
-                                <DropDownMenuButtonIcon alt="ícone de vídeos" src={YourVideosIcon} />
-                                <span>Sair</span>
-                            </DropDownMenuContent>
-
-                        </DropDownMenuPortal>
+                                <DropDownMenuContent onClick={goOut}>
+                                    <DropDownMenuButtonIcon alt="ícone de vídeos" src={YourVideosIcon} />
+                                    <span>Sair</span>
+                                </DropDownMenuContent>
+                            </DropDownMenu>,
+                            document.body
+                        )}
                     </>
                     :
                     <LoginContainer>
@@ -352,6 +343,6 @@ export default function Header() {
 
             </HeaderButton>
 
-        </Container>
+        </Container >
     )
 }
