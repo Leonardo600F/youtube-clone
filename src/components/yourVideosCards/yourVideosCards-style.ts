@@ -413,7 +413,7 @@ export const Container = styled.div`
 width: 340px;
 height: 340px;
 border-radius: 12px;
-margin-left: 20px;
+margin-top: 40px;
 cursor: pointer;
 background-color: #fff;
 

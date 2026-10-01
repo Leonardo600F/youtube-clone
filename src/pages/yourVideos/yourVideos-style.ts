@@ -31,7 +31,7 @@ padding: 60px 0px 0 90px;}
 export const YourVideosContainer = styled.div`width: 100%`;
 
 export const UserContainer = styled.div`
-width: fit-content;
+width: 100%;
 height: 80px;
 background-color: purple;
 
@@ -40,6 +40,8 @@ background-color: purple;
 @media(max-width: 550px) {height: 65px;}
 
 @media(max-width: 435px) {height: 50px;}
+
+@media(max-width: 330px) {margin-left: -80px;}
 `;
 
 export const UserProfile = styled.div`
@@ -95,6 +97,8 @@ font-size: 23px;}
 
 @media(max-width: 550px) {margin-left: 70px;}
 
+@media(max-width: 475px) {font-size: 20px;}
+
 @media(max-width: 435px) {
 margin-top: -40px;
 margin-left: 50px;
@@ -103,7 +107,9 @@ font-size: 17px;}
 @media(max-width: 395px) {
 margin-top: -35px;
 margin-left: 45px;
-font-size: 15px;}`;
+font-size: 15px;}
+
+@media(max-width: 330px) {font-size: 13px;}`;
 
 export const UserNickname = styled.h2`
 margin-top: -20px;

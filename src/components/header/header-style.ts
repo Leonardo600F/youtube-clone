@@ -23,7 +23,7 @@ background-color: #fff`;
 export const LogoContainer = styled.div`
 display: flex;
 width: fit-content;
-align-items: center`;
+align-items: center;`;
 
 export const MenuButtonContainer = styled.div`
 display: flex; 
@@ -36,11 +36,11 @@ cursor: pointer;
 border-radius: 50%;
 transition: 0.7s;
 
-&:hover {background-color: #9fd3c7}
+&:hover {background-color: #9fd3c7;}
 
-@media(max-width: 1312px) {margin-left: 16px}
+@media(max-width: 1312px) {margin-left: 16px;}
 
-@media(max-width: 363px) {margin-left: 3px}`;
+@media(max-width: 363px) {margin-left: 3px;}`;
 
 export const CreateVideoButtonContainer = styled.div`
 display: flex; 
@@ -54,55 +54,55 @@ border-radius: 20px;
 transition: 0.7s;
 background-color: #F0F0F0;
 
-&:hover {background-color: #9fd3c7}
+&:hover {background-color: #9fd3c7;}
 
 span {
 font-size: 13px;
 font-weight: 600;
 margin-left: 10px;
-color: #000
+color: #000;
 
-@media(max-width: 1312px) {font-size: 14px}
+@media(max-width: 1312px) {font-size: 14px;}
 
-@media(max-width: 640px) {font-size: 13.4px}
+@media(max-width: 640px) {font-size: 13.4px;}
 
-@media(max-width: 380px) {margin-left: 5px}
+@media(max-width: 380px) {margin-left: 5px;}
 
-@media(max-width: 353px) {font-size: 12.5px}}
+@media(max-width: 353px) {font-size: 12.5px;}}
 
 @media(max-width: 1559px) {
 margin-top: 7px;
 margin-left: -5px;
-width: 80px}
+width: 80px;}
 
-@media(max-width: 1440px) {margin-top: 4px}
+@media(max-width: 1440px) {margin-top: 4px;}
 
 @media(max-width: 1312px) {
 width: 95px;
 height: 38px;
-margin-right: 10px}
+margin-right: 10px;}
 
-@media(max-width: 1128px) {margin-right: 10px}
+@media(max-width: 1128px) {margin-right: 10px;}
 
 @media(max-width: 1060px) {
 height: 37px;
-margin-top: 2px}
+margin-top: 2px;}
 
-@media(max-width: 976px) {width: 93px}
+@media(max-width: 976px) {width: 93px;}
 
-@media(max-width: 905px) {margin-right: 20px}
+@media(max-width: 905px) {margin-right: 20px;}
 
-@media(max-width: 870px) {margin-right: 15px}
+@media(max-width: 870px) {margin-right: 15px;}
 
-@media(max-width: 640px) {width: 80px}
+@media(max-width: 640px) {width: 80px;}
 
-@media(max-width: 570px) {margin-right: 7px}
+@media(max-width: 570px) {margin-right: 7px;}
 
-@media(max-width: 483px) {margin-right: 2px}
+@media(max-width: 483px) {margin-right: 2px;}
 
-@media(max-width: 380px) {width: 70px}
+@media(max-width: 380px) {width: 70px;}
 
-@media(max-width: 353px) {width: 70px}`;
+@media(max-width: 353px) {width: 70px;}`;
 
 export const PlusIconContainer = styled.img`
 margin-left: -10px;
@@ -872,7 +872,7 @@ margin-right: 50px;}
 export const DropDownMenuContent = styled.div`
 display: flex;
 align-items: center;
-width: 100%;
+width: 92.6%;
 height: 40px;
 border-radius: 10px;
 margin-top: 5px;
@@ -892,7 +892,7 @@ width: 100%;
 height: fit-content;
 border-radius: 10px;
 
-@media(max-width: 1128px) {margin-top: 15px}`;
+@media(max-width: 1128px) {margin-top: 15px;}`;
 
 export const UserName = styled.span`
 display: flex;
