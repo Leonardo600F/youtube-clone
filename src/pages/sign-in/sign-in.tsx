@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { UserContext } from "../../context/userContext";
 import { useNavigate } from "react-router-dom";
 import { ComponentContext } from "../../context/componentContext";
+import { signInUseCase } from "../../application/useCases";
 import GoogleIcon from '../../assets/icon-google.png';
 import ExclamationIcon from '../../assets/icon-exclamation.png';
 
@@ -33,7 +34,7 @@ import {
 
 export default function SignIn() {
 
-    const { handleLogin, email, setEmail, password, setPassword, showPassword, setShowPassword } = useContext(UserContext);
+    const { email, setEmail, password, setPassword, showPassword, setShowPassword, setToken } = useContext(UserContext);
     const { isFocused, setIsFocused } = useContext(ComponentContext);
 
     const [validEmail, setValidEmail] = useState(true);
@@ -54,7 +55,7 @@ export default function SignIn() {
         }
     }, [])
 
-    const userLogin = () => {
+    const userLogin = async () => {
         if (email.trim() !== '') {
             setValidEmail(true);
         }
@@ -99,7 +100,12 @@ export default function SignIn() {
             return;
         }
 
-        handleLogin(email, password);
+        const response = await signInUseCase.execute(email, password);
+
+        if (response) {
+            localStorage.setItem('token', response.token);
+            setToken(response.token);
+        }
     }
 
 

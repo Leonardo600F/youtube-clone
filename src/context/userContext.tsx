@@ -209,6 +209,8 @@ export const UserStorage = ({ children }: any) => {
     return (
         <UserContext.Provider value={{
             login,
+            token,
+            setToken,
             email, setEmail,
             password, setPassword,
             showPassword, setShowPassword,
