@@ -34,7 +34,7 @@ import {
 
 export default function SignIn() {
 
-    const { email, setEmail, password, setPassword, showPassword, setShowPassword, setToken } = useContext(UserContext);
+    const { email, setEmail, password, setPassword, showPassword, setShowPassword, setToken, getUser } = useContext(UserContext);
     const { isFocused, setIsFocused } = useContext(ComponentContext);
 
     const [validEmail, setValidEmail] = useState(true);
@@ -105,6 +105,8 @@ export default function SignIn() {
         if (response) {
             localStorage.setItem('token', response.token);
             setToken(response.token);
+            await getUser(response.token);
+            navigate('/');
         }
     }
 

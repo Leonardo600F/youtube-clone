@@ -1,5 +1,6 @@
-import { createContext, useEffect, useState } from "react";
 import api from "../api";
+import { createContext, useEffect, useState } from "react";
+import { createUserUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext({} as any);
@@ -156,20 +157,27 @@ export const UserStorage = ({ children }: any) => {
         }
     };
 
-    const handleCreateUser = (name: string, surname: string, email: string, nickname: string, password: string) => {
-        api.post('/users/sign-up', { name, surname, email, nickname, password })
-            .then(() => {
-                alert('Cadastro realizado com sucesso!')
-                handleLogin(email, password);
-            })
-            .catch((error) => {
-                if (error.response?.status === 409) {
-                    alert('Este e-mail já está em uso. Por favor, tente outro.');
-                } else {
-                    alert('Não foi possível criar o usuário. Verifique os dados e tente novamente.');
-                }
-            })
+    const handleCreateUser = async (
+        name: string,
+        surname: string,
+        email: string,
+        nickname: string,
+        password: string
+    ) => {
+        try {
+            await createUserUseCase.execute(name, surname, email, nickname, password);
+
+            alert("Cadastro realizado com sucesso!");
+            handleLogin(email, password);
+        } catch (error: any) {
+            if (error.response?.status === 409) {
+                alert("Este e-mail já está em uso. Por favor, tente outro.");
+            } else {
+                alert("Não foi possível criar o usuário. Verifique os dados e tente novamente.");
+            }
+        }
     }
+
 
     const [dropDownPosition, setDropDownPosition] = useState({
         top: 60,
@@ -215,6 +223,7 @@ export const UserStorage = ({ children }: any) => {
             password, setPassword,
             showPassword, setShowPassword,
             user,
+            getUser,
             createVideos,
             deleteVideo,
             userVideos,
