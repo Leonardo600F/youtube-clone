@@ -14,4 +14,12 @@ export class UsersRepository {
 
         return response.data;
     }
+
+    async getUser(token: string) {
+        const response = await api.get('/users/get-user', {
+            headers: { Authorization: `Bearer ${token}` }
+        });
+
+        return response.data;
+    }
 }

@@ -1,6 +1,6 @@
 import api from "../api";
 import { createContext, useEffect, useState } from "react";
-import { createUserUseCase } from "../application/useCases";
+import { signInUseCase, createUserUseCase, getUserUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext({} as any);
@@ -103,14 +103,10 @@ export const UserStorage = ({ children }: any) => {
         }
 
         try {
-            const response = await api.get('/users/get-user', {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
+            const response = await getUserUseCase.execute(token);
 
-            if (response.data) {
-                setUser(response.data);
+            if (response) {
+                setUser(response);
                 setLogin(true);
                 getVideos(token, response.data.user_id);
             }
@@ -138,21 +134,25 @@ export const UserStorage = ({ children }: any) => {
 
     const handleLogin = async (email: string, password: string) => {
         try {
-            const response = await api.post('/users/sign-in', { email, password });
-            if (response.status === 200) {
-                const token = response.data.token;
-                localStorage.setItem('token', token);
-                setToken(token);
-                setLogin(true);
-                await getUser(token);
-                navigate('/');
-            }
+            const response = await signInUseCase.execute(email, password);
+
+            const token = response.token;
+
+            localStorage.setItem('token', token);
+            setToken(token);
+            setLogin(true);
+
+            await getUser(token);
+
+            navigate('/');
         } catch (error: any) {
             if (!error.response) {
-                alert('Erro de conexão. Por favor, verifique se o servidor está rodando.');
+                alert("Erro de conexão. Por favor, verifique se o servidor está rodando.");
                 return;
             }
+
             const errorMessage = error.response.data.error || 'Ocorreu um erro ao fazer login.';
+
             alert(errorMessage);
         }
     };
@@ -176,7 +176,7 @@ export const UserStorage = ({ children }: any) => {
                 alert("Não foi possível criar o usuário. Verifique os dados e tente novamente.");
             }
         }
-    }
+    };
 
 
     const [dropDownPosition, setDropDownPosition] = useState({
