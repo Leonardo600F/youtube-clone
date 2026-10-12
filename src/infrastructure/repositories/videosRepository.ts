@@ -8,4 +8,26 @@ export class VideosRepository {
 
         return response.data;
     }
+
+    async createVideo(
+        token: string,
+        user_id: string,
+        thumbnail: string,
+        title: string,
+        description: string,
+        publishedAt: Date
+    ) {
+        const response = await api.post(
+            '/videos/create-video',
+            { user_id, thumbnail, title, description, publishedAt },
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+
+        return response.data;
+    }
 }

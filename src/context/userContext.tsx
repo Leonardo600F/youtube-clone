@@ -1,6 +1,6 @@
 import api from "../api";
 import { createContext, useEffect, useState } from "react";
-import { signInUseCase, createUserUseCase, getUserUseCase } from "../application/useCases";
+import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext({} as any);
@@ -17,17 +17,12 @@ export const UserStorage = ({ children }: any) => {
     const [openDropDownMenu, setOpenDropDownMenu] = useState(false);
     const navigate = useNavigate();
 
-    const getVideos = (token: string, user_id: string) => {
-        api.get(`/videos/get-videos?user_id=${user_id}`, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        }).then(({ data }) => {
-            setUserVideos(data.videos)
-        }).catch(() => {
-            alert('Erro ao buscar vídeos. Tente novamente mais tarde.');
-        })
-    }
+    const getVideos = async (token: string, user_id: string) => {
+        try {
+            const response = await getVideosUseCase.execute(token, user_id);
+            setUserVideos(response.videos);
+        } catch (error) { alert("Erro ao buscar os vídeos. Tente novamente mais tarde."); }
+    };
 
     const createVideos = (token: string, user_id: string, thumbnail: string, title: string, description: string, publishedAt: Date) => {
         const storedToken = localStorage.getItem('token');

@@ -11,4 +11,4 @@ const videosRepository = new VideosRepository();
 export const signInUseCase = new SignInUseCase(usersRepository);
 export const createUserUseCase = new CreateUserUseCase(usersRepository);
 export const getUserUseCase = new GetUserUseCase(usersRepository);
-export const getVideosUseCase = new GetVideosUseCase(videosRepository);
+export const getVideosUseCase = new GetVideosUseCase(videosRepository); 
