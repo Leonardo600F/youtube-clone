@@ -19,9 +19,13 @@ export const UserStorage = ({ children }: any) => {
 
     const getVideos = async (token: string, user_id: string) => {
         try {
+
             const response = await getVideosUseCase.execute(token, user_id);
+
             setUserVideos(response.videos);
-        } catch (error) { alert("Erro ao buscar os vídeos. Tente novamente mais tarde."); }
+        } catch (error) {
+            alert("Erro ao buscar os vídeos. Tente novamente mais tarde.");
+        }
     };
 
 
@@ -57,6 +61,7 @@ export const UserStorage = ({ children }: any) => {
             );
 
             alert('Vídeo enviado com sucesso!');
+
             await getUser(storedToken);
 
         } catch (error: any) {
@@ -112,14 +117,17 @@ export const UserStorage = ({ children }: any) => {
             if (response) {
                 setUser(response);
                 setLogin(true);
-                getVideos(token, response.data.user_id);
+
+                await getVideos(token, response.user_id);
             }
         } catch (error: any) {
+            console.error("ERRO EM GET USER:", error);
+
             if (error.response?.status === 401) {
                 logOut();
             }
         }
-    }
+    };
 
     useEffect(() => {
         const storedToken = localStorage.getItem('token');

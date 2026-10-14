@@ -30,4 +30,14 @@ export class VideosRepository {
 
         return response.data;
     }
+
+    async deleteVideo(token: string, video_id: string) {
+        const response = await api.delete(
+            `/videos/delete-video/${video_id}`,
+            {
+                headers: { Authorization: `Bearer ${token}` }
+            }
+        );
+        return response.data;
+    }
 }
