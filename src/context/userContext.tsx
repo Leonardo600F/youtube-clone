@@ -1,6 +1,5 @@
-import api from "../api";
 import { createContext, useEffect, useState } from "react";
-import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase } from "../application/useCases";
+import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext({} as any);
@@ -75,34 +74,29 @@ export const UserStorage = ({ children }: any) => {
     };
 
 
-    const deleteVideo = (video_id: string) => {
-        const storedToken = localStorage.getItem('token');
+    const deleteVideo = async (video_id: string) => {
+        const storedToken = localStorage.getItem("token");
 
         if (!storedToken) {
-            alert('Sessão expirada. Por favor, faça login novamente.');
+            alert("Sessão expirada. Por favor, faça seu login novamente.")
             logOut();
             return;
         }
 
-        const authToken = `Bearer ${storedToken}`;
+        try {
+            await deleteVideoUseCase.execute(storedToken, video_id);
 
-        api.delete(`/videos/delete-video/${video_id}`, {
-            headers: {
-                Authorization: authToken,
-            },
-        })
-            .then(() => {
-                alert('Vídeo removido com sucesso!');
-                getUser(storedToken);
-            })
-            .catch((error) => {
-                if (error.response?.status === 401) {
-                    alert('Sessão expirada. Por favor, faça login novamente.');
-                    logOut();
-                } else {
-                    alert('Não foi possível remover o vídeo. Tente novamente.');
-                }
-            });
+            alert("Vídeo removido com sucesso!");
+            await getUser(storedToken);
+
+        } catch (error: any) {
+            if (error.response?.status === 401) {
+                alert("Sessão expirada. Por favor, faça login novamente.");
+                logOut();
+            } else {
+                alert("Não foi possível remover o vídeo. Tente novamente.");
+            }
+        }
     };
 
     const getUser = async (token: string) => {
