@@ -105,7 +105,7 @@ export default function YourVideos() {
             }
         }
         else {
-            createVideos(token, USER_ID, thumbnail, title, description, date);
+            createVideos(USER_ID, thumbnail, title, description, date);
             clearInputs();
             setHideModal(true)
 

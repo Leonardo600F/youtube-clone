@@ -29,7 +29,6 @@ export const UserStorage = ({ children }: any) => {
 
 
     const createVideos = async (
-        token: string,
         user_id: string,
         thumbnail: string,
         title: string,
@@ -133,10 +132,14 @@ export const UserStorage = ({ children }: any) => {
 
     const logOut = () => {
         localStorage.removeItem('token');
+        setToken(null);
         setLogin(false);
         setUser({});
+        setUserVideos([]);
+        setOpenMenu(false);
+        setOpenDropDownMenu(false);
         navigate('/');
-    }
+    };
 
     const handleLogin = async (email: string, password: string) => {
         try {
@@ -174,7 +177,7 @@ export const UserStorage = ({ children }: any) => {
             await createUserUseCase.execute(name, surname, email, nickname, password);
 
             alert("Cadastro realizado com sucesso!");
-            handleLogin(email, password);
+            await handleLogin(email, password);
         } catch (error: any) {
             if (error.response?.status === 409) {
                 alert("Este e-mail já está em uso. Por favor, tente outro.");
