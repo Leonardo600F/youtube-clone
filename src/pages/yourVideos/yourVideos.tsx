@@ -1,6 +1,7 @@
-import { useContext, useState, useEffect, useRef, useMemo } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { UserContext } from '../../context/userContext'
 import { ComponentContext } from "../../context/componentContext";
+import { getTimeDifference } from "../../utils/getTimeDifference";
 import YourVideosCards from "../../components/yourVideosCards/yourVideosCards";
 import Menu from "../../components/menu/menu";
 import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
@@ -44,12 +45,10 @@ export default function YourVideos() {
     }
 
     const { openMenu } = useContext(ComponentContext);
-    const { user, userVideos, createVideos, token } = useContext(UserContext);
+    const { user, userVideos, createVideos } = useContext(UserContext);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const USER_ID = user?.user_id;
-
-    console.log('USER_ID obtido:', USER_ID);
 
     const [thumbnail, setThumbnail] = useState('');
     const [title, setTitle] = useState('');
@@ -65,52 +64,52 @@ export default function YourVideos() {
     const [descriptionValid, setDescriptionValid] = useState(true);
 
     const sendVideo = () => {
-        const date: Date = new Date();
-
         if (!USER_ID) {
             alert('Erro: ID do usuário não encontrado. Por favor, faça login novamente.');
             return;
         }
 
-        if (thumbnail.trim() !== '') {
+        let isValid = true;
+
+        if (thumbnail.trim() === '') {
+            setThumbnailValid(false);
+            isValid = false;
+        } else {
             setThumbnailValid(true);
         }
-        if (title.trim() !== '') {
+
+        if (title.trim() === '') {
+            setTitleValid(false);
+            isValid = false;
+        } else {
             setTitleValid(true);
         }
-        if (description.trim() !== '') {
+
+        if (description.trim() === '') {
+            setDescriptionValid(false);
+            isValid = false;
+        } else {
             setDescriptionValid(true);
         }
-        if (thumbnail.trim() === '' && title.trim() === '' && description.trim() === '') {
-            setThumbnailValid(false);
-            setTitleValid(false);
-            setDescriptionValid(false);
-            if (thumbnailRef.current) {
-                thumbnailRef.current.focus();
-            }
-        } else if (thumbnail.trim() === '') {
-            setThumbnailValid(false);
-            if (thumbnailRef.current) {
-                thumbnailRef.current.focus();
-            }
-        } else if (title.trim() === '') {
-            setTitleValid(false);
-            if (titleRef.current) {
-                titleRef.current.focus();
-            }
-        } else if (description.trim() === '') {
-            setThumbnailValid(false);
-            if (descriptionRef.current) {
-                descriptionRef.current.focus();
-            }
-        }
-        else {
-            createVideos(USER_ID, thumbnail, title, description, date);
-            clearInputs();
-            setHideModal(true)
 
+        if (!isValid) {
+            if (thumbnail.trim() === '') {
+                thumbnailRef.current?.focus();
+            } else if (title.trim() === '') {
+                titleRef.current?.focus();
+            } else if (description.trim() === '') {
+                descriptionRef.current?.focus();
+            }
+
+            return;
         }
-    }
+
+        const date = new Date();
+
+        createVideos(USER_ID, thumbnail, title, description, date);
+        clearInputs();
+        setHideModal(true);
+    };
 
     const clearInputs = () => {
         if (thumbnailRef.current) {
@@ -136,38 +135,6 @@ export default function YourVideos() {
         setHideModal(true)
     }
 
-    function getTimeDifference(publishedAt: string): string {
-        const diff = Date.now() - Date.parse(publishedAt);
-        const minute = 60 * 1000;
-        const hour = 60 * minute;
-        const day = 24 * hour;
-        const week = 7 * day;
-        const month = 30 * day;
-        const year = 12 * month;
-
-        if (diff < minute * 5) {
-            return "Agora";
-        } else if (diff < hour) {
-            const minutes = Math.floor(diff / minute);
-            return `Há ${minutes} ${minutes < 2 ? "minuto" : "minutos"}`;
-        } else if (diff < day) {
-            const hours = Math.floor(diff / hour);
-            return `Há ${hours} ${hours < 2 ? "hora" : "horas"}`;
-        } else if (diff < week) {
-            const days = Math.floor(diff / day);
-            return `Há ${days} ${days < 2 ? "dia" : "dias"}`;
-        } else if (diff < month) {
-            const weeks = Math.floor(diff / week);
-            return `Há ${weeks} ${weeks < 2 ? "semana" : "semanas"}`;
-        } else if (diff < year) {
-            const months = Math.floor(diff / month);
-            return `Há ${months} ${months < 2 ? "mês" : "meses"}`;
-        } else {
-            const years = Math.floor(diff / year);
-            return `Há ${years} ${years < 2 ? "ano" : "anos"}`;
-        }
-    }
-
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -177,18 +144,8 @@ export default function YourVideos() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const ResponsiveMenuApplication = useMemo(() => {
-        if (windowWidth >= 1313) {
-            return (
-                <Menu />
-            )
-        } else {
-            return (
-                <ResponsiveMenu />
-            )
-        }
-
-    }, [windowWidth])
+    const ResponsiveMenuApplication =
+        windowWidth >= 1313 ? <Menu /> : <ResponsiveMenu />;
 
     return (
         <>
@@ -258,7 +215,7 @@ export default function YourVideos() {
                             </ModalContent>
                         </Modal>
                     </UserContainer>
-                    {Array.isArray(userVideos) ? (
+                    {Array.isArray(userVideos) && userVideos.length > 0 ? (
                         userVideos.map((video: Videos) =>
                             <YourVideosCards
                                 videoId={video.video_id || video.id || ''}
