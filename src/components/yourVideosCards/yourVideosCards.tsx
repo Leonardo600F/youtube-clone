@@ -39,16 +39,18 @@ export default function YourVideosCards(props: Props) {
 
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
-    const deleteVideoFunction = () => {
+    const deleteVideoFunction = async () => {
         if (!props.videoId) {
             alert('Não foi possível identificar o vídeo para excluir.');
             return;
-        } else {
-            setIsDeleteModalOpen(true);
-            deleteVideo(props.videoId)
         }
 
-    }
+        const success = await deleteVideo(props.videoId);
+
+        if (success) {
+            setIsDeleteModalOpen(false);
+        }
+    };
 
     return (
         <>

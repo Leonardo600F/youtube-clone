@@ -111,21 +111,15 @@ export default function YourVideos() {
         setHideModal(true);
     };
 
+
     const clearInputs = () => {
-        if (thumbnailRef.current) {
-            thumbnailRef.current.value = '';
-            thumbnailRef.current.focus();
-            setThumbnail('')
-        }
-        if (titleRef.current) {
-            titleRef.current.value = '';
-            setTitle('')
-        }
-        if (descriptionRef.current) {
-            descriptionRef.current.value = '';
-            setDescription('')
-        }
-    }
+        setThumbnail('');
+        setTitle('');
+        setDescription('');
+
+        thumbnailRef.current?.focus();
+    };
+
 
     const closeModal = () => {
         clearInputs();
@@ -172,6 +166,7 @@ export default function YourVideos() {
 
                                 <ThumbnailURL
                                     type="text"
+                                    value={thumbnail}
                                     placeholder="URL"
                                     onChange={(e) => setThumbnail(e.target.value)}
                                     maxLength={200}
@@ -185,6 +180,7 @@ export default function YourVideos() {
                                 </MessageContainer>
                                 <VideoTitle
                                     type="text"
+                                    value={title}
                                     onChange={(e) => setTitle(e.target.value)}
                                     placeholder="Título do vídeo"
                                     maxLength={100}
@@ -198,6 +194,7 @@ export default function YourVideos() {
                                 </MessageContainer>
                                 <VideoDescription
                                     type="text"
+                                    value={description}
                                     onChange={(e) => setDescription(e.target.value)}
                                     placeholder="Descrição do vídeo"
                                     maxLength={200}

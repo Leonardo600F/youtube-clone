@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface Modal { isDeleteModalOpen: boolean; }
 
-export const DeleteVideoButton = styled.div`
+export const DeleteVideoButton = styled.button`
 display: none;
 position: fixed;
 justify-content: center;

@@ -1,10 +1,10 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, type ReactNode } from "react";
 import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext({} as any);
 
-export const UserStorage = ({ children }: any) => {
+export const UserStorage = ({ children }: { children: ReactNode }) => {
     const [login, setLogin] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -77,9 +77,9 @@ export const UserStorage = ({ children }: any) => {
         const storedToken = localStorage.getItem("token");
 
         if (!storedToken) {
-            alert("Sessão expirada. Por favor, faça seu login novamente.")
+            alert("Sessão expirada. Por favor, faça seu login novamente.");
             logOut();
-            return;
+            return false;
         }
 
         try {
@@ -88,6 +88,7 @@ export const UserStorage = ({ children }: any) => {
             alert("Vídeo removido com sucesso!");
             await getUser(storedToken);
 
+            return true;
         } catch (error: any) {
             if (error.response?.status === 401) {
                 alert("Sessão expirada. Por favor, faça login novamente.");
@@ -95,7 +96,10 @@ export const UserStorage = ({ children }: any) => {
             } else {
                 alert("Não foi possível remover o vídeo. Tente novamente.");
             }
+
+            return false;
         }
+
     };
 
     const getUser = async (token: string) => {
