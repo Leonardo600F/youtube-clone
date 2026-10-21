@@ -9,12 +9,29 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [user, setUser] = useState({});
-    const [userVideos, setUserVideos] = useState([]);
+    const [user, setUser] = useState<User | null>(null);
+    const [userVideos, setUserVideos] = useState<Video[]>([]);
     const [token, setToken] = useState(localStorage.getItem('token'));
     const [openMenu, setOpenMenu] = useState(false);
     const [openDropDownMenu, setOpenDropDownMenu] = useState(false);
     const navigate = useNavigate();
+
+    interface User {
+        user_id: string;
+        name: string;
+        surname: string;
+        email: string;
+        nickname: string;
+    }
+
+    interface Video {
+        video_id: string;
+        user_id: string;
+        thumbnail: string;
+        title: string;
+        description: string;
+        publishedAt: string;
+    }
 
     const getVideos = async (token: string, user_id: string) => {
         try {
@@ -138,7 +155,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         localStorage.removeItem('token');
         setToken(null);
         setLogin(false);
-        setUser({});
+        setUser(null);
         setUserVideos([]);
         setOpenMenu(false);
         setOpenDropDownMenu(false);
