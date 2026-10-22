@@ -76,7 +76,7 @@ import VerifyIcon from '../../assets/icon-verify.png';
 import LinkedIn from '../../assets/icon-linkedin.png';
 
 import { useContext } from "react";
-import { UserContext } from "../../context/userContext";
+import { useUser } from "../../context/userContext";
 import { useCategoryContext } from "../../context/searchCategories";
 import { ComponentContext } from "../../context/componentContext";
 
@@ -145,7 +145,7 @@ const configs = [
 
 export default function Menu() {
 
-    const { login } = useContext(UserContext);
+    const { login } = useUser();
 
     const { openMenu } = useContext(ComponentContext);
 

@@ -1,5 +1,5 @@
-import { UserContext } from '../../context/userContext';
-import { useState, useContext } from "react";
+import { useUser } from '../../context/userContext';
+import { useState } from "react";
 
 import TrashIcon from "../../assets/icon-trash.png";
 
@@ -35,7 +35,7 @@ interface Props {
 
 export default function YourVideosCards(props: Props) {
 
-    const { deleteVideo } = useContext(UserContext);
+    const { deleteVideo } = useUser();
 
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 

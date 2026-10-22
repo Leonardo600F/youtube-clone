@@ -45,7 +45,7 @@ import {
 import { ComponentContext } from "../../context/componentContext";
 import { useCategoryContext } from "../../context/searchCategories";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../context/userContext";
+import { useUser } from "../../context/userContext";
 import { useSearchContext } from "../../context/searchContext";
 
 import YouTubeLogoIcon from "../../assets/icon-youtube-logo.png";
@@ -66,7 +66,7 @@ import YourVideosIcon from "../../assets/icon-your-videos.png";
 
 export default function Header() {
 
-    const { login, logOut, user, openDropDownMenu, setOpenDropDownMenu, dropDownPosition } = useContext(UserContext);
+    const { login, logOut, user, openDropDownMenu, setOpenDropDownMenu, dropDownPosition } = useUser();
 
     const { openMenu, setOpenMenu, openBar, setOpenBar } = useContext(ComponentContext);
 

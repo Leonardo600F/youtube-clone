@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { UserContext } from "../../context/userContext";
+import { useUser } from "../../context/userContext";
 import { useNavigate } from "react-router-dom";
 import { ComponentContext } from "../../context/componentContext";
 import { signInUseCase } from "../../application/useCases";
@@ -34,7 +34,7 @@ import {
 
 export default function SignIn() {
 
-    const { email, setEmail, password, setPassword, showPassword, setShowPassword, setToken, getUser } = useContext(UserContext);
+    const { email, setEmail, password, setPassword, showPassword, setShowPassword, setToken, getUser } = useUser();
     const { isFocused, setIsFocused } = useContext(ComponentContext);
 
     const [validEmail, setValidEmail] = useState(true);

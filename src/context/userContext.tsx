@@ -1,8 +1,75 @@
-import { createContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
 
-export const UserContext = createContext({} as any);
+interface User {
+    user_id: string;
+    name: string;
+    surname: string;
+    email: string;
+    nickname: string;
+}
+
+interface Video {
+    video_id: string;
+    user_id: string;
+    thumbnail: string;
+    title: string;
+    description: string;
+    publishedAt: string;
+}
+
+interface UserContextType {
+    login: boolean;
+    token: string | null;
+    setToken: React.Dispatch<React.SetStateAction<string | null>>;
+    email: string;
+    setEmail: React.Dispatch<React.SetStateAction<string>>;
+    password: string;
+    setPassword: React.Dispatch<React.SetStateAction<string>>;
+    showPassword: boolean;
+    setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
+    user: User | null;
+    getUser: (token: string) => Promise<void>;
+    createVideos: (
+        user_id: string,
+        thumbnail: string,
+        title: string,
+        description: string,
+        publishedAt: Date
+    ) => Promise<void>;
+    deleteVideo: (video_id: string) => Promise<boolean>;
+    userVideos: Video[];
+    openMenu: boolean;
+    setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+    handleLogin: (email: string, password: string) => Promise<void>;
+    handleCreateUser: (
+        name: string,
+        surname: string,
+        email: string,
+        nickname: string,
+        password: string
+    ) => Promise<void>;
+    logOut: () => void;
+    openDropDownMenu: boolean;
+    setOpenDropDownMenu: React.Dispatch<React.SetStateAction<boolean>>;
+    dropDownPosition: {
+        top: number;
+        right: number;
+    };
+}
+
+export const UserContext = createContext<UserContextType | null>(null);
+
+export const useUser = () => {
+    const context = useContext(UserContext);
+
+    if (!context) {
+        throw new Error("useUser deve ser utilizado dentro do UserStorage.");
+    }
+
+    return context;
+}
 
 export const UserStorage = ({ children }: { children: ReactNode }) => {
     const [login, setLogin] = useState(false);
@@ -15,23 +82,6 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
     const [openMenu, setOpenMenu] = useState(false);
     const [openDropDownMenu, setOpenDropDownMenu] = useState(false);
     const navigate = useNavigate();
-
-    interface User {
-        user_id: string;
-        name: string;
-        surname: string;
-        email: string;
-        nickname: string;
-    }
-
-    interface Video {
-        video_id: string;
-        user_id: string;
-        thumbnail: string;
-        title: string;
-        description: string;
-        publishedAt: string;
-    }
 
     const getVideos = async (token: string, user_id: string) => {
         try {

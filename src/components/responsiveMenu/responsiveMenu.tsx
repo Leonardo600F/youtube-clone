@@ -32,7 +32,7 @@ import {
 } from "./responsiveMenu-style";
 
 import { useContext, useEffect } from "react";
-import { UserContext } from "../../context/userContext";
+import { useUser } from "../../context/userContext";
 import { useCategoryContext } from "../../context/searchCategories";
 import { ComponentContext } from "../../context/componentContext";
 import { useNavigate, Link } from "react-router-dom";
@@ -85,7 +85,7 @@ import LinkedIn from '../../assets/icon-linkedin.png';
 
 export default function ResponsiveMenu() {
 
-    const { login } = useContext(UserContext);
+    const { login } = useUser();
     const { openMenu, setOpenMenu } = useContext(ComponentContext);
     const { setCategoryId } = useCategoryContext();
 
