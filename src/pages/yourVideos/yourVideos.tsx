@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect, useRef } from "react";
-import { UserContext } from '../../context/userContext'
+import { UserContext, useUser } from '../../context/userContext'
 import { ComponentContext } from "../../context/componentContext";
 import { getTimeDifference } from "../../utils/getTimeDifference";
 import YourVideosCards from "../../components/yourVideosCards/yourVideosCards";
@@ -45,7 +45,7 @@ export default function YourVideos() {
     }
 
     const { openMenu } = useContext(ComponentContext);
-    const { user, userVideos, createVideos } = useContext(UserContext);
+    const { user, userVideos, createVideos } = useUser();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const USER_ID = user?.user_id;

@@ -1,5 +1,5 @@
 import { useState, useContext, useRef, useEffect } from 'react';
-import { UserContext } from '../../context/userContext';
+import { UserContext, useUser } from '../../context/userContext';
 import { useNavigate } from 'react-router-dom';
 
 import GoogleIcon from '../../assets/icon-google.png';
@@ -59,7 +59,7 @@ export default function SignUp() {
 
     const navigate = useNavigate();
 
-    const { showPassword, setShowPassword } = useContext(UserContext);
+    const { showPassword, setShowPassword } = useUser();
 
     const [firstNameFocus, setFirstNameFocus] = useState(false);
     const [surnameFocus, setSurnameFocus] = useState(false);
@@ -102,7 +102,7 @@ export default function SignUp() {
         if (nameRef.current !== null) { nameRef.current.focus() }
     }, [])
 
-    const { handleCreateUser } = useContext(UserContext);
+    const { handleCreateUser } = useUser();
 
     const createUser = () => {
         if (userName.trim() !== '') { setUserNameValid(true) }

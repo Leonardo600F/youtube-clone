@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
@@ -129,12 +130,12 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
             await getUser(storedToken);
 
-        } catch (error: any) {
-            if (error.response?.status === 401) {
-                alert('Sessão expirada. Por favor, faça login novamente.');
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error) && error.response?.status === 401) {
+                alert("Sessão expirada. Por favor, faça login novamente.");
                 logOut();
             } else {
-                alert('Não foi possível enviar o vídeo. Tente novamente.');
+                alert("Não foi possível enviar o vídeo. Tente novamente.");
             }
         }
     };
@@ -156,13 +157,12 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             await getUser(storedToken);
 
             return true;
-        } catch (error: any) {
-            if (error.response?.status === 401) {
+
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error) && error.response?.status === 401) {
                 alert("Sessão expirada. Por favor, faça login novamente.");
                 logOut();
-            } else {
-                alert("Não foi possível remover o vídeo. Tente novamente.");
-            }
+            } else { alert("Não foi possível remover o vídeo. Tente novamente."); }
 
             return false;
         }
@@ -184,10 +184,10 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
                 await getVideos(token, response.user_id);
             }
-        } catch (error: any) {
-            console.error("ERRO EM GET USER:", error);
+        } catch (error: unknown) {
+            console.error("Erro em GetUser:", error);
 
-            if (error.response?.status === 401) {
+            if (axios.isAxiosError(error) && error.response?.status === 401) {
                 logOut();
             }
         }
@@ -225,13 +225,13 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             await getUser(token);
 
             navigate('/');
-        } catch (error: any) {
-            if (!error.response) {
+        } catch (error: unknown) {
+            if (!axios.isAxiosError(error) || !error.response) {
                 alert("Erro de conexão. Por favor, verifique se o servidor está rodando.");
                 return;
             }
 
-            const errorMessage = error.response.data.error || 'Ocorreu um erro ao fazer login.';
+            const errorMessage = error.response.data?.error || "Ocorreu um erro ao fazer login.";
 
             alert(errorMessage);
         }
@@ -249,8 +249,9 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
             alert("Cadastro realizado com sucesso!");
             await handleLogin(email, password);
-        } catch (error: any) {
-            if (error.response?.status === 409) {
+
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error) && error.response?.status === 409) {
                 alert("Este e-mail já está em uso. Por favor, tente outro.");
             } else {
                 alert("Não foi possível criar o usuário. Verifique os dados e tente novamente.");
