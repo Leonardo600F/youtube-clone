@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Video } from "../domain/entities/Video";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
@@ -9,15 +10,6 @@ interface User {
     surname: string;
     email: string;
     nickname: string;
-}
-
-interface Video {
-    video_id: string;
-    user_id: string;
-    thumbnail: string;
-    title: string;
-    description: string;
-    publishedAt: string;
 }
 
 interface UserContextType {
@@ -86,12 +78,9 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
     const getVideos = async (token: string, user_id: string) => {
         try {
-
             const response = await getVideosUseCase.execute(token, user_id);
-
             setUserVideos(response.videos);
-        } catch (error) {
-            alert("Erro ao buscar os vídeos. Tente novamente mais tarde.");
+        } catch (error: unknown) {
         }
     };
 

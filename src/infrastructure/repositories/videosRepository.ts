@@ -1,10 +1,15 @@
 import api from "../../api";
+import { Video } from "../../domain/entities/Video";
 
 export class VideosRepository {
     async getVideos(token: string, user_id: string) {
-        const response = await api.get(`/videos/get-videos?user_id=${user_id}`, {
-            headers: { Authorization: `Bearer ${token}` }
-        });
+
+        const response = await api.get<{ videos: Video[] }>(
+            `/videos/get-videos?user_id=${user_id}`,
+            {
+                headers: { Authorization: `Bearer ${token}` }
+            }
+        );
 
         return response.data;
     }
