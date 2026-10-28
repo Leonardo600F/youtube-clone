@@ -1,5 +1,13 @@
 import api from "../../api";
 
+interface User {
+    user_id: string;
+    name: string;
+    surname: string;
+    email: string;
+    nickname: string;
+}
+
 export class UsersRepository {
     async signIn(email: string, password: string) {
         const response = await api.post("/users/sign-in", { email, password });
@@ -15,8 +23,8 @@ export class UsersRepository {
         return response.data;
     }
 
-    async getUser(token: string) {
-        const response = await api.get('/users/get-user', {
+    async getUser(token: string): Promise<User> {
+        const response = await api.get<User>('/users/get-user', {
             headers: { Authorization: `Bearer ${token}` }
         });
 
