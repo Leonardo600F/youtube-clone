@@ -1,6 +1,6 @@
 import api from "../../api";
 
-interface User {
+export interface User {
     user_id: string;
     name: string;
     surname: string;
@@ -8,10 +8,18 @@ interface User {
     nickname: string;
 }
 
-export class UsersRepository {
-    async signIn(email: string, password: string) {
-        const response = await api.post("/users/sign-in", { email, password });
+export interface SignInResponse { token: string; }
 
+export class UsersRepository {
+
+    async signIn(
+        email: string,
+        password: string
+    ): Promise<SignInResponse> {
+        const response = await api.post<SignInResponse>(
+            "/users/sign-in",
+            { email, password }
+        );
         return response.data;
     }
 

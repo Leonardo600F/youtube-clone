@@ -4,5 +4,7 @@ import type { User } from "../../infrastructure/repositories/usersRepository";
 export class GetUserUseCase {
     constructor(private usersRepository: UsersRepository) { }
 
-    async execute(token: string) { return await this.usersRepository.getUser(token); }
+    async execute(token: string): Promise<User> {
+        return this.usersRepository.getUser(token);
+    }
 }
