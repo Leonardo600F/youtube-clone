@@ -1,8 +1,15 @@
 import api from "../../api";
-import { Video } from "../../domain/entities/Video";
+import type { Video } from "../../domain/entities/Video";
+
+export interface CreateVideoResponse { message: string; }
+
+export interface DeleteVideoResponse { message: string; }
 
 export class VideosRepository {
-    async getVideos(token: string, user_id: string) {
+    async getVideos(
+        token: string,
+        user_id: string,
+    ): Promise<{ videos: Video[] }> {
 
         const response = await api.get<{ videos: Video[] }>(
             `/videos/get-videos?user_id=${user_id}`,
@@ -21,7 +28,7 @@ export class VideosRepository {
         title: string,
         description: string,
         publishedAt: Date
-    ) {
+    ): Promise<CreateVideoResponse> {
         const response = await api.post(
             '/videos/create-video',
             { user_id, thumbnail, title, description, publishedAt },

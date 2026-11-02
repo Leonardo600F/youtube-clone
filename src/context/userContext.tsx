@@ -1,16 +1,9 @@
 import axios from "axios";
-import { Video } from "../domain/entities/Video";
+import type { Video } from "../domain/entities/Video";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
-
-interface User {
-    user_id: string;
-    name: string;
-    surname: string;
-    email: string;
-    nickname: string;
-}
+import type { User } from "../domain/entities/User";
 
 interface UserContextType {
     login: boolean;

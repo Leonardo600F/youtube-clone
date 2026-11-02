@@ -1,12 +1,5 @@
 import api from "../../api";
-
-export interface User {
-    user_id: string;
-    name: string;
-    surname: string;
-    email: string;
-    nickname: string;
-}
+import type { User } from "../../domain/entities/User";
 
 export interface SignInResponse { token: string; }
 
@@ -25,7 +18,13 @@ export class UsersRepository {
         return response.data;
     }
 
-    async createUser(name: string, surname: string, email: string, nickname: string, password: string): Promise<CreateUserResponse> {
+    async createUser(
+        name: string,
+        surname: string,
+        email: string,
+        nickname: string,
+        password: string
+    ): Promise<CreateUserResponse> {
         const response = await api.post('/users/sign-up', {
             name, surname, email, nickname, password
         });
