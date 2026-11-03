@@ -1,5 +1,5 @@
 import { UsersRepository } from "../../infrastructure/repositories/usersRepository";
-import type { User } from "../../infrastructure/repositories/usersRepository";
+import type { User } from "../../domain/entities/User";
 
 export class GetUserUseCase {
     constructor(private usersRepository: UsersRepository) { }

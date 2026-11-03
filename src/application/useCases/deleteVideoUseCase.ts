@@ -1,9 +1,10 @@
 import { VideosRepository } from "../../infrastructure/repositories/videosRepository";
+import type { DeleteVideoResponse } from "../../infrastructure/repositories/videosRepository";
 
 export class DeleteVideosUseCase {
     constructor(private videosRepository: VideosRepository) { }
 
-    async execute(token: string, video_id: string) {
+    async execute(token: string, video_id: string): Promise<DeleteVideoResponse> {
         return await this.videosRepository.deleteVideo(token, video_id);
     }
 }

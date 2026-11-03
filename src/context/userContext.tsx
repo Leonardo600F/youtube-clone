@@ -69,7 +69,9 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
     const [openDropDownMenu, setOpenDropDownMenu] = useState(false);
     const navigate = useNavigate();
 
-    const getVideos = async (token: string, user_id: string) => {
+    const getVideos = async (
+        token: string,
+        user_id: string): Promise<void> => {
         try {
             const response = await getVideosUseCase.execute(token, user_id);
             setUserVideos(response.videos);
@@ -84,7 +86,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         title: string,
         description: string,
         publishedAt: Date
-    ) => {
+    ): Promise<void> => {
         const storedToken = localStorage.getItem('token');
 
         if (!storedToken) {
@@ -123,7 +125,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
     };
 
 
-    const deleteVideo = async (video_id: string) => {
+    const deleteVideo = async (video_id: string): Promise<boolean> => {
         const storedToken = localStorage.getItem("token");
 
         if (!storedToken) {

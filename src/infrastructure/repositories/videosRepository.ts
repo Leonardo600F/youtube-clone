@@ -29,7 +29,7 @@ export class VideosRepository {
         description: string,
         publishedAt: Date
     ): Promise<CreateVideoResponse> {
-        const response = await api.post(
+        const response = await api.post<CreateVideoResponse>(
             '/videos/create-video',
             { user_id, thumbnail, title, description, publishedAt },
             {
@@ -43,7 +43,9 @@ export class VideosRepository {
         return response.data;
     }
 
-    async deleteVideo(token: string, video_id: string) {
+    async deleteVideo(
+        token: string,
+        video_id: string): Promise<DeleteVideoResponse> {
         const response = await api.delete(
             `/videos/delete-video/${video_id}`,
             {
