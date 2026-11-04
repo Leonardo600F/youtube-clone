@@ -153,7 +153,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
     };
 
-    const getUser = async (token: string) => {
+    const getUser = async (token: string): Promise<void> => {
         if (!token) {
             logOut();
             return;
@@ -196,7 +196,10 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         navigate('/');
     };
 
-    const handleLogin = async (email: string, password: string) => {
+    const handleLogin = async (
+        email: string,
+        password: string
+    ): Promise<void> => {
         try {
             const response = await signInUseCase.execute(email, password);
 
@@ -227,7 +230,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         email: string,
         nickname: string,
         password: string
-    ) => {
+    ): Promise<void> => {
         try {
             await createUserUseCase.execute(name, surname, email, nickname, password);
 

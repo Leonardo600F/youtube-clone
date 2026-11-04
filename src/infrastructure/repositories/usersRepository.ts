@@ -25,14 +25,14 @@ export class UsersRepository {
         nickname: string,
         password: string
     ): Promise<CreateUserResponse> {
-        const response = await api.post('/users/sign-up', {
+        const response = await api.post<CreateUserResponse>('/users/sign-up', {
             name, surname, email, nickname, password
         });
 
         return response.data;
     }
 
-    async getUser(token: string): Promise<User> {
+    async getUser(token: string): Promise<User | null> {
         const response = await api.get<User>('/users/get-user', {
             headers: { Authorization: `Bearer ${token}` }
         });

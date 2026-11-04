@@ -5,6 +5,6 @@ export class DeleteVideosUseCase {
     constructor(private videosRepository: VideosRepository) { }
 
     async execute(token: string, video_id: string): Promise<DeleteVideoResponse> {
-        return await this.videosRepository.deleteVideo(token, video_id);
+        return this.videosRepository.deleteVideo(token, video_id);
     }
 }

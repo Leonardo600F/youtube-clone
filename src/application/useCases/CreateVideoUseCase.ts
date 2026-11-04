@@ -12,7 +12,7 @@ export class CreateVideoUseCase {
         description: string,
         publishedAt: Date
     ): Promise<CreateVideoResponse> {
-        return await this.videosRepository.createVideo(
+        return this.videosRepository.createVideo(
             token,
             user_id,
             thumbnail,
