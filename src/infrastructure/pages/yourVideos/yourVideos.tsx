@@ -1,10 +1,11 @@
 import { useContext, useState, useEffect, useRef } from "react";
-import { UserContext, useUser } from '../../context/userContext'
-import { ComponentContext } from "../../context/componentContext";
-import { getTimeDifference } from "../../utils/getTimeDifference";
-import YourVideosCards from "../../components/yourVideosCards/yourVideosCards";
-import Menu from "../../components/menu/menu";
-import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
+import { useUser } from '../../../context/userContext'
+import { ComponentContext } from "../../../context/componentContext";
+import { getTimeDifference } from "../../../utils/getTimeDifference";
+import type { Video } from "../../../domain/entities/Video";
+import YourVideosCards from "../../../components/yourVideosCards/yourVideosCards";
+import Menu from "../../../components/menu/menu";
+import ResponsiveMenu from "../../../components/responsiveMenu/responsiveMenu";
 
 import {
 
@@ -35,15 +36,6 @@ import CloseIcon from "../../assets/icon-close.png";
 
 export default function YourVideos() {
 
-    interface Videos {
-        id?: string;
-        video_id?: string;
-        title: string;
-        thumbnail: string;
-        description: string;
-        publishedAt: string;
-    }
-
     const { openMenu } = useContext(ComponentContext);
     const { user, userVideos, createVideos } = useUser();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -63,7 +55,7 @@ export default function YourVideos() {
     const [titleValid, setTitleValid] = useState(true);
     const [descriptionValid, setDescriptionValid] = useState(true);
 
-    const sendVideo = () => {
+    const sendVideo = async () => {
         if (!USER_ID) {
             alert('Erro: ID do usuário não encontrado. Por favor, faça login novamente.');
             return;
@@ -106,7 +98,7 @@ export default function YourVideos() {
 
         const date = new Date();
 
-        createVideos(USER_ID, thumbnail, title, description, date);
+        await createVideos(USER_ID, thumbnail, title, description, date);
         clearInputs();
         setHideModal(true);
     };
@@ -213,16 +205,16 @@ export default function YourVideos() {
                         </Modal>
                     </UserContainer>
                     {Array.isArray(userVideos) && userVideos.length > 0 ? (
-                        userVideos.map((video: Videos) =>
+                        userVideos.map((video: Video) =>
                             <YourVideosCards
-                                videoId={video.video_id || video.id || ''}
+                                videoId={video.video_id}
                                 title={video.title}
                                 thumbnail={video.thumbnail}
                                 channelImage={user && user.nickname ? user.nickname.charAt(0).toUpperCase() : ''}
                                 channelName={user && user.nickname ? user.nickname : ''}
                                 details={video.description}
                                 publishedAt={getTimeDifference(video.publishedAt)}
-                                key={video.video_id || video.id}
+                                key={video.video_id}
                             />)
                     )
                         :

@@ -33,19 +33,27 @@ interface Props {
     publishedAt: string
 }
 
-export default function YourVideosCards(props: Props) {
+export default function YourVideosCards({
+    videoId,
+    title,
+    thumbnail,
+    channelImage,
+    channelName,
+    details,
+    publishedAt
+}: Props) {
 
     const { deleteVideo } = useUser();
 
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
     const deleteVideoFunction = async () => {
-        if (!props.videoId) {
+        if (!videoId) {
             alert('Não foi possível identificar o vídeo para excluir.');
             return;
         }
 
-        const success = await deleteVideo(props.videoId);
+        const success = await deleteVideo(videoId);
 
         if (success) {
             setIsDeleteModalOpen(false);
@@ -60,24 +68,24 @@ export default function YourVideosCards(props: Props) {
                     <DeleteVideoButtonIcon src={TrashIcon} />
                 </DeleteVideoButton>
 
-                <Banner alt="thumbnail" src={props.thumbnail} />
+                <Banner alt="thumbnail" src={thumbnail} />
 
                 <TitleContainer>
-                    <ChannelImage>{props.channelImage}</ChannelImage>
+                    <ChannelImage>{channelImage}</ChannelImage>
                     <TextContainer>
-                        <Title>{props.title}</Title>
-                        <TextCard>{props.details}</TextCard>
-                        <TextCard style={{ fontSize: '13px', marginTop: '5px' }}>{props.publishedAt}</TextCard>
+                        <Title>{title}</Title>
+                        <TextCard>{details}</TextCard>
+                        <TextCard style={{ fontSize: '13px', marginTop: '5px' }}>{publishedAt}</TextCard>
                     </TextContainer>
                 </TitleContainer>
 
                 <ResponsiveTitleContainer>
                     <TextContainer>
-                        <Title>{props.title}</Title>
-                        <ChannelImage>{props.channelImage}</ChannelImage>
-                        <ResponsiveChannelName>{props.channelName}</ResponsiveChannelName>
-                        <ResponsivePublishedData><span>{props.publishedAt}</span></ResponsivePublishedData>
-                        <ResponsiveDescription><span>{props.details}</span></ResponsiveDescription>
+                        <Title>{title}</Title>
+                        <ChannelImage>{channelImage}</ChannelImage>
+                        <ResponsiveChannelName>{channelName}</ResponsiveChannelName>
+                        <ResponsivePublishedData><span>{publishedAt}</span></ResponsivePublishedData>
+                        <ResponsiveDescription><span>{details}</span></ResponsiveDescription>
 
                     </TextContainer>
                 </ResponsiveTitleContainer>

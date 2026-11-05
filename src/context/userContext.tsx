@@ -185,7 +185,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         }
     }, []);
 
-    const logOut = () => {
+    const logOut = (): void => {
         localStorage.removeItem('token');
         setToken(null);
         setLogin(false);
@@ -252,7 +252,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         right: 45
     });
 
-    const updateDropDownPosition = () => {
+    const updateDropDownPosition = (): void => {
         const profileButton = document.querySelector(
             '[data-profile-button]'
         ) as HTMLElement;
