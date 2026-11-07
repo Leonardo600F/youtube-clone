@@ -1,8 +1,8 @@
 import type { Video } from "../../domain/entities/Video";
-import { VideosRepository } from "../../infrastructure/repositories/videosRepository";
+import type { InterfaceVideosRepository } from "../../domain/repositories/InterfaceVideosRepository";
 
 export class GetVideosUseCase {
-    constructor(private videosRepository: VideosRepository) { }
+    constructor(private videosRepository: InterfaceVideosRepository) { }
 
     async execute(
         token: string,

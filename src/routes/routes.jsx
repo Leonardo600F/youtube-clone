@@ -1,5 +1,33 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/home/home";
+import Home from "../../infrastructure/pages/home/home";
+import SearchPage from "../infrastructure/pages/search/searchPage";
+import SignUp from "../infrastructure/pages/sign-up/sign-up";
+import SignIn from "../infrastructure/pages/sign-in/sign-in";
+import YourVideos from "../infrastructure/pages/yourVideos/yourVideos";
+
+const AppRoutes = () => {
+
+    return (
+
+        <Routes>
+
+            Container de login
+            <Route path='/' element={<Home />} />
+            <Route path='/sign-in' element={<SignIn />} />
+            <Route path='/sign-up' element={<SignUp />} />
+            <Route path='/videos' element={<YourVideos />} />
+            <Route path='/yourVideos' element={< YourVideos />} />
+            <Route path='/search' element={<SearchPage />} />
+
+        </Routes>
+
+    )
+}
+
+export default AppRoutes;
+
+/* <Routes>
+
 import Shorts from "../pages/items/Container/shorts/shorts";
 import Subscribes from "../pages/items/Container/subscribes";
 import You from "../pages/items/Container2/you";
@@ -34,33 +62,6 @@ import ChannelFour from "../pages/items/Container3/channelFour";
 import ChannelFive from "../pages/items/Container3/channelFive";
 import ChannelSix from "../pages/items/Container3/channelSix";
 import ChannelSeven from "../pages/items/Container3/channelSeven";
-import SearchPage from "../pages/search/searchPage";
-import SignUp from "../pages/sign-up/sign-up";
-import SignIn from "../pages/sign-in/sign-in";
-import YourVideos from "../pages/yourVideos/yourVideos";
-
-const AppRoutes = () => {
-
-    return (
-
-        <Routes>
-
-            Container de login
-            <Route path='/' element={<Home />} />
-            <Route path='/sign-in' element={<SignIn />} />
-            <Route path='/sign-up' element={<SignUp />} />
-            <Route path='/videos' element={<YourVideos />} />
-            <Route path='/yourVideos' element={< YourVideos />} />
-            <Route path='/search' element={<SearchPage />} />
-
-        </Routes>
-
-    )
-}
-
-export default AppRoutes;
-
-/* <Routes>
 
             Container de login
             <Route path='/sign-in' element={<SignIn />} />

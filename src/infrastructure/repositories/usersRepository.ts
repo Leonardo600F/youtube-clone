@@ -1,11 +1,12 @@
 import api from "../../api";
+import type { InterfaceUsersRepository } from "../../domain/repositories/InterfaceUsersRepository";
 import type { User } from "../../domain/entities/User";
 
 export interface SignInResponse { token: string; }
 
 export interface CreateUserResponse { message: string; }
 
-export class UsersRepository {
+export class UsersRepository implements InterfaceUsersRepository {
 
     async signIn(
         email: string,

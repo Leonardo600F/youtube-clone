@@ -1,11 +1,12 @@
 import api from "../../api";
 import type { Video } from "../../domain/entities/Video";
+import type { InterfaceVideosRepository } from "../../domain/repositories/InterfaceVideosRepository";
 
 export interface CreateVideoResponse { message: string; }
 
 export interface DeleteVideoResponse { message: string; }
 
-export class VideosRepository {
+export class VideosRepository implements InterfaceVideosRepository {
     async getVideos(
         token: string,
         user_id: string,

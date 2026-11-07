@@ -1,12 +1,12 @@
 import axios from "axios";
 import moment from "moment";
-import VideosSearchCards from "../../components/videosSearchCards/videosSearchCards";
+import VideosSearchCards from "../../../components/videosSearchCards/videosSearchCards";
 import { useState, useEffect, useContext, useMemo } from "react";
-import { ComponentContext } from "../../context/componentContext";
-import { useSearchContext } from "../../context/searchContext";
+import { ComponentContext } from "../../../context/componentContext";
+import { useSearchContext } from "../../../context/searchContext";
 import { Container, SearchContainer } from "./searchPage-style";
-import Menu from "../../components/menu/menu";
-import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
+import Menu from "../../../components/menu/menu";
+import ResponsiveMenu from "../../../components/responsiveMenu/responsiveMenu";
 
 export default function SearchPage() {
 

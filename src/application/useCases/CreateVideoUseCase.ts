@@ -1,8 +1,7 @@
-import { VideosRepository } from "../../infrastructure/repositories/videosRepository";
-import type { CreateVideoResponse } from "../../infrastructure/repositories/videosRepository";
+import type { InterfaceVideosRepository } from "../../domain/repositories/InterfaceVideosRepository";
 
 export class CreateVideoUseCase {
-    constructor(private videosRepository: VideosRepository) { }
+    constructor(private videosRepository: InterfaceVideosRepository) { }
 
     async execute(
         token: string,
@@ -11,7 +10,7 @@ export class CreateVideoUseCase {
         title: string,
         description: string,
         publishedAt: Date
-    ): Promise<CreateVideoResponse> {
+    ): Promise<{ message: string }> {
         return this.videosRepository.createVideo(
             token,
             user_id,

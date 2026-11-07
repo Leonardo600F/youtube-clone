@@ -32,7 +32,7 @@ import {
 
 } from './yourVideos-style';
 
-import CloseIcon from "../../assets/icon-close.png";
+import CloseIcon from "../../../assets/icon-close.png";
 
 export default function YourVideos() {
 

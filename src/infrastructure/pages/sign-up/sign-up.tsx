@@ -1,9 +1,9 @@
 import { useState, useContext, useRef, useEffect } from 'react';
-import { UserContext, useUser } from '../../context/userContext';
+import { UserContext, useUser } from '../../../context/userContext';
 import { useNavigate } from 'react-router-dom';
 
-import GoogleIcon from '../../assets/icon-google.png';
-import ExclamationIcon from '../../assets/icon-exclamation.png';
+import GoogleIcon from '../../../assets/icon-google.png';
+import ExclamationIcon from '../../../assets/icon-exclamation.png';
 
 import {
     MainContainer,

@@ -1,10 +1,10 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { useUser } from "../../context/userContext";
+import { useUser } from "../../../context/userContext";
 import { useNavigate } from "react-router-dom";
-import { ComponentContext } from "../../context/componentContext";
-import { signInUseCase } from "../../application/useCases";
-import GoogleIcon from '../../assets/icon-google.png';
-import ExclamationIcon from '../../assets/icon-exclamation.png';
+import { ComponentContext } from "../../../context/componentContext";
+import { signInUseCase } from "../../../application/useCases";
+import GoogleIcon from '../../../assets/icon-google.png';
+import ExclamationIcon from '../../../assets/icon-exclamation.png';
 
 import {
 
