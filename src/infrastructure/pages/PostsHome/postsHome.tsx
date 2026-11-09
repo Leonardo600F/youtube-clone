@@ -14,30 +14,30 @@ import {
     ShowMoreIcon
 } from './postsHome-style';
 
-import PostsComponents from '../../components/PostsComponents/posts';
-import SecondPostsComponents from '../../components/PostsComponents/SecondPostsComponents/secondPosts';
+import PostsComponents from '../../../components/PostsComponents/posts';
+import SecondPostsComponents from '../../../components/PostsComponents/SecondPostsComponents/secondPosts';
 import { useState, useContext, useEffect, useMemo } from 'react';
-import { ComponentContext } from '../../context/componentContext';
+import { ComponentContext } from '../../../context/componentContext';
 
-import NarventIcon from '../../assets/avatar-narvent.png';
-import JetRockzIcon from '../../assets/avatar-jetrockz.png';
-import PSIcon from '../../assets/avatar-playstation.png';
-import XboxIcon from '../../assets/avatar-xbox.png';
-import CoDIcon from '../../assets/avatar-cod.png';
-import CultIcon from '../../assets/avatar-cult.png';
-import EduIcon from '../../assets/avatar-brksedu.png';
-import ReunionIcon from '../../assets/avatar-reunion.png';
-import FunkyIcon from '../../assets/avatar-funky.png';
-import HayashiiIcon from '../../assets/avatar-hayashii.png';
-import PeeWeeIcon from '../../assets/avatar-peewee.png';
-import NerdIcon from '../../assets/avatar-einerd.png';
-import LikeIcon from '../../assets/icon-like.png';
-import DeslikeIcon from '../../assets/icon-deslike.png';
-import ShareIcon from '../../assets/icon-share.png';
-import CommentsIcon from '../../assets/icon-comments.png';
-import OptionsIcon from "../../assets/icon-options.png";
-import MoreIcon from '../../assets/icon-down.png';
-import LessIcon from '../../assets/icon-up.png';
+import NarventIcon from '../../../assets/avatar-narvent.png';
+import JetRockzIcon from '../../../assets/avatar-jetrockz.png';
+import PSIcon from '../../../assets/avatar-playstation.png';
+import XboxIcon from '../../../assets/avatar-xbox.png';
+import CoDIcon from '../../../assets/avatar-cod.png';
+import CultIcon from '../../../assets/avatar-cult.png';
+import EduIcon from '../../../assets/avatar-brksedu.png';
+import ReunionIcon from '../../../assets/avatar-reunion.png';
+import FunkyIcon from '../../../assets/avatar-funky.png';
+import HayashiiIcon from '../../../assets/avatar-hayashii.png';
+import PeeWeeIcon from '../../../assets/avatar-peewee.png';
+import NerdIcon from '../../../assets/avatar-einerd.png';
+import LikeIcon from '../../../assets/icon-like.png';
+import DeslikeIcon from '../../../assets/icon-deslike.png';
+import ShareIcon from '../../../assets/icon-share.png';
+import CommentsIcon from '../../../assets/icon-comments.png';
+import OptionsIcon from "../../../assets/icon-options.png";
+import MoreIcon from '../../../assets/icon-down.png';
+import LessIcon from '../../../assets/icon-up.png';
 
 const posts = [
     {

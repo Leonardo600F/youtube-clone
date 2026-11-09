@@ -76,6 +76,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             const response = await getVideosUseCase.execute(token, user_id);
             setUserVideos(response.videos);
         } catch (error: unknown) {
+            console.error("Erro ao buscar vídeos:", error);
         }
     };
 

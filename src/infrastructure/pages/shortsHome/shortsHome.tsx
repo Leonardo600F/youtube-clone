@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect, useMemo } from "react";
-import { ComponentContext } from "../../context/componentContext";
+import { ComponentContext } from "../../../context/componentContext";
 
 import {
     Container,
@@ -14,9 +14,9 @@ import {
     ReturnContainer
 } from "./shortsHome-style";
 
-import ShortsComponent from "../../components/ShortsComponent/shortsComponent";
-import Shorts from '../../assets/icon-shorts.png';
-import CloseIcon from '../../assets/icon-close.png';
+import ShortsComponent from "../../../components/ShortsComponent/shortsComponent";
+import Shorts from '../../../assets/icon-shorts.png';
+import CloseIcon from '../../../assets/icon-close.png';
 
 const shortsVideo = [{
     banner: 'https://preview.redd.it/what-are-some-good-black-suit-spider-man-comics-v0-3uisnizzj03b1.jpg?auto=webp&s=1cb025ab5d89b18c4f61725121878170154de521',

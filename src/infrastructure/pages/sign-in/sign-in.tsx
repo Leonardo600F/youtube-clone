@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { useUser } from "../../../context/userContext";
 import { useNavigate } from "react-router-dom";
+import { useUser } from "../../../context/userContext";
 import { ComponentContext } from "../../../context/componentContext";
 import { signInUseCase } from "../../../application/useCases";
 import GoogleIcon from '../../../assets/icon-google.png';

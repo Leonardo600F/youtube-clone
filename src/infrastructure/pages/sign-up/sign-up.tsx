@@ -1,5 +1,5 @@
-import { useState, useContext, useRef, useEffect } from 'react';
-import { UserContext, useUser } from '../../../context/userContext';
+import { useState, useRef, useEffect } from 'react';
+import { useUser } from '../../../context/userContext';
 import { useNavigate } from 'react-router-dom';
 
 import GoogleIcon from '../../../assets/icon-google.png';

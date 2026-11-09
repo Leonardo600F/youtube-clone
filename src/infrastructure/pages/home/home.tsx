@@ -2,12 +2,12 @@ import axios from "axios";
 import moment from "moment";
 import { Container, MainContainer } from './home-style';
 import { useState, useEffect, useContext, useMemo } from "react";
-import { ComponentContext } from "../../context/componentContext";
-import { useCategoryContext } from "../../context/searchCategories";
-import Menu from "../../components/menu/menu";
-import ResponsiveMenu from "../../components/responsiveMenu/responsiveMenu";
+import { ComponentContext } from "../../../context/componentContext";
+import { useCategoryContext } from "../../../context/searchCategories";
+import Menu from "../../../components/menu/menu";
+import ResponsiveMenu from "../../../components/responsiveMenu/responsiveMenu";
 import Categories from "../categories/categories";
-import VideosCardsComponent from "../../components/VideosCardsComponents/videosCardsComponent";
+import VideosCardsComponent from "../../../components/VideosCardsComponents/videosCardsComponent";
 import ShortsHome from "../shortsHome/shortsHome";
 import PostsHome from "../PostsHome/postsHome";
 

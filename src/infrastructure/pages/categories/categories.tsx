@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect, useMemo } from "react";
-import { ComponentContext } from "../../context/componentContext";
-import { useCategoryContext } from "../../context/searchCategories";
+import { ComponentContext } from "../../../context/componentContext";
+import { useCategoryContext } from "../../../context/searchCategories";
 
 import {
     Container,
