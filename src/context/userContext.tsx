@@ -1,8 +1,9 @@
 import axios from "axios";
-import type { Video } from "../domain/entities/Video";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
 import { useNavigate } from "react-router-dom";
+import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
+import { AppError } from "../domain/errors/AppError";
+import type { Video } from "../domain/entities/Video";
 import type { User } from "../domain/entities/User";
 
 interface UserContextType {
@@ -214,15 +215,15 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
             navigate('/');
         } catch (error: unknown) {
-            if (!axios.isAxiosError(error) || !error.response) {
-                alert("Erro de conexão. Por favor, verifique se o servidor está rodando.");
-                return;
+            if (error instanceof AppError) {
+                if (error.StatusCode === 401) { logOut(); }
+
+                alert(error.message);
+                return
             }
 
-            const errorMessage = error.response.data?.error || "Ocorreu um erro ao fazer login.";
-
-            alert(errorMessage);
         }
+        alert("Erro de conexão. Por favor, verifique se o servidor está rodando.")
     };
 
     const handleCreateUser = async (

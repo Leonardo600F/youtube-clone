@@ -1,3 +1,5 @@
+import axios from "axios";
+import { AppError } from "../../domain/errors/AppError";
 import api from "../../api";
 import type { InterfaceUsersRepository } from "../../domain/repositories/InterfaceUsersRepository";
 import type { User } from "../../domain/entities/User";
@@ -12,11 +14,27 @@ export class UsersRepository implements InterfaceUsersRepository {
         email: string,
         password: string
     ): Promise<SignInResponse> {
-        const response = await api.post<SignInResponse>(
-            "/users/sign-in",
-            { email, password }
-        );
-        return response.data;
+        try {
+            const response = await api.post<SignInResponse>(
+                "/users/sign-in",
+                { email, password }
+            );
+
+            return response.data;
+
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                const message =
+                    error.response?.data?.error ||
+                    "Erro de conexão. Verifique se o servidor está rodando.";
+
+                const statusCode = error.response?.status;
+
+                throw new AppError(message, statusCode);
+            }
+
+            throw error;
+        }
     }
 
     async createUser(
