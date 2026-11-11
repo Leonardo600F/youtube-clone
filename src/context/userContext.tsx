@@ -173,9 +173,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         } catch (error: unknown) {
             console.error("Erro em GetUser:", error);
 
-            if (axios.isAxiosError(error) && error.response?.status === 401) {
-                logOut();
-            }
+            if (error instanceof AppError && error.StatusCode === 401) { logOut(); }
         }
     };
 
@@ -240,11 +238,17 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             await handleLogin(email, password);
 
         } catch (error: unknown) {
-            if (axios.isAxiosError(error) && error.response?.status === 409) {
-                alert("Este e-mail já está em uso. Por favor, tente outro.");
-            } else {
-                alert("Não foi possível criar o usuário. Verifique os dados e tente novamente.");
+            if (error instanceof AppError) {
+                if (error.StatusCode === 409) {
+                    alert("Este e-mail já está em uso. Por favor, tente outro.");
+                    return;
+                }
+
+                alert(error.message);
+                return;
             }
+
+            alert("Não foi possível criar um usuário. Verifique os dados e tente novamente.");
         }
     };
 

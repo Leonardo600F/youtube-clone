@@ -1,4 +1,6 @@
+import axios from "axios";
 import api from "../../api";
+import { AppError } from "../../domain/errors/AppError";
 import type { Video } from "../../domain/entities/Video";
 import type { InterfaceVideosRepository } from "../../domain/repositories/InterfaceVideosRepository";
 
@@ -9,17 +11,31 @@ export interface DeleteVideoResponse { message: string; }
 export class VideosRepository implements InterfaceVideosRepository {
     async getVideos(
         token: string,
-        user_id: string,
+        user_id: string
     ): Promise<{ videos: Video[] }> {
+        try {
+            const response = await api.get<{ videos: Video[] }>(
+                `/videos/get-videos?user_id=${user_id}`,
+                {
+                    headers: { Authorization: `Bearer ${token}` }
+                }
+            );
 
-        const response = await api.get<{ videos: Video[] }>(
-            `/videos/get-videos?user_id=${user_id}`,
-            {
-                headers: { Authorization: `Bearer ${token}` }
+            return response.data;
+
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                const message =
+                    error.response?.data?.error ||
+                    "Não foi possível buscar os vídeos.";
+
+                const statusCode = error.response?.status;
+
+                throw new AppError(message, statusCode);
             }
-        );
 
-        return response.data;
+            throw error;
+        }
     }
 
     async createVideo(
@@ -30,18 +46,33 @@ export class VideosRepository implements InterfaceVideosRepository {
         description: string,
         publishedAt: Date
     ): Promise<CreateVideoResponse> {
-        const response = await api.post<CreateVideoResponse>(
-            '/videos/create-video',
-            { user_id, thumbnail, title, description, publishedAt },
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    'Content-Type': 'application/json'
+        try {
+            const response = await api.post<CreateVideoResponse>(
+                '/videos/create-video',
+                { user_id, thumbnail, title, description, publishedAt },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
                 }
-            }
-        );
+            );
 
-        return response.data;
+            return response.data;
+
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                const message =
+                    error.response?.data?.error ||
+                    "Não foi possível criar o vídeo.";
+
+                const statusCode = error.response?.status;
+
+                throw new AppError(message, statusCode);
+            }
+
+            throw error;
+        }
     }
 
     async deleteVideo(

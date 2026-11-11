@@ -44,18 +44,49 @@ export class UsersRepository implements InterfaceUsersRepository {
         nickname: string,
         password: string
     ): Promise<CreateUserResponse> {
-        const response = await api.post<CreateUserResponse>('/users/sign-up', {
-            name, surname, email, nickname, password
-        });
+        try {
+            const response = await api.post<CreateUserResponse>('/users/sign-up', {
+                name, surname, email, nickname, password
+            });
 
-        return response.data;
+            return response.data;
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                const message =
+                    error.response?.data?.error ||
+                    "Não foi possível criar o usuário.";
+
+                const statusCode = error.response?.status;
+
+                throw new AppError(message, statusCode);
+            }
+
+            throw error;
+        }
+
     }
 
     async getUser(token: string): Promise<User | null> {
-        const response = await api.get<User>('/users/get-user', {
-            headers: { Authorization: `Bearer ${token}` }
-        });
 
-        return response.data;
+        try {
+            const response = await api.get<User>('/users/get-user', {
+                headers: { Authorization: `Bearer ${token}` }
+            });
+
+            return response.data;
+
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                const message =
+                    error.response?.data?.error ||
+                    "Não foi possível buscar os dados do usuário.";
+
+                const statusCode = error.response?.status;
+
+                throw new AppError(message, statusCode);
+            }
+
+            throw error;
+        }
     }
 }
