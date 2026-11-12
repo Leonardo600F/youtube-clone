@@ -77,13 +77,25 @@ export class VideosRepository implements InterfaceVideosRepository {
 
     async deleteVideo(
         token: string,
-        video_id: string): Promise<DeleteVideoResponse> {
-        const response = await api.delete(
-            `/videos/delete-video/${video_id}`,
-            {
-                headers: { Authorization: `Bearer ${token}` }
+        video_id: string
+    ): Promise<DeleteVideoResponse> {
+        try {
+            const response = await api.delete<DeleteVideoResponse>(
+                `/videos/delete-video/${video_id}`,
+                { headers: { Authorization: `Bearer ${token}` } }
+            );
+
+            return response.data;
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                const message =
+                    error.response?.data?.error || "Não foi possível excluir o vídeo.";
+
+                const statusCode = error.response?.status;
+
+                throw new AppError(message, statusCode);
             }
-        );
-        return response.data;
+            throw error;
+        }
     }
 }

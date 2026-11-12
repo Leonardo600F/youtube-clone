@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
@@ -117,12 +116,19 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             await getUser(storedToken);
 
         } catch (error: unknown) {
-            if (axios.isAxiosError(error) && error.response?.status === 401) {
-                alert("Sessão expirada. Por favor, faça login novamente.");
-                logOut();
-            } else {
-                alert("Não foi possível enviar o vídeo. Tente novamente.");
+            if (error instanceof AppError) {
+                if (error.statusCode === 401) {
+                    alert("Sessão expirada. Por favor, faça login novamente.");
+                    logOut();
+                    return;
+                }
+
+                alert(error.message);
+                return;
             }
+
+            alert("Não foi possível cadastrar o vídeo. Verifique sua conexão.");
+
         }
     };
 
@@ -145,9 +151,11 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             return true;
 
         } catch (error: unknown) {
-            if (axios.isAxiosError(error) && error.response?.status === 401) {
-                alert("Sessão expirada. Por favor, faça login novamente.");
-                logOut();
+            if (error instanceof AppError) {
+                if (error.statusCode === 401) {
+                    alert("Sessão expirada. Por favor, faça login novamente.");
+                    logOut();
+                } else { alert(error.message); }
             } else { alert("Não foi possível remover o vídeo. Tente novamente."); }
 
             return false;
@@ -173,7 +181,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         } catch (error: unknown) {
             console.error("Erro em GetUser:", error);
 
-            if (error instanceof AppError && error.StatusCode === 401) { logOut(); }
+            if (error instanceof AppError && error.statusCode === 401) { logOut(); }
         }
     };
 
@@ -214,7 +222,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             navigate('/');
         } catch (error: unknown) {
             if (error instanceof AppError) {
-                if (error.StatusCode === 401) { logOut(); }
+                if (error.statusCode === 401) { logOut(); }
 
                 alert(error.message);
                 return
@@ -239,7 +247,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
         } catch (error: unknown) {
             if (error instanceof AppError) {
-                if (error.StatusCode === 409) {
+                if (error.statusCode === 409) {
                     alert("Este e-mail já está em uso. Por favor, tente outro.");
                     return;
                 }
