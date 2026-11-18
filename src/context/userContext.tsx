@@ -16,7 +16,7 @@ interface UserContextType {
     showPassword: boolean;
     setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
     user: User | null;
-    getUser: (token: string) => Promise<void>;
+    getUser: (token: string) => Promise<boolean>;
     createVideos: (
         user_id: string,
         thumbnail: string,
@@ -71,13 +71,10 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
     const getVideos = async (
         token: string,
-        user_id: string): Promise<void> => {
-        try {
-            const response = await getVideosUseCase.execute(token, user_id);
-            setUserVideos(response.videos);
-        } catch (error: unknown) {
-            console.error("Erro ao buscar vídeos:", error);
-        }
+        user_id: string
+    ): Promise<void> => {
+        const response = await getVideosUseCase.execute(token, user_id);
+        setUserVideos(response.videos);
     };
 
 
@@ -163,25 +160,43 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
     };
 
-    const getUser = async (token: string): Promise<void> => {
+    const getUser = async (token: string): Promise<boolean> => {
         if (!token) {
             logOut();
-            return;
+            return false;
         }
 
         try {
             const response = await getUserUseCase.execute(token);
 
-            if (response) {
-                setUser(response);
-                setLogin(true);
-
-                await getVideos(token, response.user_id);
+            if (!response) {
+                return false;
             }
+
+            setUser(response);
+            setLogin(true);
+
+            try {
+                await getVideos(token, response.user_id);
+            } catch (error: unknown) {
+                console.error("Erro ao buscar vídeos:", error);
+
+                if (error instanceof AppError && error.statusCode === 401) {
+                    logOut();
+                    return false;
+                }
+            }
+
+            return true;
+
         } catch (error: unknown) {
             console.error("Erro em GetUser:", error);
 
-            if (error instanceof AppError && error.statusCode === 401) { logOut(); }
+            if (error instanceof AppError && error.statusCode === 401) {
+                logOut();
+            }
+
+            return false;
         }
     };
 
@@ -217,9 +232,12 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             setToken(token);
             setLogin(true);
 
-            await getUser(token);
+            const userLoaded = await getUser(token);
 
-            navigate('/');
+            if (!userLoaded) { return; }
+
+            navigate('/')
+
         } catch (error: unknown) {
             if (error instanceof AppError) {
                 if (error.statusCode === 401) { logOut(); }
@@ -227,9 +245,8 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
                 alert(error.message);
                 return
             }
-
+            alert("Erro de conexão. Por favor, verifique se o servidor está rodando.")
         }
-        alert("Erro de conexão. Por favor, verifique se o servidor está rodando.")
     };
 
     const handleCreateUser = async (
