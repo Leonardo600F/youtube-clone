@@ -170,6 +170,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             const response = await getUserUseCase.execute(token);
 
             if (!response) {
+                logOut();
                 return false;
             }
 
@@ -194,17 +195,21 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
             if (error instanceof AppError && error.statusCode === 401) {
                 logOut();
+                return false;
             }
-
-            return false;
+            throw error;
         }
     };
 
     useEffect(() => {
         const storedToken = localStorage.getItem('token');
+
         if (storedToken) {
             setToken(storedToken);
-            getUser(storedToken);
+
+            getUser(storedToken).catch((error: unknown) => {
+                console.error("Erro ao restaurar sessão:", error);
+            });
         }
     }, []);
 
@@ -230,11 +235,13 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
             localStorage.setItem('token', token);
             setToken(token);
-            setLogin(true);
 
             const userLoaded = await getUser(token);
 
-            if (!userLoaded) { return; }
+            if (!userLoaded) {
+                logOut();
+                return;
+            }
 
             navigate('/')
 
