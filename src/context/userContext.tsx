@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, useCallback, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInUseCase, createUserUseCase, getUserUseCase, getVideosUseCase, createVideoUseCase, deleteVideoUseCase } from "../application/useCases";
 import { AppError } from "../domain/errors/AppError";
@@ -69,13 +69,23 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
     const [openDropDownMenu, setOpenDropDownMenu] = useState(false);
     const navigate = useNavigate();
 
-    const getVideos = async (
+    const saveToken = (token: string): void => {
+        localStorage.setItem('token', token);
+        setToken(token);
+    };
+
+    const clearToken = (): void => {
+        localStorage.removeItem('token');
+        setToken(null);
+    };
+
+    const getVideos = useCallback(async (
         token: string,
         user_id: string
     ): Promise<void> => {
         const response = await getVideosUseCase.execute(token, user_id);
         setUserVideos(response.videos);
-    };
+    }, []);
 
 
     const createVideos = async (
@@ -85,9 +95,8 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         description: string,
         publishedAt: Date
     ): Promise<void> => {
-        const storedToken = localStorage.getItem('token');
 
-        if (!storedToken) {
+        if (!token) {
             alert('Sessão expirada. Por favor, faça login novamente.');
             logOut();
             return;
@@ -100,7 +109,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
         try {
             await createVideoUseCase.execute(
-                storedToken,
+                token,
                 user_id,
                 thumbnail,
                 title,
@@ -110,7 +119,11 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
             alert('Vídeo enviado com sucesso!');
 
-            await getUser(storedToken);
+            try {
+                await getUser(token);
+            } catch (error: unknown) {
+                console.error("Erro ao atualizar dados após cadastrar vídeo:", error);
+            }
 
         } catch (error: unknown) {
             if (error instanceof AppError) {
@@ -131,19 +144,23 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
 
     const deleteVideo = async (video_id: string): Promise<boolean> => {
-        const storedToken = localStorage.getItem("token");
 
-        if (!storedToken) {
+        if (!token) {
             alert("Sessão expirada. Por favor, faça seu login novamente.");
             logOut();
             return false;
         }
 
         try {
-            await deleteVideoUseCase.execute(storedToken, video_id);
+            await deleteVideoUseCase.execute(token, video_id);
 
             alert("Vídeo removido com sucesso!");
-            await getUser(storedToken);
+
+            try {
+                await getUser(token);
+            } catch (error: unknown) {
+                console.error("Erro ao atualizar os dados ao remover os vídeos:", error);
+            }
 
             return true;
 
@@ -213,7 +230,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         }
     }, []);
 
-    const logOut = (): void => {
+    const logOut = useCallback((): void => {
         localStorage.removeItem('token');
         setToken(null);
         setLogin(false);
@@ -222,7 +239,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         setOpenMenu(false);
         setOpenDropDownMenu(false);
         navigate('/');
-    };
+    }, [navigate]);
 
     const handleLogin = async (
         email: string,
@@ -239,7 +256,6 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             const userLoaded = await getUser(token);
 
             if (!userLoaded) {
-                logOut();
                 return;
             }
 
@@ -247,12 +263,10 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
         } catch (error: unknown) {
             if (error instanceof AppError) {
-                if (error.statusCode === 401) { logOut(); }
-
                 alert(error.message);
-                return
+                return;
             }
-            alert("Erro de conexão. Por favor, verifique se o servidor está rodando.")
+            alert("Erro de conexão. Por favor, verifique se o servidor está rodando.");
         }
     };
 
@@ -272,7 +286,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         } catch (error: unknown) {
             if (error instanceof AppError) {
                 if (error.statusCode === 409) {
-                    alert("Este e-mail já está em uso. Por favor, tente outro.");
+                    alert(error.message);
                     return;
                 }
 
