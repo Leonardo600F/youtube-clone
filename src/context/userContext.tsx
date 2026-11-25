@@ -7,8 +7,6 @@ import type { User } from "../domain/entities/User";
 
 interface UserContextType {
     login: boolean;
-    token: string | null;
-    setToken: React.Dispatch<React.SetStateAction<string | null>>;
     email: string;
     setEmail: React.Dispatch<React.SetStateAction<string>>;
     password: string;
@@ -74,10 +72,10 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         setToken(token);
     };
 
-    const clearToken = (): void => {
+    const clearToken = useCallback((): void => {
         localStorage.removeItem('token');
         setToken(null);
-    };
+    }, []);
 
     const getVideos = useCallback(async (
         token: string,
@@ -177,7 +175,17 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
     };
 
-    const getUser = async (token: string): Promise<boolean> => {
+    const logOut = useCallback((): void => {
+        clearToken();
+        setLogin(false);
+        setUser(null);
+        setUserVideos([]);
+        setOpenMenu(false);
+        setOpenDropDownMenu(false);
+        navigate('/');
+    }, [clearToken, navigate]);
+
+    const getUser = useCallback(async (token: string): Promise<boolean> => {
         if (!token) {
             logOut();
             return false;
@@ -216,7 +224,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
             }
             throw error;
         }
-    };
+    }, [getVideos, logOut]);
 
     useEffect(() => {
         const storedToken = localStorage.getItem('token');
@@ -228,18 +236,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
                 console.error("Erro ao restaurar sessão:", error);
             });
         }
-    }, []);
-
-    const logOut = useCallback((): void => {
-        localStorage.removeItem('token');
-        setToken(null);
-        setLogin(false);
-        setUser(null);
-        setUserVideos([]);
-        setOpenMenu(false);
-        setOpenDropDownMenu(false);
-        navigate('/');
-    }, [navigate]);
+    }, [getUser]);
 
     const handleLogin = async (
         email: string,
@@ -250,8 +247,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
             const token = response.token;
 
-            localStorage.setItem('token', token);
-            setToken(token);
+            saveToken(token);
 
             const userLoaded = await getUser(token);
 
@@ -304,24 +300,24 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         right: 45
     });
 
-    const updateDropDownPosition = (): void => {
-        const profileButton = document.querySelector(
-            '[data-profile-button]'
-        ) as HTMLElement;
-
-        if (!profileButton) return;
-
-        const rect = profileButton.getBoundingClientRect();
-        const scrollY = window.scrollY;
-
-        const top = rect.bottom + scrollY + 5;
-        const right = window.innerWidth - rect.right;
-
-        setDropDownPosition({ top, right });
-    };
-
     useEffect(() => {
         if (!openDropDownMenu) return;
+
+        const updateDropDownPosition = (): void => {
+            const profileButton = document.querySelector(
+                '[data-profile-button]'
+            ) as HTMLElement;
+
+            if (!profileButton) return;
+
+            const rect = profileButton.getBoundingClientRect();
+            const scrollY = window.scrollY;
+
+            const top = rect.bottom + scrollY + 5;
+            const right = window.innerWidth - rect.right;
+
+            setDropDownPosition({ top, right });
+        };
 
         updateDropDownPosition();
 
@@ -337,8 +333,6 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
     return (
         <UserContext.Provider value={{
             login,
-            token,
-            setToken,
             email, setEmail,
             password, setPassword,
             showPassword, setShowPassword,
