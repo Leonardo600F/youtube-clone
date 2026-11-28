@@ -62,7 +62,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
     const [showPassword, setShowPassword] = useState(false);
     const [user, setUser] = useState<User | null>(null);
     const [userVideos, setUserVideos] = useState<Video[]>([]);
-    const [token, setToken] = useState(localStorage.getItem('token'));
+    const [token, setToken] = useState(() => localStorage.getItem('token'));
     const [openMenu, setOpenMenu] = useState(false);
     const [openDropDownMenu, setOpenDropDownMenu] = useState(false);
     const navigate = useNavigate();
@@ -139,7 +139,6 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
 
         }
     };
-
 
     const deleteVideo = async (video_id: string): Promise<boolean> => {
 
@@ -230,7 +229,7 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         const storedToken = localStorage.getItem('token');
 
         if (storedToken) {
-            setToken(storedToken);
+
 
             getUser(storedToken).catch((error: unknown) => {
                 console.error("Erro ao restaurar sessão:", error);
@@ -304,9 +303,9 @@ export const UserStorage = ({ children }: { children: ReactNode }) => {
         if (!openDropDownMenu) return;
 
         const updateDropDownPosition = (): void => {
-            const profileButton = document.querySelector(
+            const profileButton = document.querySelector<HTMLElement>(
                 '[data-profile-button]'
-            ) as HTMLElement;
+            )
 
             if (!profileButton) return;
 
